@@ -1,3 +1,13 @@
+/*
+ * Copyright (C) 2020 Andrea Mazzoleni
+ *
+ * This file is licensed under a
+ * Creative Commons Attribution 4.0 International License.
+ *
+ * You should have received a copy of the license along with this
+ * work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
+ */
+
 #include <set>
 #include <string>
 #include <cstdlib>
@@ -6,21 +16,6 @@
 #include <cmath>
 
 using namespace std;
-
-/* NAZIONALE
-data,stato,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_attualmente_positivi,nuovi_attualmente_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en
-2020-02-24T18:00:00,ITA,101,26,127,94,221,221,1,7,229,4324,,
-*/
-
-/* REGIONALE
-data,stato,codice_regione,denominazione_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_attualmente_positivi,nuovi_attualmente_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en
-2020-02-24T18:00:00,ITA,13,Abruzzo,42.35122196,13.39843823,0,0,0,0,0,0,0,0,0,5,,
-*/
-
-/* PROVINCIALE
-data,stato,codice_regione,denominazione_regione,codice_provincia,denominazione_provincia,sigla_provincia,lat,long,totale_casi,note_it,note_en
-2020-02-24T18:00:00,ITA,13,Abruzzo,069,Chieti,CH,42.35103167,14.16754574,0,,
-*/
 
 #define KIND_NAZIONALE 0
 #define KIND_REGIONALE 1
@@ -168,6 +163,7 @@ void html_header(FILE* f, const char* title)
 
 void html_footer(FILE* f)
 {
+	fprintf(f, "<p>License <a href=\"https://github.com/amadvance/covid19-italy/blob/master/LICENSE\">CC-BY-4.0</a></p>\n");
 	fprintf(f, "</body>\n");
 	fprintf(f, "</html>\n");
 }
