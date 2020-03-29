@@ -304,18 +304,14 @@ void save_place(FILE* plot, FILE* out, const place& p)
 	string png_log = trimmed + "_log.png";
 	string png_stack = trimmed + "_stk.png";
 	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(out, "<a id=\"%s\">\n", trimmed.c_str());
-		fprintf(out, "</a>\n");
-		fprintf(out, "<h1>%s</h1>\n", p.denominazione.c_str());
+		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
 		table_date(out, p);
 		table_stat(out, p, 0);
 		fprintf(out, "</table>");
 		fprintf(out, "<img src=\"%s\">\n", png_log.c_str());
 	} else {
-		fprintf(out, "<a id=\"%s\">\n", trimmed.c_str());
-		fprintf(out, "</a>\n");
-		fprintf(out, "<h1>%s</h1>\n", p.denominazione.c_str());
+		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
 		table_date(out, p);
 		table_stat(out, p, 0);
