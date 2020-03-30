@@ -256,6 +256,8 @@ void table_stat(FILE* out, const place& p, int index)
 	fprintf(out, "</tr>\n");
 }
 
+#define MEAN 3
+
 void save_place(FILE* plot, FILE* out, const place& p)
 {
 	FILE* f;
@@ -271,15 +273,28 @@ void save_place(FILE* plot, FILE* out, const place& p)
 	}
 
 	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(f, "%s\tTotaleCasi\tCrescitaPercentuale\n",
+		fprintf(f, "%s\tTotaleCasi\tCrescitaPercentuale\tCrescitaMedia\n",
 			trimmed.c_str());
 	} else {
-		fprintf(f, "%s\tRicoverati\tTerapiaIntensiva\tTotaleOspedalizzati\tIsolamentoDomiciliare\tTotaleAttualmentePositivi\tNuoviAttualmentePositivi\tGuariti\tDeceduti\tTotaleCasi\tTamponi\tCrescitaPercentuale\n",
+		fprintf(f, "%s\tRicoverati\tTerapiaIntensiva\tTotaleOspedalizzati\tIsolamentoDomiciliare\tTotaleAttualmentePositivi\tNuoviAttualmentePositivi\tGuariti\tDeceduti\tTotaleCasi\tTamponi\tCrescitaPercentuale\tCrescita\tCrescitaMedia\n",
 			trimmed.c_str());
 	}
 
+	int mean[MEAN] = { 0 };
+
 	day_set::iterator prev = p.days.end();
 	for (day_set::iterator i=p.days.begin();i!=p.days.end();++i) {
+		int delta = i->totale_casi - prev->totale_casi;
+
+		// free slot 0
+		for (int j=MEAN-1;j>0;--j)
+			mean[j] = mean[j-1];
+		mean[0] = delta;
+		double mean_val = 0;
+		for (int j=0;j<MEAN;++j)
+			mean_val += mean[j];
+		mean_val /= MEAN;
+
 		double grow;
 		if (prev != p.days.end() && prev->totale_casi > 100) {
 			grow = 100.0 * i->totale_casi / prev->totale_casi - 100.0;
@@ -288,12 +303,14 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		}
 
 		if (p.kind == KIND_PROVINCIALE) {
-			fprintf(f,"%s\t%d\t%.1f\n",
+			fprintf(f,"%s\t%d\t%.1f\t%d\t%.1f\n",
 				i->data.substr(5,5).c_str(),
 				i->totale_casi,
-				grow);
+				grow,
+				delta,
+				mean_val);
 		} else {
-			fprintf(f,"%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%.1f\n",
+			fprintf(f,"%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%.1f\t%d\t%.1f\n",
 				i->data.substr(5,5).c_str(),
 				i->ricoverati_con_sintomi,
 				i->terapia_intensiva,
@@ -305,7 +322,9 @@ void save_place(FILE* plot, FILE* out, const place& p)
 				i->deceduti,
 				i->totale_casi,
 				i->tamponi,
-				grow);
+				grow,
+				delta,
+				mean_val);
 		}
 
 		prev = i;
@@ -313,6 +332,7 @@ void save_place(FILE* plot, FILE* out, const place& p)
 
 	string png_log = trimmed + "_log.png";
 	string png_stack = trimmed + "_stk.png";
+	string png_xy = trimmed + "_xy.png";
 	if (p.kind == KIND_PROVINCIALE) {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
@@ -320,6 +340,9 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		table_stat(out, p, 0);
 		fprintf(out, "</table>");
 		fprintf(out, "<img src=\"%s\">\n", png_log.c_str());
+		// not significative with too few cases
+		if (prev->totale_casi >= 1000)
+			fprintf(out, "<img src=\"%s\">\n", png_xy.c_str());
 	} else {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
@@ -335,13 +358,18 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		fprintf(out, "</table>");
 		fprintf(out, "<img src=\"%s\">\n", png_log.c_str());
 		fprintf(out, "<img src=\"%s\">\n", png_stack.c_str());
+		// not significative with too few cases
+		if (prev->totale_casi >= 1000)
+			fprintf(out, "<img src=\"%s\">\n", png_xy.c_str());
 	}
 
 	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(plot, "gnuplot -c graph_prov.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+		fprintf(plot, "gnuplot -c graph_pr_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+		fprintf(plot, "gnuplot -c graph_pr_xy.gp %s www/%s\n", dat.c_str(), png_xy.c_str());
 	} else {
-		fprintf(plot, "gnuplot -c graph_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
-		fprintf(plot, "gnuplot -c graph_stack.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
+		fprintf(plot, "gnuplot -c graph_rg_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+		fprintf(plot, "gnuplot -c graph_rg_stack.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
+		fprintf(plot, "gnuplot -c graph_rg_xy.gp %s www/%s\n", dat.c_str(), png_xy.c_str());
 	}
 
 	fclose(f);

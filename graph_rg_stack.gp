@@ -29,4 +29,6 @@ plot ARG1 using 3:xtic(1) lc rgb "red" \
 # 9 Deceduti
 # 10 Totale-Casi
 # 11 Tamponi
-
+# 12 Crescita-Percentuale
+# 13 Crescita
+# 14 Crescita-Media

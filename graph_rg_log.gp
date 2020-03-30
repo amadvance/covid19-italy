@@ -8,9 +8,9 @@ set auto y
 set auto x
 set boxwidth 0.75
 set logscale y
+set xtics rotate 90 mirror
 set ytics auto
 set grid ytics
-set xtics rotate 90 mirror
 set style data lines
 set style line 3 lw 2 lc rgb "red"
 set style line 2 lw 2 lc rgb "gold"
@@ -40,4 +40,6 @@ plot ARG1 using 3:xtic(1) ls 3 \
 # 9 Deceduti
 # 10 Totale-Casi
 # 11 Tamponi
-
+# 12 Crescita-Percentuale
+# 13 Crescita
+# 14 Crescita-Media
