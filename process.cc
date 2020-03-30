@@ -154,6 +154,16 @@ void html_header(FILE* f, const char* title)
 	fprintf(f, "<!doctype html public \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n");
 	fprintf(f, "<html>\n");
 	fprintf(f, "<head>\n");
+	fprintf(f, "<!-- Global site tag (gtag.js) - Google Analytics -->\n");
+	fprintf(f, "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-21967501-6\"></script>\n");
+	fprintf(f, "<script>\n");
+	fprintf(f, "  window.dataLayer = window.dataLayer || [];\n");
+	fprintf(f, "taLayer.push(arguments);}\n");
+	fprintf(f, "  gtag('js', new Date());\n");
+	fprintf(f, "\n");
+	fprintf(f, "  gtag('config', 'UA-21967501-6');\n");
+	fprintf(f, "</script>\n");
+
 	fprintf(f, "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
 	fprintf(f, "<link rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"favicon.ico\"/>\n");
 	fprintf(f, "<title>%s</title>\n", title);
