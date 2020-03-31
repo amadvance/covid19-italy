@@ -42,4 +42,6 @@ plot ARG1 using 3:xtic(1) ls 3 \
 # 11 Tamponi
 # 12 NuoviCasiPercentuale
 # 13 NuoviCasi
-# 14 NuoviCasi3Giorni
+# 14 NuoviCasiXGiorni
+# 15 NuoviPositiviPercentualeXGiorni
+# 16 NuoviPositiviXGiorni

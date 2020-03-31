@@ -1,7 +1,7 @@
 reset
 set terminal png nocrop enhanced font arial 10 size 1000,400
 set output ARG2
-set ylabel "Nuovi Casi Media 3 Giorni (scala logaritmica)"
+set ylabel "Nuovi Casi media ultimi giorni (scala logaritmica)"
 set xlabel "Casi (scala logaritmica)"
 set key noinvert reverse Left outside
 set key autotitle columnheader
@@ -24,4 +24,4 @@ plot ARG1 using 2:5 ls 1
 # 2 Casi
 # 3 NuoviCasiPercentuale
 # 4 NuoviCasi
-# 5 NuoviCasi3Giorni
+# 5 NuoviCasiXGiorni

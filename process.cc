@@ -257,7 +257,8 @@ void table_stat(FILE* out, const place& p, int index)
 	fprintf(out, "</tr>\n");
 }
 
-#define MEAN 3
+#define CASI_COUNT 8
+#define POSITIVI_COUNT 8
 
 void save_place(FILE* plot, FILE* out, const place& p)
 {
@@ -267,65 +268,121 @@ void save_place(FILE* plot, FILE* out, const place& p)
 	string trimmed = trim(p.denominazione);
 	string dat = "dat/" + trimmed + ".dat";
 
+	// empty case
+	if (p.days.size() == 0)
+		return;
+
 	f = fopen(dat.c_str(), "w");
 	if (!f) {
 		fprintf(stderr, "Failed opening %s\n", dat.c_str());
 		exit(EXIT_FAILURE);
 	}
 
-	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(f, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasiMedia3Giorni\n",
-			trimmed.c_str());
+	int casi_mean_map[CASI_COUNT] = { 0 };
+	int positivi_mean_map[POSITIVI_COUNT] = { 0 };
+	int casi_count;
+	int positivi_count;
+
+	if (p.days.rbegin()->totale_casi >= 10000) {
+		casi_count = 2;
+		positivi_count = 3;
+	} else if (p.days.rbegin()->totale_casi >= 1000) {
+		casi_count = 3;
+		positivi_count = 4;
 	} else {
-		fprintf(f, "%s\tRicoverati\tTerapiaIntensiva\tOspedalizzati\tIsolamentoDomiciliare\tPositivi\tNuoviPositivi\tGuariti\tDeceduti\tCasi\tTamponi\tNuoviCasiPercentuale\tNuoviCasi\tNuoviCasiMedia3Giorni\n",
-			trimmed.c_str());
+		casi_count = 3;
+		positivi_count = 5;
 	}
 
-	int mean[MEAN] = { 0 };
+	if (p.kind == KIND_PROVINCIALE) {
+		fprintf(f, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasiMedia2Giorni\n",
+			trimmed.c_str());
+	} else {
+		fprintf(f, "%s\tRicoverati\tTerapiaIntensiva\tOspedalizzati\tIsolamentoDomiciliare\tPositivi\tNuoviPositivi\tGuariti\tDeceduti\tCasi\tTamponi\tNuoviCasi\tNuoviCasi\tNuoviCasi%dGiorni\tNuoviPositivi%dGiorni\tNuoviPositivi%dGiorni\n",
+			trimmed.c_str(), casi_count, positivi_count, positivi_count);
+	}
+
 
 	day_set::iterator prev = p.days.end();
 	for (day_set::iterator i=p.days.begin();i!=p.days.end();++i) {
-		int delta = i->totale_casi - prev->totale_casi;
+		int casi_delta;
+
+		if (prev != p.days.end())
+			casi_delta = i->totale_casi - prev->totale_casi;
+		else
+			casi_delta = 0;
 
 		// free slot 0
-		for (int j=MEAN-1;j>0;--j)
-			mean[j] = mean[j-1];
-		mean[0] = delta;
-		double mean_val = 0;
-		for (int j=0;j<MEAN;++j)
-			mean_val += mean[j];
-		mean_val /= MEAN;
+		for (int j=casi_count-1;j>0;--j)
+			casi_mean_map[j] = casi_mean_map[j-1];
+		casi_mean_map[0] = casi_delta;
+		double casi_mean = 0;
+		for (int j=0;j<casi_count;++j)
+			casi_mean += casi_mean_map[j];
+		casi_mean /= casi_count;
 
-		double grow;
+		// compute mean
+		double casi_perc;
+		char casi_perc_str[16];
 		if (prev != p.days.end() && prev->totale_casi > 100) {
-			grow = 100.0 * i->totale_casi / prev->totale_casi - 100.0;
+			casi_perc = 100.0 * casi_delta / prev->totale_casi;
+			snprintf(casi_perc_str, sizeof(casi_perc_str), "%.1f", casi_perc);
 		} else {
-			grow = 0.0;
+			casi_perc = 0.0;
+			casi_perc_str[0] = 0;
+		}
+
+		int positivi_delta;
+		if (prev != p.days.end())
+			positivi_delta = i->totale_attualmente_positivi - prev->totale_attualmente_positivi;
+		else
+			positivi_delta = 0;
+
+		// free slot 0
+		for (int j=positivi_count-1;j>0;--j)
+			positivi_mean_map[j] = positivi_mean_map[j-1];
+		positivi_mean_map[0] = positivi_delta;
+		double positivi_mean = 0;
+		for (int j=0;j<positivi_count;++j)
+			positivi_mean += positivi_mean_map[j];
+		positivi_mean /= positivi_count;
+
+		// compute mean
+		double positivi_perc_mean;
+		char positivi_perc_mean_str[16];
+		if (prev != p.days.end() && prev->totale_attualmente_positivi > 100) {
+			positivi_perc_mean = 100.0 * positivi_mean / prev->totale_attualmente_positivi;
+			snprintf(positivi_perc_mean_str, sizeof(positivi_perc_mean_str), "%.1f", positivi_perc_mean);
+		} else {
+			positivi_perc_mean = 0.0;
+			positivi_perc_mean_str[0] = 0;
 		}
 
 		if (p.kind == KIND_PROVINCIALE) {
-			fprintf(f,"%s\t%d\t%.1f\t%d\t%.1f\n",
+			fprintf(f,"%s\t%d\t%s\t%d\t%.1f\n",
 				i->data.substr(5,5).c_str(),
 				i->totale_casi,
-				grow,
-				delta,
-				mean_val);
+				casi_perc_str,
+				casi_delta,
+				casi_mean);
 		} else {
-			fprintf(f,"%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%.1f\t%d\t%.1f\n",
+			fprintf(f,"%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%.1f\t%s\t%.1f\n",
 				i->data.substr(5,5).c_str(),
 				i->ricoverati_con_sintomi,
 				i->terapia_intensiva,
 				i->totale_ospedalizzati,
 				i->isolamento_domiciliare,
 				i->totale_attualmente_positivi,
-				i->nuovi_attualmente_positivi,
+				positivi_delta,
 				i->dimessi_guariti,
 				i->deceduti,
 				i->totale_casi,
 				i->tamponi,
-				grow,
-				delta,
-				mean_val);
+				casi_perc_str,
+				casi_delta,
+				casi_mean,
+				positivi_perc_mean_str,
+				positivi_mean);
 		}
 
 		prev = i;
@@ -334,6 +391,7 @@ void save_place(FILE* plot, FILE* out, const place& p)
 	string png_log = trimmed + "_log.png";
 	string png_stack = trimmed + "_stk.png";
 	string png_xy = trimmed + "_xy.png";
+	string png_xp = trimmed + "_xp.png";
 	if (p.kind == KIND_PROVINCIALE) {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
@@ -360,8 +418,10 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_stack.c_str());
 		// not significative with too few cases
-		if (prev->totale_casi >= 1000)
+		if (prev->totale_casi >= 1000) {
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
+			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xp.c_str());
+		}
 	}
 
 	if (p.kind == KIND_PROVINCIALE) {
@@ -371,6 +431,7 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		fprintf(plot, "gnuplot -c graph_rg_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
 		fprintf(plot, "gnuplot -c graph_rg_stack.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
 		fprintf(plot, "gnuplot -c graph_rg_xy.gp %s www/%s\n", dat.c_str(), png_xy.c_str());
+		fprintf(plot, "gnuplot -c graph_rg_xp.gp %s www/%s\n", dat.c_str(), png_xp.c_str());
 	}
 
 	fclose(f);

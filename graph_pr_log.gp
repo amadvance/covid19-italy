@@ -8,6 +8,7 @@ set key autotitle columnheader
 set auto y
 set auto y2
 set auto x
+set format y2 "%+.0f%%"
 set boxwidth 0.75
 set logscale y
 set y2range [-50:50]
@@ -26,4 +27,4 @@ plot ARG1 using 3 ls 3 axes x1y2 with boxes, '' using 2:xtic(1) ls 2
 # 2 Casi
 # 3 NuoviCasiPercentuale
 # 4 NuoviCasi
-# 5 NuoviCasi3Giorni
+# 5 NuoviCasiXGiorni
