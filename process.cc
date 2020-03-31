@@ -132,6 +132,7 @@ void load(int kind, place_set& bag, const char* file)
 			d.totale_ospedalizzati = itok();
 			d.isolamento_domiciliare = itok();
 			d.totale_attualmente_positivi = itok();
+			stok(); // variazione_totale_positivi,
 			d.nuovi_attualmente_positivi = itok();
 			d.dimessi_guariti = itok();
 			d.deceduti = itok();
