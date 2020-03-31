@@ -232,13 +232,13 @@ void table_stat(FILE* out, const place& p, int index)
 	}
 
 	switch (index) {
-	case 0 : msg = "Totale Casi"; break;
-	case 1 : msg = "Totale Attualmente Positivi"; break;
+	case 0 : msg = "Casi"; break;
+	case 1 : msg = "Positivi"; break;
 	case 2 : msg = "Tamponi"; break;
 	case 3 : msg = "Deceduti"; break;
-	case 4 : msg = "Dimessi Guariti"; break;
+	case 4 : msg = "Guariti"; break;
 	case 5 : msg = "Isolamento Domiciliare"; break;
-	case 6 : msg = "Ricoverati con Sintomi"; break;
+	case 6 : msg = "Ricoverati"; break;
 	case 7 : msg = "Terapia Intensiva"; break;
 	}
 
@@ -274,10 +274,10 @@ void save_place(FILE* plot, FILE* out, const place& p)
 	}
 
 	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(f, "%s\tTotaleCasi\tCrescitaPercentuale\tCrescitaMedia\n",
+		fprintf(f, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasiMedia3Giorni\n",
 			trimmed.c_str());
 	} else {
-		fprintf(f, "%s\tRicoverati\tTerapiaIntensiva\tTotaleOspedalizzati\tIsolamentoDomiciliare\tTotaleAttualmentePositivi\tNuoviAttualmentePositivi\tGuariti\tDeceduti\tTotaleCasi\tTamponi\tCrescitaPercentuale\tCrescita\tCrescitaMedia\n",
+		fprintf(f, "%s\tRicoverati\tTerapiaIntensiva\tOspedalizzati\tIsolamentoDomiciliare\tPositivi\tNuoviPositivi\tGuariti\tDeceduti\tCasi\tTamponi\tNuoviCasiPercentuale\tNuoviCasi\tNuoviCasiMedia3Giorni\n",
 			trimmed.c_str());
 	}
 
@@ -340,28 +340,28 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		table_date(out, p);
 		table_stat(out, p, 0);
 		fprintf(out, "</table>");
-		fprintf(out, "<img src=\"%s\">\n", png_log.c_str());
+		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
 		// not significative with too few cases
 		if (prev->totale_casi >= 1000)
-			fprintf(out, "<img src=\"%s\">\n", png_xy.c_str());
+			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
 	} else {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
 		table_date(out, p);
 		table_stat(out, p, 0);
-		table_stat(out, p, 1);
-		table_stat(out, p, 2);
 		table_stat(out, p, 3);
 		table_stat(out, p, 4);
+		table_stat(out, p, 1);
 		table_stat(out, p, 5);
 		table_stat(out, p, 6);
 		table_stat(out, p, 7);
+		table_stat(out, p, 2);
 		fprintf(out, "</table>");
-		fprintf(out, "<img src=\"%s\">\n", png_log.c_str());
-		fprintf(out, "<img src=\"%s\">\n", png_stack.c_str());
+		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
+		fprintf(out, "<center><img src=\"%s\"></center>\n", png_stack.c_str());
 		// not significative with too few cases
 		if (prev->totale_casi >= 1000)
-			fprintf(out, "<img src=\"%s\">\n", png_xy.c_str());
+			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
 	}
 
 	if (p.kind == KIND_PROVINCIALE) {

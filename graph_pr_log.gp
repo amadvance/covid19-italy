@@ -1,8 +1,8 @@
 reset
 set terminal png nocrop enhanced font arial 10 size 1000,400
 set output ARG2
-set ylabel "Totale Casi (scala logaritmica)"
-set y2label "Crescita (percentuale)"
+set ylabel "Casi (scala logaritmica)"
+set y2label "Nuovi Casi (percentuale)"
 set key noinvert reverse Left outside
 set key autotitle columnheader
 set auto y
@@ -23,7 +23,7 @@ set style line 3 lc rgb "blue"
 plot ARG1 using 3 ls 3 axes x1y2 with boxes, '' using 2:xtic(1) ls 2
 
 # TABLE INDEX
-# 2 Totale-Casi
-# 3 Crescita-Percentuale
-# 4 Crescita
-# 5 Crescita-Media
+# 2 Casi
+# 3 NuoviCasiPercentuale
+# 4 NuoviCasi
+# 5 NuoviCasi3Giorni

@@ -1,8 +1,8 @@
 reset
 set terminal png nocrop enhanced font arial 10 size 1000,400
 set output ARG2
-set ylabel "Crescita (scala logaritmica)"
-set xlabel "Totale Casi (scala logaritmica)"
+set ylabel "Nuovi Casi Media 3 Giorni (scala logaritmica)"
+set xlabel "Casi (scala logaritmica)"
 set key noinvert reverse Left outside
 set key autotitle columnheader
 set auto y
@@ -22,16 +22,16 @@ plot ARG1 using 10:14 ls 1
 
 # TABLE INDEX
 # 2 Ricoverati
-# 3 Terapia-Intensiva
-# 4 Totale-Ospedalizzati
-# 5 Isolamento-Domiciliare
-# 6 Totale-Attualmente-Positivi
-# 7 Nuovi-Attualmente-Positivi
+# 3 TerapiaIntensiva
+# 4 Ospedalizzati
+# 5 IsolamentoDomiciliare
+# 6 Positivi
+# 7 NuoviPositivi
 # 8 Guariti
 # 9 Deceduti
-# 10 Totale-Casi
+# 10 Casi
 # 11 Tamponi
-# 12 Crescita-Percentuale
-# 13 Crescita
-# 14 Crescita-Media
+# 12 NuoviCasiPercentuale
+# 13 NuoviCasi
+# 14 NuoviCasi3Giorni
 
