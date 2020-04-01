@@ -46,6 +46,7 @@ typedef set<day> day_set;
 
 struct place {
 	string denominazione;
+	string denominazione_regione;
 	int kind;
 	mutable day_set days;
 
@@ -109,7 +110,7 @@ void load(int kind, place_set& bag, const char* file)
 		if (kind == KIND_PROVINCIALE) {
 			stok(); // stato
 			stok(); // codice_regione
-			stok(); // denominazione_regione
+			p.denominazione_regione = stok();
 			stok(); // codice_provincia
 			p.denominazione = stok();
 			stok(); // sigla_provincia
@@ -398,10 +399,28 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		table_date(out, p);
 		table_stat(out, p, 0);
 		fprintf(out, "</table>");
+		fprintf(out, "<p>");
+		fprintf(out,
+"Questo grafico mostra il progredire del numero di casi dell'epidemia e della sua variazione giornaliera. "
+"La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in percentuale."
+		);
+		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
 		// not significative with too few cases
-		if (prev->totale_casi >= 1000)
+		if (prev->totale_casi >= 1000) {
+			fprintf(out, "<p>");
+			fprintf(out,
+"Questo grafico mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. "
+"Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza "
+"del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di "
+"casi e non dal tempo. "
+"Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata "
+"da una linea retta crescente. "
+"Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero."
+				);
+			fprintf(out, "</p>\n");
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
+}
 	} else {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
 		fprintf(out, "<table class=\"dati\">");
@@ -415,11 +434,57 @@ void save_place(FILE* plot, FILE* out, const place& p)
 		table_stat(out, p, 7);
 		table_stat(out, p, 2);
 		fprintf(out, "</table>");
-		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
+		fprintf(out, "<p>");
+		fprintf(out,
+"Questo grafico mostra il progredire dell'epidemia nelle differenti categorie di contagiati. "
+"La scala lineare permette una facile comparazione visiva dei valori, ma rende difficilmente "
+"intuibile un cambio di tendenza dell'epidemia. "
+"Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla "
+"somma di tutti gli altri valori visuallizati. "
+"Il numero di <i>Positivi </i> &eacute; rappresentato dalla somma di <i>Isolamento Domiciliale, "
+"Ricoverati</i> e <i>Terapia Intensiva</i>. "
+		);
+		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_stack.c_str());
+
+		fprintf(out, "<p>");
+		fprintf(out,
+"Questo grafico mostra il progredire dell'epidemia nel tempo con una scala logarimica. "
+"Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. "
+"Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. "
+"I valori di <i>Casi, Guariti</i> e <i>Deceduti</i> sono monotoni crescenti, e non diminuiscono mai. "
+"Invece i valori di <i>Positivi, Isolamento Domiciale, Ricoverati</i> e <i>Terapia Intensiva</i> "
+"con il tempo scenderann&ograve; fino a zero."
+		);
+		fprintf(out, "</p>\n");
+		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
+
 		// not significative with too few cases
 		if (prev->totale_casi >= 1000) {
+			fprintf(out, "<p>");
+			fprintf(out,
+"Questo grafico mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. "
+"Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza "
+"del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di "
+"casi e non dal tempo. "
+"Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata "
+"da una linea retta crescente. "
+"Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero."
+				);
+			fprintf(out, "</p>\n");
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
+
+			fprintf(out, "<p>");
+			fprintf(out,
+"Questo grafico mostra la variazione del numero di Positivi in base al numero di Positivi stessi. "
+"Come il grafico precedente, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia. "
+"L'uso del numero di <i>Positivi</i> invece che dei <i>Casi</i> &eacute; una migliore misura della capacit&agrave; "
+"di diffusione dell'epidemia dato che i <i>Guariti</i> ed <i>Deceduti</i> non sono da considerare contagiosi. "
+"Una crescita esponenziale &eacute; rappresentata da una linea retta orizzontale. "
+"Il rallentamendo dell'epidemia si nota dalla curva che scende ed inizia a tornare indietro, "
+"in quanto il numero di <i>Positivi</i> diminuisce. "
+			);
+			fprintf(out, "</p>\n");
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xp.c_str());
 		}
 	}
@@ -451,22 +516,7 @@ void save(place_set& bag)
 		exit(EXIT_FAILURE);
 	}
 
-	FILE* regioni = fopen("www/regioni.html", "w");
-	if (!regioni) {
-		fprintf(stderr, "Failed opening regioni.html\n");
-		exit(EXIT_FAILURE);
-	}
-
-	FILE* province = fopen("www/province.html", "w");
-	if (!province) {
-		fprintf(stderr, "Failed opening province.html\n");
-		exit(EXIT_FAILURE);
-	}
-
 	fprintf(plot, "cat header.html www/nazione.html footer.html > www/index.html\n");
-
-	html_header(regioni, "Pandemia di COVID-19 in Italia per regioni");
-	html_header(province, "Pandemia di COVID-19 in Italia per province");
 
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
 		if (i->kind == KIND_NAZIONALE) {
@@ -480,10 +530,21 @@ void save(place_set& bag)
 		if (i->kind == KIND_REGIONALE) {
 			string trimmed = trim(i->denominazione);
 			fprintf(nazione, "<span style=\"font-size:%u%%\">", i->font_size());
-			fprintf(nazione, "<a href=\"regioni.html#%s\">%s</a>",
+			fprintf(nazione, "<a href=\"%s.html\">%s</a>",
 				trimmed.c_str(), i->denominazione.c_str());
 			fprintf(nazione, "</span>, \n");
-			save_place(plot, regioni, *i);
+
+			// save the regione data
+			string file = "www/" + trimmed + ".html";
+			FILE* out = fopen(file.c_str(), "w");
+			if (!out) {
+				fprintf(stderr, "Failed opening %s\n", file.c_str());
+				exit(EXIT_FAILURE);
+			}
+			string title = "Pandemia di COVID-19 in " + i->denominazione;
+			html_header(out, title.c_str());
+			save_place(plot, out, *i);
+			fclose(out);
 		}
 	}
 
@@ -492,21 +553,41 @@ void save(place_set& bag)
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
 		if (i->kind == KIND_PROVINCIALE) {
 			string trimmed = trim(i->denominazione);
+			string trimmed_regione = trim(i->denominazione_regione);
 			fprintf(nazione, "<span style=\"font-size:%u%%\">", i->font_size());
-			fprintf(nazione, "<a href=\"province.html#%s\">%s</a>",
-				trimmed.c_str(), i->denominazione.c_str());
+			fprintf(nazione, "<a href=\"%s.html#%s\">%s</a>",
+				trimmed_regione.c_str(), trimmed.c_str(), i->denominazione.c_str());
 			fprintf(nazione, "</span>, \n");
-			save_place(plot, province, *i);
+
+			// save the provincia data
+			string file = "www/" + trimmed_regione + ".html";
+			FILE* out = fopen(file.c_str(), "a");
+			if (!out) {
+				fprintf(stderr, "Failed opening %s\n", file.c_str());
+				exit(EXIT_FAILURE);
+			}
+			save_place(plot, out, *i);
+			fclose(out);
 		}
 	}
 
-	html_footer(regioni);
-	html_footer(province);
+	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+		if (i->kind == KIND_REGIONALE) {
+			// footer for the regione data
+			string trimmed = trim(i->denominazione);
+			string file = "www/" + trimmed + ".html";
+			FILE* out = fopen(file.c_str(), "a");
+			if (!out) {
+				fprintf(stderr, "Failed opening %s\n", file.c_str());
+				exit(EXIT_FAILURE);
+			}
+			html_footer(out);
+			fclose(out);
+		}
+	}
 
 	fclose(plot);
 	fclose(nazione);
-	fclose(regioni);
-	fclose(province);
 }
 
 int main(void)

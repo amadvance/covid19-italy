@@ -1,9 +1,9 @@
 reset
-set terminal png nocrop enhanced font arial 10 size 1000,400
+set terminal png nocrop enhanced font arial 10 size 900,500
 set output ARG2
 set ylabel "Casi (scala logaritmica)"
 set y2label "Nuovi Casi (percentuale)"
-set key noinvert reverse Left outside
+set key noinvert reverse right bottom inside Left
 set key autotitle columnheader
 set auto y
 set auto y2

@@ -1,9 +1,9 @@
 reset
-set terminal png nocrop enhanced font arial 10 size 940,400
+set terminal png nocrop enhanced font arial 10 size 900,500
 set output ARG2
 set ylabel "Nuovi Casi media ultimi giorni (scala logaritmica)"
 set xlabel "Casi (scala logaritmica)"
-set key noinvert reverse Left outside
+set key noinvert reverse left top inside Left
 set key autotitle columnheader
 set auto y
 set auto x
