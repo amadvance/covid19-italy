@@ -524,7 +524,7 @@ void save(place_set& bag)
 		}
 	}
 
-	fprintf(nazione, "<h1>Regioni</h1>\n");
+	fprintf(nazione, "<h1>Regioni</h1><p class=\"lista\">\n");
 
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
 		if (i->kind == KIND_REGIONALE) {
@@ -548,7 +548,7 @@ void save(place_set& bag)
 		}
 	}
 
-	fprintf(nazione, "<h1>Province</h1>\n");
+	fprintf(nazione, "</p><h1>Province</h1><p class=\"lista\">\n");
 
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
 		if (i->kind == KIND_PROVINCIALE) {
@@ -570,6 +570,8 @@ void save(place_set& bag)
 			fclose(out);
 		}
 	}
+
+	fprintf(nazione, "</p>\n");
 
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
 		if (i->kind == KIND_REGIONALE) {
