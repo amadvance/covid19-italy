@@ -528,7 +528,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(f_dat, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasiMedia2Giorni\n",
+		fprintf(f_dat, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasi\tNuoviCasiMedia2Giorni\n",
 			trimmed.c_str());
 	} else {
 		fprintf(f_dat, "%s\tRicoverati\tTerapiaIntensiva\tOspedalizzati\tIsolamentoDomiciliare\tPositivi\tNuoviPositivi\tGuariti\tDeceduti\tCasi\tTamponi\tNuoviCasi\tNuoviCasi\tNuoviCasi%dGiorni\tNuoviPositivi%dGiorni\tNuoviPositivi%dGiorni\n",
@@ -682,8 +682,8 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	if (p.kind == KIND_PROVINCIALE) {
 		fprintf(out, "<p>");
 		fprintf(out,
-"Questo grafico mostra il progredire del numero di casi dell'epidemia e della sua variazione giornaliera. "
-"La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in percentuale."
+"Questo grafico mostra il progredire del numero di casi dell'epidemia. "
+"La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare."
 		);
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
@@ -771,7 +771,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 		fprintf(out, "<p>");
 		fprintf(out,
-"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine stimato al <b>%s</b> "
+"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b> "
 		, p.ending.c_str());
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fid.c_str());

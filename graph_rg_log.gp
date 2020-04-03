@@ -12,14 +12,14 @@ set xtics rotate 90 mirror
 set ytics auto
 set grid ytics
 set style data lines
-set style line 3 lw 2 lc rgb "red"
-set style line 2 lw 2 lc rgb "gold"
-set style line 5 lw 2 lc rgb "green"
-set style line 8 lw 2 lc rgb "gray"
-set style line 9 lw 2 lc rgb "black"
-set style line 6 lw 2 lc rgb "#A52A2A"
-set style line 10 lw 2 lc rgb "blue"
-set style line 11 lw 2 lc rgb "magenta"
+set style line 3 lw 3 lc rgb "red"
+set style line 2 lw 3 lc rgb "gold"
+set style line 5 lw 3 lc rgb "green"
+set style line 8 lw 3 lc rgb "gray"
+set style line 9 lw 3 lc rgb "black"
+set style line 6 lw 3 lc rgb "#A52A2A"
+set style line 10 lw 3 lc rgb "blue"
+set style line 11 lw 3 lc rgb "magenta"
 plot ARG1 using 3:xtic(1) ls 3 \
 , '' using 2 ls 2 \
 , '' using 5 ls 5 \

@@ -18,7 +18,7 @@ set grid xtics
 set grid mytics
 set grid mxtics
 set style data lines
-set style line 1 lw 2 lc rgb "#A52A2A"
+set style line 1 lw 3 lc rgb "#A52A2A"
 plot ARG1 using 6:15 ls 1
 
 # TABLE INDEX
