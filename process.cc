@@ -356,7 +356,11 @@ void html_header(FILE* f, const char* title)
 	fprintf(f, "</script>\n");
 
 	fprintf(f, "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-	fprintf(f, "<link rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"favicon.ico\"/>\n");
+	fprintf(f, "<!--\n");
+	fprintf(f, "Icon from: https://www.iconfinder.com/iconsets/covid-19-1\n");
+	fprintf(f, "License Creative Commons (Attribution 3.0 Unported)\n");
+	fprintf(f, "-->\n");
+	fprintf(f, "<link rel=\"icon\" type=\"image/png\" sizes=\"256x256\" href=\"favicon.png\">\n");
 	fprintf(f, "<title>%s</title>\n", title);
 	fprintf(f, "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />\n");
 	fprintf(f, "<body>\n");
