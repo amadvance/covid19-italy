@@ -771,7 +771,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 		fprintf(out, "<p>");
 		fprintf(out,
-"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b> "
+"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b>. "
 		, p.ending.c_str());
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fid.c_str());
