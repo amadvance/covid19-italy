@@ -1,5 +1,5 @@
 reset
-set terminal png nocrop enhanced font arial 10 size 1000,500
+set terminal png nocrop enhanced font arial 10 size 1100,500
 set output ARG2
 set ylabel "Nuovi Casi (scala lineare)"
 set key noinvert reverse right top inside Left

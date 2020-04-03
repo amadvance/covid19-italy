@@ -1,5 +1,5 @@
 reset
-set terminal png nocrop enhanced font arial 10 size 1000,500
+set terminal png nocrop enhanced font arial 10 size 1100,500
 set output ARG2
 set ylabel "Persone (scala logaritmica)"
 set key noinvert reverse left top inside Left

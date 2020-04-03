@@ -763,7 +763,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 "Questo grafico mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
 "si avvicina ai dati fino ad oggi disponibili. "
 "E' utilizzato lo strumento di calcolo <a href=\"https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19\">fitVirusCOVID19</a> "
-"che stima un <b>R0 di %g</b> ed un totale finale di contagiati di <b>%d</b> (con una deviazione standard di %d). "
+"che stima un <b>R<sub>0</sub> di %g</b> ed un totale finale di contagiati di <b>%d</b> (con una deviazione standard di %d). "
 		, p.r0, p.limite_casi, p.rmse);
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fit.c_str());
