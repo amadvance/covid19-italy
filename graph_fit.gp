@@ -22,4 +22,5 @@ plot ARG1 using 4:xtic(1) ls 4 \
 # 3 NuoviCasi
 # 4 CasiFit
 # 5 NuoviCasiFit
+# 6 NuoviCasiXGiorni
 

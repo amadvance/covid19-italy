@@ -22,4 +22,5 @@ plot ARG1 using 3 ls 3 with boxes, '' using 5:xtic(1) ls 5
 # 3 NuoviCasi
 # 4 CasiFit
 # 5 NuoviCasiFit
+# 6 NuoviCasiXGiorni
 

@@ -17,11 +17,14 @@ set grid xtics
 set grid mytics
 set grid mxtics
 set style data lines
-set style line 1 lw 3 lc rgb "blue"
-plot ARG1 using 2:5 ls 1
+set style line 2 lw 3 lc rgb "blue"
+set style line 4 lw 3 lc rgb "#FF4500"
+plot ARG1 using 4:5 ls 4, '' using 2:6 ls 2
 
 # TABLE INDEX
 # 2 Casi
-# 3 NuoviCasiPercentuale
-# 4 NuoviCasi
-# 5 NuoviCasiXGiorni
+# 3 NuoviCasi
+# 4 CasiFit
+# 5 NuoviCasiFit
+# 6 NuoviCasiXGiorni
+

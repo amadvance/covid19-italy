@@ -534,20 +534,26 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		fprintf(f_dat, "%s\tRicoverati\tTerapiaIntensiva\tOspedalizzati\tIsolamentoDomiciliare\tPositivi\tNuoviPositivi\tGuariti\tDeceduti\tCasi\tTamponi\tNuoviCasi\tNuoviCasi\tNuoviCasi%dGiorni\tNuoviPositivi%dGiorni\tNuoviPositivi%dGiorni\n",
 			trimmed.c_str(), casi_count, positivi_count, positivi_count);
 	}
-	
-	fprintf(f_fit, "%s\tCasi\tNuoviCasi\tStimaCasi\tStimaNuoviCasi\n", trimmed.c_str());
+
+	fprintf(f_fit, "%s\tCasi\tNuoviCasi\tStimaCasi\tStimaNuoviCasi\tNuoviCasi%dGiorni\n", trimmed.c_str(), casi_count);
 
 	day_set::iterator prev = p.days.end();
 	for (day_set::iterator i=p.days.begin();i!=p.days.end();++i) {
 		int casi_delta;
 		int casi_fit_delta;
+		char casi_delta_str[16];
+		char casi_fit_delta_str[16];
 
 		if (prev != p.days.end()) {
 			casi_delta = i->totale_casi - prev->totale_casi;
 			casi_fit_delta = i->totale_casi_fit - prev->totale_casi_fit;
+			sprintf(casi_delta_str, "%d", casi_delta);
+			sprintf(casi_fit_delta_str, "%d", casi_fit_delta);
 		} else {
 			casi_delta = 0;
 			casi_fit_delta = 0;
+			sprintf(casi_delta_str, "-");
+			sprintf(casi_fit_delta_str, "-");
 		}
 
 		// free slot 0
@@ -571,10 +577,14 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		}
 
 		int positivi_delta;
-		if (prev != p.days.end())
+		char positivi_delta_str[16];
+		if (prev != p.days.end()) {
 			positivi_delta = i->totale_attualmente_positivi - prev->totale_attualmente_positivi;
-		else
+			sprintf(positivi_delta_str, "%d", positivi_delta);
+		} else {
 			positivi_delta = 0;
+			sprintf(positivi_delta_str, "-");
+        }
 
 		// free slot 0
 		for (int j=positivi_count-1;j>0;--j)
@@ -590,36 +600,36 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		char positivi_perc_mean_str[16];
 		if (prev != p.days.end() && prev->totale_attualmente_positivi > 100) {
 			positivi_perc_mean = 100.0 * positivi_mean / prev->totale_attualmente_positivi;
-			snprintf(positivi_perc_mean_str, sizeof(positivi_perc_mean_str), "%.1f", positivi_perc_mean);
+			sprintf(positivi_perc_mean_str, "%.1f", positivi_perc_mean);
 		} else {
 			positivi_perc_mean = 0.0;
-			positivi_perc_mean_str[0] = 0;
+			sprintf(positivi_perc_mean_str, "-");
 		}
 
 		// dat
 		if (i->totale_casi != 0) {
 			if (p.kind == KIND_PROVINCIALE) {
-				fprintf(f_dat,"%s\t%d\t%s\t%d\t%.1f\n",
+				fprintf(f_dat,"%s\t%d\t%s\t%s\t%.1f\n",
 					i->data.substr(5,5).c_str(),
 					i->totale_casi,
 					casi_perc_str,
-					casi_delta,
+					casi_delta_str,
 					casi_mean);
 			} else {
-				fprintf(f_dat,"%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%.1f\t%s\t%.1f\n",
+				fprintf(f_dat,"%s\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%d\t%s\t%s\t%.1f\t%s\t%.1f\n",
 					i->data.substr(5,5).c_str(),
 					i->ricoverati_con_sintomi,
 					i->terapia_intensiva,
 					i->totale_ospedalizzati,
 					i->isolamento_domiciliare,
 					i->totale_attualmente_positivi,
-					positivi_delta,
+					positivi_delta_str,
 					i->dimessi_guariti,
 					i->deceduti,
 					i->totale_casi,
 					i->tamponi,
 					casi_perc_str,
-					casi_delta,
+					casi_delta_str,
 					casi_mean,
 					positivi_perc_mean_str,
 					positivi_mean);
@@ -628,17 +638,19 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 		// fit
 		if (i->totale_casi != 0) {
-			fprintf(f_fit,"%s\t%d\t%d\t%d\t%d\n",
+			fprintf(f_fit,"%s\t%d\t%s\t%d\t%s\t%g\n",
 				i->data.substr(5,5).c_str(),
 				i->totale_casi,
-				casi_delta,
+				casi_delta_str,
 				i->totale_casi_fit,
-				casi_fit_delta);
+				casi_fit_delta_str,
+				casi_mean);
 		} else {
-			fprintf(f_fit,"%s\t-\t-\t%d\t%d\n",
+			fprintf(f_fit,"%s\t-\t-\t%d\t%s\t%g\n",
 				i->data.substr(5,5).c_str(),
 				i->totale_casi_fit,
-				casi_fit_delta);
+				casi_fit_delta_str,
+				casi_mean);
 		}
 
 		if (i->totale_casi != 0) {
@@ -716,7 +728,31 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
 		fprintf(plot, "gnuplot -c graph_rg_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
 	}
-		
+
+	// not significative with too few cases
+	if (p.max_casi >= 2500) {
+		fprintf(out, "<p>");
+		fprintf(out,
+"Questo grafico mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
+"si avvicina ai dati fino ad oggi disponibili. "
+"E' utilizzato lo strumento di calcolo <a href=\"https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19\">fitVirusCOVID19</a> "
+"che stima un <b>R<sub>0</sub> di %g</b> ed un totale finale di contagiati di <b>%d</b> (con una deviazione standard di %d). "
+		, p.r0, p.limite_casi, p.rmse);
+		fprintf(out, "</p>\n");
+		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fit.c_str());
+		fprintf(plot, "gnuplot -c graph_fit.gp %s www/%s\n", fit.c_str(), png_fit.c_str());
+
+		fprintf(out, "<p>");
+		fprintf(out,
+"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b>. "
+		, p.ending.c_str());
+		fprintf(out, "</p>\n");
+		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fid.c_str());
+		fprintf(plot, "gnuplot -c graph_fid.gp %s www/%s\n", fit.c_str(), png_fid.c_str());
+
+		save_analyze(analyze, trimmed);
+	}
+
 	// not significative with too few cases
 	if (p.max_casi >= 1000) {
 		fprintf(out, "<p>");
@@ -732,10 +768,10 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		fprintf(out, "</p>\n");
 		if (p.kind == KIND_PROVINCIALE) {
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
-			fprintf(plot, "gnuplot -c graph_pr_xy.gp %s www/%s\n", dat.c_str(), png_xy.c_str());
+			fprintf(plot, "gnuplot -c graph_pr_xy.gp %s www/%s\n", fit.c_str(), png_xy.c_str());
 		} else {
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
-			fprintf(plot, "gnuplot -c graph_rg_xy.gp %s www/%s\n", dat.c_str(), png_xy.c_str());
+			fprintf(plot, "gnuplot -c graph_rg_xy.gp %s www/%s\n", fit.c_str(), png_xy.c_str());
 		}
 	}
 
@@ -760,32 +796,11 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	if (p.max_casi >= 2500) {
 		fprintf(out, "<p>");
 		fprintf(out,
-"Questo grafico mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
-"si avvicina ai dati fino ad oggi disponibili. "
-"E' utilizzato lo strumento di calcolo <a href=\"https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19\">fitVirusCOVID19</a> "
-"che stima un <b>R<sub>0</sub> di %g</b> ed un totale finale di contagiati di <b>%d</b> (con una deviazione standard di %d). "
-		, p.r0, p.limite_casi, p.rmse);
-		fprintf(out, "</p>\n");
-		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fit.c_str());
-		fprintf(plot, "gnuplot -c graph_fit.gp %s www/%s\n", fit.c_str(), png_fit.c_str());
-
-		fprintf(out, "<p>");
-		fprintf(out,
-"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b>. "
-		, p.ending.c_str());
-		fprintf(out, "</p>\n");
-		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fid.c_str());
-		fprintf(plot, "gnuplot -c graph_fid.gp %s www/%s\n", fit.c_str(), png_fid.c_str());
-
-		fprintf(out, "<p>");
-		fprintf(out,
 "DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. "
 "In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai "
 "(casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. "
 		);
 		fprintf(out, "</p>\n");
-
-		save_analyze(analyze, trimmed);
 	}
 
 	fprintf(f_get, "]';\n");
