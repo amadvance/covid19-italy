@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       varese
+  Day                           35
+Estimated the SIR model parameters
+  Contact rate (beta)           0.984 (1/day)
+  Removal rate (gamma)          0.844 (1/day)
+  Population size (N)           6684
+  Initial number of cases (I0)  2
+Basic reproduction number (R0)  1.165
+Critical number of susceptible  6684
+Final state
+  Final number of cases         1815
+  Final number of susceptibles  4868
+Daily forecast for 30-Mar-2020
+  Total                         1079
+  Increase                      60
+Estimated logistic model parameters
+  Epidemic size (K)             1660 (cases)
+  Epidemic rate (r)             0.139482 (1/day)
+  Initial doubling time         5 (day)
+Estimated duration (days)
+  Turning day                   32
+  Acceleration   phase          14 (days)
+  Deceleration phase            15 (days)
+  Total duration                29 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         13-Mar-2020
+  Turning point                 27-Mar-2020
+  Start of steady growth        11-Apr-2020
+  Start of ending phase         10-May-2020
+Statistics
+  Number of observations        35
+  Degrees of freedom            31
+  Root Mean Squared Error       32.4136
+  R-Squared                     0.991
+  Adjusted R-Squared            0.989
+  F-statistics vs. zero model   1069.63
+  p-value                       2.28471e-31
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      180.471
+  Exit condition (1=OK)         0

@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       rimini
+  Day                           38
+Estimated the SIR model parameters
+  Contact rate (beta)           1.05 (1/day)
+  Removal rate (gamma)          0.861 (1/day)
+  Population size (N)           4846
+  Initial number of cases (I0)  2
+Basic reproduction number (R0)  1.219
+Critical number of susceptible  4847
+Final state
+  Final number of cases         1645
+  Final number of susceptibles  3201
+Daily forecast for 02-Apr-2020
+  Total                         1502
+  Increase                      24
+Estimated logistic model parameters
+  Epidemic size (K)             1480 (cases)
+  Epidemic rate (r)             0.189203 (1/day)
+  Initial doubling time         3.7 (day)
+Estimated duration (days)
+  Turning day                   24
+  Acceleration   phase          10 (days)
+  Deceleration phase            11 (days)
+  Total duration                22 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         09-Mar-2020
+  Turning point                 19-Mar-2020
+  Start of steady growth        31-Mar-2020
+  Start of ending phase         21-Apr-2020
+Statistics
+  Number of observations        38
+  Degrees of freedom            34
+  Root Mean Squared Error       20.9426
+  R-Squared                     0.999
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   7741.81
+  p-value                       3.01812e-48
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      122.114
+  Exit condition (1=OK)         0

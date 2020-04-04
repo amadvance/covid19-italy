@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       reggio_nellemilia
+  Day                           36
+Estimated the SIR model parameters
+  Contact rate (beta)           0.513 (1/day)
+  Removal rate (gamma)          0.255 (1/day)
+  Population size (N)           3854
+  Initial number of cases (I0)  2
+Basic reproduction number (R0)  2.014
+Critical number of susceptible  3854
+Final state
+  Final number of cases         3087
+  Final number of susceptibles  766
+Daily forecast for 31-Mar-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2582 (cases)
+  Epidemic rate (r)             0.258523 (1/day)
+  Initial doubling time         2.7 (day)
+Estimated duration (days)
+  Turning day                   25
+  Acceleration   phase          8 (days)
+  Deceleration phase            10 (days)
+  Total duration                18 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         12-Mar-2020
+  Turning point                 20-Mar-2020
+  Start of steady growth        30-Mar-2020
+  Start of ending phase         16-Apr-2020
+Statistics
+  Number of observations        36
+  Degrees of freedom            32
+  Root Mean Squared Error       65.9204
+  R-Squared                     0.996
+  Adjusted R-Squared            0.995
+  F-statistics vs. zero model   2388.31
+  p-value                       1.07549e-37
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      372.906
+  Exit condition (1=OK)         1

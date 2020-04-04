@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       bologna
+  Day                           33
+Estimated the SIR model parameters
+  Contact rate (beta)           0.997 (1/day)
+  Removal rate (gamma)          0.8 (1/day)
+  Population size (N)           8545
+  Initial number of cases (I0)  3
+Basic reproduction number (R0)  1.246
+Critical number of susceptible  8546
+Final state
+  Final number of cases         3151
+  Final number of susceptibles  5393
+Daily forecast for 28-Mar-2020
+  Total                         2343
+  Increase                      113
+Estimated logistic model parameters
+  Epidemic size (K)             2823 (cases)
+  Epidemic rate (r)             0.197233 (1/day)
+  Initial doubling time         3.5 (day)
+Estimated duration (days)
+  Turning day                   27
+  Acceleration   phase          10 (days)
+  Deceleration phase            11 (days)
+  Total duration                21 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         11-Mar-2020
+  Turning point                 22-Mar-2020
+  Start of steady growth        02-Apr-2020
+  Start of ending phase         23-Apr-2020
+Statistics
+  Number of observations        33
+  Degrees of freedom            29
+  Root Mean Squared Error       22.6184
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   10726.5
+  p-value                       3.04192e-44
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      121.803
+  Exit condition (1=OK)         0

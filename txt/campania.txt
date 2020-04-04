@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       campania
+  Day                           37
+Estimated the SIR model parameters
+  Contact rate (beta)           0.218 (1/day)
+  Removal rate (gamma)          0.068 (1/day)
+  Population size (N)           5051
+  Initial number of cases (I0)  19
+Basic reproduction number (R0)  3.218
+Critical number of susceptible  5052
+Final state
+  Final number of cases         4821
+  Final number of susceptibles  230
+Daily forecast for 01-Apr-2020
+  Total                         2746
+  Increase                      69
+Estimated logistic model parameters
+  Epidemic size (K)             4126 (cases)
+  Epidemic rate (r)             0.150748 (1/day)
+  Initial doubling time         4.6 (day)
+Estimated duration (days)
+  Turning day                   33
+  Acceleration   phase          14 (days)
+  Deceleration phase            16 (days)
+  Total duration                30 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         15-Mar-2020
+  Turning point                 28-Mar-2020
+  Start of steady growth        14-Apr-2020
+  Start of ending phase         14-May-2020
+Statistics
+  Number of observations        37
+  Degrees of freedom            33
+  Root Mean Squared Error       42.6593
+  R-Squared                     0.997
+  Adjusted R-Squared            0.997
+  F-statistics vs. zero model   4118.73
+  p-value                       1.55094e-42
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      245.06
+  Exit condition (1=OK)         0
