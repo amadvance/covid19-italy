@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       brescia
-  Day                           39
+  Day                           40
 Estimated the SIR model parameters
-  Contact rate (beta)           0.7 (1/day)
-  Removal rate (gamma)          0.493 (1/day)
-  Population size (N)           18416
-  Initial number of cases (I0)  23
-Basic reproduction number (R0)  1.417
-Critical number of susceptible  18417
+  Contact rate (beta)           0.492 (1/day)
+  Removal rate (gamma)          0.284 (1/day)
+  Population size (N)           14108
+  Initial number of cases (I0)  33
+Basic reproduction number (R0)  1.725
+Critical number of susceptible  14109
 Final state
-  Final number of cases         9718
-  Final number of susceptibles  8698
-Daily forecast for 03-Apr-2020
+  Final number of cases         9949
+  Final number of susceptibles  4158
+Daily forecast for 04-Apr-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             8397 (cases)
-  Epidemic rate (r)             0.206657 (1/day)
-  Initial doubling time         3.4 (day)
+  Epidemic size (K)             8367 (cases)
+  Epidemic rate (r)             0.207257 (1/day)
+  Initial doubling time         3.3 (day)
 Estimated duration (days)
   Turning day                   23
   Acceleration   phase          10 (days)
-  Deceleration phase            11 (days)
+  Deceleration phase            12 (days)
   Total duration                21 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
   Start of acceleration         08-Mar-2020
   Turning point                 18-Mar-2020
-  Start of steady growth        29-Mar-2020
-  Start of ending phase         19-Apr-2020
+  Start of steady growth        30-Mar-2020
+  Start of ending phase         20-Apr-2020
 Statistics
-  Number of observations        39
-  Degrees of freedom            35
-  Root Mean Squared Error       123.11
+  Number of observations        40
+  Degrees of freedom            36
+  Root Mean Squared Error       123.805
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   9086.31
-  p-value                       1.18271e-50
+  F-statistics vs. zero model   9642.86
+  p-value                       2.44656e-52
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      728.341
-  Exit condition (1=OK)         0
+  Objective function value      742.837
+  Exit condition (1=OK)         1
