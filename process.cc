@@ -373,7 +373,7 @@ void html_footer(FILE* f)
 	fprintf(f, "</html>\n");
 }
 
-#define LAST 6
+#define LAST 5
 
 void table_date(FILE* out, const place& p)
 {
@@ -431,8 +431,9 @@ void table_stat(FILE* out, const place& p, int index)
 	for (int i=0;i<LAST - 1;++i) {
 		if (past[i+1]) {
 			double grow;
+			int delta = past[i] - past[i+1];
 			grow = 100.0 * past[i] / past[i+1] - 100.0;
-			fprintf(out, "<td>%d (%+.1f%%)</td>\n", past[i], grow);
+			fprintf(out, "<td>%d (%+.1f%%, %+d)</td>\n", past[i], grow, delta);
 		} else {
 			fprintf(out, "<td>%d</td>\n", past[i]);
 		}
