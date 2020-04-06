@@ -1,22 +1,22 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       lombardia
-  Day                           42
+  Day                           43
 Estimated the SIR model parameters
-  Contact rate (beta)           0.553 (1/day)
-  Removal rate (gamma)          0.387 (1/day)
-  Population size (N)           106596
-  Initial number of cases (I0)  183
-Basic reproduction number (R0)  1.426
-Critical number of susceptible  106596
+  Contact rate (beta)           0.49 (1/day)
+  Removal rate (gamma)          0.325 (1/day)
+  Population size (N)           98184
+  Initial number of cases (I0)  209
+Basic reproduction number (R0)  1.504
+Critical number of susceptible  98184
 Final state
-  Final number of cases         57028
-  Final number of susceptibles  49567
-Daily forecast for 06-Apr-2020
+  Final number of cases         57881
+  Final number of susceptibles  40303
+Daily forecast for 07-Apr-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             49164 (cases)
-  Epidemic rate (r)             0.165615 (1/day)
+  Epidemic size (K)             49423 (cases)
+  Epidemic rate (r)             0.164778 (1/day)
   Initial doubling time         4.2 (day)
 Estimated duration (days)
   Turning day                   27
@@ -28,17 +28,17 @@ Estimated datums
   Start of acceleration         10-Mar-2020
   Turning point                 22-Mar-2020
   Start of steady growth        05-Apr-2020
-  Start of ending phase         01-May-2020
+  Start of ending phase         02-May-2020
 Statistics
-  Number of observations        42
-  Degrees of freedom            38
-  Root Mean Squared Error       429.6
+  Number of observations        43
+  Degrees of freedom            39
+  Root Mean Squared Error       450.123
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   22166.2
-  p-value                       1.19637e-61
+  F-statistics vs. zero model   21868.1
+  p-value                       6.25356e-63
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      2648.21
+  Objective function value      2811.07
   Exit condition (1=OK)         1
