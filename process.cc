@@ -16,25 +16,38 @@
 #include <cmath>
 #include <iterator>
 
+#include <sys/types.h>
+#include <dirent.h>
+#include <limits.h>
+
 using namespace std;
 
-#define KIND_NAZIONALE 0
-#define KIND_REGIONALE 1
-#define KIND_PROVINCIALE 2
+// Minimum to show
+#define LIMIT_FIT_DAYS 15
+#define LIMIT_FIT 2500
+#define LIMIT_COUNTRY_DAYS 10
+#define LIMIT_COUNTRY 1000
+#define LIMIT_STATE 500
+#define LIMIT_CITY 250
+
+#define KIND_COUNTRY 0
+#define KIND_STATE 1
+#define KIND_CITY 2
+#define KIND_MIXED 3
 
 struct day {
-	string data;
-	int ricoverati_con_sintomi;
-	int terapia_intensiva;
-	int totale_ospedalizzati;
-	int isolamento_domiciliare;
-	int totale_attualmente_positivi;
-	int nuovi_attualmente_positivi;
-	int dimessi_guariti;
-	int deceduti;
-	int totale_casi;
+	string date;
+	mutable int ricoverati;
+	mutable int terapia_intensiva;
+	mutable int totale_ospedalizzati;
+	mutable int isolamento_domiciliare;
+	mutable int positivi;
+	mutable int nuovi_attualmente_positivi;
+	mutable int dimessi_guariti;
+	mutable int deceduti;
+	mutable int totale_casi;
 	mutable int totale_casi_fit;
-	int tamponi;
+	mutable int tamponi;
 
 	day(void);
 
@@ -43,11 +56,11 @@ struct day {
 
 day::day(void)
 {
-	ricoverati_con_sintomi = 0;
+	ricoverati = 0;
 	terapia_intensiva = 0;
 	totale_ospedalizzati = 0;
 	isolamento_domiciliare = 0;
-	totale_attualmente_positivi = 0;
+	positivi = 0;
 	nuovi_attualmente_positivi = 0;
 	dimessi_guariti = 0;
 	deceduti = 0;
@@ -58,14 +71,16 @@ day::day(void)
 
 bool day::operator<(const day& A) const
 {
-	return data < A.data;
+	return date < A.date;
 }
 
 typedef set<day> day_set;
 
 struct place {
-	string denominazione;
-	string denominazione_regione;
+	string trimmed;
+	string city;
+	string state;
+	string country;
 	int kind;
 	mutable double r0;
 	mutable int rmse;
@@ -76,6 +91,12 @@ struct place {
 	mutable string steady;
 	mutable string ending;
 	mutable int max_casi;
+	mutable int max_isolamento_domiciliare;
+	mutable int max_ricoverati;
+	mutable int max_terapia_intensiva;
+	mutable int max_tamponi;
+	mutable int max_positivi;
+	mutable int max_dimessi_guariti;
 	mutable day_set days;
 
 	place(void);
@@ -83,6 +104,7 @@ struct place {
 	bool operator<(const place& A) const;
 
 	unsigned font_size() const;
+	string name() const;
 };
 
 place::place(void) 
@@ -92,11 +114,17 @@ place::place(void)
 	rmse = 0;
 	limite_casi = 0;
 	max_casi = 0;
+	max_isolamento_domiciliare = 0;
+	max_ricoverati = 0;
+	max_terapia_intensiva = 0;
+	max_tamponi = 0;
+	max_positivi = 0;
+	max_dimessi_guariti = 0;
 }
 
 bool place::operator<(const place& A) const
 {
-	return denominazione < A.denominazione;
+	return trimmed < A.trimmed;
 }
 
 unsigned place::font_size() const
@@ -107,33 +135,74 @@ unsigned place::font_size() const
 	return base;
 }
 
+string place::name() const
+{
+	switch (kind) {
+	case KIND_COUNTRY: return country;
+	case KIND_STATE: return state;
+	case KIND_CITY: return city;
+	}
+
+	fprintf(stderr, "Unexpected kind\n");
+	exit(EXIT_FAILURE);
+}
+
 typedef set<place> place_set;
 
 string trim(string s)
 {
 	string r;
 	for (size_t i=0;i<s.length();++i) {
+		if (s[i] == '_' || isspace(s[i])) {
+			r += "_";
+			continue;
+		}
 		if (ispunct(s[i]))
 			continue;
-		if (isspace(s[i]))
-			r += "_";
-		else
-			r += tolower(s[i]);
+		r += tolower(s[i]);
 	}
 	return r;
 }
 
-const char* stok(void)
+const char* stok(char** s, char sep)
 {
-	return strtok(NULL, ",");
+	char* begin = *s;
+	char* end = begin;
+
+	if (!*begin)
+		return 0;
+
+	// unquote
+	if (*begin == '"') {
+		++begin;
+		++end;
+		while (*end && *end != '"')
+			++end;
+	}
+
+	while (*end && *end != sep)
+		++end;
+
+	if (*end == 0) {
+		*s = end;
+	} else {
+		*end = 0;
+		*s = end + 1;
+	}
+
+	// unquote
+	if (end > begin && end[-1] == '"')
+		end[-1] = 0;
+
+	return begin;
 }
 
-int itok(void)
+int itok(char** s, char sep)
 {
-	const char* s = stok();
-	if (!s)
+	const char* t = stok(s, sep);
+	if (!t)
 		return 0;
-	return atoi(s);
+	return atoi(t);
 }
 
 void load_csv(int kind, place_set& bag, const char* file)
@@ -147,60 +216,299 @@ void load_csv(int kind, place_set& bag, const char* file)
 		exit(EXIT_FAILURE);
 	}
 
+	bool first_line = true;
+	bool old_format = false;
 	while ((s = fgets(buf, sizeof(buf), f)) != 0) {
-		struct place p;
-		struct day d;
+			size_t len = strlen(s);
 
-		p.kind = kind;
+		// trim spaces at the end
+		while (len && isspace(s[len-1]))
+			--len;
+		s[len] = 0;
 
+		// handle first line
+		if (first_line) {
+			first_line = false;
+			const char* format_nazione = "data,stato,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en";
+			const char* format_regioni = "data,stato,codice_regione,denominazione_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en";
+			const char* format_province = "data,stato,codice_regione,denominazione_regione,codice_provincia,denominazione_provincia,sigla_provincia,lat,long,totale_casi,note_it,note_en";
+			const char* format_skip_1 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered";
+			const char* format_skip_2 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude";
+			const char* format_mixed = "FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key";
+
+			// skip UTF header
+			if (s[0] == (char)0xEF && s[1] == (char)0xBB && s[2] == (char)0xBF)
+				s += 3;
+
+			// check for recognized formats
+			if (kind == KIND_COUNTRY && strcmp(s, format_nazione) == 0)
+				continue;
+			if (kind == KIND_STATE && strcmp(s, format_regioni) == 0)
+				continue;
+			if (kind == KIND_CITY && strcmp(s, format_province) == 0)
+				continue;
+			if (kind == KIND_MIXED && strcmp(s, format_skip_1) == 0) {
+				old_format = true;
+				continue;
+			}
+			if (kind == KIND_MIXED && strcmp(s, format_skip_2) == 0) {
+				old_format = true;
+				continue;
+			}
+			if (kind == KIND_MIXED && strcmp(s, format_mixed) == 0)
+				continue;
+
+			fprintf(stderr, "Unknown format '%s' for file '%s'\n", s, file);
+			exit(EXIT_FAILURE);
+		}
+
+		// skip invalid lines
 		if (strstr(s, "In fase di definizione/aggiornamento") != 0)
 			continue;
 
-		d.data = strtok(s, ",");
-		if (kind == KIND_PROVINCIALE) {
-			stok(); // stato
-			stok(); // codice_regione
-			p.denominazione_regione = stok();
-			stok(); // codice_provincia
-			p.denominazione = stok();
-			stok(); // sigla_provincia
-			stok(); // lat
-			stok(); // long
-			d.totale_casi = itok();
-		} else {
-			if (kind == KIND_NAZIONALE) {
-				stok(); // stato
-				p.denominazione = "Italia";
-			} else if (kind == KIND_REGIONALE) {
-				stok(); // stato
-				stok(); // codice_regione
-				p.denominazione = stok();
-				stok(); // lat
-				stok(); // long
-			}
-			d.ricoverati_con_sintomi = itok();
-			d.terapia_intensiva = itok();
-			d.totale_ospedalizzati = itok();
-			d.isolamento_domiciliare = itok();
-			d.totale_attualmente_positivi = itok();
-			stok(); // variazione_totale_positivi,
-			d.nuovi_attualmente_positivi = itok();
-			d.dimessi_guariti = itok();
-			d.deceduti = itok();
-			d.totale_casi = itok();
-			d.tamponi = itok();
-		}
+		if (kind == KIND_CITY) {
+			struct place p;
+			struct day d;
 
-		// skip first line
-		if (d.data[0] == '2' && d.data.length() >= 10) {
+			p.kind = kind;
+
+			d.date = stok(&s, ','); // date
+			stok(&s, ','); // stato
+			stok(&s, ','); // codice_regione
+			p.state = stok(&s, ',');
+			stok(&s, ','); // codice_provincia
+			p.city = stok(&s, ',');
+			stok(&s, ','); // sigla_provincia
+			stok(&s, ','); // lat
+			stok(&s, ','); // long
+			d.totale_casi = itok(&s, ',');
+			p.country = "Italia";
+			p.trimmed = trim(p.city);
+
+			// insert
 			pair<const place_set::iterator, bool> j = bag.insert(p);
 			j.first->days.insert(d);
-			if (j.first->max_casi < d.totale_casi)
-				j.first->max_casi = d.totale_casi;
+		} else if (kind == KIND_COUNTRY || kind == KIND_STATE) {
+			struct place p;
+			struct day d;
+
+			p.kind = kind;
+
+			d.date = stok(&s, ','); // date
+			if (kind == KIND_COUNTRY) {
+				stok(&s, ','); // stato
+				p.country = "Italia";
+				p.trimmed = trim(p.country);
+			} else if (kind == KIND_STATE) {
+				stok(&s, ','); // stato
+				stok(&s, ','); // codice_regione
+				p.state = stok(&s, ',');
+				stok(&s, ','); // lat
+				stok(&s, ','); // long
+				p.country = "Italia";
+				p.trimmed = trim(p.state);
+			}
+			d.ricoverati = itok(&s, ',');
+			d.terapia_intensiva = itok(&s, ',');
+			d.totale_ospedalizzati = itok(&s, ',');
+			d.isolamento_domiciliare = itok(&s, ',');
+			d.positivi = itok(&s, ',');
+			stok(&s, ','); // variazione_totale_positivi,
+			d.nuovi_attualmente_positivi = itok(&s, ',');
+			d.dimessi_guariti = itok(&s, ',');
+			d.deceduti = itok(&s, ',');
+			d.totale_casi = itok(&s, ',');
+			d.tamponi = itok(&s, ',');
+			pair<const place_set::iterator, bool> j = bag.insert(p);
+			j.first->days.insert(d);
+		} else if (kind == KIND_MIXED) {
+			struct day d;
+
+			string city, state, country;
+
+			if (old_format) {
+				const char* format_skip_2 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude";
+				state = stok(&s, ','); // Province_State
+				country = stok(&s, ','); // Country_Region
+				d.date = stok(&s, ','); // Last_Update
+				d.totale_casi = itok(&s, ','); // Confirmed
+				d.deceduti = itok(&s, ','); // Deaths
+				d.dimessi_guariti = itok(&s, ','); // Recovered
+				d.positivi = d.totale_casi - d.deceduti - d.dimessi_guariti;
+			} else {
+				stok(&s, ','); // FIPS
+				city = stok(&s, ','); // Admin2
+				state = stok(&s, ','); // Province_State
+				country = stok(&s, ','); // Country_Region
+				d.date = stok(&s, ','); // Last_Update
+				stok(&s, ','); // Lat
+				stok(&s, ','); // Long
+				d.totale_casi = itok(&s, ','); // Confirmed
+				d.deceduti = itok(&s, ','); // Deaths
+				d.dimessi_guariti = itok(&s, ','); // Recovered
+				d.positivi = itok(&s, ','); // Active
+			}
+
+			if (country == "Mainland China")
+				country = "China";
+			if (country == "Korea, South")
+				country = "South Korea";
+
+			// US data is not reliable in the old format
+			if (old_format && country == "US")
+				continue;
+
+			// convert early date format
+			if (d.date.substr(0,5) != "2020-") {
+				int y, m, dd;
+				if (sscanf(d.date.c_str(), "%d/%d/%d", &m, &dd, &y) != 3) {
+					fprintf(stderr, "Ignoring date %s\n", d.date.c_str());
+					continue;
+				}
+				if (y < 2000)
+					y += 2000;
+				char buf[32];
+				sprintf(buf, "%04d-%02d-%02d", y, m, dd);
+				d.date = buf;
+			}
+
+			if (city.length() == 0) {
+				// country
+				place p;
+				p.kind = KIND_COUNTRY;
+				p.country = country;
+				p.trimmed = trim(p.country);
+				pair<const place_set::iterator, bool> j = bag.insert(p);
+				j.first->days.insert(d);
+			} else {
+				if (city != "Unassigned") {
+					// city
+					place p;
+					p.kind = KIND_CITY;
+					p.city = city;
+					p.state = state;
+					p.country = country;
+					p.trimmed = trim(p.city);
+					{
+						pair<const place_set::iterator, bool> j = bag.insert(p);
+						j.first->days.insert(d);
+					}
+				}
+
+				// state
+				place p_s;
+				p_s.kind = KIND_STATE;
+				p_s.state = state;
+				p_s.country = country;
+				p_s.trimmed = trim(p_s.state);
+				{
+					pair<const place_set::iterator, bool> j = bag.insert(p_s);
+					pair<const day_set::iterator, bool> k = j.first->days.insert(d);
+					// if not inserted, add counters
+					if (!k.second) {
+						k.first->totale_casi += d.totale_casi;
+						k.first->deceduti += d.deceduti;
+						k.first->dimessi_guariti += d.dimessi_guariti;
+						k.first->positivi += d.positivi;
+					}
+				}
+
+				// country
+				place p_c;
+				p_c.kind = KIND_COUNTRY;
+				p_c.country = country;
+				p_c.trimmed = trim(p_c.country);
+				{
+					pair<const place_set::iterator, bool> j = bag.insert(p_c);
+					pair<const day_set::iterator, bool> k = j.first->days.insert(d);
+					// if not inserted, add counters
+					if (!k.second) {
+						k.first->totale_casi += d.totale_casi;
+						k.first->deceduti += d.deceduti;
+						k.first->dimessi_guariti += d.dimessi_guariti;
+						k.first->positivi += d.positivi;
+					}
+				}
+			}
+		} else {
+			fprintf(stderr, "Invalid kind\n");
+			exit(EXIT_FAILURE);
 		}
 	}
 
 	fclose(f);
+}
+
+void load_dir(int kind, place_set& bag, const char* file)
+{
+	DIR* dir;
+	struct dirent* dirent;
+
+	dir = opendir(file);
+	if (!dir) {
+		fprintf(stderr, "Failed opening %s\n", file);
+		exit(EXIT_FAILURE);
+	}
+
+	while ((dirent = readdir(dir)) != 0) {
+		const char* ext;
+		char path[PATH_MAX];
+		if (dirent->d_name[0] == '.')
+			continue;
+		ext = strstr(dirent->d_name, ".csv");
+		if (!ext)
+			continue;
+		snprintf(path, sizeof(path), "%s/%s", file, dirent->d_name);
+		load_csv(kind, bag, path);
+	}
+
+	closedir(dir);
+}
+
+void setup(place_set& bag)
+{
+	// compute max_casi
+	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+		i->max_casi = 0;
+
+		day_set::iterator prev = i->days.end();
+		for (day_set::iterator j=i->days.begin();j!=i->days.end();++j) {
+			if (j->positivi == 0) {
+				if (j->dimessi_guariti || j->deceduti) {
+					j->positivi = j->totale_casi - j->dimessi_guariti - j->deceduti;
+				}
+			}
+
+			// fix decreasing
+			if (prev != i->days.end()) {
+				if (j->totale_casi < prev->totale_casi)
+					j->totale_casi = prev->totale_casi;
+				if (j->deceduti < prev->deceduti)
+					j->deceduti = prev->deceduti;
+				if (j->dimessi_guariti < prev->dimessi_guariti)
+					j->dimessi_guariti = prev->dimessi_guariti;
+				if (j->positivi < prev->positivi)
+					j->positivi = prev->positivi;
+			}
+
+			// max
+			if (i->max_casi < j->totale_casi)
+				i->max_casi = j->totale_casi;
+			if (i->max_isolamento_domiciliare < j->isolamento_domiciliare)
+				i->max_isolamento_domiciliare = j->isolamento_domiciliare;
+			if (i->max_ricoverati < j->ricoverati)
+				i->max_ricoverati = j->ricoverati;
+			if (i->max_terapia_intensiva < j->terapia_intensiva)
+				i->max_terapia_intensiva = j->terapia_intensiva;
+			if (i->max_tamponi < j->tamponi)
+				i->max_tamponi = j->tamponi;
+			if (i->max_positivi < j->positivi)
+				i->max_positivi = j->positivi;
+			if (i->max_dimessi_guariti < j->dimessi_guariti)
+				i->max_dimessi_guariti = j->dimessi_guariti;
+			prev = j;
+		}
+	}
 }
 
 string next_date(string date)
@@ -208,7 +516,7 @@ string next_date(string date)
 	int y, m, d;
 	char buf[16];
 	int day_for_month[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-	
+
 	if (sscanf(date.c_str(), "%d-%d-%dT", &y, &m, &d) != 3) 
 		return "";
 
@@ -224,9 +532,9 @@ string next_date(string date)
 		m = 1;
 		++y;
 	}
-	
+
 	sprintf(buf, "%04d-%02d-%02d", y, m, d);
-	
+
 	return buf;
 }
 
@@ -257,8 +565,8 @@ void load_fit(place_set& bag)
 		// empty case
 		if (i->days.size() == 0)
 			continue;
-	
-		string trimmed = trim(i->denominazione);
+
+		string trimmed = i->trimmed;
 		string res = "res/" + trimmed + ".res";
 
 		FILE* f = fopen(res.c_str(), "r");
@@ -267,20 +575,27 @@ void load_fit(place_set& bag)
 			continue;
 
 		while ((s = fgets(buf, sizeof(buf), f)) != 0) {
+			size_t len = strlen(s);
+
+			// trim spaces at the end
+			while (len && isspace(s[len-1]))
+				--len;
+			s[len] = 0;
+		
 			if (strncmp(s, tag1, tag1_len) == 0) {
 
 				s += tag1_len;
 
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				day_set::iterator j = i->days.begin();
 				day_set::iterator prev = i->days.end();
 				while (t) {
-					// if no more data, insert new one
+					// if no more date, insert new one
 					if (j == i->days.end()) {
 						day d;
-						d.data = next_date(prev->data);
-						if (d.data.length() == 0) {
-							printf("Invalid date %s\n", prev->data.c_str());
+						d.date = next_date(prev->date);
+						if (d.date.length() == 0) {
+							printf("Invalid date %s\n", prev->date.c_str());
 							break;
 						}
 						pair<day_set::iterator,bool> n = i->days.insert(d);
@@ -290,45 +605,45 @@ void load_fit(place_set& bag)
 					j->totale_casi_fit = v;
 					prev = j;
 					++j;
-					// data is dense then skip 9 values and read the 10th
+					// date is dense then skip 9 values and read the 10th
 					for(int k=0;k<10 && t!=0;++k)
-						t = strtok(NULL, " \n");
+						t = stok(&s, ' ');
 				}
 			} else if (strncmp(s, tag2, tag2_len) == 0) {
 				s += tag2_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				i->r0 = t ? atof(t) : 0;
 			} else if (strncmp(s, tag3, tag3_len) == 0) {
 				s += tag3_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				i->rmse = t ? atoi(t) : 0;
 			} else if (strncmp(s, tag4, tag4_len) == 0) {
 				s += tag4_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				i->limite_casi = t ? atoi(t) : 0;
 			} else if (strncmp(s, tag5, tag5_len) == 0) {
 				s += tag5_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				if (t)
 					i->outbreak = t;
 			} else if (strncmp(s, tag6, tag6_len) == 0) {
 				s += tag6_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				if (t)
 					i->acceleration = t;
 			} else if (strncmp(s, tag7, tag7_len) == 0) {
 				s += tag6_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				if (t)
 					i->turning = t;
 			} else if (strncmp(s, tag8, tag8_len) == 0) {
 				s += tag8_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				if (t)
 					i->steady = t;
 			} else if (strncmp(s, tag9, tag9_len) == 0) {
 				s += tag9_len;
-				const char* t = strtok(s, " \n");
+				const char* t = stok(&s, ' ');
 				if (t)
 					i->ending = t;
 			} else {
@@ -385,7 +700,7 @@ void table_date(FILE* out, const place& p)
 	while (last->totale_casi == 0)
 		++last;
 	for (int i=0;i<LAST-1;++i) {
-		fprintf(out, "<td>%s</td>", last->data.substr(0,10).c_str());
+		fprintf(out, "<td>%s</td>", last->date.substr(0,10).c_str());
 		++last;
 	}
 
@@ -404,12 +719,12 @@ void table_stat(FILE* out, const place& p, int index)
 	for (int i=0;i<LAST;++i) {
 		switch (index) {
 		case 0 : past[i] = last->totale_casi; break;
-		case 1 : past[i] = last->totale_attualmente_positivi; break;
+		case 1 : past[i] = last->positivi; break;
 		case 2 : past[i] = last->tamponi; break;
 		case 3 : past[i] = last->deceduti; break;
 		case 4 : past[i] = last->dimessi_guariti; break;
 		case 5 : past[i] = last->isolamento_domiciliare; break;
-		case 6 : past[i] = last->ricoverati_con_sintomi; break;
+		case 6 : past[i] = last->ricoverati; break;
 		case 7 : past[i] = last->terapia_intensiva; break;
 		}
 		++last;
@@ -447,7 +762,7 @@ void save_analyze(FILE* f, string name)
 	string res = "res/" + name + ".res";
 
 	fprintf(f, "res = fitVirusCV19(@%s);\n", name.c_str());
-	
+
 	fprintf(f, "f = fopen('%s','w');\n", res.c_str());
 	fprintf(f, "fprintf(f, '### Ca: ');\n");
 	fprintf(f, "fprintf(f, '%%.0f ', res.Ca);\n");
@@ -478,7 +793,7 @@ void save_analyze(FILE* f, string name)
 void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 {
 	// new file
-	string trimmed = trim(p.denominazione);
+	string trimmed = p.trimmed;
 	string dat = "dat/" + trimmed + ".dat";
 	string fit = "dat/" + trimmed + ".fit";
 	string get = "get/" + trimmed + ".m";
@@ -509,7 +824,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 	fprintf(f_get, "function [country, C,date0] = get_%s()\n", trimmed.c_str());
 	fprintf(f_get, "country = '%s';\n", trimmed.c_str());
-	fprintf(f_get, "date0=datenum('%s');\n", first->data.substr(0,10).c_str());
+	fprintf(f_get, "date0=datenum('%s');\n", first->date.substr(0,10).c_str());
 	fprintf(f_get, "C = [\n");
 
 	int casi_mean_map[CASI_COUNT] = { 0 };
@@ -520,7 +835,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	if (p.max_casi >= 10000) {
 		casi_count = 2;
 		positivi_count = 3;
-	} else if (p.max_casi >= 1000) {
+	} else if (p.max_casi >= 5000) {
 		casi_count = 3;
 		positivi_count = 4;
 	} else {
@@ -528,7 +843,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		positivi_count = 5;
 	}
 
-	if (p.kind == KIND_PROVINCIALE) {
+	if (p.kind == KIND_CITY) {
 		fprintf(f_dat, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasi\tNuoviCasiMedia2Giorni\n",
 			trimmed.c_str());
 	} else {
@@ -580,12 +895,12 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		int positivi_delta;
 		char positivi_delta_str[16];
 		if (prev != p.days.end()) {
-			positivi_delta = i->totale_attualmente_positivi - prev->totale_attualmente_positivi;
+			positivi_delta = i->positivi - prev->positivi;
 			sprintf(positivi_delta_str, "%d", positivi_delta);
 		} else {
 			positivi_delta = 0;
 			sprintf(positivi_delta_str, "-");
-        }
+		}
 
 		// free slot 0
 		for (int j=positivi_count-1;j>0;--j)
@@ -599,8 +914,8 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		// compute mean
 		double positivi_perc_mean;
 		char positivi_perc_mean_str[16];
-		if (prev != p.days.end() && prev->totale_attualmente_positivi > 100) {
-			positivi_perc_mean = 100.0 * positivi_mean / prev->totale_attualmente_positivi;
+		if (prev != p.days.end() && prev->positivi > 100) {
+			positivi_perc_mean = 100.0 * positivi_mean / prev->positivi;
 			sprintf(positivi_perc_mean_str, "%.1f", positivi_perc_mean);
 		} else {
 			positivi_perc_mean = 0.0;
@@ -609,21 +924,21 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 		// dat
 		if (i->totale_casi != 0) {
-			if (p.kind == KIND_PROVINCIALE) {
+			if (p.kind == KIND_CITY) {
 				fprintf(f_dat,"%s\t%d\t%s\t%s\t%.1f\n",
-					i->data.substr(5,5).c_str(),
+					i->date.substr(5,5).c_str(),
 					i->totale_casi,
 					casi_perc_str,
 					casi_delta_str,
 					casi_mean);
 			} else {
 				fprintf(f_dat,"%s\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%d\t%s\t%s\t%.1f\t%s\t%.1f\n",
-					i->data.substr(5,5).c_str(),
-					i->ricoverati_con_sintomi,
+					i->date.substr(5,5).c_str(),
+					i->ricoverati,
 					i->terapia_intensiva,
 					i->totale_ospedalizzati,
 					i->isolamento_domiciliare,
-					i->totale_attualmente_positivi,
+					i->positivi,
 					positivi_delta_str,
 					i->dimessi_guariti,
 					i->deceduti,
@@ -640,7 +955,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		// fit
 		if (i->totale_casi != 0) {
 			fprintf(f_fit,"%s\t%d\t%s\t%d\t%s\t%g\n",
-				i->data.substr(5,5).c_str(),
+				i->date.substr(5,5).c_str(),
 				i->totale_casi,
 				casi_delta_str,
 				i->totale_casi_fit,
@@ -648,7 +963,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 				casi_mean);
 		} else {
 			fprintf(f_fit,"%s\t-\t-\t%d\t%s\t%g\n",
-				i->data.substr(5,5).c_str(),
+				i->date.substr(5,5).c_str(),
 				i->totale_casi_fit,
 				casi_fit_delta_str,
 				casi_mean);
@@ -659,7 +974,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			if (monotone_totale_casi < i->totale_casi)
 				monotone_totale_casi = i->totale_casi;
 
-			fprintf(f_get,"\t%d %% %s\n", monotone_totale_casi, i->data.substr(0,10).c_str());
+			fprintf(f_get,"\t%d %% %s\n", monotone_totale_casi, i->date.substr(0,10).c_str());
 		}
 
 		prev = i;
@@ -671,28 +986,34 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	string png_xp = trimmed + "_xp.png";
 	string png_fit = trimmed + "_fit.png";
 	string png_fid = trimmed + "_fid.png";
-	if (p.kind == KIND_PROVINCIALE) {
-		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
+	if (p.kind == KIND_CITY) {
+		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
 		fprintf(out, "<table class=\"dati\">");
 		table_date(out, p);
 		table_stat(out, p, 0);
 		fprintf(out, "</table>");
 	} else {
-		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.denominazione.c_str());
+		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
 		fprintf(out, "<table class=\"dati\">");
 		table_date(out, p);
 		table_stat(out, p, 0);
 		table_stat(out, p, 3);
-		table_stat(out, p, 4);
-		table_stat(out, p, 1);
-		table_stat(out, p, 5);
-		table_stat(out, p, 6);
-		table_stat(out, p, 7);
-		table_stat(out, p, 2);
+		if (p.max_dimessi_guariti)
+			table_stat(out, p, 4);
+		if (p.max_positivi)
+			table_stat(out, p, 1);
+		if (p.max_isolamento_domiciliare)
+			table_stat(out, p, 5);
+		if (p.max_ricoverati)
+			table_stat(out, p, 6);
+		if (p.max_terapia_intensiva)
+			table_stat(out, p, 7);
+		if (p.max_tamponi)
+			table_stat(out, p, 2);
 		fprintf(out, "</table>");
 	}
 
-	if (p.kind == KIND_PROVINCIALE) {
+	if (p.kind == KIND_CITY) {
 		fprintf(out, "<p>");
 		fprintf(out,
 "Questo grafico mostra il progredire del numero di casi dell'epidemia. "
@@ -714,7 +1035,10 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		);
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_stack.c_str());
-		fprintf(plot, "gnuplot -c graph_rg_stack.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
+		if (p.max_isolamento_domiciliare + p.max_ricoverati + p.max_terapia_intensiva + p.max_tamponi)
+			fprintf(plot, "gnuplot -c graph_rg_stack.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
+		else
+			fprintf(plot, "gnuplot -c graph_rg_stack4.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
 
 		fprintf(out, "<p>");
 		fprintf(out,
@@ -727,11 +1051,23 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		);
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
-		fprintf(plot, "gnuplot -c graph_rg_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+		if (p.max_isolamento_domiciliare + p.max_ricoverati + p.max_terapia_intensiva + p.max_tamponi)
+			fprintf(plot, "gnuplot -c graph_rg_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+		else
+			fprintf(plot, "gnuplot -c graph_rg_log4.gp %s www/%s\n", dat.c_str(), png_log.c_str());
 	}
 
 	// not significative with too few cases
-	if (p.max_casi >= 2500) {
+	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS
+		&& p.trimmed != "japan" // Fail to obtain parameters for japan
+		&& p.trimmed != "korea_south" // Error using odearguments (line 18)
+		&& p.trimmed != "westchester"
+		&& p.trimmed != "diamond_princess"
+		&& p.trimmed != "china"
+		&& p.trimmed != "mainland_china"
+		&& p.trimmed != "french_polynesia"
+		&& p.trimmed != ""
+	) {
 		fprintf(out, "<p>");
 		fprintf(out,
 "Questo grafico mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
@@ -768,7 +1104,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 "Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero."
 			);
 		fprintf(out, "</p>\n");
-		if (p.kind == KIND_PROVINCIALE) {
+		if (p.kind == KIND_CITY) {
 			fprintf(out, "<center><img src=\"%s\"></center>\n", png_xy.c_str());
 			fprintf(plot, "gnuplot -c graph_pr_xy.gp %s www/%s\n", fit.c_str(), png_xy.c_str());
 		} else {
@@ -778,13 +1114,13 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	// not significative with too few cases
-	if (p.kind != KIND_PROVINCIALE && p.max_casi >= 1000) {
+	if (p.kind != KIND_CITY && p.max_positivi >= 1000) {
 		fprintf(out, "<p>");
 		fprintf(out,
 "Questo grafico mostra la variazione del numero di Positivi in base al numero di Positivi stessi. "
 "Come il grafico precedente, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia. "
 "L'uso del numero di <i>Positivi</i> invece che dei <i>Casi</i> &eacute; una migliore misura della capacit&agrave; "
-"di diffusione dell'epidemia dato che i <i>Guariti</i> ed <i>Deceduti</i> non sono da considerare contagiosi. "
+"di diffusione dell'epidemia dato che i <i>Guariti</i> e <i>Deceduti</i> non sono da considerare contagiosi. "
 "Una crescita esponenziale &eacute; rappresentata da una linea retta orizzontale. "
 "Il rallentamendo dell'epidemia si nota dalla curva che scende ed inizia a tornare indietro, "
 "in quanto il numero di <i>Positivi</i> diminuisce. "
@@ -795,7 +1131,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	// not significative with too few cases
-	if (p.max_casi >= 2500) {
+	if (p.max_casi >= LIMIT_FIT) {
 		fprintf(out, "<p>");
 		fprintf(out,
 "DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. "
@@ -813,6 +1149,136 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	fclose(f_get);
 }
 
+void save_country(FILE* plot, FILE* analyze, place_set& bag, string country)
+{
+	bool first;
+	string html_country = "www/" + trim(country) + ".html";
+	FILE* f_country = fopen(html_country.c_str(), "w");
+	if (!f_country) {
+		fprintf(stderr, "Failed opening %s\n", html_country.c_str());
+		exit(EXIT_FAILURE);
+	}
+	
+	if (country != "Italia") {
+		html_header(f_country, country.c_str());
+	}
+
+	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+		if (i->kind != KIND_COUNTRY || i->country != country)
+			continue;
+		save_place(plot, analyze, f_country, *i);
+	}
+
+	// header state.html
+	first = true;
+	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+		if (i->kind != KIND_STATE || i->country != country)
+			continue;
+		if (i->max_casi < LIMIT_STATE)
+			continue;
+		if (first) {
+			first = false;
+			if (country != "Italia") {
+				fprintf(f_country, "<h1>States</h1><p class=\"lista\">\n");
+			} else {
+				fprintf(f_country, "<h1>Regioni</h1><p class=\"lista\">\n");
+			}
+		}
+
+		string trimmed = i->trimmed;
+		fprintf(f_country, "<span style=\"font-size:%u%%\">", i->font_size());
+		fprintf(f_country, "<a href=\"%s.html\">%s</a>",
+			trimmed.c_str(), i->name().c_str());
+		fprintf(f_country, "</span>, \n");
+
+		// state
+		string file = "www/" + trimmed + ".html";
+		FILE* out = fopen(file.c_str(), "w");
+		if (!out) {
+			fprintf(stderr, "Failed opening %s\n", file.c_str());
+			exit(EXIT_FAILURE);
+		}
+		string title = "Pandemia di COVID-19 in " + i->name();
+		html_header(out, title.c_str());
+		save_place(plot, analyze, out, *i);
+		fclose(out);
+	}
+
+	// city.html
+	first = true;
+	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+		if (i->kind != KIND_CITY || i->country != country)
+			continue;
+		if (i->max_casi < LIMIT_CITY)
+			continue;
+		if (first) {
+			first = false;
+			if (country != "Italia") {
+				fprintf(f_country, "</p><h1>Cities</h1><p class=\"lista\">\n");
+			} else {
+				fprintf(f_country, "<h1>Province</h1><p class=\"lista\">\n");
+			}
+		}
+
+		string trimmed = i->trimmed;
+		string trimmed_state = trim(i->state);
+		fprintf(f_country, "<span style=\"font-size:%u%%\">", i->font_size());
+		fprintf(f_country, "<a href=\"%s.html#%s\">%s</a>",
+			trimmed_state.c_str(), trimmed.c_str(), i->name().c_str());
+		fprintf(f_country, "</span>, \n");
+
+		// city data
+		string file = "www/" + trimmed_state + ".html";
+		FILE* out = fopen(file.c_str(), "a");
+		if (!out) {
+			fprintf(stderr, "Failed opening %s\n", file.c_str());
+			exit(EXIT_FAILURE);
+		}
+		save_place(plot, analyze, out, *i);
+		fclose(out);
+	}
+
+	if (country == "Italia") {
+		fprintf(f_country, "<h1>Resto del Mondo</h1><p class=\"lista\">\n");
+		for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+			if (i->kind != KIND_COUNTRY || i->country == country)
+				continue;
+			if (i->max_casi < LIMIT_COUNTRY)
+				continue;
+			if (i->days.size() < LIMIT_COUNTRY_DAYS)
+				continue;
+			string trimmed = i->trimmed;
+			fprintf(f_country, "<span style=\"font-size:%u%%\">", i->font_size());
+			fprintf(f_country, "<a href=\"%s.html\">%s</a>",
+				trimmed.c_str(), i->name().c_str());
+			fprintf(f_country, "</span>, \n");
+		}
+	}
+
+	fprintf(f_country, "</p>\n");
+
+	// footer for state.html
+	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
+		if (i->kind != KIND_STATE || i->country != country)
+			continue;
+		string trimmed = i->trimmed;
+		string file = "www/" + trimmed + ".html";
+		FILE* out = fopen(file.c_str(), "a");
+		if (!out) {
+			fprintf(stderr, "Failed opening %s\n", file.c_str());
+			exit(EXIT_FAILURE);
+		}
+		html_footer(out);
+		fclose(out);
+	}
+
+	if (country != "Italia") {
+		html_footer(f_country);
+	}	
+
+	fclose(f_country);
+}
+
 void save(place_set& bag)
 {
 	FILE* plot = fopen("plot.sh", "w");
@@ -820,7 +1286,7 @@ void save(place_set& bag)
 		fprintf(stderr, "Failed opening plot.sh\n");
 		exit(EXIT_FAILURE);
 	}
-	
+
 	FILE* analyze = fopen("analyze.m", "w");
 	if (!plot) {
 		fprintf(stderr, "Failed opening analyze.m\n");
@@ -831,96 +1297,31 @@ void save(place_set& bag)
 	fprintf(analyze, "addpath('fit')\n");
 	fprintf(analyze, "addpath('get')\n");
 
-	FILE* nazione = fopen("www/nazione.html", "w");
-	if (!nazione) {
-		fprintf(stderr, "Failed opening nazione.html\n");
-		exit(EXIT_FAILURE);
-	}
-
-	fprintf(plot, "cat header.html www/nazione.html footer.html > www/index.html\n");
+	fprintf(plot, "cat header.html www/italia.html footer.html > www/index.html\n");
 
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
-		if (i->kind == KIND_NAZIONALE) {
-			save_place(plot, analyze, nazione, *i);
-		}
-	}
-
-	fprintf(nazione, "<h1>Regioni</h1><p class=\"lista\">\n");
-
-	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
-		if (i->kind == KIND_REGIONALE) {
-			string trimmed = trim(i->denominazione);
-			fprintf(nazione, "<span style=\"font-size:%u%%\">", i->font_size());
-			fprintf(nazione, "<a href=\"%s.html\">%s</a>",
-				trimmed.c_str(), i->denominazione.c_str());
-			fprintf(nazione, "</span>, \n");
-
-			// save the regione data
-			string file = "www/" + trimmed + ".html";
-			FILE* out = fopen(file.c_str(), "w");
-			if (!out) {
-				fprintf(stderr, "Failed opening %s\n", file.c_str());
-				exit(EXIT_FAILURE);
-			}
-			string title = "Pandemia di COVID-19 in " + i->denominazione;
-			html_header(out, title.c_str());
-			save_place(plot, analyze, out, *i);
-			fclose(out);
-		}
-	}
-
-	fprintf(nazione, "</p><h1>Province</h1><p class=\"lista\">\n");
-
-	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
-		if (i->kind == KIND_PROVINCIALE) {
-			string trimmed = trim(i->denominazione);
-			string trimmed_regione = trim(i->denominazione_regione);
-			fprintf(nazione, "<span style=\"font-size:%u%%\">", i->font_size());
-			fprintf(nazione, "<a href=\"%s.html#%s\">%s</a>",
-				trimmed_regione.c_str(), trimmed.c_str(), i->denominazione.c_str());
-			fprintf(nazione, "</span>, \n");
-
-			// save the provincia data
-			string file = "www/" + trimmed_regione + ".html";
-			FILE* out = fopen(file.c_str(), "a");
-			if (!out) {
-				fprintf(stderr, "Failed opening %s\n", file.c_str());
-				exit(EXIT_FAILURE);
-			}
-			save_place(plot, analyze, out, *i);
-			fclose(out);
-		}
-	}
-
-	fprintf(nazione, "</p>\n");
-
-	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
-		if (i->kind == KIND_REGIONALE) {
-			// footer for the regione data
-			string trimmed = trim(i->denominazione);
-			string file = "www/" + trimmed + ".html";
-			FILE* out = fopen(file.c_str(), "a");
-			if (!out) {
-				fprintf(stderr, "Failed opening %s\n", file.c_str());
-				exit(EXIT_FAILURE);
-			}
-			html_footer(out);
-			fclose(out);
-		}
+		if (i->kind != KIND_COUNTRY)
+			continue;
+		if (i->max_casi < LIMIT_COUNTRY)
+			continue;
+		if (i->days.size() < LIMIT_COUNTRY_DAYS)
+			continue;
+		save_country(plot, analyze, bag, i->country);
 	}
 
 	fclose(analyze);
 	fclose(plot);
-	fclose(nazione);
 }
 
 int main(void)
 {
 	place_set bag;
 
-	load_csv(KIND_NAZIONALE, bag, "../COVID-19/dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv");
-	load_csv(KIND_REGIONALE, bag, "../COVID-19/dati-regioni/dpc-covid19-ita-regioni.csv");
-	load_csv(KIND_PROVINCIALE, bag, "../COVID-19/dati-province/dpc-covid19-ita-province.csv");
+	load_csv(KIND_COUNTRY, bag, "../COVID-19/dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv");
+	load_csv(KIND_STATE, bag, "../COVID-19/dati-regioni/dpc-covid19-ita-regioni.csv");
+	load_csv(KIND_CITY, bag, "../COVID-19/dati-province/dpc-covid19-ita-province.csv");
+	load_dir(KIND_MIXED, bag, "../COVID-19-INT/csse_covid_19_data/csse_covid_19_daily_reports");
+	setup(bag);
 	load_fit(bag);
 
 	save(bag);

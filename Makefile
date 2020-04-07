@@ -13,3 +13,6 @@ all: process
 process: process.cc
 	g++ -Wall -g -O0 process.cc -o process
 
+clean:
+	rm -rf dat get
+	rm process analyze.m plot.sh
