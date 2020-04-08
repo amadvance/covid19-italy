@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       wisconsin
+  Day                           17
+Estimated the SIR model parameters
+  Contact rate (beta)           0.252 (1/day)
+  Removal rate (gamma)          0.128 (1/day)
+  Population size (N)           6513
+  Initial number of cases (I0)  347
+Basic reproduction number (R0)  1.865
+Critical number of susceptible  6514
+Final state
+  Final number of cases         5256
+  Final number of susceptibles  1257
+Daily forecast for 08-Apr-2020
+  Total                         2768
+  Increase                      164
+Estimated logistic model parameters
+  Epidemic size (K)             4298 (cases)
+  Epidemic rate (r)             0.124256 (1/day)
+  Initial doubling time         5.6 (day)
+Estimated duration (days)
+  Turning day                   14
+  Acceleration   phase          13 (days)
+  Deceleration phase            18 (days)
+  Total duration                31 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         23-Mar-2020
+  Turning point                 05-Apr-2020
+  Start of steady growth        23-Apr-2020
+  Start of ending phase         23-May-2020
+Statistics
+  Number of observations        17
+  Degrees of freedom            13
+  Root Mean Squared Error       49.4706
+  R-Squared                     0.996
+  Adjusted R-Squared            0.995
+  F-statistics vs. zero model   1159.5
+  p-value                       4.9328e-16
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      178.369
+  Exit condition (1=OK)         0

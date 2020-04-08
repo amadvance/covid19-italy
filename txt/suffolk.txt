@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       suffolk
+  Day                           10
+Estimated the SIR model parameters
+  Contact rate (beta)           0.227 (1/day)
+  Removal rate (gamma)          0.018 (1/day)
+  Population size (N)           5211
+  Initial number of cases (I0)  984
+Basic reproduction number (R0)  10.33
+Critical number of susceptible  5211
+Final state
+  Final number of cases         5211
+  Final number of susceptibles  0
+Daily forecast for 01-Apr-2020
+  Total                         3463
+  Increase                      218
+Estimated logistic model parameters
+  Epidemic size (K)             4998 (cases)
+  Epidemic rate (r)             0.209445 (1/day)
+  Initial doubling time         3.3 (day)
+Estimated duration (days)
+  Turning day                   6
+  Acceleration   phase          9 (days)
+  Deceleration phase            10 (days)
+  Total duration                19 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         19-Mar-2020
+  Turning point                 28-Mar-2020
+  Start of steady growth        07-Apr-2020
+  Start of ending phase         26-Apr-2020
+Statistics
+  Number of observations        10
+  Degrees of freedom            6
+  Root Mean Squared Error       43.4898
+  R-Squared                     0.998
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   929.869
+  p-value                       2.16085e-08
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      106.528
+  Exit condition (1=OK)         0

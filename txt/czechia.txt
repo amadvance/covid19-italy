@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       czechia
+  Day                           28
+Estimated the SIR model parameters
+  Contact rate (beta)           0.64 (1/day)
+  Removal rate (gamma)          0.465 (1/day)
+  Population size (N)           13240
+  Initial number of cases (I0)  56
+Basic reproduction number (R0)  1.37
+Critical number of susceptible  13240
+Final state
+  Final number of cases         6601
+  Final number of susceptibles  6638
+Daily forecast for 08-Apr-2020
+  Total                         5197
+  Increase                      180
+Estimated logistic model parameters
+  Epidemic size (K)             5682 (cases)
+  Epidemic rate (r)             0.174777 (1/day)
+  Initial doubling time         4 (day)
+Estimated duration (days)
+  Turning day                   19
+  Acceleration   phase          11 (days)
+  Deceleration phase            13 (days)
+  Total duration                23 (days)
+Estimated datums
+  Outbreak                      11-Mar-2020
+  Start of acceleration         19-Mar-2020
+  Turning point                 30-Mar-2020
+  Start of steady growth        12-Apr-2020
+  Start of ending phase         05-May-2020
+Statistics
+  Number of observations        28
+  Degrees of freedom            24
+  Root Mean Squared Error       59.8161
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   6943.66
+  p-value                       2.17288e-35
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      293.039
+  Exit condition (1=OK)         1

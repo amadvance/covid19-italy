@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       south_korea
+  Day                           62
+Estimated the SIR model parameters
+  Contact rate (beta)           0.445 (1/day)
+  Removal rate (gamma)          0.156 (1/day)
+  Population size (N)           10464
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  2.85
+Critical number of susceptible  10465
+Final state
+  Final number of cases         9724
+  Final number of susceptibles  740
+Daily forecast for 24-Mar-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             8238 (cases)
+  Epidemic rate (r)             0.288921 (1/day)
+  Initial doubling time         2.4 (day)
+Estimated duration (days)
+  Turning day                   30
+  Acceleration   phase          7 (days)
+  Deceleration phase            9 (days)
+  Total duration                16 (days)
+Estimated datums
+  Outbreak                      22-Jan-2020
+  Start of acceleration         14-Feb-2020
+  Turning point                 21-Feb-2020
+  Start of steady growth        01-Mar-2020
+  Start of ending phase         17-Mar-2020
+Statistics
+  Number of observations        62
+  Degrees of freedom            58
+  Root Mean Squared Error       248.335
+  R-Squared                     0.997
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   5721.86
+  p-value                       1.2032e-71
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1891.77
+  Exit condition (1=OK)         1

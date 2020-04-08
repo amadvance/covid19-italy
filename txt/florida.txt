@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       florida
+  Day                           17
+Estimated the SIR model parameters
+  Contact rate (beta)           0.542 (1/day)
+  Removal rate (gamma)          0.269 (1/day)
+  Population size (N)           24649
+  Initial number of cases (I0)  374
+Basic reproduction number (R0)  1.984
+Critical number of susceptible  24649
+Final state
+  Final number of cases         19857
+  Final number of susceptibles  4791
+Daily forecast for 08-Apr-2020
+  Total                         14807
+  Increase                      262
+Estimated logistic model parameters
+  Epidemic size (K)             16509 (cases)
+  Epidemic rate (r)             0.272672 (1/day)
+  Initial doubling time         2.5 (day)
+Estimated duration (days)
+  Turning day                   11
+  Acceleration   phase          7 (days)
+  Deceleration phase            9 (days)
+  Total duration                16 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         26-Mar-2020
+  Turning point                 02-Apr-2020
+  Start of steady growth        11-Apr-2020
+  Start of ending phase         27-Apr-2020
+Statistics
+  Number of observations        17
+  Degrees of freedom            13
+  Root Mean Squared Error       714.179
+  R-Squared                     0.981
+  Adjusted R-Squared            0.974
+  F-statistics vs. zero model   227.569
+  p-value                       1.75416e-11
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      1454.37
+  Exit condition (1=OK)         1

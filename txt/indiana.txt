@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       indiana
+  Day                           17
+Estimated the SIR model parameters
+  Contact rate (beta)           0.706 (1/day)
+  Removal rate (gamma)          0.519 (1/day)
+  Population size (N)           22069
+  Initial number of cases (I0)  144
+Basic reproduction number (R0)  1.353
+Critical number of susceptible  22069
+Final state
+  Final number of cases         10828
+  Final number of susceptibles  11241
+Daily forecast for 08-Apr-2020
+  Total                         5984
+  Increase                      474
+Estimated logistic model parameters
+  Epidemic size (K)             9260 (cases)
+  Epidemic rate (r)             0.187499 (1/day)
+  Initial doubling time         3.7 (day)
+Estimated duration (days)
+  Turning day                   15
+  Acceleration   phase          10 (days)
+  Deceleration phase            11 (days)
+  Total duration                21 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         27-Mar-2020
+  Turning point                 06-Apr-2020
+  Start of steady growth        17-Apr-2020
+  Start of ending phase         08-May-2020
+Statistics
+  Number of observations        17
+  Degrees of freedom            13
+  Root Mean Squared Error       44.1832
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   8259.43
+  p-value                       1.44657e-21
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      159.305
+  Exit condition (1=OK)         1

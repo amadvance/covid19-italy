@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       trento
-  Day                           31
+  Day                           37
 Estimated the SIR model parameters
-  Contact rate (beta)           0.805 (1/day)
-  Removal rate (gamma)          0.593 (1/day)
-  Population size (N)           4807
+  Contact rate (beta)           1.357 (1/day)
+  Removal rate (gamma)          1.2 (1/day)
+  Population size (N)           13028
   Initial number of cases (I0)  6
-Basic reproduction number (R0)  1.355
-Critical number of susceptible  4807
+Basic reproduction number (R0)  1.13
+Critical number of susceptible  13029
 Final state
-  Final number of cases         2297
-  Final number of susceptibles  2510
-Daily forecast for 26-Mar-2020
+  Final number of cases         2932
+  Final number of susceptibles  10096
+Daily forecast for 01-Apr-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             2002 (cases)
-  Epidemic rate (r)             0.211721 (1/day)
-  Initial doubling time         3.3 (day)
+  Epidemic size (K)             2697 (cases)
+  Epidemic rate (r)             0.15667 (1/day)
+  Initial doubling time         4.4 (day)
 Estimated duration (days)
-  Turning day                   21
-  Acceleration   phase          9 (days)
-  Deceleration phase            11 (days)
-  Total duration                20 (days)
+  Turning day                   24
+  Acceleration   phase          12 (days)
+  Deceleration phase            13 (days)
+  Total duration                25 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
-  Start of acceleration         06-Mar-2020
-  Turning point                 16-Mar-2020
-  Start of steady growth        26-Mar-2020
-  Start of ending phase         16-Apr-2020
+  Start of acceleration         07-Mar-2020
+  Turning point                 19-Mar-2020
+  Start of steady growth        01-Apr-2020
+  Start of ending phase         27-Apr-2020
 Statistics
-  Number of observations        31
-  Degrees of freedom            27
-  Root Mean Squared Error       42.0134
+  Number of observations        37
+  Degrees of freedom            33
+  Root Mean Squared Error       57.2356
   R-Squared                     0.996
   Adjusted R-Squared            0.996
-  F-statistics vs. zero model   2474.51
-  p-value                       4.7594e-33
+  F-statistics vs. zero model   2669.11
+  p-value                       1.94308e-39
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      218.307
+  Objective function value      328.794
   Exit condition (1=OK)         0

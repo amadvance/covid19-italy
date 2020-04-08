@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       ontario
+  Day                           49
+Estimated the SIR model parameters
+  Contact rate (beta)           0.607 (1/day)
+  Removal rate (gamma)          0.509 (1/day)
+  Population size (N)           38416
+  Initial number of cases (I0)  11
+Basic reproduction number (R0)  1.191
+Critical number of susceptible  38416
+Final state
+  Final number of cases         11711
+  Final number of susceptibles  26704
+Daily forecast for 15-Mar-2020
+  Total                         4836
+  Increase                      268
+Estimated logistic model parameters
+  Epidemic size (K)             10652 (cases)
+  Epidemic rate (r)             0.0976381 (1/day)
+  Initial doubling time         7.1 (day)
+Estimated duration (days)
+  Turning day                   52
+  Acceleration   phase          21 (days)
+  Deceleration phase            22 (days)
+  Total duration                43 (days)
+Estimated datums
+  Outbreak                      26-Jan-2020
+  Start of acceleration         26-Feb-2020
+  Turning point                 18-Mar-2020
+  Start of steady growth        09-Apr-2020
+  Start of ending phase         22-May-2020
+Statistics
+  Number of observations        49
+  Degrees of freedom            45
+  Root Mean Squared Error       90.17
+  R-Squared                     0.996
+  Adjusted R-Squared            0.995
+  F-statistics vs. zero model   3466.03
+  p-value                       3.22405e-53
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      604.879
+  Exit condition (1=OK)         0

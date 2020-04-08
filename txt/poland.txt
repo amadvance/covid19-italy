@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       poland
+  Day                           35
+Estimated the SIR model parameters
+  Contact rate (beta)           0.962 (1/day)
+  Removal rate (gamma)          0.792 (1/day)
+  Population size (N)           28242
+  Initial number of cases (I0)  5
+Basic reproduction number (R0)  1.214
+Critical number of susceptible  28243
+Final state
+  Final number of cases         9373
+  Final number of susceptibles  18869
+Daily forecast for 08-Apr-2020
+  Total                         5190
+  Increase                      342
+Estimated logistic model parameters
+  Epidemic size (K)             8480 (cases)
+  Epidemic rate (r)             0.169864 (1/day)
+  Initial doubling time         4.1 (day)
+Estimated duration (days)
+  Turning day                   33
+  Acceleration   phase          12 (days)
+  Deceleration phase            13 (days)
+  Total duration                25 (days)
+Estimated datums
+  Outbreak                      04-Mar-2020
+  Start of acceleration         25-Mar-2020
+  Turning point                 06-Apr-2020
+  Start of steady growth        19-Apr-2020
+  Start of ending phase         14-May-2020
+Statistics
+  Number of observations        35
+  Degrees of freedom            31
+  Root Mean Squared Error       44.7006
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   11789.5
+  p-value                       1.83806e-47
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      248.881
+  Exit condition (1=OK)         0
