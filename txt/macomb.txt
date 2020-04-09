@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       macomb
+  Day                           18
+Estimated the SIR model parameters
+  Contact rate (beta)           0.56 (1/day)
+  Removal rate (gamma)          0.285 (1/day)
+  Population size (N)           4691
+  Initial number of cases (I0)  45
+Basic reproduction number (R0)  1.946
+Critical number of susceptible  4692
+Final state
+  Final number of cases         3709
+  Final number of susceptibles  982
+Daily forecast for 09-Apr-2020
+  Total                         2692
+  Increase                      66
+Estimated logistic model parameters
+  Epidemic size (K)             3090 (cases)
+  Epidemic rate (r)             0.274825 (1/day)
+  Initial doubling time         2.5 (day)
+Estimated duration (days)
+  Turning day                   13
+  Acceleration   phase          7 (days)
+  Deceleration phase            9 (days)
+  Total duration                16 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         28-Mar-2020
+  Turning point                 04-Apr-2020
+  Start of steady growth        13-Apr-2020
+  Start of ending phase         29-Apr-2020
+Statistics
+  Number of observations        18
+  Degrees of freedom            14
+  Root Mean Squared Error       123.787
+  R-Squared                     0.982
+  Adjusted R-Squared            0.976
+  F-statistics vs. zero model   263.549
+  p-value                       1.50504e-12
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      150.04
+  Exit condition (1=OK)         1

@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       bologna
-  Day                           39
+  Day                           40
 Estimated the SIR model parameters
-  Contact rate (beta)           0.836 (1/day)
-  Removal rate (gamma)          0.637 (1/day)
-  Population size (N)           7189
-  Initial number of cases (I0)  3
-Basic reproduction number (R0)  1.313
-Critical number of susceptible  7189
+  Contact rate (beta)           0.301 (1/day)
+  Removal rate (gamma)          0.1 (1/day)
+  Population size (N)           3518
+  Initial number of cases (I0)  9
+Basic reproduction number (R0)  2.992
+Critical number of susceptible  3518
 Final state
-  Final number of cases         3140
-  Final number of susceptibles  4048
-Daily forecast for 03-Apr-2020
-  Total                         2800
-  Increase                      42
+  Final number of cases         3309
+  Final number of susceptibles  208
+Daily forecast for 04-Apr-2020
+  Total                         2869
+  Increase                      13
 Estimated logistic model parameters
-  Epidemic size (K)             2769 (cases)
-  Epidemic rate (r)             0.199473 (1/day)
+  Epidemic size (K)             2814 (cases)
+  Epidemic rate (r)             0.200797 (1/day)
   Initial doubling time         3.5 (day)
 Estimated duration (days)
   Turning day                   27
   Acceleration   phase          10 (days)
-  Deceleration phase            11 (days)
-  Total duration                21 (days)
+  Deceleration phase            12 (days)
+  Total duration                22 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
   Start of acceleration         11-Mar-2020
   Turning point                 22-Mar-2020
-  Start of steady growth        02-Apr-2020
-  Start of ending phase         23-Apr-2020
+  Start of steady growth        03-Apr-2020
+  Start of ending phase         25-Apr-2020
 Statistics
-  Number of observations        39
-  Degrees of freedom            35
-  Root Mean Squared Error       21.3409
+  Number of observations        40
+  Degrees of freedom            36
+  Root Mean Squared Error       21.9119
   R-Squared                     1
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   25608.7
-  p-value                       1.6008e-58
+  F-statistics vs. zero model   26676.7
+  p-value                       2.75575e-60
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      126.251
-  Exit condition (1=OK)         0
+  Objective function value      131.47
+  Exit condition (1=OK)         1
