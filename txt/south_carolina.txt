@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       south_carolina
+  Day                           19
+Estimated the SIR model parameters
+  Contact rate (beta)           0.371 (1/day)
+  Removal rate (gamma)          0.206 (1/day)
+  Population size (N)           6480
+  Initial number of cases (I0)  154
+Basic reproduction number (R0)  1.756
+Critical number of susceptible  6480
+Final state
+  Final number of cases         4822
+  Final number of susceptibles  1658
+Daily forecast for 10-Apr-2020
+  Total                         2935
+  Increase                      142
+Estimated logistic model parameters
+  Epidemic size (K)             3986 (cases)
+  Epidemic rate (r)             0.164704 (1/day)
+  Initial doubling time         4.2 (day)
+Estimated duration (days)
+  Turning day                   15
+  Acceleration   phase          11 (days)
+  Deceleration phase            14 (days)
+  Total duration                25 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         26-Mar-2020
+  Turning point                 06-Apr-2020
+  Start of steady growth        20-Apr-2020
+  Start of ending phase         14-May-2020
+Statistics
+  Number of observations        19
+  Degrees of freedom            15
+  Root Mean Squared Error       75.5222
+  R-Squared                     0.993
+  Adjusted R-Squared            0.991
+  F-statistics vs. zero model   759.826
+  p-value                       1.33377e-16
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      315.748
+  Exit condition (1=OK)         1
