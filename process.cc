@@ -262,10 +262,6 @@ void load_csv(int kind, place_set& bag, const char* file)
 			exit(EXIT_FAILURE);
 		}
 
-		// skip invalid lines
-		if (strstr(s, "In fase di definizione/aggiornamento") != 0)
-			continue;
-
 		if (kind == KIND_CITY) {
 			struct place p;
 			struct day d;
@@ -284,6 +280,9 @@ void load_csv(int kind, place_set& bag, const char* file)
 			d.totale_casi = itok(&s, ',');
 			p.country = "Italia";
 			p.trimmed = trim(p.city);
+
+			// truncate to include only the day
+			d.date = d.date.substr(0, 10);
 
 			// insert
 			pair<const place_set::iterator, bool> j = bag.insert(p);
@@ -319,6 +318,10 @@ void load_csv(int kind, place_set& bag, const char* file)
 			d.deceduti = itok(&s, ',');
 			d.totale_casi = itok(&s, ',');
 			d.tamponi = itok(&s, ',');
+
+			// truncate to include only the day
+			d.date = d.date.substr(0, 10);
+
 			pair<const place_set::iterator, bool> j = bag.insert(p);
 			j.first->days.insert(d);
 		} else if (kind == KIND_MIXED) {
@@ -335,6 +338,10 @@ void load_csv(int kind, place_set& bag, const char* file)
 				d.deceduti = itok(&s, ','); // Deaths
 				d.dimessi_guariti = itok(&s, ','); // Recovered
 				d.positivi = d.totale_casi - d.deceduti - d.dimessi_guariti;
+
+				// fix name duplication, like France, France
+				if (state == country)
+					state = "";
 			} else {
 				stok(&s, ','); // FIPS
 				city = stok(&s, ','); // Admin2
@@ -354,10 +361,6 @@ void load_csv(int kind, place_set& bag, const char* file)
 			if (country == "Korea, South")
 				country = "South Korea";
 
-			// US data is not reliable in the old format
-			if (old_format && country == "US")
-				continue;
-
 			// convert early date format
 			if (d.date.substr(0,5) != "2020-") {
 				int y, m, dd;
@@ -372,7 +375,16 @@ void load_csv(int kind, place_set& bag, const char* file)
 				d.date = buf;
 			}
 
-			if (city.length() == 0) {
+			// truncate to include only the day
+			d.date = d.date.substr(0, 10);
+
+			// data not reliable, includes external provinces
+			if (country == "France")
+				continue;
+			if (country == "US" && old_format)
+				continue;
+
+			if (city.length() == 0 && state.length() == 0) {
 				// country
 				place p;
 				p.kind = KIND_COUNTRY;
@@ -380,6 +392,8 @@ void load_csv(int kind, place_set& bag, const char* file)
 				p.trimmed = trim(p.country);
 				pair<const place_set::iterator, bool> j = bag.insert(p);
 				j.first->days.insert(d);
+			} else if (city.length() == 0) {
+				// ignore for now
 			} else {
 				if (city != "Unassigned") {
 					// city
@@ -465,6 +479,33 @@ void load_dir(int kind, place_set& bag, const char* file)
 	closedir(dir);
 }
 
+string next_date(string date)
+{
+	int y, m, d;
+	char buf[16];
+	int day_for_month[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+	if (sscanf(date.c_str(), "%d-%d-%d", &y, &m, &d) != 3)
+		return "";
+
+	if (m < 1 || m > 12)
+		return "";
+
+	++d;
+	if (d > day_for_month[m-1]) {
+		d = 1;
+		++m;
+	}
+	if (m == 13) {
+		m = 1;
+		++y;
+	}
+
+	sprintf(buf, "%04d-%02d-%02d", y, m, d);
+
+	return buf;
+}
+
 void setup(place_set& bag)
 {
 	// compute max_casi
@@ -473,6 +514,7 @@ void setup(place_set& bag)
 
 		day_set::iterator prev = i->days.end();
 		for (day_set::iterator j=i->days.begin();j!=i->days.end();++j) {
+			// compute positivi
 			if (j->positivi == 0) {
 				if (j->dimessi_guariti || j->deceduti) {
 					j->positivi = j->totale_casi - j->dimessi_guariti - j->deceduti;
@@ -508,34 +550,50 @@ void setup(place_set& bag)
 				i->max_dimessi_guariti = j->dimessi_guariti;
 			prev = j;
 		}
+
+		prev = i->days.end();
+		for (day_set::iterator j=i->days.begin();j!=i->days.end();++j) {
+			// avoid holes in the day sequence
+			if (prev != i->days.end()) {
+				string next_1 = next_date(prev->date);
+				if (next_1 != j->date) {
+					string next_2 = next_date(next_1);
+					string next_3 = next_date(next_2);
+
+					if (next_2 == j->date) {
+						// interpolate 2
+						day d = *prev;
+						d.date = next_1;
+						d.totale_casi = (prev->totale_casi + j->totale_casi) / 2;
+						d.deceduti = (prev->deceduti + j->deceduti) / 2;
+						d.dimessi_guariti = (prev->dimessi_guariti + j->dimessi_guariti) / 2;
+						d.positivi = (prev->positivi + j->positivi) / 2;
+						i->days.insert(d);
+					} else if (next_3 == j->date) {
+						// interpolate 3
+						day d1 = *prev;
+						d1.date = next_1;
+						d1.totale_casi = (2*prev->totale_casi + j->totale_casi) / 3;
+						d1.deceduti = (2*prev->deceduti + j->deceduti) / 3;
+						d1.dimessi_guariti = (2*prev->dimessi_guariti + j->dimessi_guariti) / 3;
+						d1.positivi = (2*prev->positivi + j->positivi) / 3;
+						i->days.insert(d1);
+
+						day d2 = *prev;
+						d2.date = next_1;
+						d2.totale_casi = (prev->totale_casi + 2*j->totale_casi) / 3;
+						d2.deceduti = (prev->deceduti + 2*j->deceduti) / 3;
+						d2.dimessi_guariti = (prev->dimessi_guariti + 2*j->dimessi_guariti) / 3;
+						d2.positivi = (prev->positivi + 2*j->positivi) / 3;
+						i->days.insert(d2);
+					} else {
+						i->days.erase(i->days.begin(), j);
+					}
+				}
+			}
+			prev = j;
+		}
 	}
-}
-
-string next_date(string date)
-{
-	int y, m, d;
-	char buf[16];
-	int day_for_month[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-	if (sscanf(date.c_str(), "%d-%d-%dT", &y, &m, &d) != 3) 
-		return "";
-
-	if (m < 1 || m > 12)
-		return "";
-
-	++d;
-	if (d > day_for_month[m-1]) {
-		d = 1;
-		++m;
-	}
-	if (m == 13) {
-		m = 1;
-		++y;
-	}
-
-	sprintf(buf, "%04d-%02d-%02d", y, m, d);
-
-	return buf;
 }
 
 void load_fit(place_set& bag)
@@ -1030,9 +1088,12 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 "intuibile un cambio di tendenza dell'epidemia. "
 "Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla "
 "somma di tutti gli altri valori visuallizati. "
+		);
+		if (p.max_isolamento_domiciliare || p.max_terapia_intensiva || p.max_ricoverati)
+		fprintf(out,
 "Il numero di <i>Positivi </i> &eacute; rappresentato dalla somma di <i>Isolamento Domiciliare, "
 "Ricoverati</i> e <i>Terapia Intensiva</i>. "
-		);
+        );
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_stack.c_str());
 		if (p.max_isolamento_domiciliare + p.max_ricoverati + p.max_terapia_intensiva + p.max_tamponi)
@@ -1045,6 +1106,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 "Questo grafico mostra il progredire dell'epidemia nel tempo con una scala logarimica. "
 "Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. "
 "Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. "
+        );
+        if (p.max_isolamento_domiciliare || p.max_terapia_intensiva || p.max_ricoverati)
+        fprintf(out,
 "I valori di <i>Casi, Guariti</i> e <i>Deceduti</i> sono monotoni crescenti, e non diminuiscono mai. "
 "Invece i valori di <i>Positivi, Isolamento Domiciliare, Ricoverati</i> e <i>Terapia Intensiva</i> "
 "con il tempo scenderann&ograve; fino a zero."
@@ -1060,12 +1124,13 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	// not significative with too few cases
 	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS
 		&& p.trimmed != "japan" // Fail to obtain parameters for japan
-		&& p.trimmed != "korea_south" // Error using odearguments (line 18)
+		&& p.trimmed != "south_korea"
 		&& p.trimmed != "westchester"
 		&& p.trimmed != "diamond_princess"
 		&& p.trimmed != "china"
-		&& p.trimmed != "mainland_china"
 		&& p.trimmed != "french_polynesia"
+		&& p.trimmed != "king"
+		&& p.trimmed != "peru"		
 		&& p.trimmed != ""
 	) {
 		fprintf(out, "<p>");
