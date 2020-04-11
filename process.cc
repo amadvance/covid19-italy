@@ -1072,18 +1072,18 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	if (p.kind == KIND_CITY) {
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra il progredire del numero di casi dell'epidemia. "
+"Il grafico successivo mostra il progredire del numero di casi dell'epidemia. "
 "La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare."
 		);
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
 		fprintf(plot, "gnuplot -c graph_pr_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
 	} else {
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra il progredire dell'epidemia nelle differenti categorie di contagiati. "
+"Il grafico successivo mostra il progredire dell'epidemia nelle differenti categorie di contagiati. "
 "La scala lineare permette una facile comparazione visiva dei valori, ma rende difficilmente "
 "intuibile un cambio di tendenza dell'epidemia. "
 "Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla "
@@ -1093,7 +1093,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		fprintf(out,
 "Il numero di <i>Positivi </i> &eacute; rappresentato dalla somma di <i>Isolamento Domiciliare, "
 "Ricoverati</i> e <i>Terapia Intensiva</i>. "
-        );
+		);
 		fprintf(out, "</p>\n");
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_stack.c_str());
 		if (p.max_isolamento_domiciliare + p.max_ricoverati + p.max_terapia_intensiva + p.max_tamponi)
@@ -1101,14 +1101,14 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		else
 			fprintf(plot, "gnuplot -c graph_rg_stack4.gp %s www/%s\n", dat.c_str(), png_stack.c_str());
 
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra il progredire dell'epidemia nel tempo con una scala logarimica. "
+"Il grafico successivo mostra il progredire dell'epidemia nel tempo con una scala logarimica. "
 "Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. "
 "Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. "
-        );
-        if (p.max_isolamento_domiciliare || p.max_terapia_intensiva || p.max_ricoverati)
-        fprintf(out,
+		);
+		if (p.max_isolamento_domiciliare || p.max_terapia_intensiva || p.max_ricoverati)
+		fprintf(out,
 "I valori di <i>Casi, Guariti</i> e <i>Deceduti</i> sono monotoni crescenti, e non diminuiscono mai. "
 "Invece i valori di <i>Positivi, Isolamento Domiciliare, Ricoverati</i> e <i>Terapia Intensiva</i> "
 "con il tempo scenderann&ograve; fino a zero."
@@ -1133,9 +1133,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		&& p.trimmed != "peru"		
 		&& p.trimmed != ""
 	) {
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
+"Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
 "si avvicina ai dati fino ad oggi disponibili. "
 "E' utilizzato lo strumento di calcolo <a href=\"https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19\">fitVirusCOVID19</a> "
 "che stima un totale finale di contagiati di <b>%d</b> (con una deviazione standard di %d). "
@@ -1144,9 +1144,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		fprintf(out, "<center><img src=\"%s\"></center>\n", png_fit.c_str());
 		fprintf(plot, "gnuplot -c graph_fit.gp %s www/%s\n", fit.c_str(), png_fit.c_str());
 
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b>. "
+"Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>%s</b>. "
 "Ulteriori stime le potete trovare nei <a href=\"https://github.com/amadvance/covid19-italy/blob/master/txt/%s.txt\">risultati completi dello strumento di calcolo</a>. "
 		, p.ending.c_str(), trimmed.c_str());
 		fprintf(out, "</p>\n");
@@ -1158,9 +1158,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 	// not significative with too few cases
 	if (p.max_casi >= 1000) {
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. "
+"Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. "
 "Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza "
 "del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di "
 "casi e non dal tempo. "
@@ -1180,9 +1180,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 	// not significative with too few cases
 	if (p.kind != KIND_CITY && p.max_positivi >= 1000) {
-		fprintf(out, "<p>");
+		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
-"Questo grafico mostra la variazione del numero di Positivi in base al numero di Positivi stessi. "
+"Il grafico successivo mostra la variazione del numero di Positivi in base al numero di Positivi stessi. "
 "Come il grafico precedente, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia. "
 "L'uso del numero di <i>Positivi</i> invece che dei <i>Casi</i> &eacute; una migliore misura della capacit&agrave; "
 "di diffusione dell'epidemia dato che i <i>Guariti</i> e <i>Deceduti</i> non sono da considerare contagiosi. "
@@ -1303,8 +1303,16 @@ void save_country(FILE* plot, FILE* analyze, place_set& bag, string country)
 		fclose(out);
 	}
 
+	fprintf(f_country, "</p>\n");
+
 	if (country == "Italia") {
-		fprintf(f_country, "<h1>Resto del Mondo</h1><p class=\"lista\">\n");
+		fprintf(f_country, "<h1>Resto del Mondo</h1>\n");
+		fprintf(f_country, "<p>\n");
+		fprintf(f_country,
+"I dati del resto del Mondo sono ottenuti dal <a href=\"https://github.com/CSSEGISandData/COVID-19\">repository github del Johns Hopkins CSSE</a>"
+		);
+		fprintf(f_country, "</p>\n");
+		fprintf(f_country, "<p class=\"lista\">\n");
 		for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
 			if (i->kind != KIND_COUNTRY || i->country == country)
 				continue;
@@ -1318,9 +1326,8 @@ void save_country(FILE* plot, FILE* analyze, place_set& bag, string country)
 				trimmed.c_str(), i->name().c_str());
 			fprintf(f_country, "</span>, \n");
 		}
+		fprintf(f_country, "</p>\n");
 	}
-
-	fprintf(f_country, "</p>\n");
 
 	// footer for state.html
 	for (place_set::iterator i=bag.begin();i!=bag.end();++i) {
