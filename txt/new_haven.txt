@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       new_haven
+  Day                           21
+Estimated the SIR model parameters
+  Contact rate (beta)           0.88 (1/day)
+  Removal rate (gamma)          0.707 (1/day)
+  Population size (N)           21346
+  Initial number of cases (I0)  25
+Basic reproduction number (R0)  1.244
+Critical number of susceptible  21347
+Final state
+  Final number of cases         7892
+  Final number of susceptibles  13453
+Daily forecast for 12-Apr-2020
+  Total                         3015
+  Increase                      300
+Estimated logistic model parameters
+  Epidemic size (K)             7025 (cases)
+  Epidemic rate (r)             0.173356 (1/day)
+  Initial doubling time         4 (day)
+Estimated duration (days)
+  Turning day                   23
+  Acceleration   phase          11 (days)
+  Deceleration phase            12 (days)
+  Total duration                24 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         03-Apr-2020
+  Turning point                 14-Apr-2020
+  Start of steady growth        27-Apr-2020
+  Start of ending phase         20-May-2020
+Statistics
+  Number of observations        21
+  Degrees of freedom            17
+  Root Mean Squared Error       60.2007
+  R-Squared                     0.996
+  Adjusted R-Squared            0.994
+  F-statistics vs. zero model   1268.9
+  p-value                       3.48682e-20
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      248.214
+  Exit condition (1=OK)         0
