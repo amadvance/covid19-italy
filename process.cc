@@ -109,6 +109,8 @@ struct place {
 
 	unsigned font_size() const;
 	string name() const;
+
+	double skew() const;
 };
 
 place::place(void) 
@@ -149,6 +151,19 @@ string place::name() const
 
 	fprintf(stderr, "Unexpected kind\n");
 	exit(EXIT_FAILURE);
+}
+
+double place::skew() const
+{
+    double last_skew = 0;
+    for(day_set::const_iterator i=days.begin();i!=days.end();++i) {
+        if (i->has_data && i->has_fit) {
+            int casi_skew = i->totale_casi - i->totale_casi_fit;
+            if (rmse != 0)
+                last_skew = casi_skew / (double)rmse;
+        }
+    }
+    return last_skew;
 }
 
 typedef set<place> place_set;
