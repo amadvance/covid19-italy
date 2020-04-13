@@ -828,7 +828,7 @@ void save_analyze(FILE* f, string name)
 	fprintf(f, "fprintf(f, '### R0: ');\n");
 	fprintf(f, "fprintf(f, '%%.1f\\n', res.R0);\n");
 	fprintf(f, "fprintf(f, '### RMSE: ');\n");
-	fprintf(f, "fprintf(f, '%%.f0\\n', res.RMSE);\n");
+	fprintf(f, "fprintf(f, '%%.0f\\n', res.RMSE);\n");
 	fprintf(f, "fprintf(f, '### Clim: ');\n");
 	fprintf(f, "fprintf(f, '%%.0f\\n', res.Clim);\n");
 	fprintf(f, "fprintf(f, '### Outbreak: ');\n");
