@@ -48,6 +48,8 @@ struct day {
 	mutable int totale_casi;
 	mutable int totale_casi_fit;
 	mutable int tamponi;
+	mutable bool has_fit;
+	mutable bool has_data;
 
 	day(void);
 
@@ -67,6 +69,8 @@ day::day(void)
 	totale_casi = 0;
 	totale_casi_fit = 0;
 	tamponi = 0;
+	has_fit = false;
+	has_data = false;
 }
 
 bool day::operator<(const day& A) const
@@ -283,6 +287,7 @@ void load_csv(int kind, place_set& bag, const char* file)
 
 			// truncate to include only the day
 			d.date = d.date.substr(0, 10);
+			d.has_data = true;
 
 			// insert
 			pair<const place_set::iterator, bool> j = bag.insert(p);
@@ -321,6 +326,7 @@ void load_csv(int kind, place_set& bag, const char* file)
 
 			// truncate to include only the day
 			d.date = d.date.substr(0, 10);
+			d.has_data = true;
 
 			pair<const place_set::iterator, bool> j = bag.insert(p);
 			j.first->days.insert(d);
@@ -377,8 +383,9 @@ void load_csv(int kind, place_set& bag, const char* file)
 
 			// truncate to include only the day
 			d.date = d.date.substr(0, 10);
+			d.has_data = true;			
 
-			// data not reliable, includes external provinces
+			// data not reliable from 04-04 with a big increase, maybe added external provinces ?
 			if (country == "France")
 				continue;
 			if (country == "US" && old_format)
@@ -393,7 +400,7 @@ void load_csv(int kind, place_set& bag, const char* file)
 				pair<const place_set::iterator, bool> j = bag.insert(p);
 				j.first->days.insert(d);
 			} else if (city.length() == 0) {
-				// ignore for now
+			    // ignored
 			} else {
 				if (city != "Unassigned") {
 					// city
@@ -564,6 +571,7 @@ void setup(place_set& bag)
 						// interpolate 2
 						day d = *prev;
 						d.date = next_1;
+						d.has_data = true;
 						d.totale_casi = (prev->totale_casi + j->totale_casi) / 2;
 						d.deceduti = (prev->deceduti + j->deceduti) / 2;
 						d.dimessi_guariti = (prev->dimessi_guariti + j->dimessi_guariti) / 2;
@@ -573,6 +581,7 @@ void setup(place_set& bag)
 						// interpolate 3
 						day d1 = *prev;
 						d1.date = next_1;
+						d1.has_data = true;
 						d1.totale_casi = (2*prev->totale_casi + j->totale_casi) / 3;
 						d1.deceduti = (2*prev->deceduti + j->deceduti) / 3;
 						d1.dimessi_guariti = (2*prev->dimessi_guariti + j->dimessi_guariti) / 3;
@@ -581,6 +590,7 @@ void setup(place_set& bag)
 
 						day d2 = *prev;
 						d2.date = next_1;
+						d2.has_data = true;
 						d2.totale_casi = (prev->totale_casi + 2*j->totale_casi) / 3;
 						d2.deceduti = (prev->deceduti + 2*j->deceduti) / 3;
 						d2.dimessi_guariti = (prev->dimessi_guariti + 2*j->dimessi_guariti) / 3;
@@ -661,6 +671,7 @@ void load_fit(place_set& bag)
 					}
 					int v = atoi(t);
 					j->totale_casi_fit = v;
+					j->has_fit = true;
 					prev = j;
 					++j;
 					// date is dense then skip 9 values and read the 10th
@@ -758,6 +769,8 @@ void table_date(FILE* out, const place& p)
 	while (last->totale_casi == 0)
 		++last;
 	for (int i=0;i<LAST-1;++i) {
+	    if (last == p.days.rend())
+	        break;
 		fprintf(out, "<td>%s</td>", last->date.substr(0,10).c_str());
 		++last;
 	}
@@ -915,20 +928,27 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	for (day_set::iterator i=p.days.begin();i!=p.days.end();++i) {
 		int casi_delta;
 		int casi_fit_delta;
+		char casi_str[16];
 		char casi_delta_str[16];
 		char casi_fit_delta_str[16];
+		char casi_fit_str[16];
+		char casi_mean_str[16];
 
 		if (prev != p.days.end()) {
 			casi_delta = i->totale_casi - prev->totale_casi;
 			casi_fit_delta = i->totale_casi_fit - prev->totale_casi_fit;
 			sprintf(casi_delta_str, "%d", casi_delta);
+			sprintf(casi_fit_str, "%d", i->totale_casi_fit);
 			sprintf(casi_fit_delta_str, "%d", casi_fit_delta);
 		} else {
 			casi_delta = 0;
 			casi_fit_delta = 0;
 			sprintf(casi_delta_str, "-");
+			sprintf(casi_fit_str, "-");
 			sprintf(casi_fit_delta_str, "-");
 		}
+
+		sprintf(casi_str, "%d", i->totale_casi);
 
 		// free slot 0
 		for (int j=casi_count-1;j>0;--j)
@@ -938,6 +958,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		for (int j=0;j<casi_count;++j)
 			casi_mean += casi_mean_map[j];
 		casi_mean /= casi_count;
+		sprintf(casi_mean_str, "%.1f", casi_mean);
 
 		// compute mean
 		double casi_perc;
@@ -947,7 +968,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			snprintf(casi_perc_str, sizeof(casi_perc_str), "%.1f", casi_perc);
 		} else {
 			casi_perc = 0.0;
-			casi_perc_str[0] = 0;
+			sprintf(casi_perc_str, "-");
 		}
 
 		int positivi_delta;
@@ -979,60 +1000,69 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			positivi_perc_mean = 0.0;
 			sprintf(positivi_perc_mean_str, "-");
 		}
+		
+		// if there is no data, clear the value
+		if (!i->has_data) {
+			sprintf(casi_str, "-");
+			sprintf(casi_delta_str, "-");
+			sprintf(casi_mean_str, "-");			
+		}
 
-		// dat
-		if (i->totale_casi != 0) {
-			if (p.kind == KIND_CITY) {
-				fprintf(f_dat,"%s\t%d\t%s\t%s\t%.1f\n",
-					i->date.substr(5,5).c_str(),
-					i->totale_casi,
-					casi_perc_str,
-					casi_delta_str,
-					casi_mean);
-			} else {
-				fprintf(f_dat,"%s\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%d\t%s\t%s\t%.1f\t%s\t%.1f\n",
-					i->date.substr(5,5).c_str(),
-					i->ricoverati,
-					i->terapia_intensiva,
-					i->totale_ospedalizzati,
-					i->isolamento_domiciliare,
-					i->positivi,
-					positivi_delta_str,
-					i->dimessi_guariti,
-					i->deceduti,
-					i->totale_casi,
-					i->tamponi,
-					casi_perc_str,
-					casi_delta_str,
-					casi_mean,
-					positivi_perc_mean_str,
-					positivi_mean);
+		// if there is no estimate, clear the value
+		if (!i->has_fit) {
+			sprintf(casi_fit_str, "-");
+			sprintf(casi_fit_delta_str, "-");		
+		}		
+
+		// ensure monotone grow
+		if (monotone_totale_casi < i->totale_casi)
+			monotone_totale_casi = i->totale_casi;
+
+		// skip initial zero measure
+		if (i->totale_casi != 0 || monotone_totale_casi != 1) {
+			// dat
+			if (i->has_data) {
+				if (p.kind == KIND_CITY) {
+					fprintf(f_dat,"%s\t%s\t%s\t%s\t%s\n",
+						i->date.substr(5,5).c_str(),
+						casi_str,
+						casi_perc_str,
+						casi_delta_str,
+						casi_mean_str);
+				} else {
+					fprintf(f_dat,"%s\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%d\t%s\t%s\t%s\t%s\t%.1f\n",
+						i->date.substr(5,5).c_str(),
+						i->ricoverati,
+						i->terapia_intensiva,
+						i->totale_ospedalizzati,
+						i->isolamento_domiciliare,
+						i->positivi,
+						positivi_delta_str,
+						i->dimessi_guariti,
+						i->deceduti,
+						i->totale_casi,
+						i->tamponi,
+						casi_perc_str,
+						casi_delta_str,
+						casi_mean_str,
+						positivi_perc_mean_str,
+						positivi_mean);
+				}
 			}
-		}
 
-		// fit
-		if (i->totale_casi != 0) {
-			fprintf(f_fit,"%s\t%d\t%s\t%d\t%s\t%g\n",
+			// fit
+			fprintf(f_fit,"%s\t%s\t%s\t%s\t%s\t%s\n",
 				i->date.substr(5,5).c_str(),
-				i->totale_casi,
+				casi_str,
 				casi_delta_str,
-				i->totale_casi_fit,
+				casi_fit_str,
 				casi_fit_delta_str,
-				casi_mean);
-		} else {
-			fprintf(f_fit,"%s\t-\t-\t%d\t%s\t%g\n",
-				i->date.substr(5,5).c_str(),
-				i->totale_casi_fit,
-				casi_fit_delta_str,
-				casi_mean);
-		}
+				casi_mean_str);
 
-		if (i->totale_casi != 0) {
-			// ensure monotone grow
-			if (monotone_totale_casi < i->totale_casi)
-				monotone_totale_casi = i->totale_casi;
-
-			fprintf(f_get,"\t%d %% %s\n", monotone_totale_casi, i->date.substr(0,10).c_str());
+			// get
+			if (i->has_data) {
+				fprintf(f_get,"\t%d %% %s\n", monotone_totale_casi, i->date.substr(0,10).c_str());
+			}
 		}
 
 		prev = i;
@@ -1130,7 +1160,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		&& p.trimmed != "china"
 		&& p.trimmed != "french_polynesia"
 		&& p.trimmed != "king"
-		&& p.trimmed != "peru"		
+		&& p.trimmed != "peru"
+		&& p.trimmed != "singapore"
+		&& p.trimmed != "rhode_island"
 		&& p.trimmed != ""
 	) {
 		fprintf(out, "<p class=\"didascalia\">");
