@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       norfolk
+  Day                           22
+Estimated the SIR model parameters
+  Contact rate (beta)           0.694 (1/day)
+  Removal rate (gamma)          0.617 (1/day)
+  Population size (N)           553737
+  Initial number of cases (I0)  70
+Basic reproduction number (R0)  1.125
+Critical number of susceptible  553738
+Final state
+  Final number of cases         119306
+  Final number of susceptibles  434431
+Daily forecast for 13-Apr-2020
+  Total                         2886
+  Increase                      237
+Estimated logistic model parameters
+  Epidemic size (K)             111196 (cases)
+  Epidemic rate (r)             0.0774863 (1/day)
+  Initial doubling time         8.9 (day)
+Estimated duration (days)
+  Turning day                   67
+  Acceleration   phase          26 (days)
+  Deceleration phase            27 (days)
+  Total duration                53 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         02-May-2020
+  Turning point                 28-May-2020
+  Start of steady growth        24-Jun-2020
+  Start of ending phase         16-Aug-2020
+Statistics
+  Number of observations        22
+  Degrees of freedom            18
+  Root Mean Squared Error       33.0435
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   3933.04
+  p-value                       1.55447e-25
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      140.192
+  Exit condition (1=OK)         0
