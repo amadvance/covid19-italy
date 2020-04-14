@@ -155,15 +155,15 @@ string place::name() const
 
 double place::skew() const
 {
-    double last_skew = 0;
-    for(day_set::const_iterator i=days.begin();i!=days.end();++i) {
-        if (i->has_data && i->has_fit) {
-            int casi_skew = i->totale_casi - i->totale_casi_fit;
-            if (rmse != 0)
-                last_skew = casi_skew / (double)rmse;
-        }
-    }
-    return last_skew;
+	double last_skew = 0;
+	for(day_set::const_iterator i=days.begin();i!=days.end();++i) {
+		if (i->has_data && i->has_fit) {
+			int casi_skew = i->totale_casi - i->totale_casi_fit;
+			if (rmse != 0)
+				last_skew = casi_skew / (double)rmse;
+		}
+	}
+	return last_skew;
 }
 
 typedef set<place> place_set;
@@ -377,6 +377,14 @@ void load_csv(int kind, place_set& bag, const char* file)
 				d.positivi = itok(&s, ','); // Active
 			}
 
+			// special lines for recovered with negative deceduti
+			if (state == "Recovered")
+				continue;
+
+			// special lines with negative positivi
+			if (city == "Unassigned" || city == "unassigned")
+				continue;
+
 			if (country == "Mainland China")
 				country = "China";
 			if (country == "Korea, South")
@@ -415,20 +423,18 @@ void load_csv(int kind, place_set& bag, const char* file)
 				pair<const place_set::iterator, bool> j = bag.insert(p);
 				j.first->days.insert(d);
 			} else if (city.length() == 0) {
-			    // ignored
+				// ignored
 			} else {
-				if (city != "Unassigned") {
-					// city
-					place p;
-					p.kind = KIND_CITY;
-					p.city = city;
-					p.state = state;
-					p.country = country;
-					p.trimmed = trim(p.city);
-					{
-						pair<const place_set::iterator, bool> j = bag.insert(p);
-						j.first->days.insert(d);
-					}
+				// city
+				place p;
+				p.kind = KIND_CITY;
+				p.city = city;
+				p.state = state;
+				p.country = country;
+				p.trimmed = trim(p.city);
+				{
+					pair<const place_set::iterator, bool> j = bag.insert(p);
+					j.first->days.insert(d);
 				}
 
 				// state
@@ -536,13 +542,6 @@ void setup(place_set& bag)
 
 		day_set::iterator prev = i->days.end();
 		for (day_set::iterator j=i->days.begin();j!=i->days.end();++j) {
-			// compute positivi
-			if (j->positivi == 0) {
-				if (j->dimessi_guariti || j->deceduti) {
-					j->positivi = j->totale_casi - j->dimessi_guariti - j->deceduti;
-				}
-			}
-
 			// fix decreasing
 			if (prev != i->days.end()) {
 				if (j->totale_casi < prev->totale_casi)
@@ -551,9 +550,10 @@ void setup(place_set& bag)
 					j->deceduti = prev->deceduti;
 				if (j->dimessi_guariti < prev->dimessi_guariti)
 					j->dimessi_guariti = prev->dimessi_guariti;
-				if (j->positivi < prev->positivi)
-					j->positivi = prev->positivi;
 			}
+
+			// recompute positivi
+			j->positivi = j->totale_casi - j->dimessi_guariti - j->deceduti;
 
 			// max
 			if (i->max_casi < j->totale_casi)
@@ -784,8 +784,8 @@ void table_date(FILE* out, const place& p)
 	while (last->totale_casi == 0)
 		++last;
 	for (int i=0;i<LAST-1;++i) {
-	    if (last == p.days.rend())
-	        break;
+		if (last == p.days.rend())
+			break;
 		fprintf(out, "<td>%s</td>", last->date.substr(0,10).c_str());
 		++last;
 	}
