@@ -1,23 +1,23 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       spain
-  Day                           49
+  Day                           50
 Estimated the SIR model parameters
-  Contact rate (beta)           0.623 (1/day)
-  Removal rate (gamma)          0.423 (1/day)
-  Population size (N)           326739
-  Initial number of cases (I0)  65
-Basic reproduction number (R0)  1.474
-Critical number of susceptible  326739
+  Contact rate (beta)           0.404 (1/day)
+  Removal rate (gamma)          0.202 (1/day)
+  Population size (N)           237733
+  Initial number of cases (I0)  97
+Basic reproduction number (R0)  2
+Critical number of susceptible  237733
 Final state
-  Final number of cases         184860
-  Final number of susceptibles  141878
-Daily forecast for 14-Apr-2020
-  Total                         NaN
-  Increase                      NaN
+  Final number of cases         189540
+  Final number of susceptibles  48192
+Daily forecast for 15-Apr-2020
+  Total                         172668
+  Increase                      127
 Estimated logistic model parameters
-  Epidemic size (K)             159020 (cases)
-  Epidemic rate (r)             0.200412 (1/day)
-  Initial doubling time         3.5 (day)
+  Epidemic size (K)             158552 (cases)
+  Epidemic rate (r)             0.202134 (1/day)
+  Initial doubling time         3.4 (day)
 Estimated duration (days)
   Turning day                   34
   Acceleration   phase          10 (days)
@@ -28,17 +28,17 @@ Estimated datums
   Start of acceleration         20-Mar-2020
   Turning point                 30-Mar-2020
   Start of steady growth        11-Apr-2020
-  Start of ending phase         03-May-2020
+  Start of ending phase         04-May-2020
 Statistics
-  Number of observations        49
-  Degrees of freedom            45
-  Root Mean Squared Error       1447.34
-  R-Squared                     0.999
+  Number of observations        50
+  Degrees of freedom            46
+  Root Mean Squared Error       1409.55
+  R-Squared                     1
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   27158.9
-  p-value                       2.68658e-73
+  F-statistics vs. zero model   31029
+  p-value                       4.9459e-76
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      9709.9
-  Exit condition (1=OK)         0
+  Objective function value      9559.98
+  Exit condition (1=OK)         1

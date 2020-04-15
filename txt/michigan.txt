@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       michigan
-  Day                           23
+  Day                           24
 Estimated the SIR model parameters
-  Contact rate (beta)           0.302 (1/day)
-  Removal rate (gamma)          0.068 (1/day)
-  Population size (N)           30629
-  Initial number of cases (I0)  1021
-Basic reproduction number (R0)  4.285
-Critical number of susceptible  30629
+  Contact rate (beta)           0.361 (1/day)
+  Removal rate (gamma)          0.149 (1/day)
+  Population size (N)           36806
+  Initial number of cases (I0)  940
+Basic reproduction number (R0)  2.355
+Critical number of susceptible  36806
 Final state
-  Final number of cases         30257
-  Final number of susceptibles  371
-Daily forecast for 14-Apr-2020
-  Total                         25950
-  Increase                      315
+  Final number of cases         32584
+  Final number of susceptibles  4222
+Daily forecast for 15-Apr-2020
+  Total                         27121
+  Increase                      211
 Estimated logistic model parameters
-  Epidemic size (K)             26734 (cases)
-  Epidemic rate (r)             0.234208 (1/day)
-  Initial doubling time         3 (day)
+  Epidemic size (K)             27204 (cases)
+  Epidemic rate (r)             0.211684 (1/day)
+  Initial doubling time         3.3 (day)
 Estimated duration (days)
   Turning day                   13
-  Acceleration   phase          8 (days)
-  Deceleration phase            10 (days)
-  Total duration                18 (days)
+  Acceleration   phase          9 (days)
+  Deceleration phase            11 (days)
+  Total duration                20 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         26-Mar-2020
   Turning point                 04-Apr-2020
-  Start of steady growth        14-Apr-2020
-  Start of ending phase         02-May-2020
+  Start of steady growth        16-Apr-2020
+  Start of ending phase         06-May-2020
 Statistics
-  Number of observations        23
-  Degrees of freedom            19
-  Root Mean Squared Error       165.674
-  R-Squared                     1
-  Adjusted R-Squared            1
-  F-statistics vs. zero model   19134.5
-  p-value                       3.12383e-33
+  Number of observations        24
+  Degrees of freedom            20
+  Root Mean Squared Error       213.019
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   12963.8
+  p-value                       4.76049e-33
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      722.148
-  Exit condition (1=OK)         0
+  Objective function value      952.645
+  Exit condition (1=OK)         1
