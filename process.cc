@@ -1090,11 +1090,11 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	string png_fit = trimmed + "_fit.png";
 	string png_fid = trimmed + "_fid.png";
 	if (p.kind == KIND_CITY) {
-		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
-		fprintf(out, "<table class=\"dati\">");
-		table_date(out, p);
-		table_stat(out, p, 0);
-		fprintf(out, "</table>");
+   		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
+   		fprintf(out, "<table class=\"dati\">");
+   		table_date(out, p);
+   		table_stat(out, p, 0);
+   		fprintf(out, "</table>");
 	} else {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
 		fprintf(out, "<table class=\"dati\">");
@@ -1116,15 +1116,36 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		fprintf(out, "</table>");
 	}
 
+	bool has_analyze = false;
+	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS
+		&& p.trimmed != "japan" // Fail to obtain parameters for japan
+		&& p.trimmed != "south_korea"
+		&& p.trimmed != "westchester"
+		&& p.trimmed != "diamond_princess"
+		&& p.trimmed != "china"
+		&& p.trimmed != "french_polynesia"
+		&& p.trimmed != "king"
+		&& p.trimmed != "peru"
+		&& p.trimmed != "singapore"
+		&& p.trimmed != "rhode_island"
+		&& p.trimmed != "switzerland"
+		&& p.trimmed != ""
+	) {	
+		has_analyze = true;
+	}
+
 	if (p.kind == KIND_CITY) {
-		fprintf(out, "<p class=\"didascalia\">");
-		fprintf(out,
+		// skip if we have the fit graphs
+		if (!has_analyze) {
+			fprintf(out, "<p class=\"didascalia\">");
+			fprintf(out,
 "Il grafico successivo mostra il progredire del numero di casi dell'epidemia. "
 "La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare."
-		);
-		fprintf(out, "</p>\n");
-		fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
-		fprintf(plot, "gnuplot -c graph_pr_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+			);
+			fprintf(out, "</p>\n");
+			fprintf(out, "<center><img src=\"%s\"></center>\n", png_log.c_str());
+			fprintf(plot, "gnuplot -c graph_pr_log.gp %s www/%s\n", dat.c_str(), png_log.c_str());
+		}
 	} else {
 		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
@@ -1167,19 +1188,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	// not significative with too few cases
-	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS
-		&& p.trimmed != "japan" // Fail to obtain parameters for japan
-		&& p.trimmed != "south_korea"
-		&& p.trimmed != "westchester"
-		&& p.trimmed != "diamond_princess"
-		&& p.trimmed != "china"
-		&& p.trimmed != "french_polynesia"
-		&& p.trimmed != "king"
-		&& p.trimmed != "peru"
-		&& p.trimmed != "singapore"
-		&& p.trimmed != "rhode_island"
-		&& p.trimmed != ""
-	) {
+	if (has_analyze) {
 		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
 "Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più "
@@ -1204,7 +1213,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	// not significative with too few cases
-	if (p.max_casi >= 1000) {
+	if (has_analyze) {
 		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
 "Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. "
@@ -1226,7 +1235,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	// not significative with too few cases
-	if (p.kind != KIND_CITY && p.max_positivi >= 1000) {
+	if (p.kind != KIND_CITY && has_analyze) {
 		fprintf(out, "<p class=\"didascalia\">");
 		fprintf(out,
 "Il grafico successivo mostra la variazione del numero di Positivi in base al numero di Positivi stessi. "
