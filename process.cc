@@ -413,6 +413,12 @@ void load_csv(int kind, place_set& bag, const char* file)
 				continue;
 			if (country == "US" && old_format)
 				continue;
+			if (country == "US" && city == "Out of GA")
+				city = "hide";
+			if (country == "US" && city == "Out of TN")
+				city = "hide";
+			if (country == "US" && city == "Michigan Department of Corrections (MDOC)")
+				city = "hide";
 
 			if (city.length() == 0 && state.length() == 0) {
 				// country
@@ -426,15 +432,17 @@ void load_csv(int kind, place_set& bag, const char* file)
 				// ignored
 			} else {
 				// city
-				place p;
-				p.kind = KIND_CITY;
-				p.city = city;
-				p.state = state;
-				p.country = country;
-				p.trimmed = trim(p.city);
-				{
-					pair<const place_set::iterator, bool> j = bag.insert(p);
-					j.first->days.insert(d);
+				if (city != "hide") {
+					place p;
+					p.kind = KIND_CITY;
+					p.city = city;
+					p.state = state;
+					p.country = country;
+					p.trimmed = trim(p.city + "_" + p.country);
+					{
+						pair<const place_set::iterator, bool> j = bag.insert(p);
+						j.first->days.insert(d);
+					}
 				}
 
 				// state
@@ -1118,17 +1126,16 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 	bool has_analyze = false;
 	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS
-		&& p.trimmed != "japan" // Fail to obtain parameters for japan
+		&& p.trimmed != "japan"
 		&& p.trimmed != "south_korea"
-		&& p.trimmed != "westchester"
+		&& p.trimmed != "westchester_us"
 		&& p.trimmed != "diamond_princess"
 		&& p.trimmed != "china"
 		&& p.trimmed != "french_polynesia"
-		&& p.trimmed != "king"
+		&& p.trimmed != "king_us"
 		&& p.trimmed != "peru"
 		&& p.trimmed != "singapore"
 		&& p.trimmed != "rhode_island"
-		&& p.trimmed != "switzerland"
 		&& p.trimmed != ""
 	) {	
 		has_analyze = true;
