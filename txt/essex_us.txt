@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       essex_us
+  Day                           26
+Estimated the SIR model parameters
+  Contact rate (beta)           0.765 (1/day)
+  Removal rate (gamma)          0.635 (1/day)
+  Population size (N)           23461
+  Initial number of cases (I0)  56
+Basic reproduction number (R0)  1.202
+Critical number of susceptible  23462
+Final state
+  Final number of cases         7711
+  Final number of susceptibles  15750
+Daily forecast for 17-Apr-2020
+  Total                         4422
+  Increase                      177
+Estimated logistic model parameters
+  Epidemic size (K)             6825 (cases)
+  Epidemic rate (r)             0.130206 (1/day)
+  Initial doubling time         5.3 (day)
+Estimated duration (days)
+  Turning day                   23
+  Acceleration   phase          14 (days)
+  Deceleration phase            16 (days)
+  Total duration                29 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         31-Mar-2020
+  Turning point                 14-Apr-2020
+  Start of steady growth        30-Apr-2020
+  Start of ending phase         29-May-2020
+Statistics
+  Number of observations        26
+  Degrees of freedom            22
+  Root Mean Squared Error       47.6635
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   6243.14
+  p-value                       2.24164e-32
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      223.561
+  Exit condition (1=OK)         0

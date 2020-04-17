@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       philadelphia_us
+  Day                           26
+Estimated the SIR model parameters
+  Contact rate (beta)           0.599 (1/day)
+  Removal rate (gamma)          0.399 (1/day)
+  Population size (N)           16891
+  Initial number of cases (I0)  101
+Basic reproduction number (R0)  1.491
+Critical number of susceptible  16891
+Final state
+  Final number of cases         9959
+  Final number of susceptibles  6931
+Daily forecast for 17-Apr-2020
+  Total                         8106
+  Increase                      61
+Estimated logistic model parameters
+  Epidemic size (K)             8449 (cases)
+  Epidemic rate (r)             0.199768 (1/day)
+  Initial doubling time         3.5 (day)
+Estimated duration (days)
+  Turning day                   17
+  Acceleration   phase          10 (days)
+  Deceleration phase            11 (days)
+  Total duration                21 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         29-Mar-2020
+  Turning point                 08-Apr-2020
+  Start of steady growth        19-Apr-2020
+  Start of ending phase         10-May-2020
+Statistics
+  Number of observations        26
+  Degrees of freedom            22
+  Root Mean Squared Error       89.6206
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   7186.83
+  p-value                       4.77365e-33
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      420.36
+  Exit condition (1=OK)         1

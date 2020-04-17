@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       prince_georges_us
+  Day                           26
+Estimated the SIR model parameters
+  Contact rate (beta)           0.448 (1/day)
+  Removal rate (gamma)          0.221 (1/day)
+  Population size (N)           4757
+  Initial number of cases (I0)  21
+Basic reproduction number (R0)  2.014
+Critical number of susceptible  4758
+Final state
+  Final number of cases         3827
+  Final number of susceptibles  930
+Daily forecast for 17-Apr-2020
+  Total                         2822
+  Increase                      100
+Estimated logistic model parameters
+  Epidemic size (K)             3195 (cases)
+  Epidemic rate (r)             0.226436 (1/day)
+  Initial doubling time         3.1 (day)
+Estimated duration (days)
+  Turning day                   20
+  Acceleration   phase          9 (days)
+  Deceleration phase            11 (days)
+  Total duration                20 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         02-Apr-2020
+  Turning point                 11-Apr-2020
+  Start of steady growth        21-Apr-2020
+  Start of ending phase         11-May-2020
+Statistics
+  Number of observations        26
+  Degrees of freedom            22
+  Root Mean Squared Error       51.3491
+  R-Squared                     0.997
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   2484.79
+  p-value                       5.53334e-28
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      178.236
+  Exit condition (1=OK)         1
