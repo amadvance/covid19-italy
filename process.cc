@@ -928,13 +928,13 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 	if (p.max_casi >= 10000) {
 		casi_count = 2;
-		positivi_count = 3;
+		positivi_count = 5;
 	} else if (p.max_casi >= 5000) {
 		casi_count = 3;
-		positivi_count = 4;
+		positivi_count = 6;
 	} else {
 		casi_count = 3;
-		positivi_count = 5;
+		positivi_count = 7;
 	}
 
 	if (p.kind == KIND_CITY) {
