@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       firenze
+  Day                           54
+Estimated the SIR model parameters
+  Contact rate (beta)           0.582 (1/day)
+  Removal rate (gamma)          0.437 (1/day)
+  Population size (N)           6353
+  Initial number of cases (I0)  3
+Basic reproduction number (R0)  1.331
+Critical number of susceptible  6353
+Final state
+  Final number of cases         2886
+  Final number of susceptibles  3467
+Daily forecast for 18-Apr-2020
+  Total                         2565
+  Increase                      2
+Estimated logistic model parameters
+  Epidemic size (K)             2535 (cases)
+  Epidemic rate (r)             0.145085 (1/day)
+  Initial doubling time         4.8 (day)
+Estimated duration (days)
+  Turning day                   37
+  Acceleration   phase          14 (days)
+  Deceleration phase            16 (days)
+  Total duration                30 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         18-Mar-2020
+  Turning point                 01-Apr-2020
+  Start of steady growth        17-Apr-2020
+  Start of ending phase         16-May-2020
+Statistics
+  Number of observations        54
+  Degrees of freedom            50
+  Root Mean Squared Error       39.4329
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   8763.7
+  p-value                       5.19833e-68
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      278.831
+  Exit condition (1=OK)         0

@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       pennsylvania
-  Day                           26
+  Day                           27
 Estimated the SIR model parameters
-  Contact rate (beta)           0.409 (1/day)
-  Removal rate (gamma)          0.202 (1/day)
-  Population size (N)           44650
-  Initial number of cases (I0)  498
-Basic reproduction number (R0)  2.005
-Critical number of susceptible  44651
+  Contact rate (beta)           0.478 (1/day)
+  Removal rate (gamma)          0.281 (1/day)
+  Population size (N)           53175
+  Initial number of cases (I0)  456
+Basic reproduction number (R0)  1.687
+Critical number of susceptible  53176
 Final state
-  Final number of cases         36069
-  Final number of susceptibles  8581
-Daily forecast for 17-Apr-2020
-  Total                         28889
-  Increase                      631
+  Final number of cases         37082
+  Final number of susceptibles  16093
+Daily forecast for 18-Apr-2020
+  Total                         30215
+  Increase                      327
 Estimated logistic model parameters
-  Epidemic size (K)             30037 (cases)
-  Epidemic rate (r)             0.207548 (1/day)
-  Initial doubling time         3.3 (day)
+  Epidemic size (K)             31047 (cases)
+  Epidemic rate (r)             0.19706 (1/day)
+  Initial doubling time         3.5 (day)
 Estimated duration (days)
   Turning day                   17
-  Acceleration   phase          9 (days)
+  Acceleration   phase          10 (days)
   Deceleration phase            12 (days)
-  Total duration                21 (days)
+  Total duration                22 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         29-Mar-2020
   Turning point                 08-Apr-2020
-  Start of steady growth        19-Apr-2020
-  Start of ending phase         11-May-2020
+  Start of steady growth        20-Apr-2020
+  Start of ending phase         12-May-2020
 Statistics
-  Number of observations        26
-  Degrees of freedom            22
-  Root Mean Squared Error       151.582
+  Number of observations        27
+  Degrees of freedom            23
+  Root Mean Squared Error       219.129
   R-Squared                     1
-  Adjusted R-Squared            1
-  F-statistics vs. zero model   31809.5
-  p-value                       3.7719e-40
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   17460.9
+  p-value                       9.62703e-39
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      710.988
-  Exit condition (1=OK)         1
+  Objective function value      1050.92
+  Exit condition (1=OK)         0
