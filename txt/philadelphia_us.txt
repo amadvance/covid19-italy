@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       philadelphia_us
-  Day                           27
+  Day                           28
 Estimated the SIR model parameters
-  Contact rate (beta)           0.813 (1/day)
-  Removal rate (gamma)          0.633 (1/day)
-  Population size (N)           25268
-  Initial number of cases (I0)  83
-Basic reproduction number (R0)  1.281
-Critical number of susceptible  25268
+  Contact rate (beta)           1.13 (1/day)
+  Removal rate (gamma)          0.967 (1/day)
+  Population size (N)           39303
+  Initial number of cases (I0)  66
+Basic reproduction number (R0)  1.167
+Critical number of susceptible  39304
 Final state
-  Final number of cases         10511
-  Final number of susceptibles  14756
-Daily forecast for 18-Apr-2020
-  Total                         8573
-  Increase                      10
+  Final number of cases         11104
+  Final number of susceptibles  28199
+Daily forecast for 19-Apr-2020
+  Total                         9039
+  Increase                      25
 Estimated logistic model parameters
-  Epidemic size (K)             9171 (cases)
-  Epidemic rate (r)             0.180245 (1/day)
-  Initial doubling time         3.8 (day)
+  Epidemic size (K)             9935 (cases)
+  Epidemic rate (r)             0.163511 (1/day)
+  Initial doubling time         4.2 (day)
 Estimated duration (days)
   Turning day                   18
-  Acceleration   phase          10 (days)
+  Acceleration   phase          11 (days)
   Deceleration phase            12 (days)
-  Total duration                22 (days)
+  Total duration                23 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         29-Mar-2020
   Turning point                 09-Apr-2020
-  Start of steady growth        20-Apr-2020
-  Start of ending phase         13-May-2020
+  Start of steady growth        22-Apr-2020
+  Start of ending phase         15-May-2020
 Statistics
-  Number of observations        27
-  Degrees of freedom            23
-  Root Mean Squared Error       114.302
-  R-Squared                     0.999
+  Number of observations        28
+  Degrees of freedom            24
+  Root Mean Squared Error       131.323
+  R-Squared                     0.998
   Adjusted R-Squared            0.998
-  F-statistics vs. zero model   5105.87
-  p-value                       1.31508e-32
+  F-statistics vs. zero model   4439.52
+  p-value                       4.61907e-33
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      548.174
+  Objective function value      643.348
   Exit condition (1=OK)         0

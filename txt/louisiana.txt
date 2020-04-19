@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       louisiana
-  Day                           27
+  Day                           28
 Estimated the SIR model parameters
-  Contact rate (beta)           0.29 (1/day)
-  Removal rate (gamma)          0.02 (1/day)
-  Population size (N)           23489
-  Initial number of cases (I0)  639
-Basic reproduction number (R0)  13.959
-Critical number of susceptible  23489
+  Contact rate (beta)           0.321 (1/day)
+  Removal rate (gamma)          0.053 (1/day)
+  Population size (N)           24325
+  Initial number of cases (I0)  591
+Basic reproduction number (R0)  5.92
+Critical number of susceptible  24325
 Final state
-  Final number of cases         23489
-  Final number of susceptibles  0
-Daily forecast for 18-Apr-2020
+  Final number of cases         24269
+  Final number of susceptibles  55
+Daily forecast for 19-Apr-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             22641 (cases)
-  Epidemic rate (r)             0.269767 (1/day)
+  Epidemic size (K)             22140 (cases)
+  Epidemic rate (r)             0.268304 (1/day)
   Initial doubling time         2.6 (day)
 Estimated duration (days)
   Turning day                   13
   Acceleration   phase          7 (days)
   Deceleration phase            8 (days)
-  Total duration                15 (days)
+  Total duration                16 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         27-Mar-2020
   Turning point                 04-Apr-2020
   Start of steady growth        12-Apr-2020
-  Start of ending phase         27-Apr-2020
+  Start of ending phase         28-Apr-2020
 Statistics
-  Number of observations        27
-  Degrees of freedom            23
-  Root Mean Squared Error       429.269
-  R-Squared                     0.998
+  Number of observations        28
+  Degrees of freedom            24
+  Root Mean Squared Error       440.978
+  R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   3128.24
-  p-value                       3.6381e-30
+  F-statistics vs. zero model   3204.76
+  p-value                       2.28718e-31
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      2058.71
+  Objective function value      2160.36
   Exit condition (1=OK)         1

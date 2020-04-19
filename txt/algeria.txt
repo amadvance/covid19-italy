@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       algeria
+  Day                           48
+Estimated the SIR model parameters
+  Contact rate (beta)           0.367 (1/day)
+  Removal rate (gamma)          0.188 (1/day)
+  Population size (N)           3636
+  Initial number of cases (I0)  2
+Basic reproduction number (R0)  1.946
+Critical number of susceptible  3636
+Final state
+  Final number of cases         2844
+  Final number of susceptibles  791
+Daily forecast for 19-Apr-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2380 (cases)
+  Epidemic rate (r)             0.178665 (1/day)
+  Initial doubling time         3.9 (day)
+Estimated duration (days)
+  Turning day                   34
+  Acceleration   phase          12 (days)
+  Deceleration phase            14 (days)
+  Total duration                25 (days)
+Estimated datums
+  Outbreak                      02-Mar-2020
+  Start of acceleration         25-Mar-2020
+  Turning point                 05-Apr-2020
+  Start of steady growth        19-Apr-2020
+  Start of ending phase         14-May-2020
+Statistics
+  Number of observations        48
+  Degrees of freedom            44
+  Root Mean Squared Error       49.3246
+  R-Squared                     0.997
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   4325.65
+  p-value                       2.31252e-54
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      327.183
+  Exit condition (1=OK)         1
