@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       riverside_us
+  Day                           29
+Estimated the SIR model parameters
+  Contact rate (beta)           1.458 (1/day)
+  Removal rate (gamma)          1.328 (1/day)
+  Population size (N)           23266
+  Initial number of cases (I0)  14
+Basic reproduction number (R0)  1.097
+Critical number of susceptible  23267
+Final state
+  Final number of cases         4154
+  Final number of susceptibles  19112
+Daily forecast for 20-Apr-2020
+  Total                         2736
+  Increase                      98
+Estimated logistic model parameters
+  Epidemic size (K)             3815 (cases)
+  Epidemic rate (r)             0.130219 (1/day)
+  Initial doubling time         5.3 (day)
+Estimated duration (days)
+  Turning day                   23
+  Acceleration   phase          14 (days)
+  Deceleration phase            15 (days)
+  Total duration                29 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         01-Apr-2020
+  Turning point                 14-Apr-2020
+  Start of steady growth        30-Apr-2020
+  Start of ending phase         28-May-2020
+Statistics
+  Number of observations        29
+  Degrees of freedom            25
+  Root Mean Squared Error       62.1252
+  R-Squared                     0.995
+  Adjusted R-Squared            0.994
+  F-statistics vs. zero model   1665.18
+  p-value                       6.72161e-29
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      310.625
+  Exit condition (1=OK)         0
