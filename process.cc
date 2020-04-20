@@ -406,7 +406,7 @@ void load_csv(int kind, place_set& bag, const char* file)
 
 			// truncate to include only the day
 			d.date = d.date.substr(0, 10);
-			d.has_data = true;			
+			d.has_data = true;
 
 			// data not reliable from 04-04 with a big increase, maybe added external provinces ?
 			if (country == "France")
@@ -809,7 +809,7 @@ void table_stat(FILE* out, const place& p, int index)
 
 	last = p.days.rbegin();
 	while (last->totale_casi == 0)
-		++last;	
+		++last;
 	for (int i=0;i<LAST;++i) {
 		switch (index) {
 		case 0 : past[i] = last->totale_casi; break;
@@ -1028,14 +1028,14 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		if (!i->has_data) {
 			sprintf(casi_str, "-");
 			sprintf(casi_delta_str, "-");
-			sprintf(casi_mean_str, "-");			
+			sprintf(casi_mean_str, "-");
 		}
 
 		// if there is no estimate, clear the value
 		if (!i->has_fit) {
 			sprintf(casi_fit_str, "-");
-			sprintf(casi_fit_delta_str, "-");		
-		}		
+			sprintf(casi_fit_delta_str, "-");
+		}
 
 		// ensure monotone grow
 		if (monotone_totale_casi < i->totale_casi)
@@ -1098,11 +1098,11 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	string png_fit = trimmed + "_fit.png";
 	string png_fid = trimmed + "_fid.png";
 	if (p.kind == KIND_CITY) {
-   		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
-   		fprintf(out, "<table class=\"dati\">");
-   		table_date(out, p);
-   		table_stat(out, p, 0);
-   		fprintf(out, "</table>");
+		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
+		fprintf(out, "<table class=\"dati\">");
+		table_date(out, p);
+		table_stat(out, p, 0);
+		fprintf(out, "</table>");
 	} else {
 		fprintf(out, "<h1><a id=\"%s\">%s</a></h1>\n", trimmed.c_str(), p.name().c_str());
 		fprintf(out, "<table class=\"dati\">");
@@ -1136,8 +1136,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		&& p.trimmed != "peru"
 		&& p.trimmed != "singapore"
 		&& p.trimmed != "rhode_island"
+		&& p.trimmed != "qatar"
 		&& p.trimmed != ""
-	) {	
+	) {
 		has_analyze = true;
 	}
 
@@ -1286,7 +1287,7 @@ void save_country(FILE* plot, FILE* analyze, place_set& bag, string country)
 		fprintf(stderr, "Failed opening %s\n", html_country.c_str());
 		exit(EXIT_FAILURE);
 	}
-	
+
 	if (country != "Italia") {
 		html_header(f_country, country.c_str());
 	}
@@ -1409,7 +1410,7 @@ void save_country(FILE* plot, FILE* analyze, place_set& bag, string country)
 
 	if (country != "Italia") {
 		html_footer(f_country);
-	}	
+	}
 
 	fclose(f_country);
 }
