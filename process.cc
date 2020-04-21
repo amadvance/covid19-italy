@@ -48,6 +48,7 @@ struct day {
 	mutable int totale_casi;
 	mutable int totale_casi_fit;
 	mutable int tamponi;
+	mutable int casi_testati;
 	mutable bool has_fit;
 	mutable bool has_data;
 
@@ -69,6 +70,7 @@ day::day(void)
 	totale_casi = 0;
 	totale_casi_fit = 0;
 	tamponi = 0;
+	casi_testati = 0;
 	has_fit = false;
 	has_data = false;
 }
@@ -99,6 +101,7 @@ struct place {
 	mutable int max_ricoverati;
 	mutable int max_terapia_intensiva;
 	mutable int max_tamponi;
+	mutable int max_casi_testati;
 	mutable int max_positivi;
 	mutable int max_dimessi_guariti;
 	mutable day_set days;
@@ -124,6 +127,7 @@ place::place(void)
 	max_ricoverati = 0;
 	max_terapia_intensiva = 0;
 	max_tamponi = 0;
+	max_casi_testati = 0;
 	max_positivi = 0;
 	max_dimessi_guariti = 0;
 }
@@ -248,8 +252,8 @@ void load_csv(int kind, place_set& bag, const char* file)
 		// handle first line
 		if (first_line) {
 			first_line = false;
-			const char* format_nazione = "data,stato,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en";
-			const char* format_regioni = "data,stato,codice_regione,denominazione_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en";
+			const char* format_nazione = "data,stato,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,casi_testati,note_it,note_en";
+			const char* format_regioni = "data,stato,codice_regione,denominazione_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,casi_testati,note_it,note_en";
 			const char* format_province = "data,stato,codice_regione,denominazione_regione,codice_provincia,denominazione_provincia,sigla_provincia,lat,long,totale_casi,note_it,note_en";
 			const char* format_skip_1 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered";
 			const char* format_skip_2 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude";
@@ -338,6 +342,7 @@ void load_csv(int kind, place_set& bag, const char* file)
 			d.deceduti = itok(&s, ',');
 			d.totale_casi = itok(&s, ',');
 			d.tamponi = itok(&s, ',');
+			d.casi_testati = itok(&s, ',');
 
 			// truncate to include only the day
 			d.date = d.date.substr(0, 10);
@@ -574,6 +579,8 @@ void setup(place_set& bag)
 				i->max_terapia_intensiva = j->terapia_intensiva;
 			if (i->max_tamponi < j->tamponi)
 				i->max_tamponi = j->tamponi;
+			if (i->max_casi_testati < j->casi_testati)
+				i->max_casi_testati = j->casi_testati;
 			if (i->max_positivi < j->positivi)
 				i->max_positivi = j->positivi;
 			if (i->max_dimessi_guariti < j->dimessi_guariti)
@@ -820,6 +827,7 @@ void table_stat(FILE* out, const place& p, int index)
 		case 5 : past[i] = last->isolamento_domiciliare; break;
 		case 6 : past[i] = last->ricoverati; break;
 		case 7 : past[i] = last->terapia_intensiva; break;
+		case 8 : past[i] = last->casi_testati; break;
 		}
 		++last;
 	}
@@ -833,6 +841,7 @@ void table_stat(FILE* out, const place& p, int index)
 	case 5 : msg = "Isolamento Domiciliare"; break;
 	case 6 : msg = "Ricoverati"; break;
 	case 7 : msg = "Terapia Intensiva"; break;
+	case 8 : msg = "Soggestti Testati"; break;
 	}
 
 	fprintf(out, "<tr><th>%s</th>", msg);
@@ -1121,6 +1130,8 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			table_stat(out, p, 7);
 		if (p.max_tamponi)
 			table_stat(out, p, 2);
+		if (p.max_casi_testati)
+			table_stat(out, p, 8);
 		fprintf(out, "</table>");
 	}
 
@@ -1137,6 +1148,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		&& p.trimmed != "singapore"
 		&& p.trimmed != "rhode_island"
 		&& p.trimmed != "qatar"
+		&& p.trimmed != "ohio"
 		&& p.trimmed != ""
 	) {
 		has_analyze = true;
