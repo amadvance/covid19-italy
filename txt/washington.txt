@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       washington
-  Day                           30
+  Day                           31
 Estimated the SIR model parameters
-  Contact rate (beta)           0.2 (1/day)
-  Removal rate (gamma)          0.102 (1/day)
-  Population size (N)           18069
-  Initial number of cases (I0)  1708
-Basic reproduction number (R0)  1.768
-Critical number of susceptible  18069
+  Contact rate (beta)           0.209 (1/day)
+  Removal rate (gamma)          0.125 (1/day)
+  Population size (N)           20964
+  Initial number of cases (I0)  1684
+Basic reproduction number (R0)  1.534
+Critical number of susceptible  20964
 Final state
-  Final number of cases         14741
-  Final number of susceptibles  3327
-Daily forecast for 21-Apr-2020
-  Total                         12044
-  Increase                      89
+  Final number of cases         15219
+  Final number of susceptibles  5744
+Daily forecast for 22-Apr-2020
+  Total                         NaN
+  Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             11847 (cases)
-  Epidemic rate (r)             0.0974479 (1/day)
-  Initial doubling time         7.1 (day)
+  Epidemic size (K)             11987 (cases)
+  Epidemic rate (r)             0.0835254 (1/day)
+  Initial doubling time         8.3 (day)
 Estimated duration (days)
   Turning day                   10
   Acceleration   phase          13 (days)
-  Deceleration phase            21 (days)
-  Total duration                35 (days)
+  Deceleration phase            23 (days)
+  Total duration                36 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         19-Mar-2020
   Turning point                 01-Apr-2020
-  Start of steady growth        23-Apr-2020
-  Start of ending phase         27-May-2020
+  Start of steady growth        24-Apr-2020
+  Start of ending phase         30-May-2020
 Statistics
-  Number of observations        30
-  Degrees of freedom            26
-  Root Mean Squared Error       110.54
+  Number of observations        31
+  Degrees of freedom            27
+  Root Mean Squared Error       122.901
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   8380.21
-  p-value                       6.38795e-39
+  F-statistics vs. zero model   7365.16
+  p-value                       1.98291e-39
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      563.647
-  Exit condition (1=OK)         0
+  Objective function value      638.611
+  Exit condition (1=OK)         1
