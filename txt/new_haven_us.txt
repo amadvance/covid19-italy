@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       new_haven_us
-  Day                           31
+  Day                           32
 Estimated the SIR model parameters
-  Contact rate (beta)           0.851 (1/day)
-  Removal rate (gamma)          0.677 (1/day)
-  Population size (N)           18710
-  Initial number of cases (I0)  26
-Basic reproduction number (R0)  1.257
-Critical number of susceptible  18710
+  Contact rate (beta)           0.791 (1/day)
+  Removal rate (gamma)          0.62 (1/day)
+  Population size (N)           18413
+  Initial number of cases (I0)  29
+Basic reproduction number (R0)  1.274
+Critical number of susceptible  18413
 Final state
-  Final number of cases         7191
-  Final number of susceptibles  11518
-Daily forecast for 22-Apr-2020
-  Total                         5654
-  Increase                      161
+  Final number of cases         7423
+  Final number of susceptibles  10989
+Daily forecast for 23-Apr-2020
+  Total                         5910
+  Increase                      99
 Estimated logistic model parameters
-  Epidemic size (K)             6375 (cases)
-  Epidemic rate (r)             0.174843 (1/day)
+  Epidemic size (K)             6552 (cases)
+  Epidemic rate (r)             0.171222 (1/day)
   Initial doubling time         4 (day)
 Estimated duration (days)
-  Turning day                   22
+  Turning day                   23
   Acceleration   phase          11 (days)
-  Deceleration phase            12 (days)
-  Total duration                23 (days)
+  Deceleration phase            13 (days)
+  Total duration                24 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         02-Apr-2020
-  Turning point                 13-Apr-2020
-  Start of steady growth        26-Apr-2020
-  Start of ending phase         19-May-2020
+  Turning point                 14-Apr-2020
+  Start of steady growth        27-Apr-2020
+  Start of ending phase         21-May-2020
 Statistics
-  Number of observations        31
-  Degrees of freedom            27
-  Root Mean Squared Error       63.4902
+  Number of observations        32
+  Degrees of freedom            28
+  Root Mean Squared Error       66.538
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   8088.18
-  p-value                       5.60967e-40
+  F-statistics vs. zero model   8418.52
+  p-value                       1.80775e-41
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      329.902
+  Objective function value      352.088
   Exit condition (1=OK)         0
