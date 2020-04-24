@@ -2,43 +2,43 @@ Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       bangladesh
   Day                           41
 Estimated the SIR model parameters
-  Contact rate (beta)           0.756 (1/day)
-  Removal rate (gamma)          0.502 (1/day)
-  Population size (N)           12284
+  Contact rate (beta)           0.392 (1/day)
+  Removal rate (gamma)          0.138 (1/day)
+  Population size (N)           8076
   Initial number of cases (I0)  0
-Basic reproduction number (R0)  1.508
-Critical number of susceptible  12284
+Basic reproduction number (R0)  2.829
+Critical number of susceptible  8076
 Final state
-  Final number of cases         7220
-  Final number of susceptibles  5063
+  Final number of cases         7490
+  Final number of susceptibles  585
 Daily forecast for 18-Apr-2020
-  Total                         4173
-  Increase                      401
+  Total                         4564
+  Increase                      378
 Estimated logistic model parameters
-  Epidemic size (K)             6189 (cases)
-  Epidemic rate (r)             0.254734 (1/day)
+  Epidemic size (K)             6342 (cases)
+  Epidemic rate (r)             0.253201 (1/day)
   Initial doubling time         2.7 (day)
 Estimated duration (days)
-  Turning day                   39
+  Turning day                   38
   Acceleration   phase          8 (days)
-  Deceleration phase            9 (days)
-  Total duration                17 (days)
+  Deceleration phase            10 (days)
+  Total duration                18 (days)
 Estimated datums
   Outbreak                      08-Mar-2020
-  Start of acceleration         08-Apr-2020
-  Turning point                 16-Apr-2020
+  Start of acceleration         07-Apr-2020
+  Turning point                 15-Apr-2020
   Start of steady growth        25-Apr-2020
   Start of ending phase         13-May-2020
 Statistics
   Number of observations        41
   Degrees of freedom            37
-  Root Mean Squared Error       28.4083
+  Root Mean Squared Error       28.4973
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   16884.2
-  p-value                       4.62674e-58
+  F-statistics vs. zero model   21757.9
+  p-value                       4.25699e-60
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      172.842
-  Exit condition (1=OK)         1
+  Objective function value      173.355
+  Exit condition (1=OK)         0
