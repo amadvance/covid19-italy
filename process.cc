@@ -228,7 +228,7 @@ int itok(char** s, char sep)
 	return atoi(t);
 }
 
-void load_csv(int kind, place_set& bag, const char* file)
+void load_csv(int kind, place_set& bag, const char* file, string force_date = "")
 {
 	char buf[1024];
 	char* s;
@@ -425,6 +425,10 @@ void load_csv(int kind, place_set& bag, const char* file)
 			if (country == "US" && city == "Michigan Department of Corrections (MDOC)")
 				city = "hide";
 
+            // override the date
+            if (force_date.length())
+                d.date = force_date;
+
 			if (city.length() == 0 && state.length() == 0) {
 				// country
 				place p;
@@ -513,8 +517,15 @@ void load_dir(int kind, place_set& bag, const char* file)
 		ext = strstr(dirent->d_name, ".csv");
 		if (!ext)
 			continue;
+
+		string force_date = dirent->d_name;
+	    if (force_date.length() < 10) {
+	        fprintf(stderr, "Ignoring file %s\n", dirent->d_name);
+	        continue;
+        }
+		force_date = force_date.substr(6, 4) + "-" + force_date.substr(0, 2) + "-" + force_date.substr(3, 2);
 		snprintf(path, sizeof(path), "%s/%s", file, dirent->d_name);
-		load_csv(kind, bag, path);
+		load_csv(kind, bag, path, force_date);
 	}
 
 	closedir(dir);
@@ -891,6 +902,7 @@ void save_analyze(FILE* f, string name)
 }
 
 #define CASI_COUNT 8
+#define NUOVI_CASI_COUNT 8
 #define POSITIVI_COUNT 8
 
 void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
@@ -931,8 +943,10 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	fprintf(f_get, "C = [\n");
 
 	int casi_mean_map[CASI_COUNT] = { 0 };
+	int casi7_mean_map[CASI_COUNT] = { 0 };
 	int positivi_mean_map[POSITIVI_COUNT] = { 0 };
 	int casi_count;
+	int casi7_count;
 	int positivi_count;
 
 	if (p.max_casi >= 10000) {
@@ -945,6 +959,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		casi_count = 3;
 		positivi_count = 7;
 	}
+	casi7_count = 7;
 
 	if (p.kind == KIND_CITY) {
 		fprintf(f_dat, "%s\tCasi\tNuoviCasiPercentuale\tNuoviCasi\tNuoviCasiMedia2Giorni\n",
@@ -954,7 +969,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			trimmed.c_str(), casi_count, positivi_count, positivi_count);
 	}
 
-	fprintf(f_fit, "%s\tCasi\tNuoviCasi\tStimaCasi\tStimaNuoviCasi\tNuoviCasi%dGiorni\n", trimmed.c_str(), casi_count);
+	fprintf(f_fit, "%s\tCasi\tNuoviCasi\tStimaCasi\tStimaNuoviCasi\tNuoviCasi%dGiorni\tNuoviCasi7Giorni\n", trimmed.c_str(), casi_count);
 
 	day_set::iterator prev = p.days.end();
 	for (day_set::iterator i=p.days.begin();i!=p.days.end();++i) {
@@ -965,7 +980,9 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		char casi_fit_delta_str[16];
 		char casi_fit_str[16];
 		char casi_mean_str[16];
+		char casi7_mean_str[16];
 
+		// casi delta
 		if (prev != p.days.end()) {
 			casi_delta = i->totale_casi - prev->totale_casi;
 			casi_fit_delta = i->totale_casi_fit - prev->totale_casi_fit;
@@ -982,7 +999,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 		sprintf(casi_str, "%d", i->totale_casi);
 
-		// free slot 0
+		// casi mean
 		for (int j=casi_count-1;j>0;--j)
 			casi_mean_map[j] = casi_mean_map[j-1];
 		casi_mean_map[0] = casi_delta;
@@ -992,7 +1009,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		casi_mean /= casi_count;
 		sprintf(casi_mean_str, "%.1f", casi_mean);
 
-		// compute mean
+		// casi percentage
 		double casi_perc;
 		char casi_perc_str[16];
 		if (prev != p.days.end() && prev->totale_casi > 100) {
@@ -1003,6 +1020,17 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			sprintf(casi_perc_str, "-");
 		}
 
+		// casi7 mean
+		for (int j=casi7_count-1;j>0;--j)
+			casi7_mean_map[j] = casi7_mean_map[j-1];
+		casi7_mean_map[0] = casi_delta;
+		double casi7_mean = 0;
+		for (int j=0;j<casi7_count;++j)
+			casi7_mean += casi7_mean_map[j];
+		casi7_mean /= casi7_count;
+		sprintf(casi7_mean_str, "%.1f", casi7_mean);
+
+		// positivi delta
 		int positivi_delta;
 		char positivi_delta_str[16];
 		if (prev != p.days.end()) {
@@ -1013,7 +1041,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			sprintf(positivi_delta_str, "-");
 		}
 
-		// free slot 0
+		// positivi mean
 		for (int j=positivi_count-1;j>0;--j)
 			positivi_mean_map[j] = positivi_mean_map[j-1];
 		positivi_mean_map[0] = positivi_delta;
@@ -1022,7 +1050,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			positivi_mean += positivi_mean_map[j];
 		positivi_mean /= positivi_count;
 
-		// compute mean
+		// positivi percentage
 		double positivi_perc_mean;
 		char positivi_perc_mean_str[16];
 		if (prev != p.days.end() && prev->positivi > 100) {
@@ -1038,6 +1066,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			sprintf(casi_str, "-");
 			sprintf(casi_delta_str, "-");
 			sprintf(casi_mean_str, "-");
+			sprintf(casi7_mean_str, "-");
 		}
 
 		// if there is no estimate, clear the value
@@ -1083,13 +1112,14 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 			}
 
 			// fit
-			fprintf(f_fit,"%s\t%s\t%s\t%s\t%s\t%s\n",
+			fprintf(f_fit,"%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
 				i->date.substr(5,5).c_str(),
 				casi_str,
 				casi_delta_str,
 				casi_fit_str,
 				casi_fit_delta_str,
-				casi_mean_str);
+				casi_mean_str,
+				casi7_mean_str);
 
 			// get
 			if (i->has_data) {
