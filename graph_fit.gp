@@ -14,8 +14,7 @@ set grid ytics
 set style data lines
 set style line 2 lw 3 lc rgb "blue"
 set style line 4 lw 3 lc rgb "#FF4500"
-plot ARG1 using 4:xtic(1) ls 4 \
-, '' using 2 ls 2
+plot ARG1 using 4:xtic(1) ls 4, '' using 2:xtic(1) ls 2
 
 # TABLE INDEX
 # 2 Casi

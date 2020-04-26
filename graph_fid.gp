@@ -16,7 +16,7 @@ set style fill solid border -1
 set style line 5 lw 3 lc rgb "#FF4500"
 set style line 7 lw 3 lc rgb "#7777FF"
 set style line 3 lc rgb "blue"
-plot ARG1 using 3 ls 3 with boxes, '' using 5:xtic(1) ls 5, '' using 7 ls 7
+plot ARG1 using 3:xtic(1) ls 3 with boxes, '' using 5:xtic(1) ls 5, '' using 7 ls 7
 
 # TABLE INDEX
 # 2 Casi
