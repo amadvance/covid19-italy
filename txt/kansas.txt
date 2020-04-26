@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       kansas
-  Day                           34
+  Day                           35
 Estimated the SIR model parameters
-  Contact rate (beta)           0.41 (1/day)
-  Removal rate (gamma)          0.36 (1/day)
-  Population size (N)           304458
-  Initial number of cases (I0)  78
-Basic reproduction number (R0)  1.14
-Critical number of susceptible  304458
+  Contact rate (beta)           0.534 (1/day)
+  Removal rate (gamma)          0.484 (1/day)
+  Population size (N)           852875
+  Initial number of cases (I0)  60
+Basic reproduction number (R0)  1.105
+Critical number of susceptible  852876
 Final state
-  Final number of cases         72324
-  Final number of susceptibles  232133
-Daily forecast for 25-Apr-2020
-  Total                         NaN
-  Increase                      NaN
+  Final number of cases         156851
+  Final number of susceptibles  696024
+Daily forecast for 26-Apr-2020
+  Total                         3142
+  Increase                      7
 Estimated logistic model parameters
-  Epidemic size (K)             66841 (cases)
-  Epidemic rate (r)             0.0505998 (1/day)
+  Epidemic size (K)             147632 (cases)
+  Epidemic rate (r)             0.0506342 (1/day)
   Initial doubling time         13.7 (day)
 Estimated duration (days)
-  Turning day                   93
+  Turning day                   108
   Acceleration   phase          39 (days)
   Deceleration phase            41 (days)
   Total duration                81 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         14-May-2020
-  Turning point                 23-Jun-2020
-  Start of steady growth        03-Aug-2020
-  Start of ending phase         23-Oct-2020
+  Start of acceleration         30-May-2020
+  Turning point                 08-Jul-2020
+  Start of steady growth        18-Aug-2020
+  Start of ending phase         07-Nov-2020
 Statistics
-  Number of observations        34
-  Degrees of freedom            30
-  Root Mean Squared Error       80.1506
+  Number of observations        35
+  Degrees of freedom            31
+  Root Mean Squared Error       85.9452
   R-Squared                     0.991
   Adjusted R-Squared            0.99
-  F-statistics vs. zero model   1076.29
-  p-value                       1.28843e-30
+  F-statistics vs. zero model   1134.39
+  p-value                       9.2671e-32
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      439.003
+  Objective function value      478.523
   Exit condition (1=OK)         0
