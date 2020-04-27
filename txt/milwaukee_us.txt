@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       milwaukee_us
-  Day                           35
+  Day                           36
 Estimated the SIR model parameters
-  Contact rate (beta)           0.415 (1/day)
-  Removal rate (gamma)          0.353 (1/day)
-  Population size (N)           9098
-  Initial number of cases (I0)  136
-Basic reproduction number (R0)  1.16
-Critical number of susceptible  9099
+  Contact rate (beta)           0.483 (1/day)
+  Removal rate (gamma)          0.437 (1/day)
+  Population size (N)           14096
+  Initial number of cases (I0)  126
+Basic reproduction number (R0)  1.094
+Critical number of susceptible  14097
 Final state
-  Final number of cases         3094
-  Final number of susceptibles  6003
-Daily forecast for 26-Apr-2020
+  Final number of cases         3353
+  Final number of susceptibles  10742
+Daily forecast for 27-Apr-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             2387 (cases)
-  Epidemic rate (r)             0.0627084 (1/day)
-  Initial doubling time         11.1 (day)
+  Epidemic size (K)             2431 (cases)
+  Epidemic rate (r)             0.0455861 (1/day)
+  Initial doubling time         15.2 (day)
 Estimated duration (days)
   Turning day                   14
-  Acceleration   phase          14 (days)
-  Deceleration phase            24 (days)
-  Total duration                38 (days)
+  Acceleration   phase          15 (days)
+  Deceleration phase            28 (days)
+  Total duration                42 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         22-Mar-2020
   Turning point                 05-Apr-2020
-  Start of steady growth        29-Apr-2020
-  Start of ending phase         06-Jun-2020
+  Start of steady growth        03-May-2020
+  Start of ending phase         14-Jun-2020
 Statistics
-  Number of observations        35
-  Degrees of freedom            31
-  Root Mean Squared Error       34.0535
+  Number of observations        36
+  Degrees of freedom            32
+  Root Mean Squared Error       38.4536
   R-Squared                     0.998
-  Adjusted R-Squared            0.998
-  F-statistics vs. zero model   5355.8
-  p-value                       3.70243e-42
+  Adjusted R-Squared            0.997
+  F-statistics vs. zero model   4558.61
+  p-value                       3.58846e-42
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      189.602
+  Objective function value      217.526
   Exit condition (1=OK)         1
