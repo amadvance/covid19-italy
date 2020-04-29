@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       burlington_us
+  Day                           38
+Estimated the SIR model parameters
+  Contact rate (beta)           2.003 (1/day)
+  Removal rate (gamma)          1.928 (1/day)
+  Population size (N)           53847
+  Initial number of cases (I0)  11
+Basic reproduction number (R0)  1.039
+Critical number of susceptible  53847
+Final state
+  Final number of cases         4262
+  Final number of susceptibles  49584
+Daily forecast for 29-Apr-2020
+  Total                         2556
+  Increase                      13
+Estimated logistic model parameters
+  Epidemic size (K)             3912 (cases)
+  Epidemic rate (r)             0.0755158 (1/day)
+  Initial doubling time         9.2 (day)
+Estimated duration (days)
+  Turning day                   32
+  Acceleration   phase          21 (days)
+  Deceleration phase            24 (days)
+  Total duration                45 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         02-Apr-2020
+  Turning point                 23-Apr-2020
+  Start of steady growth        17-May-2020
+  Start of ending phase         30-Jun-2020
+Statistics
+  Number of observations        38
+  Degrees of freedom            34
+  Root Mean Squared Error       62.1694
+  R-Squared                     0.994
+  Adjusted R-Squared            0.993
+  F-statistics vs. zero model   1881.27
+  p-value                       7.76114e-38
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      362.507
+  Exit condition (1=OK)         0

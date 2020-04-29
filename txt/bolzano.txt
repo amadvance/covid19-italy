@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       bolzano
+  Day                           56
+Estimated the SIR model parameters
+  Contact rate (beta)           0.817 (1/day)
+  Removal rate (gamma)          0.699 (1/day)
+  Population size (N)           9132
+  Initial number of cases (I0)  16
+Basic reproduction number (R0)  1.167
+Critical number of susceptible  9133
+Final state
+  Final number of cases         2583
+  Final number of susceptibles  6548
+Daily forecast for 20-Apr-2020
+  Total                         2511
+  Increase                      4
+Estimated logistic model parameters
+  Epidemic size (K)             2306 (cases)
+  Epidemic rate (r)             0.118149 (1/day)
+  Initial doubling time         5.9 (day)
+Estimated duration (days)
+  Turning day                   25
+  Acceleration   phase          15 (days)
+  Deceleration phase            17 (days)
+  Total duration                32 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         05-Mar-2020
+  Turning point                 20-Mar-2020
+  Start of steady growth        06-Apr-2020
+  Start of ending phase         08-May-2020
+Statistics
+  Number of observations        56
+  Degrees of freedom            52
+  Root Mean Squared Error       42.7413
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   8092.14
+  p-value                       2.20191e-69
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      308.214
+  Exit condition (1=OK)         0
