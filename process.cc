@@ -242,12 +242,19 @@ void load_csv(int kind, place_set& bag, const char* file, string force_date = ""
 	bool first_line = true;
 	bool old_format = false;
 	while ((s = fgets(buf, sizeof(buf), f)) != 0) {
-			size_t len = strlen(s);
+        size_t len;
+        
+        if (!s)
+            continue;
 
 		// trim spaces at the end
+		len = strlen(s);
 		while (len && isspace(s[len-1]))
 			--len;
 		s[len] = 0;
+		
+		if (s[0] == 0)
+		    continue;
 
 		// handle first line
 		if (first_line) {
@@ -1173,6 +1180,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		&& p.trimmed != "ohio"
 		&& p.trimmed != "los_angeles_us"
 		&& p.trimmed != "orleans_us"
+		&& p.trimmed != "ecuador"
 		&& p.trimmed != ""
 	) {
 		has_analyze = true;
