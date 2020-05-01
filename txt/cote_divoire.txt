@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       cote_divoire
-  Day                           224
+  Day                           225
 Estimated the SIR model parameters
-  Contact rate (beta)           0.079 (1/day)
-  Removal rate (gamma)          0.026 (1/day)
-  Population size (N)           21649
-  Initial number of cases (I0)  47
-Basic reproduction number (R0)  3.053
-Critical number of susceptible  21649
+  Contact rate (beta)           0.156 (1/day)
+  Removal rate (gamma)          0.101 (1/day)
+  Population size (N)           32878
+  Initial number of cases (I0)  22
+Basic reproduction number (R0)  1.536
+Critical number of susceptible  32878
 Final state
-  Final number of cases         20448
-  Final number of susceptibles  1200
-Daily forecast for 21-Oct-2020
+  Final number of cases         19939
+  Final number of susceptibles  12938
+Daily forecast for 22-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             17420 (cases)
-  Epidemic rate (r)             0.0531951 (1/day)
-  Initial doubling time         13 (day)
+  Epidemic size (K)             17020 (cases)
+  Epidemic rate (r)             0.0543282 (1/day)
+  Initial doubling time         12.8 (day)
 Estimated duration (days)
   Turning day                   105
   Acceleration   phase          38 (days)
-  Deceleration phase            46 (days)
-  Total duration                85 (days)
+  Deceleration phase            43 (days)
+  Total duration                81 (days)
 Estimated datums
   Outbreak                      11-Mar-2020
-  Start of acceleration         17-May-2020
+  Start of acceleration         18-May-2020
   Turning point                 24-Jun-2020
-  Start of steady growth        10-Aug-2020
-  Start of ending phase         03-Nov-2020
+  Start of steady growth        07-Aug-2020
+  Start of ending phase         27-Oct-2020
 Statistics
-  Number of observations        224
-  Degrees of freedom            220
-  Root Mean Squared Error       384.075
-  R-Squared                     0.998
-  Adjusted R-Squared            0.998
-  F-statistics vs. zero model   31720
-  p-value                       1.00062e-289
+  Number of observations        225
+  Degrees of freedom            221
+  Root Mean Squared Error       417.915
+  R-Squared                     0.997
+  Adjusted R-Squared            0.997
+  F-statistics vs. zero model   27156.5
+  p-value                       2.16438e-283
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      5696.74
+  Objective function value      6212.68
   Exit condition (1=OK)         0

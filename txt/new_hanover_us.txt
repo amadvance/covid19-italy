@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       new_hanover_us
-  Day                           217
+  Day                           218
 Estimated the SIR model parameters
   Contact rate (beta)           0.081 (1/day)
   Removal rate (gamma)          0.048 (1/day)
-  Population size (N)           8166
-  Initial number of cases (I0)  17
-Basic reproduction number (R0)  1.7
-Critical number of susceptible  8167
+  Population size (N)           8273
+  Initial number of cases (I0)  18
+Basic reproduction number (R0)  1.691
+Critical number of susceptible  8273
 Final state
-  Final number of cases         5669
-  Final number of susceptibles  2497
-Daily forecast for 25-Oct-2020
+  Final number of cases         5709
+  Final number of susceptibles  2563
+Daily forecast for 26-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             4773 (cases)
-  Epidemic rate (r)             0.033505 (1/day)
-  Initial doubling time         20.7 (day)
+  Epidemic size (K)             4809 (cases)
+  Epidemic rate (r)             0.0332345 (1/day)
+  Initial doubling time         20.9 (day)
 Estimated duration (days)
   Turning day                   144
   Acceleration   phase          61 (days)
   Deceleration phase            72 (days)
-  Total duration                133 (days)
+  Total duration                134 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         13-Jun-2020
   Turning point                 13-Aug-2020
-  Start of steady growth        23-Oct-2020
-  Start of ending phase         05-Mar-2021
+  Start of steady growth        25-Oct-2020
+  Start of ending phase         07-Mar-2021
 Statistics
-  Number of observations        217
-  Degrees of freedom            213
-  Root Mean Squared Error       160.409
+  Number of observations        218
+  Degrees of freedom            214
+  Root Mean Squared Error       161.157
   R-Squared                     0.991
   Adjusted R-Squared            0.991
-  F-statistics vs. zero model   7848.45
-  p-value                       1.0321e-217
+  F-statistics vs. zero model   7916.93
+  p-value                       6.40701e-219
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      2341.1
-  Exit condition (1=OK)         0
+  Objective function value      2357.53
+  Exit condition (1=OK)         1

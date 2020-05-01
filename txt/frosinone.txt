@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       frosinone
-  Day                           233
+  Day                           85
 Estimated the SIR model parameters
-  Contact rate (beta)           0.294 (1/day)
-  Removal rate (gamma)          0.092 (1/day)
-  Population size (N)           874
+  Contact rate (beta)           0.311 (1/day)
+  Removal rate (gamma)          0.074 (1/day)
+  Population size (N)           3426
   Initial number of cases (I0)  0
-Basic reproduction number (R0)  3.201
-Critical number of susceptible  874
+Basic reproduction number (R0)  4.172
+Critical number of susceptible  3427
 Final state
-  Final number of cases         832
-  Final number of susceptibles  41
-Daily forecast for 14-Oct-2020
+  Final number of cases         3370
+  Final number of susceptibles  56
+Daily forecast for 19-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             712 (cases)
-  Epidemic rate (r)             0.202387 (1/day)
-  Initial doubling time         3.4 (day)
+  Epidemic size (K)             2960 (cases)
+  Epidemic rate (r)             0.236191 (1/day)
+  Initial doubling time         2.9 (day)
 Estimated duration (days)
-  Turning day                   41
-  Acceleration   phase          10 (days)
-  Deceleration phase            12 (days)
-  Total duration                22 (days)
+  Turning day                   81
+  Acceleration   phase          9 (days)
+  Deceleration phase            10 (days)
+  Total duration                19 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
-  Start of acceleration         26-Mar-2020
-  Turning point                 05-Apr-2020
-  Start of steady growth        17-Apr-2020
-  Start of ending phase         09-May-2020
+  Start of acceleration         06-May-2020
+  Turning point                 15-May-2020
+  Start of steady growth        25-May-2020
+  Start of ending phase         13-Jun-2020
 Statistics
-  Number of observations        233
-  Degrees of freedom            229
-  Root Mean Squared Error       375.326
-  R-Squared                     0.284
-  Adjusted R-Squared            0.272
-  F-statistics vs. zero model   47.9988
-  p-value                       4.17399e-24
+  Number of observations        85
+  Degrees of freedom            81
+  Root Mean Squared Error       228.302
+  R-Squared                     0.821
+  Adjusted R-Squared            0.812
+  F-statistics vs. zero model   128.358
+  p-value                       1.09908e-30
 Method
-  Total cases weight            1
-  Infection rate weight         0
-  Objective function value      5679.71
-  Exit condition (1=OK)         1
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      374.974
+  Exit condition (1=OK)         0

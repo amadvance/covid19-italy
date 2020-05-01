@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       mecklenburg_us
-  Day                           218
+  Day                           219
 Estimated the SIR model parameters
   Contact rate (beta)           0.069 (1/day)
   Removal rate (gamma)          0.03 (1/day)
-  Population size (N)           37728
-  Initial number of cases (I0)  206
-Basic reproduction number (R0)  2.3
-Critical number of susceptible  37729
+  Population size (N)           37973
+  Initial number of cases (I0)  210
+Basic reproduction number (R0)  2.287
+Critical number of susceptible  37973
 Final state
-  Final number of cases         32659
-  Final number of susceptibles  5069
-Daily forecast for 26-Oct-2020
+  Final number of cases         32791
+  Final number of susceptibles  5182
+Daily forecast for 27-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             27320 (cases)
-  Epidemic rate (r)             0.0391889 (1/day)
-  Initial doubling time         17.7 (day)
+  Epidemic size (K)             27425 (cases)
+  Epidemic rate (r)             0.0389114 (1/day)
+  Initial doubling time         17.8 (day)
 Estimated duration (days)
   Turning day                   113
   Acceleration   phase          52 (days)
-  Deceleration phase            63 (days)
-  Total duration                115 (days)
+  Deceleration phase            64 (days)
+  Total duration                116 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         22-May-2020
   Turning point                 13-Jul-2020
-  Start of steady growth        14-Sep-2020
-  Start of ending phase         07-Jan-2021
+  Start of steady growth        15-Sep-2020
+  Start of ending phase         08-Jan-2021
 Statistics
-  Number of observations        218
-  Degrees of freedom            214
-  Root Mean Squared Error       593.79
+  Number of observations        219
+  Degrees of freedom            215
+  Root Mean Squared Error       615.41
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   26086.2
-  p-value                       4.87087e-274
+  F-statistics vs. zero model   24570.9
+  p-value                       2.567e-272
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      8686.4
+  Objective function value      9023.68
   Exit condition (1=OK)         1
