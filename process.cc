@@ -1181,6 +1181,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		&& p.trimmed != "los_angeles_us"
 		&& p.trimmed != "orleans_us"
 		&& p.trimmed != "ecuador"
+		&& p.trimmed != "minnesota"
 		&& p.trimmed != ""
 	) {
 		has_analyze = true;
