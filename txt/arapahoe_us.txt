@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       arapahoe_us
+  Day                           41
+Estimated the SIR model parameters
+  Contact rate (beta)           0.632 (1/day)
+  Removal rate (gamma)          0.565 (1/day)
+  Population size (N)           21062
+  Initial number of cases (I0)  37
+Basic reproduction number (R0)  1.115
+Critical number of susceptible  21062
+Final state
+  Final number of cases         4518
+  Final number of susceptibles  16544
+Daily forecast for 02-May-2020
+  Total                         2646
+  Increase                      83
+Estimated logistic model parameters
+  Epidemic size (K)             3998 (cases)
+  Epidemic rate (r)             0.066234 (1/day)
+  Initial doubling time         10.5 (day)
+Estimated duration (days)
+  Turning day                   34
+  Acceleration   phase          23 (days)
+  Deceleration phase            28 (days)
+  Total duration                52 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         02-Apr-2020
+  Turning point                 25-Apr-2020
+  Start of steady growth        23-May-2020
+  Start of ending phase         14-Jul-2020
+Statistics
+  Number of observations        41
+  Degrees of freedom            37
+  Root Mean Squared Error       43.4208
+  R-Squared                     0.997
+  Adjusted R-Squared            0.997
+  F-statistics vs. zero model   4375.87
+  p-value                       3.13899e-47
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      264.118
+  Exit condition (1=OK)         0

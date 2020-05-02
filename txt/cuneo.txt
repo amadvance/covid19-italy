@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       cuneo
+  Day                           57
+Estimated the SIR model parameters
+  Contact rate (beta)           0.924 (1/day)
+  Removal rate (gamma)          0.823 (1/day)
+  Population size (N)           13278
+  Initial number of cases (I0)  9
+Basic reproduction number (R0)  1.121
+Critical number of susceptible  13278
+Final state
+  Final number of cases         2844
+  Final number of susceptibles  10434
+Daily forecast for 21-Apr-2020
+  Total                         2579
+  Increase                      25
+Estimated logistic model parameters
+  Epidemic size (K)             2606 (cases)
+  Epidemic rate (r)             0.100573 (1/day)
+  Initial doubling time         6.9 (day)
+Estimated duration (days)
+  Turning day                   34
+  Acceleration   phase          18 (days)
+  Deceleration phase            20 (days)
+  Total duration                38 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         10-Mar-2020
+  Turning point                 29-Mar-2020
+  Start of steady growth        18-Apr-2020
+  Start of ending phase         26-May-2020
+Statistics
+  Number of observations        57
+  Degrees of freedom            53
+  Root Mean Squared Error       37.4589
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   10369
+  p-value                       2.41426e-73
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      272.706
+  Exit condition (1=OK)         0
