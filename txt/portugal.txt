@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       portugal
-  Day                           60
+  Day                           62
 Estimated the SIR model parameters
-  Contact rate (beta)           0.31 (1/day)
-  Removal rate (gamma)          0.162 (1/day)
-  Population size (N)           34123
-  Initial number of cases (I0)  72
-Basic reproduction number (R0)  1.907
-Critical number of susceptible  34124
+  Contact rate (beta)           0.3 (1/day)
+  Removal rate (gamma)          0.155 (1/day)
+  Population size (N)           34229
+  Initial number of cases (I0)  80
+Basic reproduction number (R0)  1.929
+Critical number of susceptible  34230
 Final state
-  Final number of cases         26331
-  Final number of susceptibles  7792
-Daily forecast for 01-May-2020
+  Final number of cases         26651
+  Final number of susceptibles  7578
+Daily forecast for 03-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             22032 (cases)
-  Epidemic rate (r)             0.147928 (1/day)
-  Initial doubling time         4.7 (day)
+  Epidemic size (K)             22290 (cases)
+  Epidemic rate (r)             0.144618 (1/day)
+  Initial doubling time         4.8 (day)
 Estimated duration (days)
-  Turning day                   34
+  Turning day                   35
   Acceleration   phase          14 (days)
   Deceleration phase            17 (days)
-  Total duration                30 (days)
+  Total duration                31 (days)
 Estimated datums
   Outbreak                      02-Mar-2020
-  Start of acceleration         23-Mar-2020
-  Turning point                 05-Apr-2020
-  Start of steady growth        22-Apr-2020
-  Start of ending phase         22-May-2020
+  Start of acceleration         22-Mar-2020
+  Turning point                 06-Apr-2020
+  Start of steady growth        23-Apr-2020
+  Start of ending phase         24-May-2020
 Statistics
-  Number of observations        60
-  Degrees of freedom            56
-  Root Mean Squared Error       503.803
+  Number of observations        62
+  Degrees of freedom            58
+  Root Mean Squared Error       502.949
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   6388.06
-  p-value                       6.09854e-71
+  F-statistics vs. zero model   6963.12
+  p-value                       4.12364e-74
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      3770.14
-  Exit condition (1=OK)         0
+  Objective function value      3830.39
+  Exit condition (1=OK)         1
