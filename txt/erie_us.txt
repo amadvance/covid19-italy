@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       erie_us
-  Day                           43
+  Day                           44
 Estimated the SIR model parameters
-  Contact rate (beta)           1.306 (1/day)
-  Removal rate (gamma)          1.276 (1/day)
-  Population size (N)           170280
-  Initial number of cases (I0)  40
-Basic reproduction number (R0)  1.023
-Critical number of susceptible  170280
+  Contact rate (beta)           0.783 (1/day)
+  Removal rate (gamma)          0.758 (1/day)
+  Population size (N)           208189
+  Initial number of cases (I0)  69
+Basic reproduction number (R0)  1.033
+Critical number of susceptible  208189
 Final state
-  Final number of cases         9138
-  Final number of susceptibles  161141
-Daily forecast for 04-May-2020
-  Total                         3748
-  Increase                      38
+  Final number of cases         14929
+  Final number of susceptibles  193259
+Daily forecast for 05-May-2020
+  Total                         3907
+  Increase                      105
 Estimated logistic model parameters
-  Epidemic size (K)             7598 (cases)
-  Epidemic rate (r)             0.0298016 (1/day)
-  Initial doubling time         23.3 (day)
+  Epidemic size (K)             12906 (cases)
+  Epidemic rate (r)             0.0250559 (1/day)
+  Initial doubling time         27.7 (day)
 Estimated duration (days)
-  Turning day                   43
-  Acceleration   phase          35 (days)
-  Deceleration phase            49 (days)
-  Total duration                85 (days)
+  Turning day                   64
+  Acceleration   phase          49 (days)
+  Deceleration phase            64 (days)
+  Total duration                113 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         30-Mar-2020
-  Turning point                 04-May-2020
-  Start of steady growth        23-Jun-2020
-  Start of ending phase         15-Sep-2020
+  Start of acceleration         06-Apr-2020
+  Turning point                 25-May-2020
+  Start of steady growth        28-Jul-2020
+  Start of ending phase         18-Nov-2020
 Statistics
-  Number of observations        43
-  Degrees of freedom            39
-  Root Mean Squared Error       86.4527
+  Number of observations        44
+  Degrees of freedom            40
+  Root Mean Squared Error       87.9619
   R-Squared                     0.994
   Adjusted R-Squared            0.994
-  F-statistics vs. zero model   2234.93
-  p-value                       1.16582e-43
+  F-statistics vs. zero model   2311.11
+  p-value                       7.62376e-45
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      539.897
+  Objective function value      556.32
   Exit condition (1=OK)         0
