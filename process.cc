@@ -656,7 +656,7 @@ void setup(place_set& bag)
 
 void load_fit(place_set& bag)
 {
-	char buf[65536];
+	char buf[256000];
 	char* s;
 	const char* tag1 = "### Ca: ";
 	const char* tag2 = "### R0: ";
@@ -699,9 +699,7 @@ void load_fit(place_set& bag)
 			s[len] = 0;
 		
 			if (strncmp(s, tag1, tag1_len) == 0) {
-
 				s += tag1_len;
-
 				const char* t = stok(&s, ' ');
 				day_set::iterator j = i->days.begin();
 				day_set::iterator prev = i->days.end();
@@ -764,7 +762,7 @@ void load_fit(place_set& bag)
 				if (t)
 					i->ending = t;
 			} else {
-				printf("Ignored line '%s'\n", s);
+				printf("Ignored line '%s' for file '%s'\n", s, trimmed.c_str());
 			}
 		}
 
@@ -882,30 +880,35 @@ void save_analyze(FILE* f, string name)
 {
 	string res = "res/" + name + ".res";
 
-	fprintf(f, "res = fitVirusCV19(@%s);\n", name.c_str());
+	fprintf(f, "try\n");
+	fprintf(f, "\tres = fitVirusCV19(@%s);\n", name.c_str());
 
-	fprintf(f, "f = fopen('%s','w');\n", res.c_str());
-	fprintf(f, "fprintf(f, '### Ca: ');\n");
-	fprintf(f, "fprintf(f, '%%.0f ', res.Ca);\n");
-	fprintf(f, "fprintf(f, '\\n');\n");
-	fprintf(f, "fprintf(f, '### R0: ');\n");
-	fprintf(f, "fprintf(f, '%%.1f\\n', res.R0);\n");
-	fprintf(f, "fprintf(f, '### RMSE: ');\n");
-	fprintf(f, "fprintf(f, '%%.0f\\n', res.RMSE);\n");
-	fprintf(f, "fprintf(f, '### Clim: ');\n");
-	fprintf(f, "fprintf(f, '%%.0f\\n', res.Clim);\n");
-	fprintf(f, "fprintf(f, '### Outbreak: ');\n");
-	fprintf(f, "fprintf(f, '%%s\\n',res.tp0);\n");
-	fprintf(f, "fprintf(f, '### Acceleration: ');\n");
-	fprintf(f, "fprintf(f, '%%s\\n',res.tp1);\n");
-	fprintf(f, "fprintf(f, '### Turning: ');\n");
-	fprintf(f, "fprintf(f, '%%s\\n',res.tp2);\n");
-	fprintf(f, "fprintf(f, '### Steady: ');\n");
-	fprintf(f, "fprintf(f, '%%s\\n',res.tp3);\n");
-	fprintf(f, "fprintf(f, '### Ending: ');\n");
-	fprintf(f, "fprintf(f, '%%s\\n',res.tp4);\n");
+	fprintf(f, "\tf = fopen('%s','w');\n", res.c_str());
+	fprintf(f, "\tfprintf(f, '### Ca: ');\n");
+	fprintf(f, "\tfprintf(f, '%%.0f ', res.Ca);\n");
+	fprintf(f, "\tfprintf(f, '\\n');\n");
+	fprintf(f, "\tfprintf(f, '### R0: ');\n");
+	fprintf(f, "\tfprintf(f, '%%.1f\\n', res.R0);\n");
+	fprintf(f, "\tfprintf(f, '### RMSE: ');\n");
+	fprintf(f, "\tfprintf(f, '%%.0f\\n', res.RMSE);\n");
+	fprintf(f, "\tfprintf(f, '### Clim: ');\n");
+	fprintf(f, "\tfprintf(f, '%%.0f\\n', res.Clim);\n");
+	fprintf(f, "\tfprintf(f, '### Outbreak: ');\n");
+	fprintf(f, "\tfprintf(f, '%%s\\n',res.tp0);\n");
+	fprintf(f, "\tfprintf(f, '### Acceleration: ');\n");
+	fprintf(f, "\tfprintf(f, '%%s\\n',res.tp1);\n");
+	fprintf(f, "\tfprintf(f, '### Turning: ');\n");
+	fprintf(f, "\tfprintf(f, '%%s\\n',res.tp2);\n");
+	fprintf(f, "\tfprintf(f, '### Steady: ');\n");
+	fprintf(f, "\tfprintf(f, '%%s\\n',res.tp3);\n");
+	fprintf(f, "\tfprintf(f, '### Ending: ');\n");
+	fprintf(f, "\tfprintf(f, '%%s\\n',res.tp4);\n");
 
-	fprintf(f, "fclose(f);\n");
+	fprintf(f, "\tfclose(f);\n");
+
+	fprintf(f, "catch\n");
+	fprintf(f, "\twarning('Skip %s')\n", name.c_str());
+	fprintf(f, "end\n");
 }
 
 #define CASI_COUNT 8
@@ -1165,29 +1168,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	}
 
 	bool has_analyze = false;
-	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS
-		&& p.trimmed != "japan"
-		&& p.trimmed != "south_korea"
-		&& p.trimmed != "westchester_us"
-		&& p.trimmed != "diamond_princess"
-		&& p.trimmed != "china"
-		&& p.trimmed != "french_polynesia"
-		&& p.trimmed != "king_us"
-		&& p.trimmed != "peru"
-		&& p.trimmed != "singapore"
-		&& p.trimmed != "rhode_island"
-		&& p.trimmed != "qatar"
-		&& p.trimmed != "ohio"
-		&& p.trimmed != "los_angeles_us"
-		&& p.trimmed != "orleans_us"
-		&& p.trimmed != "ecuador"
-		&& p.trimmed != "minnesota"
-		&& p.trimmed != "kansas"
-		&& p.trimmed != "tennessee"
-		&& p.trimmed != "wisconsin"
-		&& p.trimmed != "snohomish_us"
-		&& p.trimmed != ""
-	) {
+	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS) {
 		has_analyze = true;
 	}
 
