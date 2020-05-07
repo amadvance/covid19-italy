@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       cuyahoga_us
+  Day                           46
+Estimated the SIR model parameters
+  Contact rate (beta)           0.355 (1/day)
+  Removal rate (gamma)          0.343 (1/day)
+  Population size (N)           81778
+  Initial number of cases (I0)  124
+Basic reproduction number (R0)  1.033
+Critical number of susceptible  81779
+Final state
+  Final number of cases         7778
+  Final number of susceptibles  74000
+Daily forecast for 07-May-2020
+  Total                         2545
+  Increase                      3
+Estimated logistic model parameters
+  Epidemic size (K)             5315 (cases)
+  Epidemic rate (r)             0.0119139 (1/day)
+  Initial doubling time         58.2 (day)
+Estimated duration (days)
+  Turning day                   47
+  Acceleration   phase          45 (days)
+  Deceleration phase            91 (days)
+  Total duration                136 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         24-Mar-2020
+  Turning point                 08-May-2020
+  Start of steady growth        06-Aug-2020
+  Start of ending phase         20-Dec-2020
+Statistics
+  Number of observations        46
+  Degrees of freedom            42
+  Root Mean Squared Error       33.3932
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   6777.04
+  p-value                       2.08352e-56
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      216.413
+  Exit condition (1=OK)         0
