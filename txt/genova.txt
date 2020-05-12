@@ -1,27 +1,27 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       genova
-  Day                           68
+  Day                           69
 Estimated the SIR model parameters
-  Contact rate (beta)           2.049 (1/day)
-  Removal rate (gamma)          1.942 (1/day)
-  Population size (N)           49674
-  Initial number of cases (I0)  5
-Basic reproduction number (R0)  1.055
-Critical number of susceptible  49675
+  Contact rate (beta)           0.513 (1/day)
+  Removal rate (gamma)          0.397 (1/day)
+  Population size (N)           12535
+  Initial number of cases (I0)  18
+Basic reproduction number (R0)  1.29
+Critical number of susceptible  12536
 Final state
-  Final number of cases         5194
-  Final number of susceptibles  44480
-Daily forecast for 02-May-2020
+  Final number of cases         5240
+  Final number of susceptibles  7295
+Daily forecast for 03-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             4939 (cases)
-  Epidemic rate (r)             0.107211 (1/day)
-  Initial doubling time         6.5 (day)
+  Epidemic size (K)             4615 (cases)
+  Epidemic rate (r)             0.115798 (1/day)
+  Initial doubling time         6 (day)
 Estimated duration (days)
   Turning day                   35
   Acceleration   phase          17 (days)
-  Deceleration phase            18 (days)
+  Deceleration phase            19 (days)
   Total duration                36 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        18-Apr-2020
   Start of ending phase         24-May-2020
 Statistics
-  Number of observations        68
-  Degrees of freedom            64
-  Root Mean Squared Error       163.397
+  Number of observations        69
+  Degrees of freedom            65
+  Root Mean Squared Error       160.379
   R-Squared                     0.993
-  Adjusted R-Squared            0.992
-  F-statistics vs. zero model   2875.75
-  p-value                       3.59449e-68
+  Adjusted R-Squared            0.993
+  F-statistics vs. zero model   3092.26
+  p-value                       4.92712e-70
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1307.17
+  Objective function value      1293.02
   Exit condition (1=OK)         0
