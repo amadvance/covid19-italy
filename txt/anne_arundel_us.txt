@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       anne_arundel_us
+  Day                           52
+Estimated the SIR model parameters
+  Contact rate (beta)           1.111 (1/day)
+  Removal rate (gamma)          1.042 (1/day)
+  Population size (N)           27158
+  Initial number of cases (I0)  13
+Basic reproduction number (R0)  1.066
+Critical number of susceptible  27158
+Final state
+  Final number of cases         3480
+  Final number of susceptibles  23677
+Daily forecast for 13-May-2020
+  Total                         2561
+  Increase                      41
+Estimated logistic model parameters
+  Epidemic size (K)             3181 (cases)
+  Epidemic rate (r)             0.0691115 (1/day)
+  Initial doubling time         10 (day)
+Estimated duration (days)
+  Turning day                   37
+  Acceleration   phase          24 (days)
+  Deceleration phase            27 (days)
+  Total duration                50 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         04-Apr-2020
+  Turning point                 28-Apr-2020
+  Start of steady growth        25-May-2020
+  Start of ending phase         14-Jul-2020
+Statistics
+  Number of observations        52
+  Degrees of freedom            48
+  Root Mean Squared Error       36.9874
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   7925.19
+  p-value                       1.1232e-64
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      256.256
+  Exit condition (1=OK)         0
