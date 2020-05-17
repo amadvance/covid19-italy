@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       mecklenburg_us
+  Day                           56
+Estimated the SIR model parameters
+  Contact rate (beta)           0.327 (1/day)
+  Removal rate (gamma)          0.322 (1/day)
+  Population size (N)           281612
+  Initial number of cases (I0)  110
+Basic reproduction number (R0)  1.017
+Critical number of susceptible  281612
+Final state
+  Final number of cases         13645
+  Final number of susceptibles  267966
+Daily forecast for 17-May-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             9230 (cases)
+  Epidemic rate (r)             0.00545592 (1/day)
+  Initial doubling time         127 (day)
+Estimated duration (days)
+  Turning day                   102
+  Acceleration   phase          95 (days)
+  Deceleration phase            191 (days)
+  Total duration                286 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         28-Mar-2020
+  Turning point                 02-Jul-2020
+  Start of steady growth        09-Jan-2021
+  Start of ending phase         22-Oct-2021
+Statistics
+  Number of observations        56
+  Degrees of freedom            52
+  Root Mean Squared Error       51.0705
+  R-Squared                     0.995
+  Adjusted R-Squared            0.994
+  F-statistics vs. zero model   3129.75
+  p-value                       1.07228e-58
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      368.275
+  Exit condition (1=OK)         0
