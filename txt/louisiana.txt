@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       louisiana
-  Day                           57
+  Day                           58
 Estimated the SIR model parameters
-  Contact rate (beta)           0.93 (1/day)
-  Removal rate (gamma)          0.86 (1/day)
-  Population size (N)           183957
-  Initial number of cases (I0)  656
-Basic reproduction number (R0)  1.077
-Critical number of susceptible  183957
+  Contact rate (beta)           0.8 (1/day)
+  Removal rate (gamma)          0.736 (1/day)
+  Population size (N)           171357
+  Initial number of cases (I0)  783
+Basic reproduction number (R0)  1.082
+Critical number of susceptible  171358
 Final state
-  Final number of cases         32636
-  Final number of susceptibles  151320
-Daily forecast for 18-May-2020
+  Final number of cases         33099
+  Final number of susceptibles  138258
+Daily forecast for 19-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             25556 (cases)
-  Epidemic rate (r)             0.0694067 (1/day)
-  Initial doubling time         10 (day)
+  Epidemic size (K)             25499 (cases)
+  Epidemic rate (r)             0.0643263 (1/day)
+  Initial doubling time         10.8 (day)
 Estimated duration (days)
   Turning day                   14
   Acceleration   phase          13 (days)
-  Deceleration phase            20 (days)
-  Total duration                33 (days)
+  Deceleration phase            22 (days)
+  Total duration                35 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         23-Mar-2020
   Turning point                 05-Apr-2020
-  Start of steady growth        26-Apr-2020
-  Start of ending phase         29-May-2020
+  Start of steady growth        27-Apr-2020
+  Start of ending phase         31-May-2020
 Statistics
-  Number of observations        57
-  Degrees of freedom            53
-  Root Mean Squared Error       1316.7
+  Number of observations        58
+  Degrees of freedom            54
+  Root Mean Squared Error       1350.14
   R-Squared                     0.985
   Adjusted R-Squared            0.984
-  F-statistics vs. zero model   1138.34
-  p-value                       4.44735e-48
+  F-statistics vs. zero model   1103.21
+  p-value                       2.09659e-48
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      9585.74
+  Objective function value      9921.45
   Exit condition (1=OK)         0
