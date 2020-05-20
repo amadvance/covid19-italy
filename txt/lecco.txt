@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       lecco
-  Day                           80
+  Day                           81
 Estimated the SIR model parameters
-  Contact rate (beta)           0.217 (1/day)
-  Removal rate (gamma)          0.107 (1/day)
-  Population size (N)           3114
-  Initial number of cases (I0)  60
-Basic reproduction number (R0)  1.979
-Critical number of susceptible  3115
+  Contact rate (beta)           2.033 (1/day)
+  Removal rate (gamma)          1.969 (1/day)
+  Population size (N)           36810
+  Initial number of cases (I0)  10
+Basic reproduction number (R0)  1.032
+Critical number of susceptible  36810
 Final state
-  Final number of cases         2516
-  Final number of susceptibles  597
-Daily forecast for 14-May-2020
+  Final number of cases         2561
+  Final number of susceptibles  34248
+Daily forecast for 15-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             2088 (cases)
-  Epidemic rate (r)             0.109246 (1/day)
-  Initial doubling time         6.3 (day)
+  Epidemic size (K)             2230 (cases)
+  Epidemic rate (r)             0.0635188 (1/day)
+  Initial doubling time         10.9 (day)
 Estimated duration (days)
   Turning day                   26
-  Acceleration   phase          17 (days)
-  Deceleration phase            22 (days)
-  Total duration                39 (days)
+  Acceleration   phase          20 (days)
+  Deceleration phase            25 (days)
+  Total duration                45 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
-  Start of acceleration         04-Mar-2020
+  Start of acceleration         02-Mar-2020
   Turning point                 21-Mar-2020
-  Start of steady growth        12-Apr-2020
-  Start of ending phase         21-May-2020
+  Start of steady growth        16-Apr-2020
+  Start of ending phase         31-May-2020
 Statistics
-  Number of observations        80
-  Degrees of freedom            76
-  Root Mean Squared Error       106.772
+  Number of observations        81
+  Degrees of freedom            77
+  Root Mean Squared Error       107.811
   R-Squared                     0.986
-  Adjusted R-Squared            0.986
-  F-statistics vs. zero model   1709.37
-  p-value                       1.23933e-69
+  Adjusted R-Squared            0.985
+  F-statistics vs. zero model   1702.23
+  p-value                       2.90093e-70
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      930.815
-  Exit condition (1=OK)         1
+  Objective function value      946.036
+  Exit condition (1=OK)         0
