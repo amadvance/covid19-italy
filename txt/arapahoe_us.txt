@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       arapahoe_us
-  Day                           63
+  Day                           64
 Estimated the SIR model parameters
-  Contact rate (beta)           0.824 (1/day)
-  Removal rate (gamma)          0.764 (1/day)
-  Population size (N)           31315
-  Initial number of cases (I0)  31
-Basic reproduction number (R0)  1.077
-Critical number of susceptible  31315
+  Contact rate (beta)           0.764 (1/day)
+  Removal rate (gamma)          0.703 (1/day)
+  Population size (N)           28276
+  Initial number of cases (I0)  32
+Basic reproduction number (R0)  1.086
+Critical number of susceptible  28276
 Final state
-  Final number of cases         4777
-  Final number of susceptibles  26537
-Daily forecast for 24-May-2020
-  Total                         4055
-  Increase                      28
+  Final number of cases         4735
+  Final number of susceptibles  23540
+Daily forecast for 25-May-2020
+  Total                         4083
+  Increase                      39
 Estimated logistic model parameters
-  Epidemic size (K)             4250 (cases)
-  Epidemic rate (r)             0.059955 (1/day)
-  Initial doubling time         11.6 (day)
+  Epidemic size (K)             4210 (cases)
+  Epidemic rate (r)             0.0614694 (1/day)
+  Initial doubling time         11.3 (day)
 Estimated duration (days)
   Turning day                   35
   Acceleration   phase          25 (days)
   Deceleration phase            30 (days)
-  Total duration                55 (days)
+  Total duration                54 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         02-Apr-2020
   Turning point                 26-Apr-2020
   Start of steady growth        26-May-2020
-  Start of ending phase         20-Jul-2020
+  Start of ending phase         19-Jul-2020
 Statistics
-  Number of observations        63
-  Degrees of freedom            59
-  Root Mean Squared Error       36.4721
+  Number of observations        64
+  Degrees of freedom            60
+  Root Mean Squared Error       36.4664
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   26617.8
-  p-value                       2.5451e-92
+  F-statistics vs. zero model   27776.9
+  p-value                       3.21558e-94
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      280.148
+  Objective function value      282.467
   Exit condition (1=OK)         0

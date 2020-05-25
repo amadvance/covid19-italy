@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       japan
-  Day                           120
+  Day                           121
 Estimated the SIR model parameters
-  Contact rate (beta)           1.209 (1/day)
-  Removal rate (gamma)          1.078 (1/day)
-  Population size (N)           79739
+  Contact rate (beta)           2.496 (1/day)
+  Removal rate (gamma)          2.367 (1/day)
+  Population size (N)           162878
   Initial number of cases (I0)  0
-Basic reproduction number (R0)  1.121
-Critical number of susceptible  79739
+Basic reproduction number (R0)  1.055
+Critical number of susceptible  162878
 Final state
-  Final number of cases         16606
-  Final number of susceptibles  63132
-Daily forecast for 21-May-2020
+  Final number of cases         16569
+  Final number of susceptibles  146308
+Daily forecast for 22-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             15567 (cases)
-  Epidemic rate (r)             0.130792 (1/day)
-  Initial doubling time         5.3 (day)
+  Epidemic size (K)             16035 (cases)
+  Epidemic rate (r)             0.129239 (1/day)
+  Initial doubling time         5.4 (day)
 Estimated duration (days)
   Turning day                   81
   Acceleration   phase          16 (days)
   Deceleration phase            16 (days)
-  Total duration                32 (days)
+  Total duration                31 (days)
 Estimated datums
   Outbreak                      22-Jan-2020
   Start of acceleration         27-Mar-2020
   Turning point                 12-Apr-2020
   Start of steady growth        28-Apr-2020
-  Start of ending phase         30-May-2020
+  Start of ending phase         29-May-2020
 Statistics
-  Number of observations        120
-  Degrees of freedom            116
-  Root Mean Squared Error       255.84
-  R-Squared                     0.998
+  Number of observations        121
+  Degrees of freedom            117
+  Root Mean Squared Error       251.6
+  R-Squared                     0.999
   Adjusted R-Squared            0.998
-  F-statistics vs. zero model   25601.9
-  p-value                       1.92477e-163
+  F-statistics vs. zero model   27137
+  p-value                       4.12935e-166
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      2755.36
+  Objective function value      2721.28
   Exit condition (1=OK)         0
