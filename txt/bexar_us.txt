@@ -1,22 +1,22 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
-  Country                       cobb_us
+  Country                       bexar_us
   Day                           68
 Estimated the SIR model parameters
-  Contact rate (beta)           0.634 (1/day)
-  Removal rate (gamma)          0.596 (1/day)
-  Population size (N)           27721
-  Initial number of cases (I0)  39
+  Contact rate (beta)           0.64 (1/day)
+  Removal rate (gamma)          0.603 (1/day)
+  Population size (N)           24565
+  Initial number of cases (I0)  33
 Basic reproduction number (R0)  1.061
-Critical number of susceptible  27721
+Critical number of susceptible  24565
 Final state
-  Final number of cases         3704
-  Final number of susceptibles  24016
+  Final number of cases         3239
+  Final number of susceptibles  21325
 Daily forecast for 29-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             3097 (cases)
-  Epidemic rate (r)             0.0374872 (1/day)
+  Epidemic size (K)             2710 (cases)
+  Epidemic rate (r)             0.0373889 (1/day)
   Initial doubling time         18.5 (day)
 Estimated duration (days)
   Turning day                   37
@@ -32,13 +32,13 @@ Estimated datums
 Statistics
   Number of observations        68
   Degrees of freedom            64
-  Root Mean Squared Error       33.5152
-  R-Squared                     0.999
-  Adjusted R-Squared            0.999
-  F-statistics vs. zero model   16028.7
-  p-value                       5.81387e-92
+  Root Mean Squared Error       55.3007
+  R-Squared                     0.995
+  Adjusted R-Squared            0.995
+  F-statistics vs. zero model   4477.31
+  p-value                       2.75633e-74
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      268.122
+  Objective function value      442.406
   Exit condition (1=OK)         0

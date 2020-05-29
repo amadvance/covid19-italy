@@ -1,26 +1,26 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       essex_us
-  Day                           67
+  Day                           68
 Estimated the SIR model parameters
-  Contact rate (beta)           0.509 (1/day)
-  Removal rate (gamma)          0.422 (1/day)
-  Population size (N)           43810
-  Initial number of cases (I0)  113
-Basic reproduction number (R0)  1.204
-Critical number of susceptible  43810
+  Contact rate (beta)           2.74 (1/day)
+  Removal rate (gamma)          2.661 (1/day)
+  Population size (N)           242502
+  Initial number of cases (I0)  23
+Basic reproduction number (R0)  1.029
+Critical number of susceptible  242503
 Final state
-  Final number of cases         14532
-  Final number of susceptibles  29277
-Daily forecast for 28-May-2020
+  Final number of cases         14524
+  Final number of susceptibles  227978
+Daily forecast for 29-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             12835 (cases)
-  Epidemic rate (r)             0.0874009 (1/day)
-  Initial doubling time         7.9 (day)
+  Epidemic size (K)             13542 (cases)
+  Epidemic rate (r)             0.0786981 (1/day)
+  Initial doubling time         8.8 (day)
 Estimated duration (days)
   Turning day                   33
-  Acceleration   phase          20 (days)
+  Acceleration   phase          21 (days)
   Deceleration phase            23 (days)
   Total duration                44 (days)
 Estimated datums
@@ -28,17 +28,17 @@ Estimated datums
   Start of acceleration         04-Apr-2020
   Turning point                 24-Apr-2020
   Start of steady growth        18-May-2020
-  Start of ending phase         30-Jun-2020
+  Start of ending phase         01-Jul-2020
 Statistics
-  Number of observations        67
-  Degrees of freedom            63
-  Root Mean Squared Error       115.282
+  Number of observations        68
+  Degrees of freedom            64
+  Root Mean Squared Error       110.296
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   37101.7
-  p-value                       3.25748e-102
+  F-statistics vs. zero model   42142.3
+  p-value                       2.19692e-105
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      915.024
+  Objective function value      882.374
   Exit condition (1=OK)         0
