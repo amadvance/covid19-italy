@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       pesaro_e_urbino
-  Day                           94
+  Day                           95
 Estimated the SIR model parameters
-  Contact rate (beta)           3.524 (1/day)
-  Removal rate (gamma)          3.462 (1/day)
-  Population size (N)           68608
-  Initial number of cases (I0)  6
-Basic reproduction number (R0)  1.018
-Critical number of susceptible  68609
+  Contact rate (beta)           0.479 (1/day)
+  Removal rate (gamma)          0.402 (1/day)
+  Population size (N)           8374
+  Initial number of cases (I0)  41
+Basic reproduction number (R0)  1.187
+Critical number of susceptible  8374
 Final state
-  Final number of cases         2716
-  Final number of susceptibles  65891
-Daily forecast for 28-May-2020
+  Final number of cases         2709
+  Final number of susceptibles  5664
+Daily forecast for 29-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             2366 (cases)
-  Epidemic rate (r)             0.0618505 (1/day)
-  Initial doubling time         11.2 (day)
+  Epidemic size (K)             2330 (cases)
+  Epidemic rate (r)             0.077465 (1/day)
+  Initial doubling time         8.9 (day)
 Estimated duration (days)
-  Turning day                   26
+  Turning day                   27
   Acceleration   phase          20 (days)
-  Deceleration phase            26 (days)
-  Total duration                46 (days)
+  Deceleration phase            25 (days)
+  Total duration                44 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
   Start of acceleration         02-Mar-2020
-  Turning point                 21-Mar-2020
-  Start of steady growth        16-Apr-2020
-  Start of ending phase         01-Jun-2020
+  Turning point                 22-Mar-2020
+  Start of steady growth        15-Apr-2020
+  Start of ending phase         30-May-2020
 Statistics
-  Number of observations        94
-  Degrees of freedom            90
-  Root Mean Squared Error       79.6461
+  Number of observations        95
+  Degrees of freedom            91
+  Root Mean Squared Error       83.0089
   R-Squared                     0.993
-  Adjusted R-Squared            0.993
-  F-statistics vs. zero model   4142.92
-  p-value                       2.70269e-96
+  Adjusted R-Squared            0.992
+  F-statistics vs. zero model   3837.4
+  p-value                       1.20618e-95
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      755.589
+  Objective function value      791.855
   Exit condition (1=OK)         0

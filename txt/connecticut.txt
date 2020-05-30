@@ -1,28 +1,28 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       connecticut
-  Day                           68
+  Day                           69
 Estimated the SIR model parameters
-  Contact rate (beta)           0.753 (1/day)
-  Removal rate (gamma)          0.684 (1/day)
-  Population size (N)           227351
-  Initial number of cases (I0)  375
-Basic reproduction number (R0)  1.099
-Critical number of susceptible  227351
+  Contact rate (beta)           1.06 (1/day)
+  Removal rate (gamma)          0.993 (1/day)
+  Population size (N)           320105
+  Initial number of cases (I0)  269
+Basic reproduction number (R0)  1.067
+Critical number of susceptible  320106
 Final state
-  Final number of cases         43202
-  Final number of susceptibles  184148
-Daily forecast for 29-May-2020
+  Final number of cases         43185
+  Final number of susceptibles  276919
+Daily forecast for 30-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             38008 (cases)
-  Epidemic rate (r)             0.0687021 (1/day)
-  Initial doubling time         10.1 (day)
+  Epidemic size (K)             38307 (cases)
+  Epidemic rate (r)             0.0674679 (1/day)
+  Initial doubling time         10.3 (day)
 Estimated duration (days)
   Turning day                   30
   Acceleration   phase          21 (days)
   Deceleration phase            26 (days)
-  Total duration                48 (days)
+  Total duration                47 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         31-Mar-2020
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        17-May-2020
   Start of ending phase         04-Jul-2020
 Statistics
-  Number of observations        68
-  Degrees of freedom            64
-  Root Mean Squared Error       747.165
+  Number of observations        69
+  Degrees of freedom            65
+  Root Mean Squared Error       739.39
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   7488.37
-  p-value                       2.0865e-81
+  F-statistics vs. zero model   7935.57
+  p-value                       2.82652e-83
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      5977.33
+  Objective function value      5961.16
   Exit condition (1=OK)         0
