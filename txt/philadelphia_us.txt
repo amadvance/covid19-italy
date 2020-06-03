@@ -1,23 +1,23 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       philadelphia_us
-  Day                           71
+  Day                           73
 Estimated the SIR model parameters
-  Contact rate (beta)           1.1 (1/day)
-  Removal rate (gamma)          1.036 (1/day)
-  Population size (N)           191989
-  Initial number of cases (I0)  141
-Basic reproduction number (R0)  1.06
-Critical number of susceptible  191989
+  Contact rate (beta)           0.993 (1/day)
+  Removal rate (gamma)          0.928 (1/day)
+  Population size (N)           172705
+  Initial number of cases (I0)  154
+Basic reproduction number (R0)  1.068
+Critical number of susceptible  172705
 Final state
-  Final number of cases         23653
-  Final number of susceptibles  168335
-Daily forecast for 01-Jun-2020
+  Final number of cases         23724
+  Final number of susceptibles  148980
+Daily forecast for 03-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             20939 (cases)
-  Epidemic rate (r)             0.0634333 (1/day)
-  Initial doubling time         10.9 (day)
+  Epidemic size (K)             20996 (cases)
+  Epidemic rate (r)             0.0642471 (1/day)
+  Initial doubling time         10.8 (day)
 Estimated duration (days)
   Turning day                   31
   Acceleration   phase          22 (days)
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        19-May-2020
   Start of ending phase         08-Jul-2020
 Statistics
-  Number of observations        71
-  Degrees of freedom            67
-  Root Mean Squared Error       297.911
-  R-Squared                     0.999
+  Number of observations        73
+  Degrees of freedom            69
+  Root Mean Squared Error       311.749
+  R-Squared                     0.998
   Adjusted R-Squared            0.998
-  F-statistics vs. zero model   14855.1
-  p-value                       1.6972e-94
+  F-statistics vs. zero model   14389.5
+  p-value                       2.13206e-96
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      2438.51
+  Objective function value      2589.58
   Exit condition (1=OK)         0

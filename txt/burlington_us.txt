@@ -1,23 +1,23 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       burlington_us
-  Day                           71
+  Day                           73
 Estimated the SIR model parameters
-  Contact rate (beta)           0.986 (1/day)
-  Removal rate (gamma)          0.917 (1/day)
-  Population size (N)           33533
-  Initial number of cases (I0)  24
-Basic reproduction number (R0)  1.075
-Critical number of susceptible  33533
+  Contact rate (beta)           0.703 (1/day)
+  Removal rate (gamma)          0.632 (1/day)
+  Population size (N)           23704
+  Initial number of cases (I0)  32
+Basic reproduction number (R0)  1.112
+Critical number of susceptible  23704
 Final state
-  Final number of cases         4873
-  Final number of susceptibles  28659
-Daily forecast for 01-Jun-2020
+  Final number of cases         4891
+  Final number of susceptibles  18813
+Daily forecast for 03-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             4405 (cases)
-  Epidemic rate (r)             0.0693533 (1/day)
-  Initial doubling time         10 (day)
+  Epidemic size (K)             4379 (cases)
+  Epidemic rate (r)             0.0715821 (1/day)
+  Initial doubling time         9.7 (day)
 Estimated duration (days)
   Turning day                   35
   Acceleration   phase          23 (days)
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        22-May-2020
   Start of ending phase         11-Jul-2020
 Statistics
-  Number of observations        71
-  Degrees of freedom            67
-  Root Mean Squared Error       58.746
+  Number of observations        73
+  Degrees of freedom            69
+  Root Mean Squared Error       61.4083
   R-Squared                     0.999
-  Adjusted R-Squared            0.999
-  F-statistics vs. zero model   16216.1
-  p-value                       9.04109e-96
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   15822.5
+  p-value                       8.10138e-98
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      480.856
+  Objective function value      510.095
   Exit condition (1=OK)         0
