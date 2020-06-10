@@ -1,22 +1,22 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       belgium
-  Day                           100
+  Day                           102
 Estimated the SIR model parameters
-  Contact rate (beta)           4.673 (1/day)
-  Removal rate (gamma)          4.573 (1/day)
-  Population size (N)           1.33475e+06
-  Initial number of cases (I0)  15
-Basic reproduction number (R0)  1.022
-Critical number of susceptible  1.33475e+06
+  Contact rate (beta)           1.736 (1/day)
+  Removal rate (gamma)          1.635 (1/day)
+  Population size (N)           500655
+  Initial number of cases (I0)  40
+Basic reproduction number (R0)  1.062
+Critical number of susceptible  500655
 Final state
-  Final number of cases         57486
-  Final number of susceptibles  1.27726e+06
-Daily forecast for 14-May-2020
+  Final number of cases         57707
+  Final number of susceptibles  442947
+Daily forecast for 16-May-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             56031 (cases)
-  Epidemic rate (r)             0.100192 (1/day)
+  Epidemic size (K)             55060 (cases)
+  Epidemic rate (r)             0.101012 (1/day)
   Initial doubling time         6.9 (day)
 Estimated duration (days)
   Turning day                   43
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        07-Apr-2020
   Start of ending phase         16-May-2020
 Statistics
-  Number of observations        100
-  Degrees of freedom            96
-  Root Mean Squared Error       1182.29
+  Number of observations        102
+  Degrees of freedom            98
+  Root Mean Squared Error       1187
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   12046.6
-  p-value                       1.60789e-123
+  F-statistics vs. zero model   12293.9
+  p-value                       4.36624e-126
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      11584
+  Objective function value      11750.7
   Exit condition (1=OK)         0

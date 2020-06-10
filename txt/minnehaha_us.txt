@@ -1,23 +1,23 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       minnehaha_us
-  Day                           76
+  Day                           78
 Estimated the SIR model parameters
-  Contact rate (beta)           1.09 (1/day)
-  Removal rate (gamma)          0.994 (1/day)
-  Population size (N)           19568
-  Initial number of cases (I0)  11
-Basic reproduction number (R0)  1.096
-Critical number of susceptible  19568
+  Contact rate (beta)           0.642 (1/day)
+  Removal rate (gamma)          0.541 (1/day)
+  Population size (N)           11401
+  Initial number of cases (I0)  19
+Basic reproduction number (R0)  1.184
+Critical number of susceptible  11402
 Final state
-  Final number of cases         3453
-  Final number of susceptibles  16114
-Daily forecast for 06-Jun-2020
+  Final number of cases         3458
+  Final number of susceptibles  7943
+Daily forecast for 08-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             3173 (cases)
-  Epidemic rate (r)             0.0961471 (1/day)
-  Initial doubling time         7.2 (day)
+  Epidemic size (K)             3091 (cases)
+  Epidemic rate (r)             0.100681 (1/day)
+  Initial doubling time         6.9 (day)
 Estimated duration (days)
   Turning day                   32
   Acceleration   phase          18 (days)
@@ -25,20 +25,20 @@ Estimated duration (days)
   Total duration                39 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         04-Apr-2020
+  Start of acceleration         05-Apr-2020
   Turning point                 23-Apr-2020
   Start of steady growth        13-May-2020
   Start of ending phase         21-Jun-2020
 Statistics
-  Number of observations        76
-  Degrees of freedom            72
-  Root Mean Squared Error       127.19
-  R-Squared                     0.99
+  Number of observations        78
+  Degrees of freedom            74
+  Root Mean Squared Error       125.772
+  R-Squared                     0.991
   Adjusted R-Squared            0.99
-  F-statistics vs. zero model   2401.26
-  p-value                       4.6697e-72
+  F-statistics vs. zero model   2551.5
+  p-value                       1.38332e-74
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1079.24
+  Objective function value      1081.94
   Exit condition (1=OK)         0

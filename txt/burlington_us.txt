@@ -1,23 +1,23 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       burlington_us
-  Day                           78
+  Day                           80
 Estimated the SIR model parameters
-  Contact rate (beta)           1.01 (1/day)
-  Removal rate (gamma)          0.943 (1/day)
-  Population size (N)           35981
-  Initial number of cases (I0)  24
-Basic reproduction number (R0)  1.07
-Critical number of susceptible  35982
+  Contact rate (beta)           0.65 (1/day)
+  Removal rate (gamma)          0.58 (1/day)
+  Population size (N)           23012
+  Initial number of cases (I0)  36
+Basic reproduction number (R0)  1.118
+Critical number of susceptible  23013
 Final state
-  Final number of cases         4959
-  Final number of susceptibles  31022
-Daily forecast for 08-Jun-2020
+  Final number of cases         4976
+  Final number of susceptibles  18035
+Daily forecast for 10-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             4478 (cases)
-  Epidemic rate (r)             0.0670153 (1/day)
-  Initial doubling time         10.3 (day)
+  Epidemic size (K)             4437 (cases)
+  Epidemic rate (r)             0.0693037 (1/day)
+  Initial doubling time         10 (day)
 Estimated duration (days)
   Turning day                   35
   Acceleration   phase          23 (days)
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        23-May-2020
   Start of ending phase         13-Jul-2020
 Statistics
-  Number of observations        78
-  Degrees of freedom            74
-  Root Mean Squared Error       61.733
+  Number of observations        80
+  Degrees of freedom            76
+  Root Mean Squared Error       62.7246
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   17950.3
-  p-value                       8.43308e-106
+  F-statistics vs. zero model   18250
+  p-value                       1.72072e-108
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      531.046
+  Objective function value      546.822
   Exit condition (1=OK)         0
