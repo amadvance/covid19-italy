@@ -1,23 +1,23 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       novara
-  Day                           98
+  Day                           100
 Estimated the SIR model parameters
-  Contact rate (beta)           0.207 (1/day)
-  Removal rate (gamma)          0.099 (1/day)
-  Population size (N)           3327
-  Initial number of cases (I0)  34
-Basic reproduction number (R0)  2.062
-Critical number of susceptible  3327
+  Contact rate (beta)           0.196 (1/day)
+  Removal rate (gamma)          0.089 (1/day)
+  Population size (N)           3235
+  Initial number of cases (I0)  36
+Basic reproduction number (R0)  2.179
+Critical number of susceptible  3235
 Final state
-  Final number of cases         2731
-  Final number of susceptibles  595
-Daily forecast for 01-Jun-2020
+  Final number of cases         2740
+  Final number of susceptibles  494
+Daily forecast for 03-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             2276 (cases)
-  Epidemic rate (r)             0.107744 (1/day)
-  Initial doubling time         6.4 (day)
+  Epidemic size (K)             2285 (cases)
+  Epidemic rate (r)             0.10713 (1/day)
+  Initial doubling time         6.5 (day)
 Estimated duration (days)
   Turning day                   33
   Acceleration   phase          18 (days)
@@ -28,17 +28,17 @@ Estimated datums
   Start of acceleration         10-Mar-2020
   Turning point                 28-Mar-2020
   Start of steady growth        20-Apr-2020
-  Start of ending phase         31-May-2020
+  Start of ending phase         01-Jun-2020
 Statistics
-  Number of observations        98
-  Degrees of freedom            94
-  Root Mean Squared Error       51.8198
+  Number of observations        100
+  Degrees of freedom            96
+  Root Mean Squared Error       51.3419
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   11844.2
-  p-value                       4.95412e-121
+  F-statistics vs. zero model   12311.6
+  p-value                       5.6745e-124
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      502.411
-  Exit condition (1=OK)         0
+  Objective function value      503.043
+  Exit condition (1=OK)         1

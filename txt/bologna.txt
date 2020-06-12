@@ -1,22 +1,22 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       bologna
-  Day                           102
+  Day                           104
 Estimated the SIR model parameters
-  Contact rate (beta)           0.21 (1/day)
-  Removal rate (gamma)          0.101 (1/day)
-  Population size (N)           6185
+  Contact rate (beta)           0.208 (1/day)
+  Removal rate (gamma)          0.1 (1/day)
+  Population size (N)           6167
   Initial number of cases (I0)  57
-Basic reproduction number (R0)  2.049
-Critical number of susceptible  6186
+Basic reproduction number (R0)  2.062
+Critical number of susceptible  6167
 Final state
-  Final number of cases         5055
-  Final number of susceptibles  1130
-Daily forecast for 05-Jun-2020
+  Final number of cases         5060
+  Final number of susceptibles  1106
+Daily forecast for 07-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             4213 (cases)
-  Epidemic rate (r)             0.108386 (1/day)
+  Epidemic size (K)             4218 (cases)
+  Epidemic rate (r)             0.108198 (1/day)
   Initial doubling time         6.4 (day)
 Estimated duration (days)
   Turning day                   34
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        21-Apr-2020
   Start of ending phase         01-Jun-2020
 Statistics
-  Number of observations        102
-  Degrees of freedom            98
-  Root Mean Squared Error       105.771
+  Number of observations        104
+  Degrees of freedom            100
+  Root Mean Squared Error       104.985
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   10296.4
-  p-value                       2.52479e-122
+  F-statistics vs. zero model   10669.5
+  p-value                       3.74631e-125
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1047.09
-  Exit condition (1=OK)         0
+  Objective function value      1049.87
+  Exit condition (1=OK)         1
