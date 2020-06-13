@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       luxembourg
-  Day                           99
+  Day                           100
 Estimated the SIR model parameters
-  Contact rate (beta)           0.265 (1/day)
-  Removal rate (gamma)          0.098 (1/day)
-  Population size (N)           4305
-  Initial number of cases (I0)  40
-Basic reproduction number (R0)  2.691
-Critical number of susceptible  4306
+  Contact rate (beta)           0.363 (1/day)
+  Removal rate (gamma)          0.172 (1/day)
+  Population size (N)           4749
+  Initial number of cases (I0)  19
+Basic reproduction number (R0)  2.102
+Critical number of susceptible  4749
 Final state
-  Final number of cases         3953
-  Final number of susceptibles  351
-Daily forecast for 07-Jun-2020
+  Final number of cases         3921
+  Final number of susceptibles  827
+Daily forecast for 08-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             3334 (cases)
-  Epidemic rate (r)             0.167708 (1/day)
-  Initial doubling time         4.1 (day)
+  Epidemic size (K)             3275 (cases)
+  Epidemic rate (r)             0.190874 (1/day)
+  Initial doubling time         3.6 (day)
 Estimated duration (days)
   Turning day                   24
-  Acceleration   phase          12 (days)
-  Deceleration phase            15 (days)
-  Total duration                27 (days)
+  Acceleration   phase          11 (days)
+  Deceleration phase            13 (days)
+  Total duration                24 (days)
 Estimated datums
   Outbreak                      29-Feb-2020
-  Start of acceleration         12-Mar-2020
+  Start of acceleration         13-Mar-2020
   Turning point                 24-Mar-2020
-  Start of steady growth        08-Apr-2020
-  Start of ending phase         04-May-2020
+  Start of steady growth        06-Apr-2020
+  Start of ending phase         30-Apr-2020
 Statistics
-  Number of observations        99
-  Degrees of freedom            95
-  Root Mean Squared Error       99.8804
+  Number of observations        100
+  Degrees of freedom            96
+  Root Mean Squared Error       105.387
   R-Squared                     0.995
   Adjusted R-Squared            0.995
-  F-statistics vs. zero model   6554.98
-  p-value                       6.09863e-110
+  F-statistics vs. zero model   6180.59
+  p-value                       1.16264e-109
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      973.536
+  Objective function value      1032.59
   Exit condition (1=OK)         0
