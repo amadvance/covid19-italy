@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       district_of_columbia_us
-  Day                           83
+  Day                           86
 Estimated the SIR model parameters
-  Contact rate (beta)           1.02 (1/day)
-  Removal rate (gamma)          0.969 (1/day)
-  Population size (N)           99718
-  Initial number of cases (I0)  49
-Basic reproduction number (R0)  1.052
-Critical number of susceptible  99718
+  Contact rate (beta)           0.856 (1/day)
+  Removal rate (gamma)          0.806 (1/day)
+  Population size (N)           86845
+  Initial number of cases (I0)  59
+Basic reproduction number (R0)  1.061
+Critical number of susceptible  86846
 Final state
-  Final number of cases         10608
-  Final number of susceptibles  89110
-Daily forecast for 13-Jun-2020
-  Total                         9672
-  Increase                      18
+  Final number of cases         10729
+  Final number of susceptibles  76116
+Daily forecast for 16-Jun-2020
+  Total                         9858
+  Increase                      46
 Estimated logistic model parameters
-  Epidemic size (K)             9501 (cases)
-  Epidemic rate (r)             0.0510034 (1/day)
-  Initial doubling time         13.6 (day)
+  Epidemic size (K)             9554 (cases)
+  Epidemic rate (r)             0.0498277 (1/day)
+  Initial doubling time         13.9 (day)
 Estimated duration (days)
   Turning day                   41
   Acceleration   phase          29 (days)
-  Deceleration phase            34 (days)
-  Total duration                63 (days)
+  Deceleration phase            35 (days)
+  Total duration                64 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         03-Apr-2020
   Turning point                 02-May-2020
-  Start of steady growth        05-Jun-2020
-  Start of ending phase         07-Aug-2020
+  Start of steady growth        07-Jun-2020
+  Start of ending phase         10-Aug-2020
 Statistics
-  Number of observations        83
-  Degrees of freedom            79
-  Root Mean Squared Error       68.1319
+  Number of observations        86
+  Degrees of freedom            82
+  Root Mean Squared Error       69.5736
   R-Squared                     1
   Adjusted R-Squared            1
-  F-statistics vs. zero model   60963.7
-  p-value                       8.85123e-133
+  F-statistics vs. zero model   63126.1
+  p-value                       8.92936e-138
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      605.571
+  Objective function value      630.014
   Exit condition (1=OK)         0
