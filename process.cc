@@ -264,7 +264,9 @@ void load_csv(int kind, place_set& bag, const char* file, string force_date = ""
 			const char* format_province = "data,stato,codice_regione,denominazione_regione,codice_provincia,denominazione_provincia,sigla_provincia,lat,long,totale_casi,note_it,note_en";
 			const char* format_skip_1 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered";
 			const char* format_skip_2 = "Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude";
-			const char* format_mixed = "FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key";
+			const char* format_mixed_1 = "FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key";
+			const char* format_mixed_2 = "FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incidence_Rate,Case-Fatality_Ratio";
+			
 
 			// skip UTF header
 			if (s[0] == (char)0xEF && s[1] == (char)0xBB && s[2] == (char)0xBF)
@@ -285,8 +287,10 @@ void load_csv(int kind, place_set& bag, const char* file, string force_date = ""
 				old_format = true;
 				continue;
 			}
-			if (kind == KIND_MIXED && strcmp(s, format_mixed) == 0)
+			if (kind == KIND_MIXED && strcmp(s, format_mixed_1) == 0)
 				continue;
+			if (kind == KIND_MIXED && strcmp(s, format_mixed_2) == 0)
+				continue;				
 
 			fprintf(stderr, "Unknown format '%s' for file '%s'\n", s, file);
 			exit(EXIT_FAILURE);
@@ -973,6 +977,11 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 	fprintf(f_fit, "%s\tCasi\tNuoviCasi\tStimaCasi\tStimaNuoviCasi\tNuoviCasi%dGiorni\tNuoviCasi7Giorni\n", trimmed.c_str(), casi_count);
 
+    unsigned count = 0;
+    unsigned count_roll = p.days.size() / 40;
+    if (count_roll < 1)
+        count_roll = 1;
+
 	day_set::iterator prev = p.days.end();
 	for (day_set::iterator i=p.days.begin();i!=p.days.end();++i) {
 		int casi_delta;
@@ -1081,20 +1090,27 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 		if (monotone_totale_casi < i->totale_casi)
 			monotone_totale_casi = i->totale_casi;
 
+        string date = "\"\"";
+        
+        if (count == 0) {
+            date = i->date.substr(5,5);
+        }
+        count = (count + 1) % count_roll;
+
 		// skip initial zero measure
 		if (i->totale_casi != 0 || monotone_totale_casi != 1) {
 			// dat
 			if (i->has_data) {
 				if (p.kind == KIND_CITY) {
 					fprintf(f_dat,"%s\t%s\t%s\t%s\t%s\n",
-						i->date.substr(5,5).c_str(),
+						date.c_str(),
 						casi_str,
 						casi_perc_str,
 						casi_delta_str,
 						casi_mean_str);
 				} else {
 					fprintf(f_dat,"%s\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%d\t%s\t%s\t%s\t%s\t%.1f\n",
-						i->date.substr(5,5).c_str(),
+						date.c_str(),
 						i->ricoverati,
 						i->terapia_intensiva,
 						i->totale_ospedalizzati,
@@ -1115,7 +1131,7 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 
 			// fit
 			fprintf(f_fit,"%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
-				i->date.substr(5,5).c_str(),
+				date.c_str(),
 				casi_str,
 				casi_delta_str,
 				casi_fit_str,
@@ -1170,6 +1186,10 @@ void save_place(FILE* plot, FILE* analyze, FILE* out, const place& p)
 	bool has_analyze = false;
 	if (p.max_casi >= LIMIT_FIT && p.days.size() > LIMIT_FIT_DAYS) {
 		has_analyze = true;
+	}
+
+	if (trimmed == "san_mateo_us") {
+		has_analyze = false;
 	}
 
 	if (p.kind == KIND_CITY) {
