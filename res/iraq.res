@@ -2,8 +2,8 @@
 ### R0: 1.9
 ### RMSE: 1196
 ### Clim: 104262
-### Outbreak: 24-Feb-2020
-### Acceleration: 06-Jun-2020
-### Turning: 28-Jun-2020
-### Steady: 26-Jul-2020
-### Ending: 13-Sep-2020
+### Outbreak: 23-Feb-2020
+### Acceleration: 05-Jun-2020
+### Turning: 27-Jun-2020
+### Steady: 25-Jul-2020
+### Ending: 12-Sep-2020

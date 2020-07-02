@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       puerto_rico
+  Day                           103
+Estimated the SIR model parameters
+  Contact rate (beta)           0.313 (1/day)
+  Removal rate (gamma)          0.286 (1/day)
+  Population size (N)           108769
+  Initial number of cases (I0)  70
+Basic reproduction number (R0)  1.092
+Critical number of susceptible  108769
+Final state
+  Final number of cases         18529
+  Final number of susceptibles  90240
+Daily forecast for 27-Jun-2020
+  Total                         7833
+  Increase                      132
+Estimated logistic model parameters
+  Epidemic size (K)             16977 (cases)
+  Epidemic rate (r)             0.0264548 (1/day)
+  Initial doubling time         26.2 (day)
+Estimated duration (days)
+  Turning day                   110
+  Acceleration   phase          65 (days)
+  Deceleration phase            73 (days)
+  Total duration                139 (days)
+Estimated datums
+  Outbreak                      16-Mar-2020
+  Start of acceleration         29-Apr-2020
+  Turning point                 04-Jul-2020
+  Start of steady growth        15-Sep-2020
+  Start of ending phase         01-Feb-2021
+Statistics
+  Number of observations        103
+  Degrees of freedom            99
+  Root Mean Squared Error       142.957
+  R-Squared                     0.996
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   8554.71
+  p-value                       2.19641e-119
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1422.4
+  Exit condition (1=OK)         0
