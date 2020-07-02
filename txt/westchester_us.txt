@@ -1,27 +1,27 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       westchester_us
-  Day                           94
+  Day                           102
 Estimated the SIR model parameters
-  Contact rate (beta)           0.305 (1/day)
-  Removal rate (gamma)          0.266 (1/day)
-  Population size (N)           101829
-  Initial number of cases (I0)  2509
-Basic reproduction number (R0)  1.119
-Critical number of susceptible  101829
+  Contact rate (beta)           0.318 (1/day)
+  Removal rate (gamma)          0.283 (1/day)
+  Population size (N)           111833
+  Initial number of cases (I0)  2460
+Basic reproduction number (R0)  1.1
+Critical number of susceptible  111834
 Final state
-  Final number of cases         34512
-  Final number of susceptibles  67316
-Daily forecast for 24-Jun-2020
+  Final number of cases         34631
+  Final number of susceptibles  77202
+Daily forecast for 02-Jul-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             23202 (cases)
-  Epidemic rate (r)             0.0392731 (1/day)
-  Initial doubling time         17.6 (day)
+  Epidemic size (K)             22347 (cases)
+  Epidemic rate (r)             0.0353025 (1/day)
+  Initial doubling time         19.6 (day)
 Estimated duration (days)
   Turning day                   9
-  Acceleration   phase          12 (days)
-  Deceleration phase            29 (days)
+  Acceleration   phase          11 (days)
+  Deceleration phase            30 (days)
   Total duration                41 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        30-Apr-2020
   Start of ending phase         10-Jun-2020
 Statistics
-  Number of observations        94
-  Degrees of freedom            90
-  Root Mean Squared Error       283.531
+  Number of observations        102
+  Degrees of freedom            98
+  Root Mean Squared Error       288.168
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   34627.3
-  p-value                       1.15388e-137
+  F-statistics vs. zero model   35674.1
+  p-value                       1.0163e-148
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      2689.81
-  Exit condition (1=OK)         0
+  Objective function value      2852.72
+  Exit condition (1=OK)         1

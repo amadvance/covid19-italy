@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       singapore
-  Day                           153
+  Day                           161
 Estimated the SIR model parameters
-  Contact rate (beta)           0.163 (1/day)
-  Removal rate (gamma)          0.075 (1/day)
-  Population size (N)           51903
-  Initial number of cases (I0)  2
-Basic reproduction number (R0)  2.166
-Critical number of susceptible  51904
+  Contact rate (beta)           0.155 (1/day)
+  Removal rate (gamma)          0.07 (1/day)
+  Population size (N)           52687
+  Initial number of cases (I0)  3
+Basic reproduction number (R0)  2.207
+Critical number of susceptible  52687
 Final state
-  Final number of cases         43435
-  Final number of susceptibles  8468
-Daily forecast for 24-Jun-2020
+  Final number of cases         44528
+  Final number of susceptibles  8159
+Daily forecast for 02-Jul-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             36330 (cases)
-  Epidemic rate (r)             0.087919 (1/day)
-  Initial doubling time         7.9 (day)
+  Epidemic size (K)             37253 (cases)
+  Epidemic rate (r)             0.0846059 (1/day)
+  Initial doubling time         8.2 (day)
 Estimated duration (days)
-  Turning day                   104
+  Turning day                   105
   Acceleration   phase          24 (days)
-  Deceleration phase            28 (days)
-  Total duration                52 (days)
+  Deceleration phase            29 (days)
+  Total duration                54 (days)
 Estimated datums
   Outbreak                      23-Jan-2020
-  Start of acceleration         13-Apr-2020
-  Turning point                 06-May-2020
-  Start of steady growth        03-Jun-2020
-  Start of ending phase         25-Jul-2020
+  Start of acceleration         12-Apr-2020
+  Turning point                 07-May-2020
+  Start of steady growth        05-Jun-2020
+  Start of ending phase         29-Jul-2020
 Statistics
-  Number of observations        153
-  Degrees of freedom            149
-  Root Mean Squared Error       845.955
+  Number of observations        161
+  Degrees of freedom            157
+  Root Mean Squared Error       880.225
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   16646.8
-  p-value                       5.77153e-188
+  F-statistics vs. zero model   18386.4
+  p-value                       1.16314e-199
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      10326.2
+  Objective function value      11029.2
   Exit condition (1=OK)         1
