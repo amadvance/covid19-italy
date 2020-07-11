@@ -20,31 +20,40 @@ License Creative Commons (Attribution 3.0 Unported)
 <link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 <h1><a id="maldives">Maldives</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-01</td><td>2020-06-30</td><td>2020-06-29</td><td>2020-06-28</td></tr>
-<tr><th>Casi</th><td>2382 (+0.9%, +21)</td>
-<td>2361 (+1.0%, +24)</td>
-<td>2337 (+0.6%, +13)</td>
-<td>2324 (+0.8%, +19)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
+<tr><th>Casi</th><td>2617 (+2.5%, +64)</td>
+<td>2553 (+1.4%, +36)</td>
+<td>2517 (+0.6%, +16)</td>
+<td>2501 (+0.4%, +10)</td>
 </tr>
-<tr><th>Deceduti</th><td>9 (+0.0%, +0)</td>
-<td>9 (+12.5%, +1)</td>
-<td>8 (+0.0%, +0)</td>
-<td>8 (+0.0%, +0)</td>
+<tr><th>Deceduti</th><td>13 (+0.0%, +0)</td>
+<td>13 (+0.0%, +0)</td>
+<td>13 (+8.3%, +1)</td>
+<td>12 (+0.0%, +0)</td>
 </tr>
-<tr><th>Guariti</th><td>1954 (+0.5%, +10)</td>
-<td>1944 (+0.9%, +17)</td>
-<td>1927 (+0.8%, +16)</td>
-<td>1911 (+1.9%, +36)</td>
+<tr><th>Guariti</th><td>2238 (+0.5%, +11)</td>
+<td>2227 (+2.2%, +47)</td>
+<td>2180 (+1.0%, +22)</td>
+<td>2158 (+2.1%, +45)</td>
 </tr>
-<tr><th>Positivi</th><td>419 (+2.7%, +11)</td>
-<td>408 (+1.5%, +6)</td>
-<td>402 (-0.7%, -3)</td>
-<td>405 (-4.0%, -17)</td>
+<tr><th>Positivi</th><td>366 (+16.9%, +53)</td>
+<td>313 (-3.4%, -11)</td>
+<td>324 (-2.1%, -7)</td>
+<td>331 (-9.6%, -35)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nelle differenti categorie di contagiati. La scala lineare permette una facile comparazione visiva dei valori, ma rende difficilmente intuibile un cambio di tendenza dell'epidemia. Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla somma di tutti gli altri valori visuallizati. </p>
 <center><img src="maldives_stk.png"></center>
 <p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nel tempo con una scala logarimica. Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. </p>
 <center><img src="maldives_log.png"></center>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>2544</b> (con una deviazione standard di 64). </p>
+<center><img src="maldives_fit.png"></center>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>07-Aug-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/maldives.txt">risultati completi dello strumento di calcolo</a>. </p>
+<center><img src="maldives_fid.png"></center>
+<p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
+<center><img src="maldives_xy.png"></center>
+<p class="didascalia">Il grafico successivo mostra la variazione del numero di Positivi in base al numero di Positivi stessi. Come il grafico precedente, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia. L'uso del numero di <i>Positivi</i> invece che dei <i>Casi</i> &eacute; una migliore misura della capacit&agrave; di diffusione dell'epidemia dato che i <i>Guariti</i> e <i>Deceduti</i> non sono da considerare contagiosi. Una crescita esponenziale &eacute; rappresentata da una linea retta orizzontale. Il rallentamendo dell'epidemia si nota dalla curva che scende ed inizia a tornare indietro, in quanto il numero di <i>Positivi</i> diminuisce. </p>
+<center><img src="maldives_xp.png"></center>
+<p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 </p>
 <p>License <a href="https://github.com/amadvance/covid19-italy/blob/master/LICENSE">CC-BY-4.0</a></p>
 </body>
