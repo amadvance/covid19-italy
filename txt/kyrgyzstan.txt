@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       kyrgyzstan
-  Day                           97
+  Day                           114
 Estimated the SIR model parameters
-  Contact rate (beta)           0.092 (1/day)
-  Removal rate (gamma)          0.067 (1/day)
-  Population size (N)           179800
-  Initial number of cases (I0)  86
-Basic reproduction number (R0)  1.375
-Critical number of susceptible  179800
+  Contact rate (beta)           0.12 (1/day)
+  Removal rate (gamma)          0.073 (1/day)
+  Population size (N)           492912
+  Initial number of cases (I0)  18
+Basic reproduction number (R0)  1.642
+Critical number of susceptible  492912
 Final state
-  Final number of cases         88418
-  Final number of susceptibles  91381
-Daily forecast for 23-Jun-2020
+  Final number of cases         327084
+  Final number of susceptibles  165827
+Daily forecast for 10-Jul-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             77092 (cases)
-  Epidemic rate (r)             0.0250317 (1/day)
-  Initial doubling time         27.7 (day)
+  Epidemic size (K)             277030 (cases)
+  Epidemic rate (r)             0.0469069 (1/day)
+  Initial doubling time         14.8 (day)
 Estimated duration (days)
-  Turning day                   224
-  Acceleration   phase          82 (days)
-  Deceleration phase            91 (days)
-  Total duration                173 (days)
+  Turning day                   188
+  Acceleration   phase          44 (days)
+  Deceleration phase            51 (days)
+  Total duration                95 (days)
 Estimated datums
   Outbreak                      18-Mar-2020
-  Start of acceleration         07-Aug-2020
-  Turning point                 28-Oct-2020
-  Start of steady growth        27-Jan-2021
-  Start of ending phase         19-Jul-2021
+  Start of acceleration         09-Aug-2020
+  Turning point                 22-Sep-2020
+  Start of steady growth        12-Nov-2020
+  Start of ending phase         16-Feb-2021
 Statistics
-  Number of observations        97
-  Degrees of freedom            93
-  Root Mean Squared Error       109.999
-  R-Squared                     0.985
-  Adjusted R-Squared            0.985
-  F-statistics vs. zero model   2018.86
-  p-value                       1.73599e-84
+  Number of observations        114
+  Degrees of freedom            110
+  Root Mean Squared Error       368.776
+  R-Squared                     0.974
+  Adjusted R-Squared            0.973
+  F-statistics vs. zero model   1507.65
+  p-value                       3.75779e-89
 Method
-  Total cases weight            1
-  Infection rate weight         0
-  Objective function value      1060.79
+  Total cases weight            0.5
+  Infection rate weight         0.5
+  Objective function value      2418.62
   Exit condition (1=OK)         0

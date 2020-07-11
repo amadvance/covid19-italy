@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       marin_us
+  Day                           110
+Estimated the SIR model parameters
+  Contact rate (beta)           0.256 (1/day)
+  Removal rate (gamma)          0.104 (1/day)
+  Population size (N)           4493
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  2.46
+Critical number of susceptible  4494
+Final state
+  Final number of cases         3987
+  Final number of susceptibles  506
+Daily forecast for 10-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             3347 (cases)
+  Epidemic rate (r)             0.151786 (1/day)
+  Initial doubling time         4.6 (day)
+Estimated duration (days)
+  Turning day                   99
+  Acceleration   phase          14 (days)
+  Deceleration phase            16 (days)
+  Total duration                30 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         16-Jun-2020
+  Turning point                 29-Jun-2020
+  Start of steady growth        16-Jul-2020
+  Start of ending phase         15-Aug-2020
+Statistics
+  Number of observations        110
+  Degrees of freedom            106
+  Root Mean Squared Error       325.573
+  R-Squared                     0.85
+  Adjusted R-Squared            0.844
+  F-statistics vs. zero model   230.561
+  p-value                       2.70096e-46
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      388.711
+  Exit condition (1=OK)         0

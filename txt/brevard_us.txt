@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       brevard_us
+  Day                           110
+Estimated the SIR model parameters
+  Contact rate (beta)           0.244 (1/day)
+  Removal rate (gamma)          0.092 (1/day)
+  Population size (N)           4484
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  2.647
+Critical number of susceptible  4484
+Final state
+  Final number of cases         4081
+  Final number of susceptibles  403
+Daily forecast for 10-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             3440 (cases)
+  Epidemic rate (r)             0.151987 (1/day)
+  Initial doubling time         4.6 (day)
+Estimated duration (days)
+  Turning day                   101
+  Acceleration   phase          14 (days)
+  Deceleration phase            16 (days)
+  Total duration                30 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         18-Jun-2020
+  Turning point                 01-Jul-2020
+  Start of steady growth        18-Jul-2020
+  Start of ending phase         17-Aug-2020
+Statistics
+  Number of observations        110
+  Degrees of freedom            106
+  Root Mean Squared Error       293.52
+  R-Squared                     0.839
+  Adjusted R-Squared            0.833
+  F-statistics vs. zero model   232.111
+  p-value                       1.98561e-46
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      249.118
+  Exit condition (1=OK)         0

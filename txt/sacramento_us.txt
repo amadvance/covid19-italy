@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       sacramento_us
+  Day                           111
+Estimated the SIR model parameters
+  Contact rate (beta)           0.087 (1/day)
+  Removal rate (gamma)          0.015 (1/day)
+  Population size (N)           24790
+  Initial number of cases (I0)  1
+Basic reproduction number (R0)  5.646
+Critical number of susceptible  24791
+Final state
+  Final number of cases         24701
+  Final number of susceptibles  89
+Daily forecast for 11-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             22382 (cases)
+  Epidemic rate (r)             0.0719125 (1/day)
+  Initial doubling time         9.6 (day)
+Estimated duration (days)
+  Turning day                   131
+  Acceleration   phase          28 (days)
+  Deceleration phase            32 (days)
+  Total duration                60 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         03-Jul-2020
+  Turning point                 31-Jul-2020
+  Start of steady growth        01-Sep-2020
+  Start of ending phase         31-Oct-2020
+Statistics
+  Number of observations        111
+  Degrees of freedom            107
+  Root Mean Squared Error       959.071
+  R-Squared                     0.255
+  Adjusted R-Squared            0.227
+  F-statistics vs. zero model   70.5659
+  p-value                       2.97911e-25
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      505.75
+  Exit condition (1=OK)         0

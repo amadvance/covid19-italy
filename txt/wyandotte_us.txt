@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       wyandotte_us
+  Day                           111
+Estimated the SIR model parameters
+  Contact rate (beta)           0.219 (1/day)
+  Removal rate (gamma)          0.207 (1/day)
+  Population size (N)           172192
+  Initial number of cases (I0)  57
+Basic reproduction number (R0)  1.054
+Critical number of susceptible  172192
+Final state
+  Final number of cases         18467
+  Final number of susceptibles  153724
+Daily forecast for 11-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             16969 (cases)
+  Epidemic rate (r)             0.0113299 (1/day)
+  Initial doubling time         61.2 (day)
+Estimated duration (days)
+  Turning day                   226
+  Acceleration   phase          143 (days)
+  Deceleration phase            163 (days)
+  Total duration                307 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         13-Jun-2020
+  Turning point                 03-Nov-2020
+  Start of steady growth        16-Apr-2021
+  Start of ending phase         16-Feb-2022
+Statistics
+  Number of observations        111
+  Degrees of freedom            107
+  Root Mean Squared Error       95.9607
+  R-Squared                     0.985
+  Adjusted R-Squared            0.984
+  F-statistics vs. zero model   2252.73
+  p-value                       1.68812e-96
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      992.626
+  Exit condition (1=OK)         0

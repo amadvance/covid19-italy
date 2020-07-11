@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       lubbock_us
+  Day                           110
+Estimated the SIR model parameters
+  Contact rate (beta)           1.925 (1/day)
+  Removal rate (gamma)          1.889 (1/day)
+  Population size (N)           873818
+  Initial number of cases (I0)  1
+Basic reproduction number (R0)  1.019
+Critical number of susceptible  873819
+Final state
+  Final number of cases         32445
+  Final number of susceptibles  841373
+Daily forecast for 10-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             31989 (cases)
+  Epidemic rate (r)             0.0358926 (1/day)
+  Initial doubling time         19.3 (day)
+Estimated duration (days)
+  Turning day                   172
+  Acceleration   phase          55 (days)
+  Deceleration phase            56 (days)
+  Total duration                111 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         16-Jul-2020
+  Turning point                 10-Sep-2020
+  Start of steady growth        05-Nov-2020
+  Start of ending phase         24-Feb-2021
+Statistics
+  Number of observations        110
+  Degrees of freedom            106
+  Root Mean Squared Error       235.307
+  R-Squared                     0.907
+  Adjusted R-Squared            0.904
+  F-statistics vs. zero model   433.66
+  p-value                       2.4151e-59
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      2422.64
+  Exit condition (1=OK)         0

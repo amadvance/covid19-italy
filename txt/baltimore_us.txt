@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       baltimore_us
-  Day                           102
+  Day                           111
 Estimated the SIR model parameters
-  Contact rate (beta)           0.618 (1/day)
-  Removal rate (gamma)          0.576 (1/day)
-  Population size (N)           61803
-  Initial number of cases (I0)  56
-Basic reproduction number (R0)  1.071
-Critical number of susceptible  61803
+  Contact rate (beta)           0.436 (1/day)
+  Removal rate (gamma)          0.397 (1/day)
+  Population size (N)           48104
+  Initial number of cases (I0)  83
+Basic reproduction number (R0)  1.097
+Critical number of susceptible  48105
 Final state
-  Final number of cases         8739
-  Final number of susceptibles  53063
-Daily forecast for 02-Jul-2020
+  Final number of cases         9058
+  Final number of susceptibles  39046
+Daily forecast for 11-Jul-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             7745 (cases)
-  Epidemic rate (r)             0.0413026 (1/day)
-  Initial doubling time         16.8 (day)
+  Epidemic size (K)             7929 (cases)
+  Epidemic rate (r)             0.0392036 (1/day)
+  Initial doubling time         17.7 (day)
 Estimated duration (days)
-  Turning day                   49
-  Acceleration   phase          35 (days)
-  Deceleration phase            43 (days)
-  Total duration                78 (days)
+  Turning day                   50
+  Acceleration   phase          37 (days)
+  Deceleration phase            46 (days)
+  Total duration                82 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         05-Apr-2020
-  Turning point                 10-May-2020
-  Start of steady growth        22-Jun-2020
-  Start of ending phase         08-Sep-2020
+  Turning point                 11-May-2020
+  Start of steady growth        26-Jun-2020
+  Start of ending phase         16-Sep-2020
 Statistics
-  Number of observations        102
-  Degrees of freedom            98
-  Root Mean Squared Error       91.2954
+  Number of observations        111
+  Degrees of freedom            107
+  Root Mean Squared Error       103.348
   R-Squared                     0.999
   Adjusted R-Squared            0.999
-  F-statistics vs. zero model   28192.8
-  p-value                       1.02408e-143
+  F-statistics vs. zero model   26550.1
+  p-value                       1.76491e-153
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      903.779
+  Objective function value      1069.04
   Exit condition (1=OK)         0

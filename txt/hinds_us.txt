@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       hinds_us
+  Day                           111
+Estimated the SIR model parameters
+  Contact rate (beta)           0.038 (1/day)
+  Removal rate (gamma)          0.014 (1/day)
+  Population size (N)           2.49508e+06
+  Initial number of cases (I0)  122
+Basic reproduction number (R0)  2.746
+Critical number of susceptible  2.49508e+06
+Final state
+  Final number of cases         2.29575e+06
+  Final number of susceptibles  199328
+Daily forecast for 11-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             1.93975e+06 (cases)
+  Epidemic rate (r)             0.0241977 (1/day)
+  Initial doubling time         28.6 (day)
+Estimated duration (days)
+  Turning day                   386
+  Acceleration   phase          85 (days)
+  Deceleration phase            103 (days)
+  Total duration                188 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         17-Jan-2021
+  Turning point                 12-Apr-2021
+  Start of steady growth        24-Jul-2021
+  Start of ending phase         28-Jan-2022
+Statistics
+  Number of observations        111
+  Degrees of freedom            107
+  Root Mean Squared Error       88.6169
+  R-Squared                     0.985
+  Adjusted R-Squared            0.985
+  F-statistics vs. zero model   2376.07
+  p-value                       1.01837e-97
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      916.661
+  Exit condition (1=OK)         0
