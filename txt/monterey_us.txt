@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       monterey_us
+  Day                           124
+Estimated the SIR model parameters
+  Contact rate (beta)           0.094 (1/day)
+  Removal rate (gamma)          0.056 (1/day)
+  Population size (N)           41975
+  Initial number of cases (I0)  16
+Basic reproduction number (R0)  1.684
+Critical number of susceptible  41976
+Final state
+  Final number of cases         28738
+  Final number of susceptibles  13237
+Daily forecast for 24-Jul-2020
+  Total                         3842
+  Increase                      116
+Estimated logistic model parameters
+  Epidemic size (K)             24265 (cases)
+  Epidemic rate (r)             0.0380317 (1/day)
+  Initial doubling time         18.2 (day)
+Estimated duration (days)
+  Turning day                   172
+  Acceleration   phase          54 (days)
+  Deceleration phase            63 (days)
+  Total duration                118 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         17-Jul-2020
+  Turning point                 10-Sep-2020
+  Start of steady growth        12-Nov-2020
+  Start of ending phase         10-Mar-2021
+Statistics
+  Number of observations        124
+  Degrees of freedom            120
+  Root Mean Squared Error       38.0246
+  R-Squared                     0.999
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   27437
+  p-value                       5.36216e-170
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      227.239
+  Exit condition (1=OK)         0

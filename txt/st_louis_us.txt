@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       st_louis_us
+  Day                           124
+Estimated the SIR model parameters
+  Contact rate (beta)           0.249 (1/day)
+  Removal rate (gamma)          0.028 (1/day)
+  Population size (N)           269511
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  9.062
+Critical number of susceptible  269511
+Final state
+  Final number of cases         269480
+  Final number of susceptibles  31
+Daily forecast for 24-Jul-2020
+  Total                         11749
+  Increase                      2251
+Estimated logistic model parameters
+  Epidemic size (K)             253772 (cases)
+  Epidemic rate (r)             0.22191 (1/day)
+  Initial doubling time         3.1 (day)
+Estimated duration (days)
+  Turning day                   138
+  Acceleration   phase          9 (days)
+  Deceleration phase            10 (days)
+  Total duration                19 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         29-Jul-2020
+  Turning point                 07-Aug-2020
+  Start of steady growth        16-Aug-2020
+  Start of ending phase         04-Sep-2020
+Statistics
+  Number of observations        124
+  Degrees of freedom            120
+  Root Mean Squared Error       733.636
+  R-Squared                     0.795
+  Adjusted R-Squared            0.788
+  F-statistics vs. zero model   147.266
+  p-value                       4.66678e-40
+Method
+  Total cases weight            0.5
+  Infection rate weight         0.5
+  Objective function value      8213.42
+  Exit condition (1=OK)         0

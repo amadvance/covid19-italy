@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       coconino_us
+  Day                           124
+Estimated the SIR model parameters
+  Contact rate (beta)           0.114 (1/day)
+  Removal rate (gamma)          0.098 (1/day)
+  Population size (N)           94288
+  Initial number of cases (I0)  73
+Basic reproduction number (R0)  1.154
+Critical number of susceptible  94288
+Final state
+  Final number of cases         24531
+  Final number of susceptibles  69756
+Daily forecast for 24-Jul-2020
+  Total                         2881
+  Increase                      45
+Estimated logistic model parameters
+  Epidemic size (K)             22339 (cases)
+  Epidemic rate (r)             0.015266 (1/day)
+  Initial doubling time         45.4 (day)
+Estimated duration (days)
+  Turning day                   242
+  Acceleration   phase          124 (days)
+  Deceleration phase            136 (days)
+  Total duration                260 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         18-Jul-2020
+  Turning point                 19-Nov-2020
+  Start of steady growth        03-Apr-2021
+  Start of ending phase         19-Dec-2021
+Statistics
+  Number of observations        124
+  Degrees of freedom            120
+  Root Mean Squared Error       61.6427
+  R-Squared                     0.994
+  Adjusted R-Squared            0.994
+  F-statistics vs. zero model   6839.03
+  p-value                       6.53047e-134
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      675.262
+  Exit condition (1=OK)         0

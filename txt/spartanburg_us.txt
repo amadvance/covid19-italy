@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       spartanburg_us
+  Day                           124
+Estimated the SIR model parameters
+  Contact rate (beta)           0.777 (1/day)
+  Removal rate (gamma)          0.721 (1/day)
+  Population size (N)           40806
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  1.077
+Critical number of susceptible  40806
+Final state
+  Final number of cases         5719
+  Final number of susceptibles  35087
+Daily forecast for 24-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             5464 (cases)
+  Epidemic rate (r)             0.0557558 (1/day)
+  Initial doubling time         12.4 (day)
+Estimated duration (days)
+  Turning day                   120
+  Acceleration   phase          36 (days)
+  Deceleration phase            37 (days)
+  Total duration                73 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         14-Jun-2020
+  Turning point                 20-Jul-2020
+  Start of steady growth        26-Aug-2020
+  Start of ending phase         07-Nov-2020
+Statistics
+  Number of observations        124
+  Degrees of freedom            120
+  Root Mean Squared Error       226.206
+  R-Squared                     0.937
+  Adjusted R-Squared            0.935
+  F-statistics vs. zero model   618.29
+  p-value                       8.90014e-73
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      173.231
+  Exit condition (1=OK)         0

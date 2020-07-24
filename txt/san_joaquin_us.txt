@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       san_joaquin_us
+  Day                           124
+Estimated the SIR model parameters
+  Contact rate (beta)           0.14 (1/day)
+  Removal rate (gamma)          0.088 (1/day)
+  Population size (N)           66840
+  Initial number of cases (I0)  8
+Basic reproduction number (R0)  1.584
+Critical number of susceptible  66841
+Final state
+  Final number of cases         42343
+  Final number of susceptibles  24497
+Daily forecast for 24-Jul-2020
+  Total                         10084
+  Increase                      258
+Estimated logistic model parameters
+  Epidemic size (K)             36017 (cases)
+  Epidemic rate (r)             0.0514555 (1/day)
+  Initial doubling time         13.5 (day)
+Estimated duration (days)
+  Turning day                   145
+  Acceleration   phase          40 (days)
+  Deceleration phase            46 (days)
+  Total duration                87 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         05-Jul-2020
+  Turning point                 14-Aug-2020
+  Start of steady growth        30-Sep-2020
+  Start of ending phase         25-Dec-2020
+Statistics
+  Number of observations        124
+  Degrees of freedom            120
+  Root Mean Squared Error       264.282
+  R-Squared                     0.989
+  Adjusted R-Squared            0.988
+  F-statistics vs. zero model   3668.21
+  p-value                       8.2343e-118
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      1530.23
+  Exit condition (1=OK)         1

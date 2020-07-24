@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       southwest_utah_us
+  Day                           96
+Estimated the SIR model parameters
+  Contact rate (beta)           0.068 (1/day)
+  Removal rate (gamma)          0.017 (1/day)
+  Population size (N)           4488
+  Initial number of cases (I0)  43
+Basic reproduction number (R0)  3.881
+Critical number of susceptible  4489
+Final state
+  Final number of cases         4392
+  Final number of susceptibles  96
+Daily forecast for 24-Jul-2020
+  Total                         2649
+  Increase                      46
+Estimated logistic model parameters
+  Epidemic size (K)             3832 (cases)
+  Epidemic rate (r)             0.0509722 (1/day)
+  Initial doubling time         13.6 (day)
+Estimated duration (days)
+  Turning day                   83
+  Acceleration   phase          40 (days)
+  Deceleration phase            47 (days)
+  Total duration                87 (days)
+Estimated datums
+  Outbreak                      19-Apr-2020
+  Start of acceleration         01-Jun-2020
+  Turning point                 11-Jul-2020
+  Start of steady growth        27-Aug-2020
+  Start of ending phase         22-Nov-2020
+Statistics
+  Number of observations        96
+  Degrees of freedom            92
+  Root Mean Squared Error       18.7285
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   55795
+  p-value                       8.30876e-150
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      179.637
+  Exit condition (1=OK)         0

@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       richmond_city_us
+  Day                           123
+Estimated the SIR model parameters
+  Contact rate (beta)           0.093 (1/day)
+  Removal rate (gamma)          0.033 (1/day)
+  Population size (N)           3091
+  Initial number of cases (I0)  27
+Basic reproduction number (R0)  2.758
+Critical number of susceptible  3092
+Final state
+  Final number of cases         2857
+  Final number of susceptibles  234
+Daily forecast for 23-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2414 (cases)
+  Epidemic rate (r)             0.0596298 (1/day)
+  Initial doubling time         11.6 (day)
+Estimated duration (days)
+  Turning day                   69
+  Acceleration   phase          34 (days)
+  Deceleration phase            41 (days)
+  Total duration                75 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         26-Apr-2020
+  Turning point                 30-May-2020
+  Start of steady growth        10-Jul-2020
+  Start of ending phase         24-Sep-2020
+Statistics
+  Number of observations        123
+  Degrees of freedom            119
+  Root Mean Squared Error       36.9545
+  R-Squared                     0.998
+  Adjusted R-Squared            0.998
+  F-statistics vs. zero model   24451.5
+  p-value                       7.98642e-166
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      403.126
+  Exit condition (1=OK)         1
