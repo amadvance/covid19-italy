@@ -20,29 +20,29 @@ License Creative Commons (Attribution 3.0 Unported)
 <link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 <h1><a id="alabama">Alabama</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>49892 (+2.7%, +1304)</td>
-<td>48588 (+4.7%, +2164)</td>
-<td>46424 (+2.6%, +1161)</td>
-<td>45263 (+2.0%, +888)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>72696 (+3.2%, +2283)</td>
+<td>70413 (+1.9%, +1338)</td>
+<td>69075 (+2.0%, +1364)</td>
+<td>67711 (+2.8%, +1846)</td>
 </tr>
-<tr><th>Deceduti</th><td>1077 (+3.4%, +35)</td>
-<td>1042 (+1.0%, +10)</td>
-<td>1032 (+2.5%, +25)</td>
-<td>1007 (+2.3%, +23)</td>
+<tr><th>Deceduti</th><td>1357 (+2.4%, +32)</td>
+<td>1325 (+4.5%, +57)</td>
+<td>1268 (+0.9%, +11)</td>
+<td>1257 (+0.2%, +3)</td>
 </tr>
-<tr><th>Positivi</th><td>48815 (+2.7%, +1269)</td>
-<td>47546 (+4.7%, +2154)</td>
-<td>45392 (+2.6%, +1136)</td>
-<td>44256 (+2.0%, +865)</td>
+<tr><th>Positivi</th><td>71339 (+3.3%, +2251)</td>
+<td>69088 (+1.9%, +1281)</td>
+<td>67807 (+2.0%, +1353)</td>
+<td>66454 (+2.9%, +1843)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nelle differenti categorie di contagiati. La scala lineare permette una facile comparazione visiva dei valori, ma rende difficilmente intuibile un cambio di tendenza dell'epidemia. Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla somma di tutti gli altri valori visuallizati. </p>
 <center><img src="alabama_stk.png"></center>
 <p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nel tempo con una scala logarimica. Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. </p>
 <center><img src="alabama_log.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>1215738</b> (con una deviazione standard di 595). </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>4612661</b> (con una deviazione standard di 872). </p>
 <center><img src="alabama_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Aug-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/alabama.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>10-Sep-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/alabama.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="alabama_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="alabama_xy.png"></center>
@@ -50,463 +50,518 @@ License Creative Commons (Attribution 3.0 Unported)
 <center><img src="alabama_xp.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="autauga_us">Autauga</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>662 (+1.4%, +9)</td>
-<td>653 (+1.6%, +10)</td>
-<td>643 (+1.1%, +7)</td>
-<td>636 (+4.3%, +26)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>877 (+1.6%, +14)</td>
+<td>863 (+2.1%, +18)</td>
+<td>845 (+0.8%, +7)</td>
+<td>838 (+1.8%, +15)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="autauga_us_log.png"></center>
 <h1><a id="baldwin_us">Baldwin</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1170 (+5.0%, +56)</td>
-<td>1114 (+7.2%, +75)</td>
-<td>1039 (+6.0%, +59)</td>
-<td>980 (+9.6%, +86)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>2423 (+12.0%, +259)</td>
+<td>2164 (+4.2%, +87)</td>
+<td>2077 (+4.4%, +87)</td>
+<td>1990 (+4.0%, +76)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="baldwin_us_log.png"></center>
 <h1><a id="barbour_us">Barbour</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>377 (+2.7%, +10)</td>
-<td>367 (+1.4%, +5)</td>
-<td>362 (+1.4%, +5)</td>
-<td>357 (+1.1%, +4)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>501 (+2.9%, +14)</td>
+<td>487 (+0.6%, +3)</td>
+<td>484 (+1.0%, +5)</td>
+<td>479 (+1.5%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="barbour_us_log.png"></center>
+<h1><a id="bibb_us">Bibb</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>284 (+0.7%, +2)</td>
+<td>282 (+1.4%, +4)</td>
+<td>278 (+1.5%, +4)</td>
+<td>274 (+3.4%, +9)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="bibb_us_log.png"></center>
 <h1><a id="blount_us">Blount</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>281 (+2.9%, +8)</td>
-<td>273 (+5.8%, +15)</td>
-<td>258 (+2.8%, +7)</td>
-<td>251 (+3.3%, +8)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>528 (+6.0%, +30)</td>
+<td>498 (+4.0%, +19)</td>
+<td>479 (+3.0%, +14)</td>
+<td>465 (+5.4%, +24)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="blount_us_log.png"></center>
 <h1><a id="bullock_us">Bullock</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>376 (+1.6%, +6)</td>
-<td>370 (+0.3%, +1)</td>
-<td>369 (+0.0%, +0)</td>
-<td>369 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>403 (+0.2%, +1)</td>
+<td>402 (+1.5%, +6)</td>
+<td>396 (+0.3%, +1)</td>
+<td>395 (+0.5%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="bullock_us_log.png"></center>
 <h1><a id="butler_us">Butler</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>645 (+0.3%, +2)</td>
-<td>643 (+0.9%, +6)</td>
-<td>637 (+0.5%, +3)</td>
-<td>634 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>698 (+0.7%, +5)</td>
+<td>693 (+0.7%, +5)</td>
+<td>688 (+0.9%, +6)</td>
+<td>682 (+0.4%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="butler_us_log.png"></center>
 <h1><a id="calhoun_us">Calhoun</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>456 (+4.6%, +20)</td>
-<td>436 (+8.2%, +33)</td>
-<td>403 (+4.1%, +16)</td>
-<td>387 (+2.9%, +11)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>908 (+4.4%, +38)</td>
+<td>870 (+2.5%, +21)</td>
+<td>849 (+4.3%, +35)</td>
+<td>814 (+6.0%, +46)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="calhoun_us_log.png"></center>
 <h1><a id="chambers_us">Chambers</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>664 (+1.1%, +7)</td>
-<td>657 (+1.5%, +10)</td>
-<td>647 (+0.6%, +4)</td>
-<td>643 (+0.2%, +1)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>756 (+1.1%, +8)</td>
+<td>748 (+0.7%, +5)</td>
+<td>743 (+0.5%, +4)</td>
+<td>739 (+0.7%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="chambers_us_log.png"></center>
 <h1><a id="chilton_us">Chilton</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>295 (+2.8%, +8)</td>
-<td>287 (+4.0%, +11)</td>
-<td>276 (+5.3%, +14)</td>
-<td>262 (+4.0%, +10)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>527 (+3.9%, +20)</td>
+<td>507 (+3.3%, +16)</td>
+<td>491 (+2.9%, +14)</td>
+<td>477 (+3.0%, +14)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="chilton_us_log.png"></center>
 <h1><a id="clarke_us">Clarke</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>303 (+3.1%, +9)</td>
-<td>294 (+2.4%, +7)</td>
-<td>287 (+1.4%, +4)</td>
-<td>283 (+2.2%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>416 (+3.2%, +13)</td>
+<td>403 (+1.3%, +5)</td>
+<td>398 (+2.8%, +11)</td>
+<td>387 (+1.0%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="clarke_us_log.png"></center>
 <h1><a id="coffee_us">Coffee</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>416 (+2.2%, +9)</td>
-<td>407 (+3.8%, +15)</td>
-<td>392 (+1.6%, +6)</td>
-<td>386 (+1.3%, +5)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>591 (+6.5%, +36)</td>
+<td>555 (+0.2%, +1)</td>
+<td>554 (+1.5%, +8)</td>
+<td>546 (+2.8%, +15)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="coffee_us_log.png"></center>
 <h1><a id="colbert_us">Colbert</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>481 (+3.4%, +16)</td>
-<td>465 (+5.2%, +23)</td>
-<td>442 (+3.8%, +16)</td>
-<td>426 (+4.4%, +18)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>823 (+2.2%, +18)</td>
+<td>805 (+2.5%, +20)</td>
+<td>785 (+3.7%, +28)</td>
+<td>757 (+4.0%, +29)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="colbert_us_log.png"></center>
+<h1><a id="conecuh_us">Conecuh</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>310 (+3.7%, +11)</td>
+<td>299 (+0.7%, +2)</td>
+<td>297 (+2.4%, +7)</td>
+<td>290 (+2.1%, +6)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="conecuh_us_log.png"></center>
 <h1><a id="covington_us">Covington</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>403 (+1.0%, +4)</td>
-<td>399 (+4.7%, +18)</td>
-<td>381 (+2.4%, +9)</td>
-<td>372 (+0.5%, +2)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>587 (+1.7%, +10)</td>
+<td>577 (+1.4%, +8)</td>
+<td>569 (+2.9%, +16)</td>
+<td>553 (+3.4%, +18)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="covington_us_log.png"></center>
 <h1><a id="cullman_us">Cullman</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>554 (+2.8%, +15)</td>
-<td>539 (+10.0%, +49)</td>
-<td>490 (+4.3%, +20)</td>
-<td>470 (+2.4%, +11)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>888 (+3.4%, +29)</td>
+<td>859 (+2.4%, +20)</td>
+<td>839 (+1.6%, +13)</td>
+<td>826 (+2.2%, +18)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="cullman_us_log.png"></center>
 <h1><a id="dale_us">Dale</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>372 (+2.8%, +10)</td>
-<td>362 (+11.0%, +36)</td>
-<td>326 (+7.9%, +24)</td>
-<td>302 (+1.0%, +3)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>587 (+3.3%, +19)</td>
+<td>568 (+2.0%, +11)</td>
+<td>557 (+3.5%, +19)</td>
+<td>538 (+5.1%, +26)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="dale_us_log.png"></center>
 <h1><a id="dallas_us">Dallas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>978 (+1.6%, +15)</td>
-<td>963 (+4.9%, +45)</td>
-<td>918 (+0.9%, +8)</td>
-<td>910 (+2.1%, +19)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1173 (+1.3%, +15)</td>
+<td>1158 (+0.7%, +8)</td>
+<td>1150 (+0.8%, +9)</td>
+<td>1141 (+2.1%, +24)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="dallas_us_log.png"></center>
 <h1><a id="dekalb_us">DeKalb</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>864 (+2.7%, +23)</td>
-<td>841 (+6.5%, +51)</td>
-<td>790 (+3.8%, +29)</td>
-<td>761 (+3.3%, +24)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1407 (+3.4%, +46)</td>
+<td>1361 (+1.4%, +19)</td>
+<td>1342 (+1.3%, +17)</td>
+<td>1325 (+2.6%, +33)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="dekalb_us_log.png"></center>
 <h1><a id="elmore_us">Elmore</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1007 (+1.8%, +18)</td>
-<td>989 (+1.4%, +14)</td>
-<td>975 (+1.4%, +13)</td>
-<td>962 (+2.0%, +19)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1371 (+4.4%, +58)</td>
+<td>1313 (+1.8%, +23)</td>
+<td>1290 (+1.7%, +22)</td>
+<td>1268 (+1.8%, +23)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="elmore_us_log.png"></center>
 <h1><a id="escambia_us">Escambia</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>468 (+3.5%, +16)</td>
-<td>452 (+3.9%, +17)</td>
-<td>435 (+5.8%, +24)</td>
-<td>411 (+3.8%, +15)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>744 (+6.7%, +47)</td>
+<td>697 (+3.1%, +21)</td>
+<td>676 (+5.6%, +36)</td>
+<td>640 (+4.4%, +27)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="escambia_us_log.png"></center>
 <h1><a id="etowah_us">Etowah</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>919 (+4.2%, +37)</td>
-<td>882 (+5.8%, +48)</td>
-<td>834 (+5.6%, +44)</td>
-<td>790 (+5.3%, +40)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1495 (+3.8%, +55)</td>
+<td>1440 (+1.3%, +18)</td>
+<td>1422 (+4.9%, +66)</td>
+<td>1356 (+3.7%, +49)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="etowah_us_log.png"></center>
 <h1><a id="franklin_us">Franklin</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>928 (+0.7%, +6)</td>
-<td>922 (+1.8%, +16)</td>
-<td>906 (+0.4%, +4)</td>
-<td>902 (+0.4%, +4)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1051 (+0.7%, +7)</td>
+<td>1044 (+0.6%, +6)</td>
+<td>1038 (+1.1%, +11)</td>
+<td>1027 (+0.7%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="franklin_us_log.png"></center>
 <h1><a id="hale_us">Hale</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>343 (+1.8%, +6)</td>
-<td>337 (+6.3%, +20)</td>
-<td>317 (+0.6%, +2)</td>
-<td>315 (+0.3%, +1)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>409 (+1.5%, +6)</td>
+<td>403 (+0.2%, +1)</td>
+<td>402 (+0.2%, +1)</td>
+<td>401 (+1.0%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="hale_us_log.png"></center>
 <h1><a id="houston_us">Houston</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>561 (+1.6%, +9)</td>
-<td>552 (+3.0%, +16)</td>
-<td>536 (+5.1%, +26)</td>
-<td>510 (+0.6%, +3)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1002 (+5.5%, +52)</td>
+<td>950 (+2.7%, +25)</td>
+<td>925 (+3.7%, +33)</td>
+<td>892 (+7.0%, +58)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="houston_us_log.png"></center>
 <h1><a id="jackson_us">Jackson</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>402 (+7.5%, +28)</td>
-<td>374 (+9.0%, +31)</td>
-<td>343 (+13.6%, +41)</td>
-<td>302 (+6.3%, +18)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>613 (+2.7%, +16)</td>
+<td>597 (+2.6%, +15)</td>
+<td>582 (+1.0%, +6)</td>
+<td>576 (+2.7%, +15)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="jackson_us_log.png"></center>
 <h1><a id="jefferson_us">Jefferson</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>6219 (+3.1%, +189)</td>
-<td>6030 (+6.0%, +343)</td>
-<td>5687 (+3.7%, +201)</td>
-<td>5486 (+1.4%, +76)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>9552 (+3.0%, +277)</td>
+<td>9275 (+2.1%, +187)</td>
+<td>9088 (+2.1%, +187)</td>
+<td>8901 (+3.0%, +261)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>857075</b> (con una deviazione standard di 199). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>1924845</b> (con una deviazione standard di 258). </p>
 <center><img src="jefferson_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Jul-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/jefferson_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>18-Jul-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/jefferson_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="jefferson_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="jefferson_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="lauderdale_us">Lauderdale</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>555 (+3.4%, +18)</td>
-<td>537 (+4.5%, +23)</td>
-<td>514 (+2.6%, +13)</td>
-<td>501 (+1.0%, +5)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>826 (+1.3%, +11)</td>
+<td>815 (+2.1%, +17)</td>
+<td>798 (+3.2%, +25)</td>
+<td>773 (+3.3%, +25)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="lauderdale_us_log.png"></center>
 <h1><a id="lee_us">Lee</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1535 (+2.7%, +41)</td>
-<td>1494 (+2.1%, +31)</td>
-<td>1463 (+2.1%, +30)</td>
-<td>1433 (+1.6%, +22)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>2172 (+2.6%, +55)</td>
+<td>2117 (+1.4%, +29)</td>
+<td>2088 (+2.2%, +45)</td>
+<td>2043 (+2.5%, +50)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="lee_us_log.png"></center>
 <h1><a id="limestone_us">Limestone</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>596 (+3.8%, +22)</td>
-<td>574 (+9.3%, +49)</td>
-<td>525 (+1.4%, +7)</td>
-<td>518 (+3.4%, +17)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>946 (+1.7%, +16)</td>
+<td>930 (+2.9%, +26)</td>
+<td>904 (+2.8%, +25)</td>
+<td>879 (+4.1%, +35)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="limestone_us_log.png"></center>
 <h1><a id="lowndes_us">Lowndes</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>480 (+0.0%, +0)</td>
-<td>480 (+0.2%, +1)</td>
-<td>479 (+0.2%, +1)</td>
-<td>478 (+1.3%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>524 (+0.0%, +0)</td>
+<td>524 (+0.6%, +3)</td>
+<td>521 (+1.2%, +6)</td>
+<td>515 (+0.6%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="lowndes_us_log.png"></center>
-<h1><a id="madison_us">Madison</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1983 (+4.0%, +76)</td>
-<td>1907 (+17.7%, +287)</td>
-<td>1620 (+4.2%, +66)</td>
-<td>1554 (+4.2%, +63)</td>
+<h1><a id="macon_us">Macon</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>276 (+2.6%, +7)</td>
+<td>269 (+1.9%, +5)</td>
+<td>264 (+1.1%, +3)</td>
+<td>261 (+2.8%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
-<center><img src="madison_us_log.png"></center>
+<center><img src="macon_us_log.png"></center>
+<h1><a id="madison_us">Madison</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>3886 (+3.9%, +145)</td>
+<td>3741 (+2.3%, +83)</td>
+<td>3658 (+2.0%, +70)</td>
+<td>3588 (+3.6%, +126)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>0</b> (con una deviazione standard di 0). </p>
+<center><img src="madison_us_fit.png"></center>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b></b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/madison_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<center><img src="madison_us_fid.png"></center>
+<p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
+<center><img src="madison_us_xy.png"></center>
+<p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="marengo_us">Marengo</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>342 (+3.6%, +12)</td>
-<td>330 (+3.1%, +10)</td>
-<td>320 (+0.9%, +3)</td>
-<td>317 (+1.6%, +5)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>451 (+3.0%, +13)</td>
+<td>438 (+1.2%, +5)</td>
+<td>433 (+1.2%, +5)</td>
+<td>428 (+2.1%, +9)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="marengo_us_log.png"></center>
 <h1><a id="marion_us">Marion</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>267 (+9.0%, +22)</td>
-<td>245 (+1.7%, +4)</td>
-<td>241 (+2.1%, +5)</td>
-<td>236 (+1.3%, +3)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>449 (+1.8%, +8)</td>
+<td>441 (+1.1%, +5)</td>
+<td>436 (+1.4%, +6)</td>
+<td>430 (+2.9%, +12)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="marion_us_log.png"></center>
 <h1><a id="marshall_us">Marshall</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1904 (+2.0%, +38)</td>
-<td>1866 (+2.8%, +51)</td>
-<td>1815 (+2.5%, +45)</td>
-<td>1770 (+2.7%, +46)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>2546 (+3.5%, +85)</td>
+<td>2461 (+1.4%, +35)</td>
+<td>2426 (+1.1%, +26)</td>
+<td>2400 (+2.8%, +65)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
-<center><img src="marshall_us_log.png"></center>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>131916</b> (con una deviazione standard di 86). </p>
+<center><img src="marshall_us_fit.png"></center>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>03-Nov-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/marshall_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<center><img src="marshall_us_fid.png"></center>
+<p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
+<center><img src="marshall_us_xy.png"></center>
+<p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="mobile_us">Mobile</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>4625 (+4.7%, +207)</td>
-<td>4418 (+2.4%, +103)</td>
-<td>4315 (+2.3%, +96)</td>
-<td>4219 (+2.2%, +90)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>6797 (+5.5%, +354)</td>
+<td>6443 (+2.6%, +164)</td>
+<td>6279 (+2.1%, +129)</td>
+<td>6150 (+2.2%, +133)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>15776</b> (con una deviazione standard di 128). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>920107</b> (con una deviazione standard di 215). </p>
 <center><img src="mobile_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Aug-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/mobile_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>19-May-2022</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/mobile_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="mobile_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="mobile_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="monroe_us">Monroe</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>255 (+2.4%, +6)</td>
-<td>249 (+2.0%, +5)</td>
-<td>244 (+1.2%, +3)</td>
-<td>241 (+0.8%, +2)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>347 (+4.5%, +15)</td>
+<td>332 (+2.8%, +9)</td>
+<td>323 (+1.6%, +5)</td>
+<td>318 (+1.9%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="monroe_us_log.png"></center>
 <h1><a id="montgomery_us">Montgomery</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>4397 (+1.3%, +58)</td>
-<td>4339 (+1.5%, +64)</td>
-<td>4275 (+0.7%, +29)</td>
-<td>4246 (+2.1%, +88)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>5429 (+1.9%, +100)</td>
+<td>5329 (+1.6%, +85)</td>
+<td>5244 (+1.3%, +66)</td>
+<td>5178 (+2.4%, +121)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>5770</b> (con una deviazione standard di 42). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>6437</b> (con una deviazione standard di 68). </p>
 <center><img src="montgomery_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>09-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/montgomery_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>24-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/montgomery_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="montgomery_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="montgomery_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="morgan_us">Morgan</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1241 (+1.7%, +21)</td>
-<td>1220 (+5.4%, +63)</td>
-<td>1157 (+2.6%, +29)</td>
-<td>1128 (+0.6%, +7)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1830 (+2.6%, +46)</td>
+<td>1784 (+2.3%, +40)</td>
+<td>1744 (+1.3%, +22)</td>
+<td>1722 (+3.5%, +58)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="morgan_us_log.png"></center>
+<h1><a id="perry_us">Perry</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>359 (+2.3%, +8)</td>
+<td>351 (+3.5%, +12)</td>
+<td>339 (+1.2%, +4)</td>
+<td>335 (+4.7%, +15)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="perry_us_log.png"></center>
 <h1><a id="pickens_us">Pickens</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>262 (+2.7%, +7)</td>
-<td>255 (+4.5%, +11)</td>
-<td>244 (+2.5%, +6)</td>
-<td>238 (+0.8%, +2)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>314 (+0.6%, +2)</td>
+<td>312 (+0.6%, +2)</td>
+<td>310 (+0.6%, +2)</td>
+<td>308 (+2.0%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="pickens_us_log.png"></center>
 <h1><a id="pike_us">Pike</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>467 (+1.7%, +8)</td>
-<td>459 (+1.5%, +7)</td>
-<td>452 (+0.0%, +0)</td>
-<td>452 (+3.4%, +15)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>572 (+1.8%, +10)</td>
+<td>562 (+1.8%, +10)</td>
+<td>552 (+1.1%, +6)</td>
+<td>546 (+1.7%, +9)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="pike_us_log.png"></center>
+<h1><a id="randolph_us">Randolph</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>348 (+3.0%, +10)</td>
+<td>338 (+0.3%, +1)</td>
+<td>337 (+2.7%, +9)</td>
+<td>328 (+3.5%, +11)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="randolph_us_log.png"></center>
 <h1><a id="russell_us">Russell</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>665 (+1.2%, +8)</td>
-<td>657 (+11.5%, +68)</td>
-<td>589 (+3.7%, +21)</td>
-<td>568 (+0.5%, +3)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>991 (+2.7%, +26)</td>
+<td>965 (+1.6%, +15)</td>
+<td>950 (+1.5%, +14)</td>
+<td>936 (+3.0%, +27)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="russell_us_log.png"></center>
 <h1><a id="shelby_us">Shelby</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1557 (+3.2%, +48)</td>
-<td>1509 (+6.7%, +95)</td>
-<td>1414 (+4.2%, +57)</td>
-<td>1357 (+1.7%, +23)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>2459 (+2.5%, +61)</td>
+<td>2398 (+2.5%, +59)</td>
+<td>2339 (+2.3%, +52)</td>
+<td>2287 (+3.6%, +79)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="shelby_us_log.png"></center>
 <h1><a id="st_clair_us">St. Clair</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>484 (+3.2%, +15)</td>
-<td>469 (+6.6%, +29)</td>
-<td>440 (+5.8%, +24)</td>
-<td>416 (+3.5%, +14)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>910 (+2.8%, +25)</td>
+<td>885 (+3.3%, +28)</td>
+<td>857 (+3.5%, +29)</td>
+<td>828 (+4.8%, +38)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="st_clair_us_log.png"></center>
 <h1><a id="sumter_us">Sumter</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>287 (+0.7%, +2)</td>
-<td>285 (+0.0%, +0)</td>
-<td>285 (+0.0%, +0)</td>
-<td>285 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>325 (+0.0%, +0)</td>
+<td>325 (+0.0%, +0)</td>
+<td>325 (+0.6%, +2)</td>
+<td>323 (+1.9%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="sumter_us_log.png"></center>
 <h1><a id="talladega_us">Talladega</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>367 (+5.2%, +18)</td>
-<td>349 (+4.8%, +16)</td>
-<td>333 (+3.1%, +10)</td>
-<td>323 (+1.9%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>652 (+3.7%, +23)</td>
+<td>629 (+2.1%, +13)</td>
+<td>616 (+2.3%, +14)</td>
+<td>602 (+3.8%, +22)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="talladega_us_log.png"></center>
 <h1><a id="tallapoosa_us">Tallapoosa</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>625 (+1.5%, +9)</td>
-<td>616 (+1.7%, +10)</td>
-<td>606 (+0.2%, +1)</td>
-<td>605 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>733 (+1.2%, +9)</td>
+<td>724 (+1.0%, +7)</td>
+<td>717 (+1.4%, +10)</td>
+<td>707 (+1.6%, +11)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="tallapoosa_us_log.png"></center>
 <h1><a id="tuscaloosa_us">Tuscaloosa</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>2586 (+1.7%, +42)</td>
-<td>2544 (+6.8%, +162)</td>
-<td>2382 (+1.5%, +36)</td>
-<td>2346 (+1.1%, +25)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>3328 (+1.4%, +46)</td>
+<td>3282 (+1.0%, +34)</td>
+<td>3248 (+1.0%, +33)</td>
+<td>3215 (+2.0%, +63)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>5264</b> (con una deviazione standard di 36). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>5945</b> (con una deviazione standard di 36). </p>
 <center><img src="tuscaloosa_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>05-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/tuscaloosa_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/tuscaloosa_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="tuscaloosa_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="tuscaloosa_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="walker_us">Walker</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>1056 (+0.5%, +5)</td>
-<td>1051 (+3.2%, +33)</td>
-<td>1018 (+3.4%, +33)</td>
-<td>985 (+0.7%, +7)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>1293 (+1.7%, +22)</td>
+<td>1271 (+1.0%, +13)</td>
+<td>1258 (+0.1%, +1)</td>
+<td>1257 (+1.6%, +20)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="walker_us_log.png"></center>
 <h1><a id="wilcox_us">Wilcox</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>299 (+1.0%, +3)</td>
-<td>296 (+0.3%, +1)</td>
-<td>295 (+0.3%, +1)</td>
-<td>294 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>368 (+1.4%, +5)</td>
+<td>363 (+1.4%, +5)</td>
+<td>358 (+2.0%, +7)</td>
+<td>351 (+1.7%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="wilcox_us_log.png"></center>
 <h1><a id="winston_us">Winston</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-10</td><td>2020-07-09</td><td>2020-07-08</td><td>2020-07-07</td></tr>
-<tr><th>Casi</th><td>292 (+1.0%, +3)</td>
-<td>289 (+4.3%, +12)</td>
-<td>277 (+4.1%, +11)</td>
-<td>266 (+1.1%, +3)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-07-23</td><td>2020-07-22</td><td>2020-07-21</td><td>2020-07-20</td></tr>
+<tr><th>Casi</th><td>373 (+4.2%, +15)</td>
+<td>358 (+1.7%, +6)</td>
+<td>352 (+0.6%, +2)</td>
+<td>350 (+2.0%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="winston_us_log.png"></center>
