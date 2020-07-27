@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       madison_us
+  Day                           127
+Estimated the SIR model parameters
+  Contact rate (beta)           0.385 (1/day)
+  Removal rate (gamma)          0.237 (1/day)
+  Population size (N)           7243
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  1.625
+Critical number of susceptible  7244
+Final state
+  Final number of cases         4746
+  Final number of susceptibles  2497
+Daily forecast for 27-Jul-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             4025 (cases)
+  Epidemic rate (r)             0.148014 (1/day)
+  Initial doubling time         4.7 (day)
+Estimated duration (days)
+  Turning day                   114
+  Acceleration   phase          14 (days)
+  Deceleration phase            16 (days)
+  Total duration                30 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         30-Jun-2020
+  Turning point                 14-Jul-2020
+  Start of steady growth        31-Jul-2020
+  Start of ending phase         30-Aug-2020
+Statistics
+  Number of observations        127
+  Degrees of freedom            123
+  Root Mean Squared Error       369.416
+  R-Squared                     0.88
+  Adjusted R-Squared            0.876
+  F-statistics vs. zero model   315.94
+  p-value                       1.33372e-57
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      304.824
+  Exit condition (1=OK)         1

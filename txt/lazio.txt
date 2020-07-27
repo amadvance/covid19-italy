@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       lazio
-  Day                           147
+  Day                           150
 Estimated the SIR model parameters
-  Contact rate (beta)           0.316 (1/day)
-  Removal rate (gamma)          0.129 (1/day)
-  Population size (N)           8727
-  Initial number of cases (I0)  4
-Basic reproduction number (R0)  2.451
-Critical number of susceptible  8728
+  Contact rate (beta)           0.798 (1/day)
+  Removal rate (gamma)          0.731 (1/day)
+  Population size (N)           47025
+  Initial number of cases (I0)  41
+Basic reproduction number (R0)  1.091
+Critical number of susceptible  47025
 Final state
-  Final number of cases         7735
-  Final number of susceptibles  992
-Daily forecast for 20-Jul-2020
+  Final number of cases         8091
+  Final number of susceptibles  38933
+Daily forecast for 23-Jul-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             6492 (cases)
-  Epidemic rate (r)             0.187043 (1/day)
-  Initial doubling time         3.7 (day)
+  Epidemic size (K)             7328 (cases)
+  Epidemic rate (r)             0.0674721 (1/day)
+  Initial doubling time         10.3 (day)
 Estimated duration (days)
-  Turning day                   37
-  Acceleration   phase          11 (days)
-  Deceleration phase            13 (days)
-  Total duration                24 (days)
+  Turning day                   38
+  Acceleration   phase          24 (days)
+  Deceleration phase            28 (days)
+  Total duration                52 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
-  Start of acceleration         21-Mar-2020
-  Turning point                 01-Apr-2020
-  Start of steady growth        15-Apr-2020
-  Start of ending phase         09-May-2020
+  Start of acceleration         09-Mar-2020
+  Turning point                 02-Apr-2020
+  Start of steady growth        30-Apr-2020
+  Start of ending phase         22-Jun-2020
 Statistics
-  Number of observations        147
-  Degrees of freedom            143
-  Root Mean Squared Error       572.923
-  R-Squared                     0.962
-  Adjusted R-Squared            0.961
-  F-statistics vs. zero model   1372.73
-  p-value                       3.71156e-105
+  Number of observations        150
+  Degrees of freedom            146
+  Root Mean Squared Error       239.038
+  R-Squared                     0.993
+  Adjusted R-Squared            0.993
+  F-statistics vs. zero model   6903.03
+  p-value                       4.78755e-157
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      6720.64
-  Exit condition (1=OK)         1
+  Objective function value      2888.28
+  Exit condition (1=OK)         0
