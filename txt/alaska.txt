@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       alaska
+  Day                           148
+Estimated the SIR model parameters
+  Contact rate (beta)           0.134 (1/day)
+  Removal rate (gamma)          0.058 (1/day)
+  Population size (N)           6334
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  2.289
+Critical number of susceptible  6334
+Final state
+  Final number of cases         5450
+  Final number of susceptibles  883
+Daily forecast for 17-Aug-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             4563 (cases)
+  Epidemic rate (r)             0.075211 (1/day)
+  Initial doubling time         9.2 (day)
+Estimated duration (days)
+  Turning day                   131
+  Acceleration   phase          27 (days)
+  Deceleration phase            33 (days)
+  Total duration                61 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         03-Jul-2020
+  Turning point                 31-Jul-2020
+  Start of steady growth        02-Sep-2020
+  Start of ending phase         02-Nov-2020
+Statistics
+  Number of observations        148
+  Degrees of freedom            144
+  Root Mean Squared Error       403.219
+  R-Squared                     0.875
+  Adjusted R-Squared            0.871
+  F-statistics vs. zero model   390.98
+  p-value                       5.64816e-69
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      205.402
+  Exit condition (1=OK)         0

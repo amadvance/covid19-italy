@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       snohomish_us
+  Day                           148
+Estimated the SIR model parameters
+  Contact rate (beta)           0.015 (1/day)
+  Removal rate (gamma)          0.01 (1/day)
+  Population size (N)           1.59015e+06
+  Initial number of cases (I0)  1279
+Basic reproduction number (R0)  1.493
+Critical number of susceptible  1.59015e+06
+Final state
+  Final number of cases         921942
+  Final number of susceptibles  668211
+Daily forecast for 17-Aug-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             790253 (cases)
+  Epidemic rate (r)             0.00504219 (1/day)
+  Initial doubling time         137.5 (day)
+Estimated duration (days)
+  Turning day                   1079
+  Acceleration   phase          406 (days)
+  Deceleration phase            464 (days)
+  Total duration                870 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         24-Jan-2022
+  Turning point                 06-Mar-2023
+  Start of steady growth        11-Jun-2024
+  Start of ending phase         29-Oct-2026
+Statistics
+  Number of observations        148
+  Degrees of freedom            144
+  Root Mean Squared Error       263.967
+  R-Squared                     0.957
+  Adjusted R-Squared            0.956
+  F-statistics vs. zero model   1063.11
+  p-value                       5.35445e-98
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      3167.6
+  Exit condition (1=OK)         0

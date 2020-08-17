@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       chesapeake_us
+  Day                           146
+Estimated the SIR model parameters
+  Contact rate (beta)           0.12 (1/day)
+  Removal rate (gamma)          0.095 (1/day)
+  Population size (N)           1.09174e+06
+  Initial number of cases (I0)  20
+Basic reproduction number (R0)  1.261
+Critical number of susceptible  1.09174e+06
+Final state
+  Final number of cases         418681
+  Final number of susceptibles  673057
+Daily forecast for 15-Aug-2020
+  Total                         3514
+  Increase                      87
+Estimated logistic model parameters
+  Epidemic size (K)             374641 (cases)
+  Epidemic rate (r)             0.0247819 (1/day)
+  Initial doubling time         28 (day)
+Estimated duration (days)
+  Turning day                   338
+  Acceleration   phase          83 (days)
+  Deceleration phase            90 (days)
+  Total duration                172 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         02-Dec-2020
+  Turning point                 23-Feb-2021
+  Start of steady growth        23-May-2021
+  Start of ending phase         12-Nov-2021
+Statistics
+  Number of observations        146
+  Degrees of freedom            142
+  Root Mean Squared Error       89.0588
+  R-Squared                     0.99
+  Adjusted R-Squared            0.99
+  F-statistics vs. zero model   5093.46
+  p-value                       2.70473e-144
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1061.26
+  Exit condition (1=OK)         0

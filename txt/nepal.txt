@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       nepal
-  Day                           127
+  Day                           148
 Estimated the SIR model parameters
-  Contact rate (beta)           0.122 (1/day)
-  Removal rate (gamma)          0.008 (1/day)
-  Population size (N)           18827
-  Initial number of cases (I0)  0
-Basic reproduction number (R0)  14.821
-Critical number of susceptible  18828
+  Contact rate (beta)           0.149 (1/day)
+  Removal rate (gamma)          0.065 (1/day)
+  Population size (N)           27510
+  Initial number of cases (I0)  3
+Basic reproduction number (R0)  2.313
+Critical number of susceptible  27510
 Final state
-  Final number of cases         18827
-  Final number of susceptibles  0
-Daily forecast for 31-May-2020
+  Final number of cases         23790
+  Final number of susceptibles  3719
+Daily forecast for 21-Jun-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             18170 (cases)
-  Epidemic rate (r)             0.114215 (1/day)
-  Initial doubling time         6.1 (day)
+  Epidemic size (K)             19926 (cases)
+  Epidemic rate (r)             0.0847971 (1/day)
+  Initial doubling time         8.2 (day)
 Estimated duration (days)
-  Turning day                   91
-  Acceleration   phase          18 (days)
-  Deceleration phase            18 (days)
-  Total duration                36 (days)
+  Turning day                   96
+  Acceleration   phase          24 (days)
+  Deceleration phase            29 (days)
+  Total duration                54 (days)
 Estimated datums
   Outbreak                      25-Jan-2020
-  Start of acceleration         07-Apr-2020
-  Turning point                 25-Apr-2020
-  Start of steady growth        13-May-2020
-  Start of ending phase         18-Jun-2020
+  Start of acceleration         05-Apr-2020
+  Turning point                 30-Apr-2020
+  Start of steady growth        29-May-2020
+  Start of ending phase         22-Jul-2020
 Statistics
-  Number of observations        127
-  Degrees of freedom            123
-  Root Mean Squared Error       144.035
-  R-Squared                     1
-  Adjusted R-Squared            1
-  F-statistics vs. zero model   94294.8
-  p-value                       1.55971e-206
+  Number of observations        148
+  Degrees of freedom            144
+  Root Mean Squared Error       923.159
+  R-Squared                     0.989
+  Adjusted R-Squared            0.989
+  F-statistics vs. zero model   4217.68
+  p-value                       4.69024e-140
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1589.42
-  Exit condition (1=OK)         0
+  Objective function value      11077.9
+  Exit condition (1=OK)         1

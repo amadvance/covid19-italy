@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       st_landry_us
+  Day                           146
+Estimated the SIR model parameters
+  Contact rate (beta)           0.731 (1/day)
+  Removal rate (gamma)          0.652 (1/day)
+  Population size (N)           15324
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  1.121
+Critical number of susceptible  15325
+Final state
+  Final number of cases         3192
+  Final number of susceptibles  12132
+Daily forecast for 15-Aug-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2992 (cases)
+  Epidemic rate (r)             0.0790627 (1/day)
+  Initial doubling time         8.8 (day)
+Estimated duration (days)
+  Turning day                   123
+  Acceleration   phase          26 (days)
+  Deceleration phase            27 (days)
+  Total duration                52 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         27-Jun-2020
+  Turning point                 23-Jul-2020
+  Start of steady growth        19-Aug-2020
+  Start of ending phase         10-Oct-2020
+Statistics
+  Number of observations        146
+  Degrees of freedom            142
+  Root Mean Squared Error       217.865
+  R-Squared                     0.934
+  Adjusted R-Squared            0.932
+  F-statistics vs. zero model   698.412
+  p-value                       8.89737e-85
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      328.904
+  Exit condition (1=OK)         0

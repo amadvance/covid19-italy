@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       madera_us
+  Day                           147
+Estimated the SIR model parameters
+  Contact rate (beta)           0.163 (1/day)
+  Removal rate (gamma)          0.108 (1/day)
+  Population size (N)           8431
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  1.513
+Critical number of susceptible  8432
+Final state
+  Final number of cases         4987
+  Final number of susceptibles  3444
+Daily forecast for 16-Aug-2020
+  Total                         2934
+  Increase                      10
+Estimated logistic model parameters
+  Epidemic size (K)             4271 (cases)
+  Epidemic rate (r)             0.0554325 (1/day)
+  Initial doubling time         12.5 (day)
+Estimated duration (days)
+  Turning day                   137
+  Acceleration   phase          37 (days)
+  Deceleration phase            42 (days)
+  Total duration                80 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         30-Jun-2020
+  Turning point                 06-Aug-2020
+  Start of steady growth        18-Sep-2020
+  Start of ending phase         06-Dec-2020
+Statistics
+  Number of observations        147
+  Degrees of freedom            143
+  Root Mean Squared Error       47.493
+  R-Squared                     0.997
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   13942.6
+  p-value                       3.52404e-176
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      567.937
+  Exit condition (1=OK)         0
