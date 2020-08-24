@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       galveston_us
-  Day                           148
+  Day                           155
 Estimated the SIR model parameters
-  Contact rate (beta)           0.648 (1/day)
-  Removal rate (gamma)          0.578 (1/day)
-  Population size (N)           53252
+  Contact rate (beta)           1.208 (1/day)
+  Removal rate (gamma)          1.137 (1/day)
+  Population size (N)           95384
   Initial number of cases (I0)  0
-Basic reproduction number (R0)  1.121
-Critical number of susceptible  53253
+Basic reproduction number (R0)  1.062
+Critical number of susceptible  95385
 Final state
-  Final number of cases         11077
-  Final number of susceptibles  42175
-Daily forecast for 17-Aug-2020
-  Total                         10141
-  Increase                      58
+  Final number of cases         10934
+  Final number of susceptibles  84450
+Daily forecast for 24-Aug-2020
+  Total                         10404
+  Increase                      35
 Estimated logistic model parameters
-  Epidemic size (K)             10382 (cases)
-  Epidemic rate (r)             0.0700068 (1/day)
-  Initial doubling time         9.9 (day)
+  Epidemic size (K)             10536 (cases)
+  Epidemic rate (r)             0.0706022 (1/day)
+  Initial doubling time         9.8 (day)
 Estimated duration (days)
   Turning day                   111
   Acceleration   phase          29 (days)
-  Deceleration phase            30 (days)
-  Total duration                59 (days)
+  Deceleration phase            29 (days)
+  Total duration                58 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         12-Jun-2020
+  Start of acceleration         13-Jun-2020
   Turning point                 11-Jul-2020
-  Start of steady growth        11-Aug-2020
-  Start of ending phase         09-Oct-2020
+  Start of steady growth        09-Aug-2020
+  Start of ending phase         06-Oct-2020
 Statistics
-  Number of observations        148
-  Degrees of freedom            144
-  Root Mean Squared Error       318.793
-  R-Squared                     0.991
-  Adjusted R-Squared            0.991
-  F-statistics vs. zero model   5663.15
-  p-value                       3.52236e-149
+  Number of observations        155
+  Degrees of freedom            151
+  Root Mean Squared Error       309.651
+  R-Squared                     0.993
+  Adjusted R-Squared            0.992
+  F-statistics vs. zero model   7337.08
+  p-value                       2.57662e-163
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      3825.51
+  Objective function value      3805.07
   Exit condition (1=OK)         0

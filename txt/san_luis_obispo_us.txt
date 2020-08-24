@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       san_luis_obispo_us
+  Day                           154
+Estimated the SIR model parameters
+  Contact rate (beta)           0.456 (1/day)
+  Removal rate (gamma)          0.394 (1/day)
+  Population size (N)           11987
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  1.157
+Critical number of susceptible  11987
+Final state
+  Final number of cases         3104
+  Final number of susceptibles  8883
+Daily forecast for 23-Aug-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2868 (cases)
+  Epidemic rate (r)             0.0619726 (1/day)
+  Initial doubling time         11.2 (day)
+Estimated duration (days)
+  Turning day                   128
+  Acceleration   phase          33 (days)
+  Deceleration phase            35 (days)
+  Total duration                67 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         25-Jun-2020
+  Turning point                 28-Jul-2020
+  Start of steady growth        31-Aug-2020
+  Start of ending phase         07-Nov-2020
+Statistics
+  Number of observations        154
+  Degrees of freedom            150
+  Root Mean Squared Error       166.641
+  R-Squared                     0.955
+  Adjusted R-Squared            0.954
+  F-statistics vs. zero model   1134.65
+  p-value                       7.69636e-103
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      301.773
+  Exit condition (1=OK)         0
