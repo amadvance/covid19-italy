@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       palm_beach_us
-  Day                           155
+  Day                           159
 Estimated the SIR model parameters
-  Contact rate (beta)           1.565 (1/day)
-  Removal rate (gamma)          1.499 (1/day)
-  Population size (N)           480913
+  Contact rate (beta)           3.906 (1/day)
+  Removal rate (gamma)          3.839 (1/day)
+  Population size (N)           1.17263e+06
   Initial number of cases (I0)  0
-Basic reproduction number (R0)  1.044
-Critical number of susceptible  480913
+Basic reproduction number (R0)  1.017
+Critical number of susceptible  1.17263e+06
 Final state
-  Final number of cases         39983
-  Final number of susceptibles  440929
-Daily forecast for 24-Aug-2020
+  Final number of cases         39614
+  Final number of susceptibles  1.13301e+06
+Daily forecast for 28-Aug-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             38904 (cases)
-  Epidemic rate (r)             0.065981 (1/day)
+  Epidemic size (K)             39159 (cases)
+  Epidemic rate (r)             0.0663201 (1/day)
   Initial doubling time         10.5 (day)
 Estimated duration (days)
   Turning day                   116
   Acceleration   phase          30 (days)
-  Deceleration phase            31 (days)
+  Deceleration phase            30 (days)
   Total duration                61 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         16-Jun-2020
   Turning point                 16-Jul-2020
   Start of steady growth        16-Aug-2020
-  Start of ending phase         17-Oct-2020
+  Start of ending phase         15-Oct-2020
 Statistics
-  Number of observations        155
-  Degrees of freedom            151
-  Root Mean Squared Error       3603.19
-  R-Squared                     0.927
-  Adjusted R-Squared            0.925
-  F-statistics vs. zero model   666.395
-  p-value                       7.74169e-87
+  Number of observations        159
+  Degrees of freedom            155
+  Root Mean Squared Error       3673.51
+  R-Squared                     0.93
+  Adjusted R-Squared            0.928
+  F-statistics vs. zero model   710.607
+  p-value                       2.47958e-90
 Method
   Total cases weight            0
   Infection rate weight         1
-  Objective function value      1254.73
+  Objective function value      1255.02
   Exit condition (1=OK)         0
