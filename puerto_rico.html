@@ -20,320 +20,397 @@ License Creative Commons (Attribution 3.0 Unported)
 <link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 <h1><a id="puerto_rico">Puerto Rico</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>30792 (+2.1%, +620)</td>
-<td>30172 (+0.4%, +108)</td>
-<td>30064 (+0.3%, +95)</td>
-<td>29969 (+2.2%, +642)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>36881 (+0.8%, +305)</td>
+<td>36576 (+1.4%, +508)</td>
+<td>36068 (+1.0%, +359)</td>
+<td>35709 (+2.1%, +748)</td>
 </tr>
 <tr><th>Deceduti</th><td>177 (+0.0%, +0)</td>
 <td>177 (+0.0%, +0)</td>
 <td>177 (+0.0%, +0)</td>
 <td>177 (+0.0%, +0)</td>
 </tr>
-<tr><th>Positivi</th><td>30615 (+2.1%, +620)</td>
-<td>29995 (+0.4%, +108)</td>
-<td>29887 (+0.3%, +95)</td>
-<td>29792 (+2.2%, +642)</td>
+<tr><th>Positivi</th><td>36704 (+0.8%, +305)</td>
+<td>36399 (+1.4%, +508)</td>
+<td>35891 (+1.0%, +359)</td>
+<td>35532 (+2.2%, +748)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nelle differenti categorie di contagiati. La scala lineare permette una facile comparazione visiva dei valori, ma rende difficilmente intuibile un cambio di tendenza dell'epidemia. Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla somma di tutti gli altri valori visuallizati. </p>
 <center><img src="puerto_rico_stk.png"></center>
 <p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nel tempo con una scala logarimica. Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. </p>
 <center><img src="puerto_rico_log.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>880631</b> (con una deviazione standard di 491). </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>68822</b> (con una deviazione standard di 813). </p>
 <center><img src="puerto_rico_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>10-Oct-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/puerto_rico.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>22-Mar-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/puerto_rico.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="puerto_rico_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="puerto_rico_xy.png"></center>
 <p class="didascalia">Il grafico successivo mostra la variazione del numero di Positivi in base al numero di Positivi stessi. Come il grafico precedente, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia. L'uso del numero di <i>Positivi</i> invece che dei <i>Casi</i> &eacute; una migliore misura della capacit&agrave; di diffusione dell'epidemia dato che i <i>Guariti</i> e <i>Deceduti</i> non sono da considerare contagiosi. Una crescita esponenziale &eacute; rappresentata da una linea retta orizzontale. Il rallentamendo dell'epidemia si nota dalla curva che scende ed inizia a tornare indietro, in quanto il numero di <i>Positivi</i> diminuisce. </p>
 <center><img src="puerto_rico_xp.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
+<h1><a id="aguada_us">Aguada</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>269 (+5.1%, +13)</td>
+<td>256 (+0.8%, +2)</td>
+<td>254 (+0.4%, +1)</td>
+<td>253 (+5.0%, +12)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="aguada_us_log.png"></center>
 <h1><a id="aguadilla_us">Aguadilla</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>298 (+1.7%, +5)</td>
-<td>293 (+0.0%, +0)</td>
-<td>293 (+1.7%, +5)</td>
-<td>288 (+2.1%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>367 (+0.8%, +3)</td>
+<td>364 (+1.7%, +6)</td>
+<td>358 (+1.4%, +5)</td>
+<td>353 (+2.0%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="aguadilla_us_log.png"></center>
 <h1><a id="arecibo_us">Arecibo</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>477 (+3.2%, +15)</td>
-<td>462 (+0.9%, +4)</td>
-<td>458 (+0.2%, +1)</td>
-<td>457 (+1.8%, +8)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>586 (+2.1%, +12)</td>
+<td>574 (+2.3%, +13)</td>
+<td>561 (+1.3%, +7)</td>
+<td>554 (+2.2%, +12)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="arecibo_us_log.png"></center>
 <h1><a id="barranquitas_us">Barranquitas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>323 (+2.2%, +7)</td>
-<td>316 (+0.6%, +2)</td>
-<td>314 (+0.3%, +1)</td>
-<td>313 (+3.3%, +10)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>372 (+0.0%, +0)</td>
+<td>372 (+0.5%, +2)</td>
+<td>370 (+0.0%, +0)</td>
+<td>370 (+2.5%, +9)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="barranquitas_us_log.png"></center>
 <h1><a id="bayamon_us">Bayamon</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>2384 (+3.2%, +75)</td>
-<td>2309 (+0.6%, +13)</td>
-<td>2296 (+0.3%, +7)</td>
-<td>2289 (+2.8%, +62)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>2991 (+1.3%, +38)</td>
+<td>2953 (+1.5%, +45)</td>
+<td>2908 (+0.8%, +22)</td>
+<td>2886 (+2.9%, +81)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
-<center><img src="bayamon_us_log.png"></center>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3101</b> (con una deviazione standard di 517). </p>
+<center><img src="bayamon_us_fit.png"></center>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>19-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/bayamon_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<center><img src="bayamon_us_fid.png"></center>
+<p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
+<center><img src="bayamon_us_xy.png"></center>
+<p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="cabo_rojo_us">Cabo Rojo</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>268 (+1.5%, +4)</td>
-<td>264 (+0.4%, +1)</td>
-<td>263 (+0.0%, +0)</td>
-<td>263 (+0.4%, +1)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>293 (+0.7%, +2)</td>
+<td>291 (+2.5%, +7)</td>
+<td>284 (+0.4%, +1)</td>
+<td>283 (+0.7%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="cabo_rojo_us_log.png"></center>
 <h1><a id="caguas_us">Caguas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>1044 (+1.2%, +12)</td>
-<td>1032 (+0.2%, +2)</td>
-<td>1030 (+0.1%, +1)</td>
-<td>1029 (+2.8%, +28)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>1255 (+0.6%, +7)</td>
+<td>1248 (+1.5%, +19)</td>
+<td>1229 (+1.8%, +22)</td>
+<td>1207 (+2.5%, +29)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="caguas_us_log.png"></center>
 <h1><a id="canovanas_us">Canovanas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>489 (+1.2%, +6)</td>
-<td>483 (+0.4%, +2)</td>
-<td>481 (+0.2%, +1)</td>
-<td>480 (+2.3%, +11)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>580 (+0.2%, +1)</td>
+<td>579 (+1.2%, +7)</td>
+<td>572 (+1.1%, +6)</td>
+<td>566 (+1.8%, +10)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="canovanas_us_log.png"></center>
 <h1><a id="carolina_us">Carolina</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>1766 (+2.0%, +34)</td>
-<td>1732 (+0.2%, +4)</td>
-<td>1728 (+0.2%, +4)</td>
-<td>1724 (+1.9%, +32)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>2149 (+0.4%, +9)</td>
+<td>2140 (+0.9%, +20)</td>
+<td>2120 (+0.7%, +15)</td>
+<td>2105 (+2.7%, +55)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="carolina_us_log.png"></center>
 <h1><a id="catano_us">Catano</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>281 (+0.7%, +2)</td>
-<td>279 (+0.7%, +2)</td>
-<td>277 (+0.7%, +2)</td>
-<td>275 (+1.5%, +4)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>359 (+0.3%, +1)</td>
+<td>358 (+7.5%, +25)</td>
+<td>333 (+0.9%, +3)</td>
+<td>330 (+2.2%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="catano_us_log.png"></center>
 <h1><a id="cayey_us">Cayey</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>251 (+2.0%, +5)</td>
-<td>246 (+0.0%, +0)</td>
-<td>246 (+0.4%, +1)</td>
-<td>245 (+0.8%, +2)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>297 (+0.7%, +2)</td>
+<td>295 (+3.1%, +9)</td>
+<td>286 (+1.1%, +3)</td>
+<td>283 (+0.7%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="cayey_us_log.png"></center>
+<h1><a id="cidra_us">Cidra</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>260 (+0.8%, +2)</td>
+<td>258 (+2.0%, +5)</td>
+<td>253 (+0.8%, +2)</td>
+<td>251 (+2.9%, +7)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="cidra_us_log.png"></center>
 <h1><a id="corozal_us">Corozal</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>376 (+4.2%, +15)</td>
-<td>361 (+0.6%, +2)</td>
-<td>359 (+0.3%, +1)</td>
-<td>358 (+3.8%, +13)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>470 (+0.9%, +4)</td>
+<td>466 (+2.0%, +9)</td>
+<td>457 (+0.7%, +3)</td>
+<td>454 (+2.7%, +12)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="corozal_us_log.png"></center>
 <h1><a id="dorado_us">Dorado</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>455 (+1.3%, +6)</td>
-<td>449 (+0.0%, +0)</td>
-<td>449 (+0.9%, +4)</td>
-<td>445 (+4.0%, +17)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>587 (+0.9%, +5)</td>
+<td>582 (+1.9%, +11)</td>
+<td>571 (+1.1%, +6)</td>
+<td>565 (+1.1%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="dorado_us_log.png"></center>
 <h1><a id="fajardo_us">Fajardo</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>334 (+1.2%, +4)</td>
-<td>330 (+0.0%, +0)</td>
-<td>330 (+0.3%, +1)</td>
-<td>329 (+2.5%, +8)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>411 (+0.7%, +3)</td>
+<td>408 (+1.5%, +6)</td>
+<td>402 (+0.8%, +3)</td>
+<td>399 (+2.6%, +10)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="fajardo_us_log.png"></center>
+<h1><a id="guayama_us">Guayama</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>260 (+0.0%, +0)</td>
+<td>260 (+4.4%, +11)</td>
+<td>249 (+1.2%, +3)</td>
+<td>246 (+0.8%, +2)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="guayama_us_log.png"></center>
 <h1><a id="guaynabo_us">Guaynabo</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>1203 (+2.6%, +30)</td>
-<td>1173 (+0.6%, +7)</td>
-<td>1166 (+0.3%, +4)</td>
-<td>1162 (+1.8%, +20)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>1394 (+0.4%, +5)</td>
+<td>1389 (+0.6%, +8)</td>
+<td>1381 (+0.4%, +6)</td>
+<td>1375 (+1.6%, +22)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="guaynabo_us_log.png"></center>
 <h1><a id="gurabo_us">Gurabo</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>346 (+2.1%, +7)</td>
-<td>339 (+0.3%, +1)</td>
-<td>338 (+0.0%, +0)</td>
-<td>338 (+3.0%, +10)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>415 (+0.2%, +1)</td>
+<td>414 (+1.5%, +6)</td>
+<td>408 (+1.0%, +4)</td>
+<td>404 (+3.1%, +12)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="gurabo_us_log.png"></center>
 <h1><a id="humacao_us">Humacao</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>286 (+1.4%, +4)</td>
-<td>282 (+0.4%, +1)</td>
-<td>281 (+0.7%, +2)</td>
-<td>279 (+4.5%, +12)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>373 (+1.6%, +6)</td>
+<td>367 (+2.5%, +9)</td>
+<td>358 (+0.8%, +3)</td>
+<td>355 (+4.4%, +15)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="humacao_us_log.png"></center>
+<h1><a id="juana_diaz_us">Juana Diaz</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>288 (+1.1%, +3)</td>
+<td>285 (+1.1%, +3)</td>
+<td>282 (+0.4%, +1)</td>
+<td>281 (+0.7%, +2)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="juana_diaz_us_log.png"></center>
+<h1><a id="juncos_us">Juncos</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>284 (+1.8%, +5)</td>
+<td>279 (+2.2%, +6)</td>
+<td>273 (+1.5%, +4)</td>
+<td>269 (+3.1%, +8)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="juncos_us_log.png"></center>
+<h1><a id="lares_us">Lares</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>263 (+0.4%, +1)</td>
+<td>262 (+0.0%, +0)</td>
+<td>262 (+0.0%, +0)</td>
+<td>262 (+0.8%, +2)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="lares_us_log.png"></center>
 <h1><a id="las_piedras_us">Las Piedras</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>256 (+3.6%, +9)</td>
-<td>247 (+0.4%, +1)</td>
-<td>246 (+0.4%, +1)</td>
-<td>245 (+2.5%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>374 (+2.5%, +9)</td>
+<td>365 (+4.3%, +15)</td>
+<td>350 (+0.9%, +3)</td>
+<td>347 (+3.6%, +12)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="las_piedras_us_log.png"></center>
 <h1><a id="manati_us">Manati</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>343 (+2.1%, +7)</td>
-<td>336 (+0.6%, +2)</td>
-<td>334 (+0.0%, +0)</td>
-<td>334 (+3.4%, +11)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>431 (+0.2%, +1)</td>
+<td>430 (+1.7%, +7)</td>
+<td>423 (+6.8%, +27)</td>
+<td>396 (+2.1%, +8)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="manati_us_log.png"></center>
 <h1><a id="mayaguez_us">Mayaguez</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>612 (+0.8%, +5)</td>
-<td>607 (+0.0%, +0)</td>
-<td>607 (+0.2%, +1)</td>
-<td>606 (+0.3%, +2)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>715 (+1.1%, +8)</td>
+<td>707 (+0.9%, +6)</td>
+<td>701 (+1.3%, +9)</td>
+<td>692 (+1.9%, +13)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="mayaguez_us_log.png"></center>
+<h1><a id="moca_us">Moca</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>290 (+1.0%, +3)</td>
+<td>287 (+1.4%, +4)</td>
+<td>283 (+1.8%, +5)</td>
+<td>278 (+2.6%, +7)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="moca_us_log.png"></center>
 <h1><a id="morovis_us">Morovis</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>368 (+3.4%, +12)</td>
-<td>356 (+0.0%, +0)</td>
-<td>356 (+0.6%, +2)</td>
-<td>354 (+1.7%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>443 (+0.2%, +1)</td>
+<td>442 (+1.8%, +8)</td>
+<td>434 (+0.2%, +1)</td>
+<td>433 (+1.6%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="morovis_us_log.png"></center>
 <h1><a id="naranjito_us">Naranjito</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>437 (+3.6%, +15)</td>
-<td>422 (+0.2%, +1)</td>
-<td>421 (+0.0%, +0)</td>
-<td>421 (+2.4%, +10)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>518 (+0.4%, +2)</td>
+<td>516 (+0.2%, +1)</td>
+<td>515 (+0.2%, +1)</td>
+<td>514 (+3.0%, +15)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="naranjito_us_log.png"></center>
 <h1><a id="orocovis_us">Orocovis</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>267 (+0.4%, +1)</td>
-<td>266 (+0.0%, +0)</td>
-<td>266 (+0.8%, +2)</td>
-<td>264 (+1.9%, +5)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>285 (+0.0%, +0)</td>
+<td>285 (+0.7%, +2)</td>
+<td>283 (+0.0%, +0)</td>
+<td>283 (+0.7%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="orocovis_us_log.png"></center>
 <h1><a id="out_of_pr_us">Out of PR</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>738 (+0.5%, +4)</td>
-<td>734 (+1.0%, +7)</td>
-<td>727 (+0.0%, +0)</td>
-<td>727 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>767 (+0.3%, +2)</td>
+<td>765 (+0.4%, +3)</td>
+<td>762 (+0.9%, +7)</td>
+<td>755 (+0.3%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="out_of_pr_us_log.png"></center>
 <h1><a id="ponce_us">Ponce</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>633 (+1.4%, +9)</td>
-<td>624 (+0.3%, +2)</td>
-<td>622 (+0.6%, +4)</td>
-<td>618 (+1.0%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>701 (+0.9%, +6)</td>
+<td>695 (+1.9%, +13)</td>
+<td>682 (+0.9%, +6)</td>
+<td>676 (+0.7%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="ponce_us_log.png"></center>
 <h1><a id="salinas_us">Salinas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>295 (+1.0%, +3)</td>
-<td>292 (+0.0%, +0)</td>
-<td>292 (+0.0%, +0)</td>
-<td>292 (+1.7%, +5)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>356 (+2.3%, +8)</td>
+<td>348 (+1.5%, +5)</td>
+<td>343 (+2.7%, +9)</td>
+<td>334 (+3.4%, +11)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="salinas_us_log.png"></center>
+<h1><a id="san_lorenzo_us">San Lorenzo</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>344 (+0.6%, +2)</td>
+<td>342 (+1.5%, +5)</td>
+<td>337 (+1.2%, +4)</td>
+<td>333 (+7.1%, +22)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="san_lorenzo_us_log.png"></center>
 <h1><a id="san_sebastian_us">San Sebastian</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>272 (+0.7%, +2)</td>
-<td>270 (+0.0%, +0)</td>
-<td>270 (+0.0%, +0)</td>
-<td>270 (+0.4%, +1)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>308 (+1.0%, +3)</td>
+<td>305 (+3.0%, +9)</td>
+<td>296 (+0.7%, +2)</td>
+<td>294 (+0.7%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="san_sebastian_us_log.png"></center>
 <h1><a id="toa_alta_us">Toa Alta</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>858 (+3.0%, +25)</td>
-<td>833 (+0.2%, +2)</td>
-<td>831 (+0.4%, +3)</td>
-<td>828 (+2.6%, +21)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>1050 (+0.5%, +5)</td>
+<td>1045 (+1.6%, +16)</td>
+<td>1029 (+0.9%, +9)</td>
+<td>1020 (+2.3%, +23)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="toa_alta_us_log.png"></center>
 <h1><a id="toa_baja_us">Toa Baja</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>844 (+2.1%, +17)</td>
-<td>827 (+0.6%, +5)</td>
-<td>822 (+0.4%, +3)</td>
-<td>819 (+3.9%, +31)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>1028 (+0.8%, +8)</td>
+<td>1020 (+1.6%, +16)</td>
+<td>1004 (+0.9%, +9)</td>
+<td>995 (+2.5%, +24)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="toa_baja_us_log.png"></center>
 <h1><a id="trujillo_alto_us">Trujillo Alto</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>712 (+2.3%, +16)</td>
-<td>696 (+0.4%, +3)</td>
-<td>693 (+0.1%, +1)</td>
-<td>692 (+2.2%, +15)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>843 (+1.0%, +8)</td>
+<td>835 (+1.3%, +11)</td>
+<td>824 (+0.7%, +6)</td>
+<td>818 (+2.6%, +21)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="trujillo_alto_us_log.png"></center>
 <h1><a id="vega_alta_us">Vega Alta</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>415 (+4.5%, +18)</td>
-<td>397 (+0.0%, +0)</td>
-<td>397 (+1.3%, +5)</td>
-<td>392 (+1.8%, +7)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>544 (+3.4%, +18)</td>
+<td>526 (+1.9%, +10)</td>
+<td>516 (+1.8%, +9)</td>
+<td>507 (+0.8%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="vega_alta_us_log.png"></center>
 <h1><a id="vega_baja_us">Vega Baja</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>623 (+1.1%, +7)</td>
-<td>616 (+0.2%, +1)</td>
-<td>615 (+1.5%, +9)</td>
-<td>606 (+2.2%, +13)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>755 (+1.2%, +9)</td>
+<td>746 (+0.9%, +7)</td>
+<td>739 (+2.5%, +18)</td>
+<td>721 (+2.0%, +14)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="vega_baja_us_log.png"></center>
 <h1><a id="yauco_us">Yauco</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-08-27</td><td>2020-08-26</td><td>2020-08-25</td><td>2020-08-24</td></tr>
-<tr><th>Casi</th><td>306 (+2.7%, +8)</td>
-<td>298 (+0.0%, +0)</td>
-<td>298 (+0.0%, +0)</td>
-<td>298 (+2.1%, +6)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<tr><th>Casi</th><td>332 (+0.3%, +1)</td>
+<td>331 (+0.6%, +2)</td>
+<td>329 (+1.9%, +6)</td>
+<td>323 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="yauco_us_log.png"></center>
