@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       outagamie_us
+  Day                           174
+Estimated the SIR model parameters
+  Contact rate (beta)           0.066 (1/day)
+  Removal rate (gamma)          0.043 (1/day)
+  Population size (N)           36983
+  Initial number of cases (I0)  19
+Basic reproduction number (R0)  1.531
+Critical number of susceptible  36983
+Final state
+  Final number of cases         22324
+  Final number of susceptibles  14658
+Daily forecast for 12-Sep-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             19068 (cases)
+  Epidemic rate (r)             0.0229986 (1/day)
+  Initial doubling time         30.1 (day)
+Estimated duration (days)
+  Turning day                   260
+  Acceleration   phase          89 (days)
+  Deceleration phase            103 (days)
+  Total duration                192 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         08-Sep-2020
+  Turning point                 07-Dec-2020
+  Start of steady growth        19-Mar-2021
+  Start of ending phase         27-Sep-2021
+Statistics
+  Number of observations        174
+  Degrees of freedom            170
+  Root Mean Squared Error       43.0151
+  R-Squared                     0.996
+  Adjusted R-Squared            0.996
+  F-statistics vs. zero model   14737.9
+  p-value                       3.91121e-205
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      560.849
+  Exit condition (1=OK)         0

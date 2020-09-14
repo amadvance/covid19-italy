@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       trinidad_and_tobago
+  Day                           183
+Estimated the SIR model parameters
+  Contact rate (beta)           0.102 (1/day)
+  Removal rate (gamma)          0.022 (1/day)
+  Population size (N)           5912
+  Initial number of cases (I0)  0
+Basic reproduction number (R0)  4.678
+Critical number of susceptible  5912
+Final state
+  Final number of cases         5854
+  Final number of susceptibles  57
+Daily forecast for 13-Sep-2020
+  Total                         3216
+  Increase                      104
+Estimated logistic model parameters
+  Epidemic size (K)             5204 (cases)
+  Epidemic rate (r)             0.0800924 (1/day)
+  Initial doubling time         8.7 (day)
+Estimated duration (days)
+  Turning day                   178
+  Acceleration   phase          25 (days)
+  Deceleration phase            29 (days)
+  Total duration                55 (days)
+Estimated datums
+  Outbreak                      14-Mar-2020
+  Start of acceleration         14-Aug-2020
+  Turning point                 08-Sep-2020
+  Start of steady growth        08-Oct-2020
+  Start of ending phase         02-Dec-2020
+Statistics
+  Number of observations        183
+  Degrees of freedom            179
+  Root Mean Squared Error       105.36
+  R-Squared                     0.974
+  Adjusted R-Squared            0.973
+  F-statistics vs. zero model   2689.77
+  p-value                       1.38413e-148
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      277.607
+  Exit condition (1=OK)         1

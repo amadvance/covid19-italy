@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       bayamon_us
+  Day                           58
+Estimated the SIR model parameters
+  Contact rate (beta)           0.121 (1/day)
+  Removal rate (gamma)          0.056 (1/day)
+  Population size (N)           3635
+  Initial number of cases (I0)  197
+Basic reproduction number (R0)  2.064
+Critical number of susceptible  3635
+Final state
+  Final number of cases         3101
+  Final number of susceptibles  534
+Daily forecast for 14-Sep-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2555 (cases)
+  Epidemic rate (r)             0.0657216 (1/day)
+  Initial doubling time         10.5 (day)
+Estimated duration (days)
+  Turning day                   28
+  Acceleration   phase          26 (days)
+  Deceleration phase            35 (days)
+  Total duration                61 (days)
+Estimated datums
+  Outbreak                      18-Jul-2020
+  Start of acceleration         20-Jul-2020
+  Turning point                 15-Aug-2020
+  Start of steady growth        19-Sep-2020
+  Start of ending phase         19-Nov-2020
+Statistics
+  Number of observations        58
+  Degrees of freedom            54
+  Root Mean Squared Error       516.555
+  R-Squared                     0.532
+  Adjusted R-Squared            0.497
+  F-statistics vs. zero model   56.9627
+  p-value                       9.73724e-17
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      169.58
+  Exit condition (1=OK)         1

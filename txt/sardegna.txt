@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       sardegna
+  Day                           195
+Estimated the SIR model parameters
+  Contact rate (beta)           0.25 (1/day)
+  Removal rate (gamma)          0.065 (1/day)
+  Population size (N)           1562
+  Initial number of cases (I0)  3
+Basic reproduction number (R0)  3.815
+Critical number of susceptible  1563
+Final state
+  Final number of cases         1525
+  Final number of susceptibles  37
+Daily forecast for 06-Sep-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             1327 (cases)
+  Epidemic rate (r)             0.184302 (1/day)
+  Initial doubling time         3.8 (day)
+Estimated duration (days)
+  Turning day                   31
+  Acceleration   phase          11 (days)
+  Deceleration phase            13 (days)
+  Total duration                24 (days)
+Estimated datums
+  Outbreak                      24-Feb-2020
+  Start of acceleration         14-Mar-2020
+  Turning point                 26-Mar-2020
+  Start of steady growth        08-Apr-2020
+  Start of ending phase         02-May-2020
+Statistics
+  Number of observations        195
+  Degrees of freedom            191
+  Root Mean Squared Error       323.079
+  R-Squared                     0.685
+  Adjusted R-Squared            0.678
+  F-statistics vs. zero model   155.125
+  p-value                       5.90364e-51
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      4465.05
+  Exit condition (1=OK)         1
