@@ -20,29 +20,29 @@ License Creative Commons (Attribution 3.0 Unported)
 <link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 <h1><a id="texas">Texas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>681885 (+0.6%, +4169)</td>
-<td>677716 (+0.4%, +2682)</td>
-<td>675034 (+0.8%, +5442)</td>
-<td>669592 (+0.3%, +2092)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>790194 (+0.4%, +2769)</td>
+<td>787425 (+0.7%, +5119)</td>
+<td>782306 (+0.7%, +5570)</td>
+<td>776736 (+0.5%, +3717)</td>
 </tr>
-<tr><th>Deceduti</th><td>14405 (+0.5%, +73)</td>
-<td>14332 (+0.7%, +105)</td>
-<td>14227 (+2.1%, +297)</td>
-<td>13930 (+0.1%, +7)</td>
+<tr><th>Deceduti</th><td>16320 (+0.2%, +25)</td>
+<td>16295 (+0.4%, +71)</td>
+<td>16224 (+0.6%, +94)</td>
+<td>16130 (+0.7%, +114)</td>
 </tr>
-<tr><th>Positivi</th><td>667480 (+0.6%, +4096)</td>
-<td>663384 (+0.4%, +2577)</td>
-<td>660807 (+0.8%, +5145)</td>
-<td>655662 (+0.3%, +2085)</td>
+<tr><th>Positivi</th><td>773874 (+0.4%, +2744)</td>
+<td>771130 (+0.7%, +5048)</td>
+<td>766082 (+0.7%, +5476)</td>
+<td>760606 (+0.5%, +3603)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nelle differenti categorie di contagiati. La scala lineare permette una facile comparazione visiva dei valori, ma rende difficilmente intuibile un cambio di tendenza dell'epidemia. Il numero di <i>Casi</i>, anche se non espressamente presente, &eacute; rappresentato dalla somma di tutti gli altri valori visuallizati. </p>
 <center><img src="texas_stk.png"></center>
 <p class="didascalia">Il grafico successivo mostra il progredire dell'epidemia nel tempo con una scala logarimica. Con questa scala, una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Le curve che progressivamente si abbassano hanno quindi una crescita meno che esponenziale. </p>
 <center><img src="texas_log.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>755169</b> (con una deviazione standard di 11439). </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>851524</b> (con una deviazione standard di 12620). </p>
 <center><img src="texas_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>04-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/texas.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>29-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/texas.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="texas_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="texas_xy.png"></center>
@@ -50,414 +50,459 @@ License Creative Commons (Attribution 3.0 Unported)
 <center><img src="texas_xp.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="andrews_us">Andrews</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>400 (+0.0%, +0)</td>
-<td>400 (+0.0%, +0)</td>
-<td>400 (+3.1%, +12)</td>
-<td>388 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>457 (+0.0%, +0)</td>
+<td>457 (+1.1%, +5)</td>
+<td>452 (+6.4%, +27)</td>
+<td>425 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="andrews_us_log.png"></center>
 <h1><a id="angelina_us">Angelina</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>2072 (+0.0%, +0)</td>
-<td>2072 (+0.0%, +0)</td>
-<td>2072 (+1.3%, +27)</td>
-<td>2045 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>2189 (+0.0%, +0)</td>
+<td>2189 (+0.0%, +0)</td>
+<td>2189 (+1.2%, +26)</td>
+<td>2163 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="angelina_us_log.png"></center>
 <h1><a id="aransas_us">Aransas</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>302 (+0.0%, +0)</td>
-<td>302 (+1.0%, +3)</td>
-<td>299 (+0.3%, +1)</td>
-<td>298 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>335 (+0.0%, +0)</td>
+<td>335 (+3.7%, +12)</td>
+<td>323 (+0.0%, +0)</td>
+<td>323 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="aransas_us_log.png"></center>
 <h1><a id="atascosa_us">Atascosa</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>615 (+0.0%, +0)</td>
-<td>615 (+2.0%, +12)</td>
-<td>603 (+2.9%, +17)</td>
-<td>586 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1166 (+0.0%, +0)</td>
+<td>1166 (+0.0%, +0)</td>
+<td>1166 (+0.1%, +1)</td>
+<td>1165 (+1.0%, +11)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="atascosa_us_log.png"></center>
 <h1><a id="austin_us">Austin</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>460 (+0.0%, +0)</td>
-<td>460 (+0.9%, +4)</td>
-<td>456 (+2.7%, +12)</td>
-<td>444 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>502 (+0.6%, +3)</td>
+<td>499 (+0.0%, +0)</td>
+<td>499 (+0.0%, +0)</td>
+<td>499 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="austin_us_log.png"></center>
 <h1><a id="bastrop_us">Bastrop</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1691 (+0.4%, +6)</td>
-<td>1685 (+0.8%, +13)</td>
-<td>1672 (+1.4%, +23)</td>
-<td>1649 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1865 (+0.1%, +1)</td>
+<td>1864 (+0.4%, +8)</td>
+<td>1856 (+0.2%, +3)</td>
+<td>1853 (+0.2%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="bastrop_us_log.png"></center>
 <h1><a id="bee_us">Bee</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1807 (+0.0%, +0)</td>
-<td>1807 (+0.0%, +0)</td>
-<td>1807 (+0.0%, +0)</td>
-<td>1807 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1838 (+0.0%, +0)</td>
+<td>1838 (+0.2%, +4)</td>
+<td>1834 (+0.0%, +0)</td>
+<td>1834 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="bee_us_log.png"></center>
 <h1><a id="bexar_us">Bexar</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>49915 (+3.6%, +1717)</td>
-<td>48198 (+0.3%, +124)</td>
-<td>48074 (+0.2%, +118)</td>
-<td>47956 (+0.1%, +69)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>58678 (+0.8%, +494)</td>
+<td>58184 (+0.2%, +145)</td>
+<td>58039 (+0.2%, +103)</td>
+<td>57936 (+0.2%, +104)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>47913</b> (con una deviazione standard di 1214). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>54337</b> (con una deviazione standard di 2053). </p>
 <center><img src="bexar_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>25-Sep-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/bexar_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>19-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/bexar_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="bexar_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="bexar_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="bosque_us">Bosque</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>263 (+0.0%, +0)</td>
-<td>263 (+5.2%, +13)</td>
-<td>250 (+2.0%, +5)</td>
-<td>245 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>351 (+0.0%, +0)</td>
+<td>351 (+1.7%, +6)</td>
+<td>345 (+0.9%, +3)</td>
+<td>342 (+0.9%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="bosque_us_log.png"></center>
 <h1><a id="bowie_us">Bowie</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1178 (+0.9%, +11)</td>
-<td>1167 (+0.7%, +8)</td>
-<td>1159 (+2.7%, +30)</td>
-<td>1129 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1439 (+0.0%, +0)</td>
+<td>1439 (+0.0%, +0)</td>
+<td>1439 (+0.6%, +9)</td>
+<td>1430 (+1.6%, +23)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="bowie_us_log.png"></center>
 <h1><a id="brazoria_us">Brazoria</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>10545 (+1.9%, +198)</td>
-<td>10347 (+1.3%, +128)</td>
-<td>10219 (+2.1%, +215)</td>
-<td>10004 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>11575 (+0.3%, +36)</td>
+<td>11539 (+0.3%, +30)</td>
+<td>11509 (+0.2%, +24)</td>
+<td>11485 (+0.4%, +45)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>11782</b> (con una deviazione standard di 206). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>12501</b> (con una deviazione standard di 195). </p>
 <center><img src="brazoria_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>14-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/brazoria_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>25-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/brazoria_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="brazoria_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="brazoria_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="brazos_us">Brazos</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>5700 (+0.8%, +46)</td>
-<td>5654 (+0.7%, +37)</td>
-<td>5617 (+0.9%, +48)</td>
-<td>5569 (+1.1%, +63)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>6659 (+0.6%, +37)</td>
+<td>6622 (+0.8%, +55)</td>
+<td>6567 (+0.5%, +31)</td>
+<td>6536 (+0.7%, +44)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>5460</b> (con una deviazione standard di 192). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>6982</b> (con una deviazione standard di 265). </p>
 <center><img src="brazos_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>10-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/brazos_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Jan-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/brazos_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="brazos_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="brazos_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="burleson_us">Burleson</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>312 (+0.0%, +0)</td>
-<td>312 (+1.0%, +3)</td>
-<td>309 (+1.0%, +3)</td>
-<td>306 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>354 (+0.0%, +0)</td>
+<td>354 (+1.7%, +6)</td>
+<td>348 (+0.3%, +1)</td>
+<td>347 (+0.6%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="burleson_us_log.png"></center>
 <h1><a id="burnet_us">Burnet</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>680 (+0.0%, +0)</td>
-<td>680 (+0.4%, +3)</td>
-<td>677 (+0.3%, +2)</td>
-<td>675 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>771 (+0.0%, +0)</td>
+<td>771 (+2.0%, +15)</td>
+<td>756 (+0.0%, +0)</td>
+<td>756 (+1.1%, +8)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="burnet_us_log.png"></center>
 <h1><a id="camp_us">Camp</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>335 (+0.0%, +0)</td>
-<td>335 (+1.2%, +4)</td>
-<td>331 (+1.5%, +5)</td>
-<td>326 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>363 (+0.0%, +0)</td>
+<td>363 (+0.0%, +0)</td>
+<td>363 (+0.8%, +3)</td>
+<td>360 (+0.3%, +1)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="camp_us_log.png"></center>
-<h1><a id="collin_us">Collin</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>12001 (+0.1%, +15)</td>
-<td>11986 (+1.5%, +182)</td>
-<td>11804 (+1.1%, +128)</td>
-<td>11676 (+0.0%, +0)</td>
+<h1><a id="castro_us">Castro</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>263 (+0.0%, +0)</td>
+<td>263 (+0.0%, +0)</td>
+<td>263 (+0.0%, +0)</td>
+<td>263 (+0.4%, +1)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>12949</b> (con una deviazione standard di 754). </p>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="castro_us_log.png"></center>
+<h1><a id="collin_us">Collin</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>15568 (+0.1%, +20)</td>
+<td>15548 (+9.8%, +1394)</td>
+<td>14154 (+0.3%, +45)</td>
+<td>14109 (+1.3%, +187)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>28323</b> (con una deviazione standard di 734). </p>
 <center><img src="collin_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>05-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/collin_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>08-Jul-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/collin_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="collin_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="collin_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="colorado_us">Colorado</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
 <tr><th>Casi</th><td>545 (+0.0%, +0)</td>
 <td>545 (+0.0%, +0)</td>
-<td>545 (+17.0%, +79)</td>
-<td>466 (+0.0%, +0)</td>
+<td>545 (+0.0%, +0)</td>
+<td>545 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="colorado_us_log.png"></center>
 <h1><a id="comal_us">Comal</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>2545 (+2.0%, +50)</td>
-<td>2495 (+0.1%, +2)</td>
-<td>2493 (+0.5%, +12)</td>
-<td>2481 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>2757 (+0.1%, +3)</td>
+<td>2754 (+0.0%, +1)</td>
+<td>2753 (+0.2%, +5)</td>
+<td>2748 (+0.1%, +4)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>2656</b> (con una deviazione standard di 45). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>2792</b> (con una deviazione standard di 50). </p>
 <center><img src="comal_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>31-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/comal_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>10-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/comal_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="comal_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="comal_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="cooke_us">Cooke</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>358 (+0.0%, +0)</td>
-<td>358 (+0.8%, +3)</td>
-<td>355 (+1.7%, +6)</td>
-<td>349 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>463 (+0.0%, +0)</td>
+<td>463 (+0.0%, +0)</td>
+<td>463 (+0.2%, +1)</td>
+<td>462 (+0.2%, +1)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="cooke_us_log.png"></center>
 <h1><a id="coryell_us">Coryell</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1767 (+0.1%, +1)</td>
-<td>1766 (+0.6%, +10)</td>
-<td>1756 (+1.0%, +17)</td>
-<td>1739 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1839 (+0.0%, +0)</td>
+<td>1839 (+0.0%, +0)</td>
+<td>1839 (+0.3%, +5)</td>
+<td>1834 (+0.2%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="coryell_us_log.png"></center>
+<h1><a id="dallam_us">Dallam</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>261 (+0.0%, +0)</td>
+<td>261 (+0.0%, +0)</td>
+<td>261 (+1.2%, +3)</td>
+<td>258 (+0.4%, +1)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="dallam_us_log.png"></center>
 <h1><a id="deaf_smith_us">Deaf Smith</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>838 (+0.0%, +0)</td>
-<td>838 (+0.7%, +6)</td>
-<td>832 (+1.7%, +14)</td>
-<td>818 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>906 (+0.0%, +0)</td>
+<td>906 (+0.2%, +2)</td>
+<td>904 (+0.3%, +3)</td>
+<td>901 (+0.1%, +1)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="deaf_smith_us_log.png"></center>
 <h1><a id="denton_us">Denton</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>11014 (+0.0%, +0)</td>
-<td>11014 (+0.3%, +37)</td>
-<td>10977 (+0.6%, +61)</td>
-<td>10916 (+0.6%, +69)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>12425 (+0.0%, +0)</td>
+<td>12425 (+0.3%, +42)</td>
+<td>12383 (+0.5%, +64)</td>
+<td>12319 (+0.6%, +77)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>12349</b> (con una deviazione standard di 594). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>13526</b> (con una deviazione standard di 459). </p>
 <center><img src="denton_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>17-Dec-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/denton_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>06-Jan-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/denton_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="denton_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="denton_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="dewitt_us">DeWitt</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>937 (+0.0%, +0)</td>
-<td>937 (+4.9%, +44)</td>
-<td>893 (+0.3%, +3)</td>
-<td>890 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>997 (+0.0%, +0)</td>
+<td>997 (+0.0%, +0)</td>
+<td>997 (+0.0%, +0)</td>
+<td>997 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="dewitt_us_log.png"></center>
-<h1><a id="ector_us">Ector</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>4454 (+0.0%, +0)</td>
-<td>4454 (+0.0%, +0)</td>
-<td>4454 (+0.5%, +21)</td>
-<td>4433 (+0.4%, +18)</td>
+<h1><a id="dimmit_us">Dimmit</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>258 (+0.0%, +0)</td>
+<td>258 (+0.0%, +0)</td>
+<td>258 (+0.4%, +1)</td>
+<td>257 (+0.0%, +0)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>4382</b> (con una deviazione standard di 124). </p>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="dimmit_us_log.png"></center>
+<h1><a id="ector_us">Ector</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>4965 (+0.0%, +0)</td>
+<td>4965 (+0.0%, +0)</td>
+<td>4965 (+0.8%, +38)</td>
+<td>4927 (+0.4%, +22)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>4754</b> (con una deviazione standard di 140). </p>
 <center><img src="ector_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>21-Sep-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/ector_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>04-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/ector_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="ector_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="ector_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="erath_us">Erath</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>760 (+0.0%, +0)</td>
-<td>760 (+0.8%, +6)</td>
-<td>754 (+2.4%, +18)</td>
-<td>736 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>892 (+0.0%, +0)</td>
+<td>892 (+0.3%, +3)</td>
+<td>889 (+0.0%, +0)</td>
+<td>889 (+0.7%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="erath_us_log.png"></center>
-<h1><a id="fort_bend_us">Fort Bend</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>15423 (+0.0%, +0)</td>
-<td>15423 (+0.5%, +71)</td>
-<td>15352 (+0.1%, +21)</td>
-<td>15331 (+0.5%, +82)</td>
+<h1><a id="falls_us">Falls</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>306 (+0.0%, +0)</td>
+<td>306 (+1.7%, +5)</td>
+<td>301 (+2.7%, +8)</td>
+<td>293 (+1.7%, +5)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>12080</b> (con una deviazione standard di 3262). </p>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="falls_us_log.png"></center>
+<h1><a id="fort_bend_us">Fort Bend</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>16603 (+0.0%, +0)</td>
+<td>16603 (+0.2%, +31)</td>
+<td>16572 (+0.5%, +78)</td>
+<td>16494 (+0.1%, +22)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>19282</b> (con una deviazione standard di 734). </p>
 <center><img src="fort_bend_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>06-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/fort_bend_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>09-Jan-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/fort_bend_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="fort_bend_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="fort_bend_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="freestone_us">Freestone</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>394 (+0.3%, +1)</td>
-<td>393 (+1.0%, +4)</td>
-<td>389 (+0.0%, +0)</td>
-<td>389 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>420 (+0.0%, +0)</td>
+<td>420 (+0.7%, +3)</td>
+<td>417 (+0.0%, +0)</td>
+<td>417 (+0.5%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="freestone_us_log.png"></center>
 <h1><a id="frio_us">Frio</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>664 (+0.0%, +0)</td>
-<td>664 (+2.6%, +17)</td>
-<td>647 (+0.5%, +3)</td>
-<td>644 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>984 (+0.0%, +0)</td>
+<td>984 (+0.0%, +0)</td>
+<td>984 (+0.0%, +0)</td>
+<td>984 (+0.5%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="frio_us_log.png"></center>
 <h1><a id="gaines_us">Gaines</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>279 (+0.0%, +0)</td>
-<td>279 (+0.0%, +0)</td>
-<td>279 (+4.1%, +11)</td>
-<td>268 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>379 (+2.2%, +8)</td>
+<td>371 (+0.0%, +0)</td>
+<td>371 (+4.2%, +15)</td>
+<td>356 (+3.8%, +13)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="gaines_us_log.png"></center>
 <h1><a id="galveston_us">Galveston</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>11280 (+0.0%, +0)</td>
-<td>11280 (+0.3%, +31)</td>
-<td>11249 (+0.6%, +72)</td>
-<td>11177 (+0.7%, +76)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>11788 (+0.3%, +31)</td>
+<td>11757 (+0.4%, +42)</td>
+<td>11715 (+0.2%, +18)</td>
+<td>11697 (+0.2%, +27)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>11078</b> (con una deviazione standard di 298). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>11821</b> (con una deviazione standard di 292). </p>
 <center><img src="galveston_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>09-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/galveston_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>19-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/galveston_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="galveston_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="galveston_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
+<h1><a id="gillespie_us">Gillespie</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>321 (+0.0%, +0)</td>
+<td>321 (+0.0%, +0)</td>
+<td>321 (+0.0%, +0)</td>
+<td>321 (+2.2%, +7)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="gillespie_us_log.png"></center>
 <h1><a id="gonzales_us">Gonzales</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>822 (+0.0%, +0)</td>
-<td>822 (+0.0%, +0)</td>
-<td>822 (+0.4%, +3)</td>
-<td>819 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1063 (+0.0%, +0)</td>
+<td>1063 (+0.0%, +0)</td>
+<td>1063 (+0.0%, +0)</td>
+<td>1063 (+0.5%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="gonzales_us_log.png"></center>
 <h1><a id="gregg_us">Gregg</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>2012 (+0.0%, +0)</td>
-<td>2012 (+0.7%, +13)</td>
-<td>1999 (+1.6%, +31)</td>
-<td>1968 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>2291 (+0.0%, +0)</td>
+<td>2291 (+0.0%, +0)</td>
+<td>2291 (+0.6%, +14)</td>
+<td>2277 (+0.5%, +12)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="gregg_us_log.png"></center>
 <h1><a id="grimes_us">Grimes</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1057 (+0.0%, +0)</td>
-<td>1057 (+0.4%, +4)</td>
-<td>1053 (+2.1%, +22)</td>
-<td>1031 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1092 (+0.1%, +1)</td>
+<td>1091 (+0.0%, +0)</td>
+<td>1091 (+0.0%, +0)</td>
+<td>1091 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="grimes_us_log.png"></center>
 <h1><a id="hays_us">Hays</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>5598 (+0.0%, +0)</td>
-<td>5598 (+0.0%, +0)</td>
-<td>5598 (+0.5%, +30)</td>
-<td>5568 (+0.1%, +8)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>5951 (+0.0%, +0)</td>
+<td>5951 (+0.0%, +0)</td>
+<td>5951 (+0.1%, +5)</td>
+<td>5946 (+0.1%, +6)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>5565</b> (con una deviazione standard di 166). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>5793</b> (con una deviazione standard di 177). </p>
 <center><img src="hays_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>26-Sep-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/hays_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>06-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/hays_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="hays_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="hays_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="hockley_us">Hockley</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>302 (+0.0%, +0)</td>
-<td>302 (+1.7%, +5)</td>
-<td>297 (+3.8%, +11)</td>
-<td>286 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>373 (+0.0%, +0)</td>
+<td>373 (+1.1%, +4)</td>
+<td>369 (+2.2%, +8)</td>
+<td>361 (+0.3%, +1)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="hockley_us_log.png"></center>
 <h1><a id="hood_us">Hood</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>847 (+0.0%, +0)</td>
-<td>847 (+0.6%, +5)</td>
-<td>842 (+3.7%, +30)</td>
-<td>812 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1002 (+0.0%, +0)</td>
+<td>1002 (+1.0%, +10)</td>
+<td>992 (+1.2%, +12)</td>
+<td>980 (+1.1%, +11)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="hood_us_log.png"></center>
 <h1><a id="hunt_us">Hunt</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1512 (+0.0%, +0)</td>
-<td>1512 (+0.4%, +6)</td>
-<td>1506 (+0.5%, +8)</td>
-<td>1498 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1705 (+0.9%, +16)</td>
+<td>1689 (+0.6%, +10)</td>
+<td>1679 (+0.6%, +10)</td>
+<td>1669 (+0.4%, +7)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="hunt_us_log.png"></center>
 <h1><a id="jim_wells_us">Jim Wells</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1370 (+0.1%, +1)</td>
-<td>1369 (+1.0%, +13)</td>
-<td>1356 (+2.1%, +28)</td>
-<td>1328 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1523 (+0.0%, +0)</td>
+<td>1523 (+1.1%, +17)</td>
+<td>1506 (+1.1%, +16)</td>
+<td>1490 (+0.3%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="jim_wells_us_log.png"></center>
 <h1><a id="karnes_us">Karnes</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>752 (+0.0%, +0)</td>
-<td>752 (+0.0%, +0)</td>
-<td>752 (+0.3%, +2)</td>
-<td>750 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>944 (+0.0%, +0)</td>
+<td>944 (+0.0%, +0)</td>
+<td>944 (+0.4%, +4)</td>
+<td>940 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="karnes_us_log.png"></center>
 <h1><a id="kaufman_us">Kaufman</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>2915 (+0.0%, +0)</td>
-<td>2915 (+0.1%, +4)</td>
-<td>2911 (+0.9%, +27)</td>
-<td>2884 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>3202 (+0.0%, +0)</td>
+<td>3202 (+0.2%, +6)</td>
+<td>3196 (+0.1%, +3)</td>
+<td>3193 (+0.0%, +0)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3288</b> (con una deviazione standard di 59). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3279</b> (con una deviazione standard di 57). </p>
 <center><img src="kaufman_us_fit.png"></center>
 <p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/kaufman_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="kaufman_us_fid.png"></center>
@@ -465,25 +510,25 @@ License Creative Commons (Attribution 3.0 Unported)
 <center><img src="kaufman_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="kerr_us">Kerr</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>444 (+0.0%, +0)</td>
-<td>444 (+0.0%, +0)</td>
-<td>444 (+0.7%, +3)</td>
-<td>441 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>606 (+0.0%, +0)</td>
+<td>606 (+0.0%, +0)</td>
+<td>606 (+0.8%, +5)</td>
+<td>601 (+1.5%, +9)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="kerr_us_log.png"></center>
 <h1><a id="kleberg_us">Kleberg</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>957 (+0.1%, +1)</td>
-<td>956 (+0.3%, +3)</td>
-<td>953 (+1.0%, +9)</td>
-<td>944 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1018 (+0.0%, +0)</td>
+<td>1018 (+0.4%, +4)</td>
+<td>1014 (+0.7%, +7)</td>
+<td>1007 (+0.4%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="kleberg_us_log.png"></center>
 <h1><a id="la_salle_us">La Salle</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
 <tr><th>Casi</th><td>368 (+0.0%, +0)</td>
 <td>368 (+0.0%, +0)</td>
 <td>368 (+0.0%, +0)</td>
@@ -492,63 +537,72 @@ License Creative Commons (Attribution 3.0 Unported)
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="la_salle_us_log.png"></center>
 <h1><a id="lamb_us">Lamb</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>308 (+0.0%, +0)</td>
-<td>308 (+1.3%, +4)</td>
-<td>304 (+1.0%, +3)</td>
-<td>301 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>346 (+0.0%, +0)</td>
+<td>346 (+0.6%, +2)</td>
+<td>344 (+0.9%, +3)</td>
+<td>341 (+1.2%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="lamb_us_log.png"></center>
+<h1><a id="lampasas_us">Lampasas</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>263 (+0.4%, +1)</td>
+<td>262 (+0.0%, +0)</td>
+<td>262 (+0.4%, +1)</td>
+<td>261 (+0.0%, +0)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="lampasas_us_log.png"></center>
 <h1><a id="lavaca_us">Lavaca</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>701 (+0.0%, +0)</td>
-<td>701 (+0.4%, +3)</td>
-<td>698 (+1.0%, +7)</td>
-<td>691 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1010 (+0.0%, +0)</td>
+<td>1010 (+0.0%, +0)</td>
+<td>1010 (+0.5%, +5)</td>
+<td>1005 (+1.7%, +17)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="lavaca_us_log.png"></center>
 <h1><a id="live_oak_us">Live Oak</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>359 (+0.0%, +0)</td>
-<td>359 (+0.0%, +0)</td>
-<td>359 (+0.6%, +2)</td>
-<td>357 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>374 (+0.0%, +0)</td>
+<td>374 (+0.0%, +0)</td>
+<td>374 (+0.0%, +0)</td>
+<td>374 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="live_oak_us_log.png"></center>
 <h1><a id="lubbock_us">Lubbock</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>9616 (+1.2%, +116)</td>
-<td>9500 (+1.0%, +98)</td>
-<td>9402 (+3.6%, +327)</td>
-<td>9075 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>12580 (+1.5%, +182)</td>
+<td>12398 (+1.3%, +156)</td>
+<td>12242 (+0.8%, +103)</td>
+<td>12139 (+1.6%, +187)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>11030</b> (con una deviazione standard di 321). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>17083</b> (con una deviazione standard di 387). </p>
 <center><img src="lubbock_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>12-Jan-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/lubbock_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>13-Apr-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/lubbock_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="lubbock_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="lubbock_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="matagorda_us">Matagorda</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>976 (+0.1%, +1)</td>
-<td>975 (+0.2%, +2)</td>
-<td>973 (+0.8%, +8)</td>
-<td>965 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1056 (+0.4%, +4)</td>
+<td>1052 (+0.3%, +3)</td>
+<td>1049 (+0.1%, +1)</td>
+<td>1048 (+0.4%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="matagorda_us_log.png"></center>
 <h1><a id="maverick_us">Maverick</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>3535 (+0.0%, +0)</td>
-<td>3535 (+1.0%, +36)</td>
-<td>3499 (+1.2%, +41)</td>
-<td>3458 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>3712 (+0.0%, +0)</td>
+<td>3712 (+0.0%, +0)</td>
+<td>3712 (+0.0%, +0)</td>
+<td>3712 (+0.0%, +0)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3889</b> (con una deviazione standard di 71). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3903</b> (con una deviazione standard di 68). </p>
 <center><img src="maverick_us_fit.png"></center>
 <p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>30-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/maverick_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="maverick_us_fid.png"></center>
@@ -556,299 +610,331 @@ License Creative Commons (Attribution 3.0 Unported)
 <center><img src="maverick_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="mclennan_us">McLennan</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>7109 (+0.7%, +50)</td>
-<td>7059 (+1.0%, +68)</td>
-<td>6991 (+2.6%, +178)</td>
-<td>6813 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>8385 (+0.6%, +51)</td>
+<td>8334 (+1.0%, +79)</td>
+<td>8255 (+0.9%, +76)</td>
+<td>8179 (+0.7%, +57)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>6892</b> (con una deviazione standard di 204). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>8211</b> (con una deviazione standard di 278). </p>
 <center><img src="mclennan_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>20-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/mclennan_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>25-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/mclennan_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="mclennan_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="mclennan_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="milam_us">Milam</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>463 (+0.0%, +0)</td>
-<td>463 (+0.2%, +1)</td>
-<td>462 (+2.2%, +10)</td>
-<td>452 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>511 (+0.0%, +0)</td>
+<td>511 (+0.2%, +1)</td>
+<td>510 (+0.2%, +1)</td>
+<td>509 (+1.6%, +8)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="milam_us_log.png"></center>
 <h1><a id="nacogdoches_us">Nacogdoches</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1465 (+0.4%, +6)</td>
-<td>1459 (+1.0%, +15)</td>
-<td>1444 (+2.3%, +32)</td>
-<td>1412 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1643 (+0.0%, +0)</td>
+<td>1643 (+0.0%, +0)</td>
+<td>1643 (+0.5%, +8)</td>
+<td>1635 (+0.6%, +9)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="nacogdoches_us_log.png"></center>
 <h1><a id="navarro_us">Navarro</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1185 (+0.0%, +0)</td>
-<td>1185 (+0.4%, +5)</td>
-<td>1180 (+1.3%, +15)</td>
-<td>1165 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1317 (+0.0%, +0)</td>
+<td>1317 (+0.0%, +0)</td>
+<td>1317 (+0.4%, +5)</td>
+<td>1312 (+0.7%, +9)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="navarro_us_log.png"></center>
-<h1><a id="nueces_us">Nueces</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>19635 (+0.4%, +78)</td>
-<td>19557 (+0.0%, +0)</td>
-<td>19557 (+0.2%, +48)</td>
-<td>19509 (+0.1%, +21)</td>
+<h1><a id="nolan_us">Nolan</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>273 (+0.0%, +0)</td>
+<td>273 (+2.6%, +7)</td>
+<td>266 (+0.4%, +1)</td>
+<td>265 (+1.1%, +3)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>20595</b> (con una deviazione standard di 346). </p>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="nolan_us_log.png"></center>
+<h1><a id="nueces_us">Nueces</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>20689 (+0.0%, +0)</td>
+<td>20689 (+0.1%, +28)</td>
+<td>20661 (+0.6%, +120)</td>
+<td>20541 (+0.0%, +0)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>20884</b> (con una deviazione standard di 333). </p>
 <center><img src="nueces_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>14-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/nueces_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/nueces_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="nueces_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="nueces_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="palo_pinto_us">Palo Pinto</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>470 (+0.0%, +0)</td>
-<td>470 (+0.4%, +2)</td>
-<td>468 (+0.9%, +4)</td>
-<td>464 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>594 (+0.0%, +0)</td>
+<td>594 (+1.5%, +9)</td>
+<td>585 (+0.5%, +3)</td>
+<td>582 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="palo_pinto_us_log.png"></center>
 <h1><a id="parker_us">Parker</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1742 (+0.0%, +0)</td>
-<td>1742 (+0.4%, +7)</td>
-<td>1735 (+1.7%, +29)</td>
-<td>1706 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>2040 (+0.0%, +0)</td>
+<td>2040 (+0.5%, +10)</td>
+<td>2030 (+0.0%, +0)</td>
+<td>2030 (+0.2%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="parker_us_log.png"></center>
 <h1><a id="parmer_us">Parmer</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>404 (+0.0%, +0)</td>
-<td>404 (+0.5%, +2)</td>
-<td>402 (+2.3%, +9)</td>
-<td>393 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>443 (+0.0%, +0)</td>
+<td>443 (+0.0%, +0)</td>
+<td>443 (+0.0%, +0)</td>
+<td>443 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="parmer_us_log.png"></center>
 <h1><a id="pecos_us">Pecos</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>348 (+0.0%, +0)</td>
-<td>348 (+1.5%, +5)</td>
-<td>343 (+1.2%, +4)</td>
-<td>339 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>392 (+0.0%, +0)</td>
+<td>392 (+0.5%, +2)</td>
+<td>390 (+1.8%, +7)</td>
+<td>383 (+1.6%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="pecos_us_log.png"></center>
 <h1><a id="randall_us">Randall</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>2426 (+0.0%, +0)</td>
-<td>2426 (+1.3%, +31)</td>
-<td>2395 (+2.3%, +54)</td>
-<td>2341 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>3193 (+0.0%, +0)</td>
+<td>3193 (+1.9%, +58)</td>
+<td>3135 (+3.0%, +90)</td>
+<td>3045 (+2.1%, +63)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
-<center><img src="randall_us_log.png"></center>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>13093</b> (con una deviazione standard di 76). </p>
+<center><img src="randall_us_fit.png"></center>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>18-Jun-2022</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/randall_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<center><img src="randall_us_fid.png"></center>
+<p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
+<center><img src="randall_us_xy.png"></center>
+<p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="refugio_us">Refugio</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>301 (+0.0%, +0)</td>
-<td>301 (+0.0%, +0)</td>
-<td>301 (+0.0%, +0)</td>
-<td>301 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>310 (+0.0%, +0)</td>
+<td>310 (+0.0%, +0)</td>
+<td>310 (+0.6%, +2)</td>
+<td>308 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="refugio_us_log.png"></center>
 <h1><a id="rockwall_us">Rockwall</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1446 (+0.0%, +0)</td>
-<td>1446 (+0.2%, +3)</td>
-<td>1443 (+0.3%, +4)</td>
-<td>1439 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1680 (+0.0%, +0)</td>
+<td>1680 (+1.1%, +18)</td>
+<td>1662 (+0.0%, +0)</td>
+<td>1662 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="rockwall_us_log.png"></center>
+<h1><a id="runnels_us">Runnels</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>279 (+0.0%, +0)</td>
+<td>279 (+0.0%, +0)</td>
+<td>279 (+0.0%, +0)</td>
+<td>279 (+0.4%, +1)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="runnels_us_log.png"></center>
 <h1><a id="rusk_us">Rusk</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>830 (+4.7%, +37)</td>
-<td>793 (+0.4%, +3)</td>
-<td>790 (+3.7%, +28)</td>
-<td>762 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>972 (+0.0%, +0)</td>
+<td>972 (+0.0%, +0)</td>
+<td>972 (+0.0%, +0)</td>
+<td>972 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="rusk_us_log.png"></center>
 <h1><a id="san_patricio_us">San Patricio</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1384 (+0.0%, +0)</td>
-<td>1384 (+0.9%, +12)</td>
-<td>1372 (+0.2%, +3)</td>
-<td>1369 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1501 (+0.0%, +0)</td>
+<td>1501 (+0.4%, +6)</td>
+<td>1495 (+2.0%, +29)</td>
+<td>1466 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="san_patricio_us_log.png"></center>
 <h1><a id="scurry_us">Scurry</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>578 (+0.0%, +0)</td>
-<td>578 (+0.0%, +0)</td>
-<td>578 (+2.7%, +15)</td>
-<td>563 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>760 (+0.0%, +0)</td>
+<td>760 (+0.0%, +0)</td>
+<td>760 (+2.3%, +17)</td>
+<td>743 (+15.0%, +97)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="scurry_us_log.png"></center>
 <h1><a id="starr_us">Starr</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>3255 (+0.4%, +13)</td>
-<td>3242 (+0.2%, +7)</td>
-<td>3235 (+2.0%, +63)</td>
-<td>3172 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>3451 (+0.0%, +0)</td>
+<td>3451 (+0.0%, +0)</td>
+<td>3451 (+0.1%, +5)</td>
+<td>3446 (+0.4%, +14)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3470</b> (con una deviazione standard di 78). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3681</b> (con una deviazione standard di 78). </p>
 <center><img src="starr_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/starr_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>27-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/starr_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="starr_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="starr_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="tarrant_us">Tarrant</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>44454 (+0.7%, +314)</td>
-<td>44140 (+0.5%, +203)</td>
-<td>43937 (+0.5%, +211)</td>
-<td>43726 (+0.5%, +211)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>52100 (+1.2%, +601)</td>
+<td>51499 (+0.8%, +418)</td>
+<td>51081 (+0.7%, +352)</td>
+<td>50729 (+0.6%, +312)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>58560</b> (con una deviazione standard di 720). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>55330</b> (con una deviazione standard di 708). </p>
 <center><img src="tarrant_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>30-Jan-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/tarrant_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>15-Jan-2021</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/tarrant_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="tarrant_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="tarrant_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
+<h1><a id="terry_us">Terry</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>286 (+6.3%, +17)</td>
+<td>269 (+0.0%, +0)</td>
+<td>269 (+6.3%, +16)</td>
+<td>253 (+4.5%, +11)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="terry_us_log.png"></center>
 <h1><a id="titus_us">Titus</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1542 (+0.0%, +0)</td>
-<td>1542 (+0.0%, +0)</td>
-<td>1542 (+0.0%, +0)</td>
-<td>1542 (+1.1%, +17)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1601 (+0.0%, +0)</td>
+<td>1601 (+0.0%, +0)</td>
+<td>1601 (+0.1%, +1)</td>
+<td>1600 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="titus_us_log.png"></center>
 <h1><a id="tom_green_us">Tom Green</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>3448 (+0.4%, +14)</td>
-<td>3434 (+0.6%, +21)</td>
-<td>3413 (+0.9%, +29)</td>
-<td>3384 (+0.3%, +10)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>3836 (+0.4%, +17)</td>
+<td>3819 (+0.6%, +23)</td>
+<td>3796 (+0.7%, +27)</td>
+<td>3769 (+0.8%, +29)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3467</b> (con una deviazione standard di 48). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3712</b> (con una deviazione standard di 66). </p>
 <center><img src="tom_green_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>06-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/tom_green_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>19-Oct-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/tom_green_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="tom_green_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="tom_green_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="travis_us">Travis</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>27701 (+0.4%, +123)</td>
-<td>27578 (+0.2%, +53)</td>
-<td>27525 (+0.4%, +101)</td>
-<td>27424 (+0.8%, +218)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>29799 (+0.2%, +49)</td>
+<td>29750 (+0.3%, +103)</td>
+<td>29647 (+0.2%, +71)</td>
+<td>29576 (+0.2%, +62)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>28944</b> (con una deviazione standard di 710). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>29839</b> (con una deviazione standard di 693). </p>
 <center><img src="travis_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>09-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/travis_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>16-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/travis_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="travis_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="travis_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="upshur_us">Upshur</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>361 (+0.3%, +1)</td>
-<td>360 (+2.0%, +7)</td>
-<td>353 (+3.8%, +13)</td>
-<td>340 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>402 (+0.0%, +0)</td>
+<td>402 (+0.0%, +0)</td>
+<td>402 (+0.8%, +3)</td>
+<td>399 (+1.5%, +6)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="upshur_us_log.png"></center>
 <h1><a id="uvalde_us">Uvalde</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>739 (+0.3%, +2)</td>
-<td>737 (+1.1%, +8)</td>
-<td>729 (+0.0%, +0)</td>
-<td>729 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>802 (+0.6%, +5)</td>
+<td>797 (+0.0%, +0)</td>
+<td>797 (+0.5%, +4)</td>
+<td>793 (+0.4%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="uvalde_us_log.png"></center>
 <h1><a id="val_verde_us">Val Verde</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1957 (+0.0%, +0)</td>
-<td>1957 (+0.0%, +0)</td>
-<td>1957 (+0.0%, +0)</td>
-<td>1957 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>2232 (+0.0%, +0)</td>
+<td>2232 (+0.9%, +20)</td>
+<td>2212 (+0.2%, +4)</td>
+<td>2208 (+0.2%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="val_verde_us_log.png"></center>
 <h1><a id="van_zandt_us">Van Zandt</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>540 (+0.0%, +0)</td>
-<td>540 (+0.2%, +1)</td>
-<td>539 (+1.3%, +7)</td>
-<td>532 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>595 (+0.0%, +0)</td>
+<td>595 (+0.0%, +0)</td>
+<td>595 (+0.3%, +2)</td>
+<td>593 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="van_zandt_us_log.png"></center>
 <h1><a id="victoria_us">Victoria</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>3931 (+0.0%, +0)</td>
-<td>3931 (+0.0%, +0)</td>
-<td>3931 (+1.4%, +55)</td>
-<td>3876 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>4100 (+0.0%, +0)</td>
+<td>4100 (+0.3%, +13)</td>
+<td>4087 (+0.3%, +11)</td>
+<td>4076 (+0.2%, +7)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>3858</b> (con una deviazione standard di 96). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>4023</b> (con una deviazione standard di 92). </p>
 <center><img src="victoria_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>06-Sep-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/victoria_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>14-Sep-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/victoria_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="victoria_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="victoria_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="waller_us">Waller</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>778 (+0.9%, +7)</td>
-<td>771 (+2.5%, +19)</td>
-<td>752 (+3.2%, +23)</td>
-<td>729 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>876 (+0.3%, +3)</td>
+<td>873 (+0.2%, +2)</td>
+<td>871 (+0.2%, +2)</td>
+<td>869 (+1.3%, +11)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="waller_us_log.png"></center>
 <h1><a id="webb_us">Webb</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>12657 (+0.6%, +77)</td>
-<td>12580 (+0.4%, +48)</td>
-<td>12532 (+0.5%, +68)</td>
-<td>12464 (+0.8%, +93)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>14000 (+0.0%, +0)</td>
+<td>14000 (+0.8%, +116)</td>
+<td>13884 (+0.0%, +0)</td>
+<td>13884 (+0.0%, +0)</td>
 </tr>
-</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>13770</b> (con una deviazione standard di 237). </p>
+</table><p class="didascalia">Il grafico successivo mostra l'andamento dei <i>Casi</i> e la stima del suo andamento futuro utilizzando la curva del modello SIR che più si avvicina ai dati fino ad oggi disponibili. E' utilizzato lo strumento di calcolo <a href="https://it.mathworks.com/matlabcentral/fileexchange/74658-fitviruscovid19">fitVirusCOVID19</a> che stima un totale finale di contagiati di <b>15042</b> (con una deviazione standard di 227). </p>
 <center><img src="webb_us_fit.png"></center>
-<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>14-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/webb_us.txt">risultati completi dello strumento di calcolo</a>. </p>
+<p class="didascalia">Il grafico successivo mostra l'andamento dei <i>NuoviCasi</i> e la stima del suo andamento futuro con un termine dell'epidemia stimato al <b>28-Nov-2020</b>. Ulteriori stime le potete trovare nei <a href="https://github.com/amadvance/covid19-italy/blob/master/txt/webb_us.txt">risultati completi dello strumento di calcolo</a>. </p>
 <center><img src="webb_us_fid.png"></center>
 <p class="didascalia">Il grafico successivo mostra la crescita del numero di <i>Casi</i> in base al numero di <i>Casi</i> stessi. Rispetto una rappresentazione temporale, &eacute; pi&ugrave; facile notare un cambio di tendenza del progredire dell'epidemia, in quanto la velocit&agrave; di diffusione dipende dal numero di casi e non dal tempo. Entrambi gli assi usano una scala logaritmica ed una crescita esponenziale &eacute; rappresentata da una linea retta crescente. Il rallentamento dell'epidemia si nota dalla curva che scende, ed il suo termine quando arriver&agrave; a zero.</p>
 <center><img src="webb_us_xy.png"></center>
 <p>DICHIARAZIONE DI NON RESPONSABILITA: Usate questi risultati con cautela. Il modello di calcolo potrebbe non funzionare in alcune situazioni. In particolare il modello può essere inadeguato, fallire nella fase iniziale dell'epidemia o quando si verificano ulteriori fasi epidemiche o focolai (casi non previsti dal modello SIR). I risultati sono forniti così come sono, senza qualsiasi garanzia espressa o implicita. </p>
 <h1><a id="wharton_us">Wharton</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1270 (+0.0%, +0)</td>
-<td>1270 (+0.9%, +11)</td>
-<td>1259 (+1.1%, +14)</td>
-<td>1245 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1386 (+0.4%, +6)</td>
+<td>1380 (+0.2%, +3)</td>
+<td>1377 (+0.1%, +2)</td>
+<td>1375 (+0.2%, +3)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="wharton_us_log.png"></center>
 <h1><a id="wichita_us">Wichita</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
 <tr><th>Casi</th><td>751 (+0.0%, +0)</td>
 <td>751 (+0.0%, +0)</td>
 <td>751 (+0.0%, +0)</td>
@@ -857,38 +943,56 @@ License Creative Commons (Attribution 3.0 Unported)
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="wichita_us_log.png"></center>
 <h1><a id="willacy_us">Willacy</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>1180 (+0.0%, +0)</td>
-<td>1180 (+0.1%, +1)</td>
-<td>1179 (+0.4%, +5)</td>
-<td>1174 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>1214 (+0.0%, +0)</td>
+<td>1214 (+0.0%, +0)</td>
+<td>1214 (+0.0%, +0)</td>
+<td>1214 (+0.0%, +0)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="willacy_us_log.png"></center>
 <h1><a id="wise_us">Wise</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>689 (+0.0%, +0)</td>
-<td>689 (+0.3%, +2)</td>
-<td>687 (+1.5%, +10)</td>
-<td>677 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>784 (+0.0%, +0)</td>
+<td>784 (+0.8%, +6)</td>
+<td>778 (+0.3%, +2)</td>
+<td>776 (+0.6%, +5)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="wise_us_log.png"></center>
+<h1><a id="yoakum_us">Yoakum</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>258 (+3.2%, +8)</td>
+<td>250 (+0.0%, +0)</td>
+<td>250 (+5.0%, +12)</td>
+<td>238 (+6.2%, +14)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="yoakum_us_log.png"></center>
+<h1><a id="young_us">Young</a></h1>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>346 (+0.0%, +0)</td>
+<td>346 (+2.1%, +7)</td>
+<td>339 (+0.6%, +2)</td>
+<td>337 (+1.5%, +5)</td>
+</tr>
+</table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
+<center><img src="young_us_log.png"></center>
 <h1><a id="zapata_us">Zapata</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>317 (+0.0%, +0)</td>
-<td>317 (+0.0%, +0)</td>
-<td>317 (+0.0%, +0)</td>
-<td>317 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>335 (+0.0%, +0)</td>
+<td>335 (+0.0%, +0)</td>
+<td>335 (+0.0%, +0)</td>
+<td>335 (+0.6%, +2)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="zapata_us_log.png"></center>
 <h1><a id="zavala_us">Zavala</a></h1>
-<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-09-13</td><td>2020-09-12</td><td>2020-09-11</td><td>2020-09-10</td></tr>
-<tr><th>Casi</th><td>282 (+0.0%, +0)</td>
-<td>282 (+2.5%, +7)</td>
-<td>275 (+1.1%, +3)</td>
-<td>272 (+0.0%, +0)</td>
+<table class="dati"><tr><th>Dati aggiornati al</th><td>2020-10-04</td><td>2020-10-03</td><td>2020-10-02</td><td>2020-10-01</td></tr>
+<tr><th>Casi</th><td>377 (+0.0%, +0)</td>
+<td>377 (+0.0%, +0)</td>
+<td>377 (+1.1%, +4)</td>
+<td>373 (+1.1%, +4)</td>
 </tr>
 </table><p class="didascalia">Il grafico successivo mostra il progredire del numero di casi dell'epidemia. La curva rappresenta il numero di casi in scala logaritmica, e le barre la variazione giornaliera in scala lineare.</p>
 <center><img src="zavala_us_log.png"></center>
