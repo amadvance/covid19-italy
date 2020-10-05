@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       carolina_us
+  Day                           79
+Estimated the SIR model parameters
+  Contact rate (beta)           0.052 (1/day)
+  Removal rate (gamma)          0.051 (1/day)
+  Population size (N)           2.9223e+06
+  Initial number of cases (I0)  562
+Basic reproduction number (R0)  1.013
+Critical number of susceptible  2.9223e+06
+Final state
+  Final number of cases         103800
+  Final number of susceptibles  2.8185e+06
+Daily forecast for 05-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             72769 (cases)
+  Epidemic rate (r)             0.000652205 (1/day)
+  Initial doubling time         1062.8 (day)
+Estimated duration (days)
+  Turning day                   979
+  Acceleration   phase          894 (days)
+  Deceleration phase            1681 (days)
+  Total duration                2575 (days)
+Estimated datums
+  Outbreak                      18-Jul-2020
+  Start of acceleration         10-Oct-2020
+  Turning point                 24-Mar-2023
+  Start of steady growth        29-Oct-2027
+  Start of ending phase         16-Nov-2034
+Statistics
+  Number of observations        79
+  Degrees of freedom            75
+  Root Mean Squared Error       83.9325
+  R-Squared                     0.986
+  Adjusted R-Squared            0.985
+  F-statistics vs. zero model   1729.45
+  p-value                       4.05715e-69
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      726.877
+  Exit condition (1=OK)         0

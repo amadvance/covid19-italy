@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       dekalb_us
+  Day                           192
+Estimated the SIR model parameters
+  Contact rate (beta)           0.076 (1/day)
+  Removal rate (gamma)          0.025 (1/day)
+  Population size (N)           2715
+  Initial number of cases (I0)  5
+Basic reproduction number (R0)  3.044
+Critical number of susceptible  2715
+Final state
+  Final number of cases         2563
+  Final number of susceptibles  152
+Daily forecast for 30-Sep-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2182 (cases)
+  Epidemic rate (r)             0.0512093 (1/day)
+  Initial doubling time         13.5 (day)
+Estimated duration (days)
+  Turning day                   112
+  Acceleration   phase          40 (days)
+  Deceleration phase            48 (days)
+  Total duration                88 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         03-Jun-2020
+  Turning point                 12-Jul-2020
+  Start of steady growth        30-Aug-2020
+  Start of ending phase         26-Nov-2020
+Statistics
+  Number of observations        192
+  Degrees of freedom            188
+  Root Mean Squared Error       69.0464
+  R-Squared                     0.994
+  Adjusted R-Squared            0.994
+  F-statistics vs. zero model   10807.9
+  p-value                       3.5745e-210
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      946.716
+  Exit condition (1=OK)         1

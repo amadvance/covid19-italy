@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       okaloosa_us
-  Day                           174
+  Day                           195
 Estimated the SIR model parameters
-  Contact rate (beta)           0.08 (1/day)
-  Removal rate (gamma)          0.011 (1/day)
-  Population size (N)           4773
-  Initial number of cases (I0)  0
-Basic reproduction number (R0)  7.474
-Critical number of susceptible  4773
+  Contact rate (beta)           0.105 (1/day)
+  Removal rate (gamma)          0.041 (1/day)
+  Population size (N)           5742
+  Initial number of cases (I0)  1
+Basic reproduction number (R0)  2.579
+Critical number of susceptible  5742
 Final state
-  Final number of cases         4770
-  Final number of susceptibles  2
-Daily forecast for 12-Sep-2020
+  Final number of cases         5182
+  Final number of susceptibles  559
+Daily forecast for 03-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             4430 (cases)
-  Epidemic rate (r)             0.0690252 (1/day)
-  Initial doubling time         10 (day)
+  Epidemic size (K)             4361 (cases)
+  Epidemic rate (r)             0.0644023 (1/day)
+  Initial doubling time         10.8 (day)
 Estimated duration (days)
-  Turning day                   123
-  Acceleration   phase          29 (days)
-  Deceleration phase            32 (days)
-  Total duration                61 (days)
+  Turning day                   124
+  Acceleration   phase          32 (days)
+  Deceleration phase            39 (days)
+  Total duration                71 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         24-Jun-2020
-  Turning point                 23-Jul-2020
-  Start of steady growth        24-Aug-2020
-  Start of ending phase         24-Oct-2020
+  Start of acceleration         22-Jun-2020
+  Turning point                 24-Jul-2020
+  Start of steady growth        01-Sep-2020
+  Start of ending phase         11-Nov-2020
 Statistics
-  Number of observations        174
-  Degrees of freedom            170
-  Root Mean Squared Error       93.0786
+  Number of observations        195
+  Degrees of freedom            191
+  Root Mean Squared Error       103.269
   R-Squared                     0.997
   Adjusted R-Squared            0.997
-  F-statistics vs. zero model   17803.1
-  p-value                       4.38287e-212
+  F-statistics vs. zero model   21506.6
+  p-value                       2.71658e-241
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1213.66
+  Objective function value      1427.21
   Exit condition (1=OK)         0

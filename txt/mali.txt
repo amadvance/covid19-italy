@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       mali
-  Day                           173
+  Day                           194
 Estimated the SIR model parameters
-  Contact rate (beta)           0.099 (1/day)
-  Removal rate (gamma)          0.048 (1/day)
-  Population size (N)           3467
-  Initial number of cases (I0)  43
-Basic reproduction number (R0)  2.058
-Critical number of susceptible  3467
+  Contact rate (beta)           0.083 (1/day)
+  Removal rate (gamma)          0.036 (1/day)
+  Population size (N)           3475
+  Initial number of cases (I0)  60
+Basic reproduction number (R0)  2.236
+Critical number of susceptible  3476
 Final state
-  Final number of cases         2850
-  Final number of susceptibles  617
-Daily forecast for 14-Sep-2020
+  Final number of cases         2995
+  Final number of susceptibles  480
+Daily forecast for 05-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             2373 (cases)
-  Epidemic rate (r)             0.0515358 (1/day)
-  Initial doubling time         13.4 (day)
+  Epidemic size (K)             2497 (cases)
+  Epidemic rate (r)             0.0464612 (1/day)
+  Initial doubling time         14.9 (day)
 Estimated duration (days)
-  Turning day                   66
-  Acceleration   phase          38 (days)
-  Deceleration phase            47 (days)
-  Total duration                85 (days)
+  Turning day                   68
+  Acceleration   phase          42 (days)
+  Deceleration phase            53 (days)
+  Total duration                94 (days)
 Estimated datums
   Outbreak                      25-Mar-2020
-  Start of acceleration         22-Apr-2020
-  Turning point                 30-May-2020
-  Start of steady growth        16-Jul-2020
-  Start of ending phase         09-Oct-2020
+  Start of acceleration         20-Apr-2020
+  Turning point                 01-Jun-2020
+  Start of steady growth        24-Jul-2020
+  Start of ending phase         26-Oct-2020
 Statistics
-  Number of observations        173
-  Degrees of freedom            169
-  Root Mean Squared Error       52.6967
-  R-Squared                     0.997
-  Adjusted R-Squared            0.997
-  F-statistics vs. zero model   20610.6
-  p-value                       2.07015e-216
+  Number of observations        194
+  Degrees of freedom            190
+  Root Mean Squared Error       83.137
+  R-Squared                     0.994
+  Adjusted R-Squared            0.994
+  F-statistics vs. zero model   9945.19
+  p-value                       1.45073e-208
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      685.056
-  Exit condition (1=OK)         0
+  Objective function value      1145.96
+  Exit condition (1=OK)         1

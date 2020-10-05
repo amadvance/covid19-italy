@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       kalamazoo_us
+  Day                           195
+Estimated the SIR model parameters
+  Contact rate (beta)           0.07 (1/day)
+  Removal rate (gamma)          0.062 (1/day)
+  Population size (N)           117756
+  Initial number of cases (I0)  96
+Basic reproduction number (R0)  1.123
+Critical number of susceptible  117756
+Final state
+  Final number of cases         25621
+  Final number of susceptibles  92134
+Daily forecast for 03-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             23388 (cases)
+  Epidemic rate (r)             0.00768132 (1/day)
+  Initial doubling time         90.2 (day)
+Estimated duration (days)
+  Turning day                   418
+  Acceleration   phase          235 (days)
+  Deceleration phase            261 (days)
+  Total duration                496 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         21-Sep-2020
+  Turning point                 14-May-2021
+  Start of steady growth        30-Jan-2022
+  Start of ending phase         10-Jun-2023
+Statistics
+  Number of observations        195
+  Degrees of freedom            191
+  Root Mean Squared Error       121.6
+  R-Squared                     0.978
+  Adjusted R-Squared            0.978
+  F-statistics vs. zero model   2869.2
+  p-value                       1.53695e-158
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1680.54
+  Exit condition (1=OK)         0

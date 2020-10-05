@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       onondaga_us
-  Day                           176
+  Day                           197
 Estimated the SIR model parameters
-  Contact rate (beta)           0.21 (1/day)
-  Removal rate (gamma)          0.185 (1/day)
-  Population size (N)           16401
-  Initial number of cases (I0)  75
-Basic reproduction number (R0)  1.127
-Critical number of susceptible  16402
+  Contact rate (beta)           0.286 (1/day)
+  Removal rate (gamma)          0.271 (1/day)
+  Population size (N)           34443
+  Initial number of cases (I0)  68
+Basic reproduction number (R0)  1.055
+Critical number of susceptible  34444
 Final state
-  Final number of cases         4095
-  Final number of susceptibles  12305
-Daily forecast for 14-Sep-2020
+  Final number of cases         4508
+  Final number of susceptibles  29935
+Daily forecast for 05-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             3428 (cases)
-  Epidemic rate (r)             0.0245006 (1/day)
-  Initial doubling time         28.3 (day)
+  Epidemic size (K)             3503 (cases)
+  Epidemic rate (r)             0.0153191 (1/day)
+  Initial doubling time         45.2 (day)
 Estimated duration (days)
   Turning day                   62
-  Acceleration   phase          51 (days)
-  Deceleration phase            69 (days)
-  Total duration                120 (days)
+  Acceleration   phase          56 (days)
+  Deceleration phase            89 (days)
+  Total duration                145 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         02-Apr-2020
+  Start of acceleration         29-Mar-2020
   Turning point                 23-May-2020
-  Start of steady growth        31-Jul-2020
-  Start of ending phase         28-Nov-2020
+  Start of steady growth        20-Aug-2020
+  Start of ending phase         12-Jan-2021
 Statistics
-  Number of observations        176
-  Degrees of freedom            172
-  Root Mean Squared Error       85.4851
-  R-Squared                     0.996
-  Adjusted R-Squared            0.996
-  F-statistics vs. zero model   12956.8
-  p-value                       2.53406e-202
+  Number of observations        197
+  Degrees of freedom            193
+  Root Mean Squared Error       112.001
+  R-Squared                     0.993
+  Adjusted R-Squared            0.993
+  F-statistics vs. zero model   9378.37
+  p-value                       9.1667e-209
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1121.13
+  Objective function value      1555.97
   Exit condition (1=OK)         0

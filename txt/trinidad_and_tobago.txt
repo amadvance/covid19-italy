@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       trinidad_and_tobago
-  Day                           183
+  Day                           204
 Estimated the SIR model parameters
-  Contact rate (beta)           0.102 (1/day)
-  Removal rate (gamma)          0.022 (1/day)
-  Population size (N)           5912
+  Contact rate (beta)           0.286 (1/day)
+  Removal rate (gamma)          0.2 (1/day)
+  Population size (N)           10539
   Initial number of cases (I0)  0
-Basic reproduction number (R0)  4.678
-Critical number of susceptible  5912
+Basic reproduction number (R0)  1.43
+Critical number of susceptible  10539
 Final state
-  Final number of cases         5854
-  Final number of susceptibles  57
-Daily forecast for 13-Sep-2020
-  Total                         3216
-  Increase                      104
+  Final number of cases         5628
+  Final number of susceptibles  4910
+Daily forecast for 04-Oct-2020
+  Total                         4835
+  Increase                      49
 Estimated logistic model parameters
-  Epidemic size (K)             5204 (cases)
-  Epidemic rate (r)             0.0800924 (1/day)
-  Initial doubling time         8.7 (day)
+  Epidemic size (K)             4872 (cases)
+  Epidemic rate (r)             0.0861377 (1/day)
+  Initial doubling time         8 (day)
 Estimated duration (days)
   Turning day                   178
-  Acceleration   phase          25 (days)
-  Deceleration phase            29 (days)
-  Total duration                55 (days)
+  Acceleration   phase          24 (days)
+  Deceleration phase            27 (days)
+  Total duration                51 (days)
 Estimated datums
   Outbreak                      14-Mar-2020
-  Start of acceleration         14-Aug-2020
+  Start of acceleration         15-Aug-2020
   Turning point                 08-Sep-2020
-  Start of steady growth        08-Oct-2020
-  Start of ending phase         02-Dec-2020
+  Start of steady growth        05-Oct-2020
+  Start of ending phase         25-Nov-2020
 Statistics
-  Number of observations        183
-  Degrees of freedom            179
-  Root Mean Squared Error       105.36
-  R-Squared                     0.974
-  Adjusted R-Squared            0.973
-  F-statistics vs. zero model   2689.77
-  p-value                       1.38413e-148
+  Number of observations        204
+  Degrees of freedom            200
+  Root Mean Squared Error       95.64
+  R-Squared                     0.995
+  Adjusted R-Squared            0.995
+  F-statistics vs. zero model   13024
+  p-value                       5.59376e-229
 Method
-  Total cases weight            0
-  Infection rate weight         1
-  Objective function value      277.607
-  Exit condition (1=OK)         1
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1352.55
+  Exit condition (1=OK)         0
