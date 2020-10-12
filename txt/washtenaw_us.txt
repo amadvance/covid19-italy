@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       washtenaw_us
-  Day                           197
+  Day                           204
 Estimated the SIR model parameters
-  Contact rate (beta)           0.033 (1/day)
-  Removal rate (gamma)          0.03 (1/day)
-  Population size (N)           2.25519e+06
-  Initial number of cases (I0)  384
-Basic reproduction number (R0)  1.094
-Critical number of susceptible  2.25519e+06
+  Contact rate (beta)           0.028 (1/day)
+  Removal rate (gamma)          0.024 (1/day)
+  Population size (N)           4.18609e+06
+  Initial number of cases (I0)  413
+Basic reproduction number (R0)  1.156
+Critical number of susceptible  4.18609e+06
 Final state
-  Final number of cases         381096
-  Final number of susceptibles  1.8741e+06
-Daily forecast for 05-Oct-2020
+  Final number of cases         1.08208e+06
+  Final number of susceptibles  3.10401e+06
+Daily forecast for 12-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             358158 (cases)
-  Epidemic rate (r)             0.00281711 (1/day)
-  Initial doubling time         246 (day)
+  Epidemic size (K)             998369 (cases)
+  Epidemic rate (r)             0.00377008 (1/day)
+  Initial doubling time         183.9 (day)
 Estimated duration (days)
   Turning day                   1552
-  Acceleration   phase          690 (days)
-  Deceleration phase            727 (days)
-  Total duration                1417 (days)
+  Acceleration   phase          536 (days)
+  Deceleration phase            566 (days)
+  Total duration                1101 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
-  Start of acceleration         01-Aug-2022
+  Start of acceleration         03-Jan-2023
   Turning point                 21-Jun-2024
-  Start of steady growth        18-Jun-2026
-  Start of ending phase         05-May-2030
+  Start of steady growth        08-Jan-2026
+  Start of ending phase         13-Jan-2029
 Statistics
-  Number of observations        197
-  Degrees of freedom            193
-  Root Mean Squared Error       117.789
+  Number of observations        204
+  Degrees of freedom            200
+  Root Mean Squared Error       124.102
   R-Squared                     0.985
   Adjusted R-Squared            0.985
-  F-statistics vs. zero model   4251.83
-  p-value                       5.89316e-176
+  F-statistics vs. zero model   4529.84
+  p-value                       1.58146e-183
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1636.38
+  Objective function value      1755.07
   Exit condition (1=OK)         0

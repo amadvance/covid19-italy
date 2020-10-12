@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       yakima_us
-  Day                           196
+  Day                           203
 Estimated the SIR model parameters
-  Contact rate (beta)           0.264 (1/day)
-  Removal rate (gamma)          0.223 (1/day)
-  Population size (N)           38848
-  Initial number of cases (I0)  48
-Basic reproduction number (R0)  1.182
-Critical number of susceptible  38848
+  Contact rate (beta)           0.214 (1/day)
+  Removal rate (gamma)          0.172 (1/day)
+  Population size (N)           31651
+  Initial number of cases (I0)  58
+Basic reproduction number (R0)  1.239
+Critical number of susceptible  31651
 Final state
-  Final number of cases         11601
-  Final number of susceptibles  27246
-Daily forecast for 04-Oct-2020
+  Final number of cases         11635
+  Final number of susceptibles  20015
+Daily forecast for 11-Oct-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             10435 (cases)
-  Epidemic rate (r)             0.0409542 (1/day)
-  Initial doubling time         16.9 (day)
+  Epidemic size (K)             10308 (cases)
+  Epidemic rate (r)             0.0415501 (1/day)
+  Initial doubling time         16.7 (day)
 Estimated duration (days)
   Turning day                   85
   Acceleration   phase          46 (days)
   Deceleration phase            51 (days)
-  Total duration                96 (days)
+  Total duration                97 (days)
 Estimated datums
   Outbreak                      22-Mar-2020
   Start of acceleration         30-Apr-2020
   Turning point                 15-Jun-2020
   Start of steady growth        05-Aug-2020
-  Start of ending phase         09-Nov-2020
+  Start of ending phase         10-Nov-2020
 Statistics
-  Number of observations        196
-  Degrees of freedom            192
-  Root Mean Squared Error       92.0091
+  Number of observations        203
+  Degrees of freedom            199
+  Root Mean Squared Error       91.654
   R-Squared                     1
   Adjusted R-Squared            1
-  F-statistics vs. zero model   136927
-  p-value                       2.07009e-319
+  F-statistics vs. zero model   145312
+  p-value                       0
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1274.91
+  Objective function value      1292.94
   Exit condition (1=OK)         0

@@ -1,22 +1,22 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       starr_us
-  Day                           193
+  Day                           200
 Estimated the SIR model parameters
   Contact rate (beta)           0.111 (1/day)
   Removal rate (gamma)          0.055 (1/day)
   Population size (N)           4584
   Initial number of cases (I0)  1
 Basic reproduction number (R0)  2.022
-Critical number of susceptible  4584
+Critical number of susceptible  4585
 Final state
-  Final number of cases         3680
+  Final number of cases         3681
   Final number of susceptibles  903
-Daily forecast for 01-Oct-2020
-  Total                         NaN
-  Increase                      NaN
+Daily forecast for 08-Oct-2020
+  Total                         3499
+  Increase                      6
 Estimated logistic model parameters
-  Epidemic size (K)             3078 (cases)
-  Epidemic rate (r)             0.0561087 (1/day)
+  Epidemic size (K)             3079 (cases)
+  Epidemic rate (r)             0.0560927 (1/day)
   Initial doubling time         12.4 (day)
 Estimated duration (days)
   Turning day                   124
@@ -30,15 +30,15 @@ Estimated datums
   Start of steady growth        07-Sep-2020
   Start of ending phase         27-Nov-2020
 Statistics
-  Number of observations        193
-  Degrees of freedom            189
-  Root Mean Squared Error       78.4454
-  R-Squared                     0.996
-  Adjusted R-Squared            0.996
-  F-statistics vs. zero model   16888.7
-  p-value                       2.6184e-229
+  Number of observations        200
+  Degrees of freedom            196
+  Root Mean Squared Error       77.0348
+  R-Squared                     0.997
+  Adjusted R-Squared            0.997
+  F-statistics vs. zero model   19461.5
+  p-value                       2.82063e-242
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      1078.45
+  Objective function value      1078.49
   Exit condition (1=OK)         1

@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       new_london_us
+  Day                           204
+Estimated the SIR model parameters
+  Contact rate (beta)           0.063 (1/day)
+  Removal rate (gamma)          0.055 (1/day)
+  Population size (N)           6836
+  Initial number of cases (I0)  159
+Basic reproduction number (R0)  1.122
+Critical number of susceptible  6836
+Final state
+  Final number of cases         2299
+  Final number of susceptibles  4536
+Daily forecast for 12-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             1568 (cases)
+  Epidemic rate (r)             0.00814657 (1/day)
+  Initial doubling time         85.1 (day)
+Estimated duration (days)
+  Turning day                   50
+  Acceleration   phase          62 (days)
+  Deceleration phase            145 (days)
+  Total duration                206 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         10-Mar-2020
+  Turning point                 11-May-2020
+  Start of steady growth        02-Oct-2020
+  Start of ending phase         27-Apr-2021
+Statistics
+  Number of observations        204
+  Degrees of freedom            200
+  Root Mean Squared Error       172.597
+  R-Squared                     0.918
+  Adjusted R-Squared            0.916
+  F-statistics vs. zero model   672.025
+  p-value                       3.78699e-104
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      2440.88
+  Exit condition (1=OK)         0

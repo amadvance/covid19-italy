@@ -1,44 +1,44 @@
 Epidemic modeling by susceptible-infected-recovered (SIR) model
   Country                       afghanistan
-  Day                           212
+  Day                           219
 Estimated the SIR model parameters
-  Contact rate (beta)           0.341 (1/day)
-  Removal rate (gamma)          0.232 (1/day)
-  Population size (N)           66732
-  Initial number of cases (I0)  0
-Basic reproduction number (R0)  1.466
-Critical number of susceptible  66733
+  Contact rate (beta)           0.248 (1/day)
+  Removal rate (gamma)          0.17 (1/day)
+  Population size (N)           69819
+  Initial number of cases (I0)  11
+Basic reproduction number (R0)  1.452
+Critical number of susceptible  69819
 Final state
-  Final number of cases         37390
-  Final number of susceptibles  29342
-Daily forecast for 23-Sep-2020
+  Final number of cases         38433
+  Final number of susceptibles  31385
+Daily forecast for 30-Sep-2020
   Total                         NaN
   Increase                      NaN
 Estimated logistic model parameters
-  Epidemic size (K)             32208 (cases)
-  Epidemic rate (r)             0.108447 (1/day)
-  Initial doubling time         6.4 (day)
+  Epidemic size (K)             33156 (cases)
+  Epidemic rate (r)             0.0770842 (1/day)
+  Initial doubling time         9 (day)
 Estimated duration (days)
   Turning day                   89
-  Acceleration   phase          19 (days)
-  Deceleration phase            22 (days)
-  Total duration                41 (days)
+  Acceleration   phase          27 (days)
+  Deceleration phase            30 (days)
+  Total duration                57 (days)
 Estimated datums
   Outbreak                      24-Feb-2020
-  Start of acceleration         04-May-2020
+  Start of acceleration         27-Apr-2020
   Turning point                 23-May-2020
-  Start of steady growth        14-Jun-2020
-  Start of ending phase         24-Jul-2020
+  Start of steady growth        23-Jun-2020
+  Start of ending phase         19-Aug-2020
 Statistics
-  Number of observations        212
-  Degrees of freedom            208
-  Root Mean Squared Error       1308.43
-  R-Squared                     0.994
-  Adjusted R-Squared            0.993
-  F-statistics vs. zero model   11356.9
-  p-value                       3.14357e-230
+  Number of observations        219
+  Degrees of freedom            215
+  Root Mean Squared Error       494.184
+  R-Squared                     0.999
+  Adjusted R-Squared            0.999
+  F-statistics vs. zero model   78742.3
+  p-value                       0
 Method
   Total cases weight            1
   Infection rate weight         0
-  Objective function value      18870.5
-  Exit condition (1=OK)         1
+  Objective function value      7245.49
+  Exit condition (1=OK)         0
