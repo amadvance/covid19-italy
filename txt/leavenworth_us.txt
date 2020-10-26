@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       leavenworth_us
+  Day                           218
+Estimated the SIR model parameters
+  Contact rate (beta)           0.129 (1/day)
+  Removal rate (gamma)          0.129 (1/day)
+  Population size (N)           187755
+  Initial number of cases (I0)  82
+Basic reproduction number (R0)  1.002
+Critical number of susceptible  187756
+Final state
+  Final number of cases         6001
+  Final number of susceptibles  181753
+Daily forecast for 26-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             947 (cases)
+  Epidemic rate (r)             0.00032766 (1/day)
+  Initial doubling time         2115.4 (day)
+Estimated duration (days)
+  Turning day                   29
+  Acceleration   phase          36 (days)
+  Deceleration phase            522 (days)
+  Total duration                558 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         14-Mar-2020
+  Turning point                 20-Apr-2020
+  Start of steady growth        24-Sep-2021
+  Start of ending phase         05-Apr-2023
+Statistics
+  Number of observations        218
+  Degrees of freedom            214
+  Root Mean Squared Error       172.946
+  R-Squared                     0.94
+  Adjusted R-Squared            0.938
+  F-statistics vs. zero model   1043.85
+  p-value                       1.95225e-127
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      2529.98
+  Exit condition (1=OK)         0

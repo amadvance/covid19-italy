@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       eau_claire_us
+  Day                           216
+Estimated the SIR model parameters
+  Contact rate (beta)           0.044 (1/day)
+  Removal rate (gamma)          0.022 (1/day)
+  Population size (N)           250507
+  Initial number of cases (I0)  16
+Basic reproduction number (R0)  1.944
+Critical number of susceptible  250507
+Final state
+  Final number of cases         195616
+  Final number of susceptibles  54891
+Daily forecast for 24-Oct-2020
+  Total                         3242
+  Increase                      67
+Estimated logistic model parameters
+  Epidemic size (K)             163769 (cases)
+  Epidemic rate (r)             0.021241 (1/day)
+  Initial doubling time         32.6 (day)
+Estimated duration (days)
+  Turning day                   406
+  Acceleration   phase          97 (days)
+  Deceleration phase            116 (days)
+  Total duration                214 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         25-Jan-2021
+  Turning point                 02-May-2021
+  Start of steady growth        27-Aug-2021
+  Start of ending phase         28-Mar-2022
+Statistics
+  Number of observations        216
+  Degrees of freedom            212
+  Root Mean Squared Error       70.0368
+  R-Squared                     0.993
+  Adjusted R-Squared            0.992
+  F-statistics vs. zero model   9627.3
+  p-value                       3.11632e-226
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      181.368
+  Exit condition (1=OK)         0

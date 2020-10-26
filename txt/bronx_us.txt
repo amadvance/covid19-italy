@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       bronx_us
+  Day                           56
+Estimated the SIR model parameters
+  Contact rate (beta)           0.127 (1/day)
+  Removal rate (gamma)          0.11 (1/day)
+  Population size (N)           366607
+  Initial number of cases (I0)  301
+Basic reproduction number (R0)  1.152
+Critical number of susceptible  366608
+Final state
+  Final number of cases         94561
+  Final number of susceptibles  272045
+Daily forecast for 26-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             86057 (cases)
+  Epidemic rate (r)             0.0168263 (1/day)
+  Initial doubling time         41.2 (day)
+Estimated duration (days)
+  Turning day                   214
+  Acceleration   phase          112 (days)
+  Deceleration phase            123 (days)
+  Total duration                234 (days)
+Estimated datums
+  Outbreak                      31-Aug-2020
+  Start of acceleration         11-Dec-2020
+  Turning point                 02-Apr-2021
+  Start of steady growth        03-Aug-2021
+  Start of ending phase         25-Mar-2022
+Statistics
+  Number of observations        56
+  Degrees of freedom            52
+  Root Mean Squared Error       53264.7
+  R-Squared                     -2820.66
+  Adjusted R-Squared            -3041.97
+  F-statistics vs. zero model   17.3398
+  p-value                       6.23157e-08
+Method
+  Total cases weight            0
+  Infection rate weight         1
+  Objective function value      104.998
+  Exit condition (1=OK)         0

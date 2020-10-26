@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       marathon_us
+  Day                           211
+Estimated the SIR model parameters
+  Contact rate (beta)           0.08 (1/day)
+  Removal rate (gamma)          0.045 (1/day)
+  Population size (N)           34750
+  Initial number of cases (I0)  1
+Basic reproduction number (R0)  1.766
+Critical number of susceptible  34751
+Final state
+  Final number of cases         25001
+  Final number of susceptibles  9749
+Daily forecast for 19-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             21032 (cases)
+  Epidemic rate (r)             0.0348223 (1/day)
+  Initial doubling time         19.9 (day)
+Estimated duration (days)
+  Turning day                   257
+  Acceleration   phase          59 (days)
+  Deceleration phase            70 (days)
+  Total duration                130 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         05-Oct-2020
+  Turning point                 04-Dec-2020
+  Start of steady growth        12-Feb-2021
+  Start of ending phase         21-Jun-2021
+Statistics
+  Number of observations        211
+  Degrees of freedom            207
+  Root Mean Squared Error       170.852
+  R-Squared                     0.966
+  Adjusted R-Squared            0.965
+  F-statistics vs. zero model   2079.27
+  p-value                       3.19276e-154
+Method
+  Total cases weight            0.5
+  Infection rate weight         0.5
+  Objective function value      1381.27
+  Exit condition (1=OK)         0

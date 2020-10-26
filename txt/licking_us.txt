@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       licking_us
+  Day                           217
+Estimated the SIR model parameters
+  Contact rate (beta)           0.052 (1/day)
+  Removal rate (gamma)          0.022 (1/day)
+  Population size (N)           3409
+  Initial number of cases (I0)  18
+Basic reproduction number (R0)  2.329
+Critical number of susceptible  3409
+Final state
+  Final number of cases         2967
+  Final number of susceptibles  441
+Daily forecast for 25-Oct-2020
+  Total                         NaN
+  Increase                      NaN
+Estimated logistic model parameters
+  Epidemic size (K)             2483 (cases)
+  Epidemic rate (r)             0.0297666 (1/day)
+  Initial doubling time         23.3 (day)
+Estimated duration (days)
+  Turning day                   148
+  Acceleration   phase          68 (days)
+  Deceleration phase            83 (days)
+  Total duration                152 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         10-Jun-2020
+  Turning point                 17-Aug-2020
+  Start of steady growth        09-Nov-2020
+  Start of ending phase         09-Apr-2021
+Statistics
+  Number of observations        217
+  Degrees of freedom            213
+  Root Mean Squared Error       78.2111
+  R-Squared                     0.99
+  Adjusted R-Squared            0.99
+  F-statistics vs. zero model   7438.07
+  p-value                       2.98316e-215
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1141.45
+  Exit condition (1=OK)         1

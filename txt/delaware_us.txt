@@ -1,0 +1,44 @@
+Epidemic modeling by susceptible-infected-recovered (SIR) model
+  Country                       delaware_us
+  Day                           218
+Estimated the SIR model parameters
+  Contact rate (beta)           0.017 (1/day)
+  Removal rate (gamma)          0 (1/day)
+  Population size (N)           189388
+  Initial number of cases (I0)  72
+Basic reproduction number (R0)  176.659
+Critical number of susceptible  189389
+Final state
+  Final number of cases         189388
+  Final number of susceptibles  0
+Daily forecast for 26-Oct-2020
+  Total                         3180
+  Increase                      54
+Estimated logistic model parameters
+  Epidemic size (K)             188851 (cases)
+  Epidemic rate (r)             0.0173775 (1/day)
+  Initial doubling time         39.9 (day)
+Estimated duration (days)
+  Turning day                   452
+  Acceleration   phase          115 (days)
+  Deceleration phase            116 (days)
+  Total duration                231 (days)
+Estimated datums
+  Outbreak                      22-Mar-2020
+  Start of acceleration         22-Feb-2021
+  Turning point                 17-Jun-2021
+  Start of steady growth        11-Oct-2021
+  Start of ending phase         29-May-2022
+Statistics
+  Number of observations        218
+  Degrees of freedom            214
+  Root Mean Squared Error       96.3529
+  R-Squared                     0.986
+  Adjusted R-Squared            0.986
+  F-statistics vs. zero model   5117.26
+  p-value                       7.20583e-199
+Method
+  Total cases weight            1
+  Infection rate weight         0
+  Objective function value      1409.52
+  Exit condition (1=OK)         0
